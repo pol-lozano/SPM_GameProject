@@ -1,38 +1,63 @@
 ﻿//Pol Lozano Llorens
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public abstract class StateMachine : MonoBehaviour
+public class StateMachine
 {
-    // Attributes
-    [SerializeField] private State[] states;
+    //Fields
+    private Stack<Type> states = new Stack<Type>();
+    private readonly Dictionary<Type, State> stateDictionary = new Dictionary<Type, State>();
 
-    private Dictionary<Type, State> stateDictionary = new Dictionary<Type, State>();
-    private State currentState;
+    //Properties
+    public State CurrentState => stateDictionary[states.Peek()];
 
     // Methods
-    protected virtual void Awake()
+    public StateMachine(object owner, State[] states)
     {
+        Debug.Assert(states.Length > 0);
         foreach (State state in states)
         {
-            State instance = Instantiate(state);
-            instance.Initialize(this);
+            State instance = UnityEngine.Object.Instantiate(state);
+            instance.Initialize(this, owner);
             stateDictionary.Add(instance.GetType(), instance);
-            if (currentState == null) currentState = instance;
+            if (this.states.Count == 0) this.states.Push(instance.GetType());
         }
-        currentState.Enter();
+        CurrentState.Enter();
     }
 
+    public void Push<T>(object param = null) where T : State
+    {
+        CurrentState.Exit();
+        
+        states.Push(typeof(T));
+        //Debug.Log(" entering state: " + CurrentState.GetType());
+        CurrentState.Enter();
+    }
+
+    public void Pop()
+    {
+        if (states.Count > 1)
+        {
+            //Debug.Log(" exited state: " + CurrentState.GetType());
+            states.Pop();
+        }
+    }
+
+    //State machine should Either use transition or pop from exit
     public void Transition<T>() where T : State
     {
-        currentState.Exit();
-        currentState = stateDictionary[typeof(T)];
-        currentState.Enter();
+        //Ignore transition if it doesn't exist
+        if (stateDictionary.ContainsKey(typeof(T)))
+        {
+            Pop();
+            Push<T>();
+        }        
     }
 
-    private void Update()
+    public void HandleUpdate()
     {
-        currentState.HandleUpdate();
+        CurrentState?.EvaluateTransitions();
+        CurrentState?.HandleUpdate();
     }
 }

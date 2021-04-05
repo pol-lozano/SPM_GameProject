@@ -1,6 +1,6 @@
 //Pol Lozano Llorens
 using UnityEngine;
-
+[RequireComponent(typeof(CapsuleCollider))]
 public class PhysicsComponent : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -21,13 +21,14 @@ public class PhysicsComponent : MonoBehaviour
     public Vector3 Point1 => transform.position + col.center + Vector3.up * (col.height / 2 - col.radius);
     public Vector3 Point2 => transform.position + col.center + Vector3.down * (col.height / 2 - col.radius);
 
+    public void AddForce(Vector3 force) => velocity += force;
     public Vector3 Velocity { get => velocity; set => velocity = value; }
     public float VelocityX { get => velocity.x; set => velocity.x = value; }
     public float VelocityY { get => velocity.y; set => velocity.y = value; }
     public float VelocityZ { get => velocity.z; set => velocity.z = value; }
 
     public float Gravity { get => gravity; set => gravity = value; }
-    public bool Grounded => Physics.CapsuleCast(Point1, Point2, col.radius * 0.95f, Vector3.down, out groundHit, groundCheckDistance + skinWidth, collisionMask);
+    public bool IsGrounded => Physics.CapsuleCast(Point1, Point2, col.radius * 0.95f, Vector3.down, out groundHit, groundCheckDistance + skinWidth, collisionMask);
     public RaycastHit GroundHit => groundHit; //TODO MAKE INTO ITS OWN METHOD
 
     public void Awake()
@@ -45,23 +46,25 @@ public class PhysicsComponent : MonoBehaviour
         HandleCollisions();
         //Apply air resistance
         velocity *= Mathf.Pow(airResistance, Time.deltaTime);
+        //Perform actual movement
+        transform.Translate(velocity * Time.deltaTime);
     }
 
     private void HandleCollisions()
     {
-        /*//TODO: FIX, THIS MAKES CHARACTER SHAKY
-        if (Physics.CapsuleCast(Point1, Point2, col.radius, velocity.normalized, out RaycastHit hit, velocity.magnitude * Time.deltaTime + skinWidth, collisionMask))
-        {
-            //Correct position
-            Physics.CapsuleCast(Point1, Point2, col.radius, -hit.normal, out RaycastHit normalHit, velocity.magnitude * Time.deltaTime + skinWidth, collisionMask);
-            transform.position += -normalHit.normal * (normalHit.distance - skinWidth);
+        /* //TODO: FIX, THIS MAKES CHARACTER SHAKY
+         if (Physics.CapsuleCast(Point1, Point2, col.radius, velocity.normalized, out RaycastHit hit, velocity.magnitude * Time.deltaTime + skinWidth, collisionMask))
+         {
+             //Correct position
+             Physics.CapsuleCast(Point1, Point2, col.radius, -hit.normal, out RaycastHit normalHit, velocity.magnitude * Time.deltaTime + skinWidth, collisionMask);
+             transform.position += -normalHit.normal * (normalHit.distance - skinWidth);
 
-            //Apply normal force and friction
-            Vector3 normalForce = PhysicsHelper.CalculateNormalForce(velocity, normalHit.normal);
-            velocity += normalForce;
-            ApplyFriction(normalForce);
-        }*/
-        
+             //Apply normal force and friction
+             Vector3 normalForce = PhysicsHelper.CalculateNormalForce(velocity, normalHit.normal);
+             velocity += normalForce;
+             ApplyFriction(normalForce);
+         }*/
+
         ResolveOverlaps();
     }
 

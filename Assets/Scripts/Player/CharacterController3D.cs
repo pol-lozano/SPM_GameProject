@@ -3,81 +3,45 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PhysicsComponent))]
 public class CharacterController3D : MonoBehaviour
 {
     public InputHandler input;
+    public PhysicsComponent PhysicsComponent;
     public Camera mainCamera;
 
-    [Header("Movement Settings")]
-    [SerializeField] private float maxSpeed = 7f;
-    [SerializeField] private float jumpHeight = 5f;
-    [SerializeField] private float acceleration = 50f;
-    [SerializeField] private float deceleration = 45f;
+    public PlayerState[] states;
+    private StateMachine stateMachine;
 
     private Vector2 rawInput;
-    private PhysicsComponent rb;
+    private bool jumpInput = false;
+    public bool JumpInput { get => jumpInput; set => jumpInput = value; }
 
     private void Awake()
     {
-        rb = GetComponent<PhysicsComponent>();
+        PhysicsComponent = GetComponent<PhysicsComponent>();
+        stateMachine = new StateMachine(this, states);
     }
+
     private void OnEnable()
     {
         input.moveEvent += OnMove;
-        input.jumpEvent += Jump;
+        input.jumpEvent += OnJump;
+        input.jumpCanceledEvent += OnJumpCanceled;
     }
 
     private void OnDisable()
     {
         input.moveEvent -= OnMove;
-        input.jumpEvent -= Jump;
+        input.jumpEvent -= OnJump;
+        input.jumpCanceledEvent -= OnJumpCanceled;
     }
 
-    private void OnMove(Vector2 input)
-    {
-        rawInput = Vector2.ClampMagnitude(input, 1f);
-    }
+    private void OnMove(Vector2 input) => rawInput = Vector2.ClampMagnitude(input, 1f);
+    private void OnJump() => jumpInput = true;
+    private void OnJumpCanceled() => jumpInput = false;
 
-    private Vector3 GetInput()
-    {
-        return CameraDirection(rawInput);
-    }
-
-    private void Update()
-    {
-        Move();
-    }
-
-    private void Move()
-    {
-        Vector3 input = GetInput();
-
-        //Accelerate
-        if (input.magnitude > float.Epsilon) Accelerate(input);
-        else Decelerate();
-
-        //Perform actual movement
-        transform.Translate(rb.Velocity * Time.deltaTime);
-    }
-
-    private void Jump()
-    {
-        if (rb.Grounded) rb.VelocityY += PhysicsHelper.CalculateJumpVelocity(jumpHeight, rb.Gravity);
-    }
-
-    private void Accelerate(Vector3 input)
-    {
-        rb.VelocityX = Mathf.MoveTowards(rb.VelocityX, input.x * maxSpeed, acceleration * Time.deltaTime);
-        rb.VelocityZ = Mathf.MoveTowards(rb.VelocityZ, input.z * maxSpeed, acceleration * Time.deltaTime);
-    }
-
-    private void Decelerate()
-    {
-        rb.VelocityX = Mathf.MoveTowards(rb.VelocityX, 0, deceleration * Time.deltaTime);
-        rb.VelocityZ = Mathf.MoveTowards(rb.VelocityZ, 0, deceleration * Time.deltaTime);
-    }
-
-    private Vector3 CameraDirection(Vector2 input)
+    public Vector3 GetInput()
     {
         Vector3 correctedHorizontal = mainCamera.transform.right;
         correctedHorizontal.y = 0f;
@@ -85,6 +49,8 @@ public class CharacterController3D : MonoBehaviour
         Vector3 correctedVertical = mainCamera.transform.forward;
         correctedVertical.y = 0f;
         correctedVertical.Normalize();
-        return input.x * correctedHorizontal + input.y * correctedVertical;
+        return rawInput.x * correctedHorizontal + rawInput.y * correctedVertical;
     }
+
+    private void Update() => stateMachine.HandleUpdate();
 }
