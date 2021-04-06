@@ -15,6 +15,7 @@ public class CharacterController3D : MonoBehaviour
 
     private Vector2 rawInput;
     private bool jumpInput = false;
+    
     public bool JumpInput { get => jumpInput; set => jumpInput = value; }
 
     private void Awake()

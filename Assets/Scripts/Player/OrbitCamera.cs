@@ -17,12 +17,14 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField, Range(0, 100), Tooltip("Minimum and maximum vertical angle")] private float minDistance = 1f, maxDistance = 10f;
     [SerializeField, Tooltip("If y axis will be inverted or not")] private bool invertY = false;
 
+
     [Header("Collision Settings")]
     [SerializeField, Tooltip("What layers the camera will check for collision")] private LayerMask collisionMask;
     [SerializeField, Tooltip("How far the camera will push away from the collision point if it collides")] private float collisionRadius;
 
     private Vector2 cameraInput;
     private Vector2 cameraRotation;
+
 
     /// <summary> Validates that the fields in the inspector are ok to use, if not changes them </summary>
     private void OnValidate()

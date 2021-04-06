@@ -11,6 +11,13 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction<Vector2> cameraRotateEvent = delegate { };
     public event UnityAction<float> cameraZoomEvent = delegate { };
 
+    public event UnityAction shootEvent = delegate { };
+    public event UnityAction shootEventCanceled = delegate { };
+    public event UnityAction aimEvent = delegate { };
+    public event UnityAction aimEventCanceled = delegate { };
+    public event UnityAction attackEvent = delegate { };
+
+
     private GameInput gameInput;
 
     private void OnEnable()
@@ -62,4 +69,27 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     {
         cameraZoomEvent.Invoke(context.ReadValue<float>());
     }
+
+
+    //*********************************************************
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        shootEvent.Invoke();
+    }
+
+    public void OnAim(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started: aimEvent.Invoke(); break;
+            case InputActionPhase.Canceled: aimEventCanceled.Invoke(); break;
+        }
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        attackEvent.Invoke();
+    }
+    //*********************************************************
+
 }
