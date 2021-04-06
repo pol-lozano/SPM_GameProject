@@ -31,7 +31,7 @@ public class StateMachine
         CurrentState.Exit();
         
         states.Push(typeof(T));
-        //Debug.Log(" entering state: " + CurrentState.GetType());
+        Debug.Log(" entering state: " + CurrentState.GetType());
         CurrentState.Enter();
     }
 
@@ -39,7 +39,7 @@ public class StateMachine
     {
         if (states.Count > 1)
         {
-            //Debug.Log(" exited state: " + CurrentState.GetType());
+            Debug.Log(" exiting state: " + CurrentState.GetType());
             states.Pop();
         }
     }

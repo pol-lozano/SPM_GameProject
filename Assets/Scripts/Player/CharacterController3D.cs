@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class CharacterController3D : MonoBehaviour
 {
     public InputHandler input;
-    public PhysicsComponent PhysicsComponent;
+    [HideInInspector] public PhysicsComponent PhysicsComponent;
     public Camera mainCamera;
 
     public PlayerState[] states;
