@@ -55,7 +55,7 @@ public class ShootState : AimState
     private void Shoot()
     {
         //DETTA KAN ÄNDRAS NÄR KARAKTÄREN ROTERAS PÅ RÄTT SÄTT
-        /*
+       /* 
         Player.FirePoint.rotation = Player.GetCamera().transform.rotation;
         ray.origin = Player.FirePoint.position;
         ray.direction = Player.GetCrossHairTarget() - Player.FirePoint.position;

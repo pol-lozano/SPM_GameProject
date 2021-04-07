@@ -6,13 +6,10 @@ using UnityEngine.InputSystem;
 public class InputHandler : ScriptableObject, GameInput.IGameplayActions
 {
     public event UnityAction<Vector2> moveEvent = delegate { };
-    public event UnityAction jumpEvent = delegate { };
-    public event UnityAction jumpCanceledEvent = delegate { };
     public event UnityAction<Vector2> cameraRotateEvent = delegate { };
     public event UnityAction<float> cameraZoomEvent = delegate { };
 
     public event UnityAction shootEvent = delegate { };
-    //public event UnityAction shootEventCanceled = delegate { };
     public event UnityAction aimEvent = delegate { };
     public event UnityAction aimEventCanceled = delegate { };
     public event UnityAction attackEvent = delegate { };
@@ -49,15 +46,6 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public void OnMove(InputAction.CallbackContext context)
     {
         moveEvent.Invoke(context.ReadValue<Vector2>());
-    }
-
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        switch (context.phase)
-        {
-            case InputActionPhase.Started: jumpEvent.Invoke(); break;
-            case InputActionPhase.Canceled: jumpCanceledEvent.Invoke(); break;
-        }
     }
 
     public void OnCameraRotate(InputAction.CallbackContext context)

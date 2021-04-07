@@ -6,41 +6,36 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PhysicsComponent))]
 public class CharacterController3D : MonoBehaviour
 {
-    public InputHandler input;
     [HideInInspector] public PhysicsComponent PhysicsComponent;
+    [HideInInspector] public Animator Animator;
+
+    public InputHandler input;
+    public Transform playerMesh;
     public Camera mainCamera;
 
     public PlayerState[] states;
     private StateMachine stateMachine;
 
-    private Vector2 rawInput;
-    private bool jumpInput = false;
-    
-    public bool JumpInput { get => jumpInput; set => jumpInput = value; }
+    public Vector2 rawInput;
 
     private void Awake()
     {
         PhysicsComponent = GetComponent<PhysicsComponent>();
+        Animator = GetComponentInChildren<Animator>();
         stateMachine = new StateMachine(this, states);
     }
 
     private void OnEnable()
     {
-        input.moveEvent += OnMove;
-        input.jumpEvent += OnJump;
-        input.jumpCanceledEvent += OnJumpCanceled;
+        input.moveEvent += OnMove;   
     }
 
     private void OnDisable()
     {
-        input.moveEvent -= OnMove;
-        input.jumpEvent -= OnJump;
-        input.jumpCanceledEvent -= OnJumpCanceled;
+        input.moveEvent -= OnMove;      
     }
 
     private void OnMove(Vector2 input) => rawInput = Vector2.ClampMagnitude(input, 1f);
-    private void OnJump() => jumpInput = true;
-    private void OnJumpCanceled() => jumpInput = false;
 
     public Vector3 GetInput()
     {
@@ -54,4 +49,6 @@ public class CharacterController3D : MonoBehaviour
     }
 
     private void Update() => stateMachine.HandleUpdate();
+    private void FixedUpdate() => stateMachine.HandleFixedUpdate();
+
 }

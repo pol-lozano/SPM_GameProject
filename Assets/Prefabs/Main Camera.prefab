@@ -71,7 +71,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -97,19 +97,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb890c1e54c81f4d81aa3734cc9ceaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
   target: {fileID: 0}
-  cameraOffset: {x: 0, y: -1, z: 7.5}
-  turnSpeed: 360
-  minViewAngle: -90
+  cameraOffset: {x: -2, y: 0, z: 3}
+  turnSpeed: 25
+  minViewAngle: -89
   maxViewAngle: 45
   minDistance: 0
   maxDistance: 10
   invertY: 0
   collisionMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   collisionRadius: 0.25
-  Camera: {fileID: 0}
 --- !u!114 &7069015762128759801
 MonoBehaviour:
   m_ObjectHideFlags: 0
