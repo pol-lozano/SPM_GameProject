@@ -20,6 +20,7 @@ public class PlayerCombat : MonoBehaviour
     private Vector3 crossHairTarget;
     private Ray chRay;
     private RaycastHit chHitInfo;
+    private float standardDistance = 10;
 
     public bool ShootInput { get => shootInput; set => shootInput = value; }
     public bool AttackInput { get => attackInput; set => attackInput = value; }
@@ -70,11 +71,11 @@ public class PlayerCombat : MonoBehaviour
 
     private void SetCrossHairTarget()
     {
-        
         chRay.origin = cam.transform.position;
         chRay.direction = cam.transform.forward;
-        Physics.Raycast(chRay, out chHitInfo);
-        crossHairTarget = chHitInfo.point;
+        if (Physics.Raycast(chRay, out chHitInfo))
+            crossHairTarget = chHitInfo.point;
+        else crossHairTarget = cam.transform.forward * standardDistance;
     }
 
 
