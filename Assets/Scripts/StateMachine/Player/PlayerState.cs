@@ -11,8 +11,8 @@ public abstract class PlayerState : State
     public override void HandleUpdate()
     {
         input = Player.rawInput;
-        Player.Animator.SetFloat("InputX", input.x);
-        Player.Animator.SetFloat("InputY", input.y);
+        Player.Animator.SetFloat("InputX", input.x, 1f, Time.deltaTime * 10f);
+        Player.Animator.SetFloat("InputY", input.y, 1f, Time.deltaTime * 10f);
     }
     public override void HandleFixedUpdate()
     {
