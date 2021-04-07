@@ -45,6 +45,7 @@ public class StateMachine
     }
 
     //State machine should Either use transition or pop from exit
+    //TODO: NOT WORKING PROPERLY
     public void Transition<T>() where T : State
     {
         CurrentState.Exit();
@@ -60,5 +61,9 @@ public class StateMachine
     {
         CurrentState?.EvaluateTransitions();
         CurrentState?.HandleUpdate();
+    }
+    public void HandleFixedUpdate()
+    {
+        CurrentState?.HandleFixedUpdate();
     }
 }

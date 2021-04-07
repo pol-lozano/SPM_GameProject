@@ -17,14 +17,14 @@ public class PlayerGroundedState : PlayerState
         base.HandleUpdate();
         Vector3 input = Player.GetInput();
 
+        Player.PhysicsComponent.Velocity = input * maxSpeed;
         //Accelerate
-        if (input.magnitude > float.Epsilon) Accelerate(input);
-        else Decelerate();
+        //if (input.magnitude > float.Epsilon) Accelerate(input);
+        //else Decelerate();
     }
 
     public override void EvaluateTransitions()
     {
-        if (Player.PhysicsComponent.IsGrounded && Player.JumpInput) stateMachine.Transition<PlayerJumpingState>();
         if (!Player.PhysicsComponent.IsGrounded) stateMachine.Transition<PlayerFallingState>();
     }
 

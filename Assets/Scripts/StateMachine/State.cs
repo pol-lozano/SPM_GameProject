@@ -14,6 +14,7 @@ public abstract class State : ScriptableObject
     }
     public virtual void Enter() { }
     public virtual void HandleUpdate() { }
+    public virtual void HandleFixedUpdate() { }
     public virtual void EvaluateTransitions() { }
     public virtual void Exit() { }
 }
