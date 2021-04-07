@@ -8,22 +8,39 @@ public class PlayerCombat : MonoBehaviour
     public CombatState[] states;
 
     private StateMachine stateMachine;
-
+    
+    [SerializeField] private ObjectPooler pool;
     [SerializeField] private GameObject crosshair;
+    [SerializeField] private Camera cam;
+    [SerializeField] private Transform firePoint;
     private bool shootInput = false;
     private bool attackInput = false;
     private bool aimInput = false;
 
+    private Vector3 crossHairTarget;
+    private Ray chRay;
+    private RaycastHit chHitInfo;
+
     public bool ShootInput { get => shootInput; set => shootInput = value; }
     public bool AttackInput { get => attackInput; set => attackInput = value; }
     public bool AimInput { get => aimInput; set => aimInput = value; }
+
+    public ObjectPooler GetObjectPooler() { return pool; }
+    public Transform FirePoint { get => firePoint; set => firePoint = value; }
+    public Camera GetCamera() { return cam; }
+        
+    public Vector3 GetCrossHairTarget() { return crossHairTarget; }
 
     private void Awake()
     {
         stateMachine = new StateMachine(this, states);
     }
 
-    private void Update() => stateMachine.HandleUpdate();
+    private void Update()
+    {
+        stateMachine.HandleUpdate();
+        SetCrossHairTarget();
+    }
 
     private void OnEnable()
     {
@@ -46,15 +63,20 @@ public class PlayerCombat : MonoBehaviour
     private void OnAim() => aimInput = true;
     private void OnAimCanceled() => aimInput = false;
 
-    public void TurnOffCrosshair()
+    public void SetCrosshair(bool b)
     {
-        crosshair.SetActive(false);
+        crosshair.SetActive(b);
     }
 
-    public void TurnOnCrosshair()
+    private void SetCrossHairTarget()
     {
-        crosshair.SetActive(true);
+        
+        chRay.origin = cam.transform.position;
+        chRay.direction = cam.transform.forward;
+        Physics.Raycast(chRay, out chHitInfo);
+        crossHairTarget = chHitInfo.point;
     }
+
 
 
 }

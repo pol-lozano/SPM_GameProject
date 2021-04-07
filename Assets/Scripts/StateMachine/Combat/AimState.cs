@@ -10,26 +10,25 @@ public class AimState : CombatState
     public override void Enter()
     {
         Debug.Log("AIM");
-        Player.TurnOnCrosshair();
+        Player.SetCrosshair(true);
     }
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        //vill man sakta ner tiden lite när man siktar??
+        //vill man sakta ner tiden lite när man siktar... asså typ 0.95%??
 
-        if (Player.ShootInput)
-        {
-            Player.TurnOffCrosshair();
-            stateMachine.Transition<ShootState>();
-        }
-            
+    }
 
-        if (!Player.AimInput)
-        {
-            Player.TurnOffCrosshair();
-            stateMachine.Transition<BaseState>();
-        }
-            
+    public override void EvaluateTransitions()
+    {
+        if (Player.ShootInput) stateMachine.Transition<ShootState>();
+        if (!Player.AimInput) stateMachine.Transition<IdleState>();
+    }
+
+    public override void Exit()
+    {
+        Debug.Log("EXIT AIM");
+        Player.SetCrosshair(false);
     }
 
 }
