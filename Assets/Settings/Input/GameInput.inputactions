@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "Normalize(max=1)",
                     "interactions": ""
+                },
+                {
+                    "name": "Dodge",
+                    "type": "Button",
+                    "id": "727538d3-32fe-4a1d-a6e8-f7bc132eb940",
+                    "expectedControlType": "Button",
+                    "processors": "Normalize(max=1)",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -217,6 +225,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e4746a1-d391-49d3-83ce-b514aaee054c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Dodge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1d34947-90d3-4746-a343-2067398cdce5",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Dodge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

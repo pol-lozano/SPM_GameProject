@@ -7,7 +7,6 @@ public class Projectile : MonoBehaviour
     [SerializeField] private LayerMask collisionLayer;
     [SerializeField] private float force;
     [SerializeField] private float lifetime;
-    [SerializeField] private GameObject parent;
     private Rigidbody rb;
 
     private void Awake()
@@ -20,7 +19,7 @@ public class Projectile : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
         Invoke("Disable", lifetime);
-        rb.AddForce(transform.forward * force);
+        
     }
 
     private void Update()
@@ -28,6 +27,10 @@ public class Projectile : MonoBehaviour
         
     }
 
+    public void SetForce(Vector3 dir)
+    {
+        rb.AddForce(dir * force);
+    }
     public void SetActive(bool b)
     {
         gameObject.SetActive(b);

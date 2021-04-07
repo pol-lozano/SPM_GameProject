@@ -18,7 +18,7 @@ public class ShootState : AimState
     public override void Enter()
     {
         
-        Debug.Log("SKJUT");
+        //Debug.Log("SKJUT");
         //logik för skott
 
         StartShooting();
@@ -66,11 +66,12 @@ public class ShootState : AimState
         }
         */
         
-        GameObject arrow = ObjectPooler.current.GetPooledObject();
+        GameObject g = ArrowPooler.current.GetPooledObject();
+        Projectile arrow = g.GetComponent<Projectile>();
         arrow.transform.position = Player.FirePoint.position;
         arrow.transform.LookAt(Player.GetCrossHairTarget());
         arrow.SetActive(true);
-        
+        arrow.SetForce((Player.GetCrossHairTarget() - arrow.transform.position).normalized);
     }
     public override void EvaluateTransitions()
     {

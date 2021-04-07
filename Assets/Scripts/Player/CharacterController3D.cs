@@ -17,6 +17,7 @@ public class CharacterController3D : MonoBehaviour
     private StateMachine stateMachine;
 
     public Vector2 rawInput;
+    public bool dodgeInput;
 
     private void Awake()
     {
@@ -27,15 +28,18 @@ public class CharacterController3D : MonoBehaviour
 
     private void OnEnable()
     {
-        input.moveEvent += OnMove;   
+        input.moveEvent += OnMove;
+        input.dodgeEvent += OnDodge;
     }
 
     private void OnDisable()
     {
-        input.moveEvent -= OnMove;      
+        input.moveEvent -= OnMove;
+        input.dodgeEvent -= OnDodge;
     }
 
     private void OnMove(Vector2 input) => rawInput = Vector2.ClampMagnitude(input, 1f);
+    private void OnDodge() => dodgeInput = true;
 
     public Vector3 GetInput()
     {

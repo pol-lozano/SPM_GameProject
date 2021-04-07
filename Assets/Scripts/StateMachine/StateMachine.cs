@@ -31,7 +31,7 @@ public class StateMachine
         //CurrentState.Exit();
         
         states.Push(typeof(T));
-        Debug.Log(" entering state: " + CurrentState.GetType());
+        //Debug.Log(" entering state: " + CurrentState.GetType());
         CurrentState.Enter();
     }
 

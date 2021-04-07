@@ -9,7 +9,7 @@ public class MeleeAttackState : CombatState
     [SerializeField] private float attackTimer;
     public override void Enter()
     {
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
         //logik för attack och animationer
         attackCooldown = attackTimer;
     }

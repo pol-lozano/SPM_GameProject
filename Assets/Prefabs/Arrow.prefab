@@ -276,6 +276,5 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
-  force: 30
+  force: 50
   lifetime: 5
-  parent: {fileID: 0}

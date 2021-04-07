@@ -9,7 +9,7 @@ public class AimState : CombatState
     
     public override void Enter()
     {
-        Debug.Log("AIM");
+        //Debug.Log("AIM");
         Player.SetCrosshair(true);
     }
     public override void HandleUpdate()

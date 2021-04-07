@@ -181,13 +181,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b2aeadbb326e245b320590cf1690f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
   PhysicsComponent: {fileID: 0}
+  Animator: {fileID: 0}
+  input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
+  playerMesh: {fileID: 0}
   mainCamera: {fileID: 0}
   states:
   - {fileID: 11400000, guid: da4c564b52feea44095156ed082ba9ac, type: 2}
-  - {fileID: 11400000, guid: 30ad19b035ade9347bd4f2305788763b, type: 2}
   - {fileID: 11400000, guid: 9f99d12394a9db54abbb99ebfe4b8264, type: 2}
+  - {fileID: 11400000, guid: 6f122bc2b3c659a41807a168c769f4e4, type: 2}
+  rawInput: {x: 0, y: 0}
+  dodgeInput: 0
 --- !u!114 &2104137301
 MonoBehaviour:
   m_ObjectHideFlags: 0

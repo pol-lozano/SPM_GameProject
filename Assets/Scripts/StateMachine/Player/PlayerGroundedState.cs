@@ -25,6 +25,7 @@ public class PlayerGroundedState : PlayerState
 
     public override void EvaluateTransitions()
     {
+        if (Player.dodgeInput) stateMachine.Transition<PlayerDodgeState>();
         if (!Player.PhysicsComponent.IsGrounded) stateMachine.Transition<PlayerFallingState>();
     }
 

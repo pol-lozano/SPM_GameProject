@@ -13,6 +13,7 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction aimEvent = delegate { };
     public event UnityAction aimEventCanceled = delegate { };
     public event UnityAction attackEvent = delegate { };
+    public event UnityAction dodgeEvent = delegate { };
 
 
     private GameInput gameInput;
@@ -77,6 +78,11 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public void OnAttack(InputAction.CallbackContext context)
     {
         attackEvent.Invoke();
+    }
+
+    public void OnDodge(InputAction.CallbackContext context)
+    {
+        dodgeEvent.Invoke();
     }
     //*********************************************************
 

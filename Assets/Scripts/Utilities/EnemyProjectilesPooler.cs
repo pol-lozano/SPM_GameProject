@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : MonoBehaviour
+public class EnemyProjectilesPooler : MonoBehaviour
 {
 
-    public static ObjectPooler current;
+    public static EnemyProjectilesPooler current;
     [SerializeField] private GameObject pooledObject;
     [SerializeField] private int poolAmount;
     [SerializeField] private bool willGrow;
@@ -34,9 +34,16 @@ public class ObjectPooler : MonoBehaviour
         foreach(GameObject g in pool)
         {
             if (!g.activeInHierarchy)
+            {
                 return g;
+            }
+                
         }
-        
+
+        if (willGrow)
+        {
+
+        }
 
         return null;
     }
