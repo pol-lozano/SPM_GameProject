@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class ShootState : CombatState
+public class ShootState : AimState
 {
     [SerializeField] private float shotCooldown;
     [SerializeField] private float shotTimer;
+
+    private Ray ray;
+    private RaycastHit hitInfo;
+
+    //-------------------------
+    private float fireRate = 1;
+    private float accumulatedTime;
+    //-------------------------
     public override void Enter()
     {
+        
         Debug.Log("SKJUT");
         //logik för skott
+
+        StartShooting();
 
         shotCooldown = shotTimer;
         
@@ -18,11 +29,51 @@ public class ShootState : CombatState
 
     public override void HandleUpdate()
     {
+        UpdateShooting(Time.deltaTime);
         shotCooldown -= Time.deltaTime;
         Player.ShootInput = false;
         Player.AttackInput = false;
+    }
 
-        if (shotCooldown < 0)
-            stateMachine.Transition<BaseState>();
+    private void StartShooting()
+    {
+        accumulatedTime = 0.0f;
+        Shoot();
+    }
+
+    private void UpdateShooting(float deltatime)
+    {
+        accumulatedTime += deltatime;
+        float fireInterval = 1.0f / fireRate;
+        while(accumulatedTime >= 0.0f)
+        {
+            Shoot();
+            accumulatedTime -= fireInterval;
+        }
+    }
+
+    private void Shoot()
+    {
+        //DETTA KAN ÄNDRAS NÄR KARAKTÄREN ROTERAS PÅ RÄTT SÄTT
+        
+        Player.FirePoint.rotation = Player.GetCamera().transform.rotation;
+        ray.origin = Player.FirePoint.position;
+        ray.direction = Player.GetCrossHairTarget() - Player.FirePoint.position;
+
+        if(Physics.Raycast(ray, out hitInfo))
+        {
+            Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1);
+        }
+        
+        /*
+        GameObject arrow = ObjectPooler.current.GetPooledObject();
+        arrow.transform.position = Player.FirePoint.position;
+        arrow.transform.LookAt(Player.GetCrossHairTarget());
+        arrow.SetActive(true);
+        */
+    }
+    public override void EvaluateTransitions()
+    {
+        if (shotCooldown < 0) stateMachine.Transition<AimState>();
     }
 }

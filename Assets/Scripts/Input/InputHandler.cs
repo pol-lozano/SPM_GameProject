@@ -12,7 +12,7 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction<float> cameraZoomEvent = delegate { };
 
     public event UnityAction shootEvent = delegate { };
-    public event UnityAction shootEventCanceled = delegate { };
+    //public event UnityAction shootEventCanceled = delegate { };
     public event UnityAction aimEvent = delegate { };
     public event UnityAction aimEventCanceled = delegate { };
     public event UnityAction attackEvent = delegate { };

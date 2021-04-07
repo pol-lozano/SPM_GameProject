@@ -28,7 +28,7 @@ public class StateMachine
 
     public void Push<T>(object param = null) where T : State
     {
-        CurrentState.Exit();
+        //CurrentState.Exit();
         
         states.Push(typeof(T));
         Debug.Log(" entering state: " + CurrentState.GetType());
@@ -47,6 +47,7 @@ public class StateMachine
     //State machine should Either use transition or pop from exit
     public void Transition<T>() where T : State
     {
+        CurrentState.Exit();
         //Ignore transition if it doesn't exist
         if (stateDictionary.ContainsKey(typeof(T)))
         {
