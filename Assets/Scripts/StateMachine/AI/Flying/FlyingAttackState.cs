@@ -47,12 +47,13 @@ public class FlyingAttackState : EnemyState
         
         //stateMachine.Transition<FlyingDeadState>();
         // Insert some attack logic here
-        GameObject g = EnemyProjectilesPooler.current.GetPooledObject();
+        GameObject g = AIController.pooler.SpawnFromPool("shadowball");
         Projectile proj = g.GetComponent<Projectile>();
         proj.transform.position = AIController.transform.position;
+        proj.transform.rotation = AIController.transform.rotation;
         proj.SetActive(true);
         //skjuter i fel jävla riktning och fattar inte varför
-        proj.SetForce(AIController.player.transform.position.normalized - AIController.transform.position);
+        proj.SetForce(AIController.player.transform.position - proj.transform.position);
 
 
 

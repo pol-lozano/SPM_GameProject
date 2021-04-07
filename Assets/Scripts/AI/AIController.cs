@@ -14,6 +14,7 @@ public class AIController : MonoBehaviour
 
     public LayerMask visionMask;
     public CharacterController3D player;
+    public ObjectPooler pooler;
 
     private void Awake()
     {

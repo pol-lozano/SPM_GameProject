@@ -52,7 +52,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &952488236611278251
+--- !u!1 &4518280992757342047
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,44 +60,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4763615765720563396}
-  - component: {fileID: 7522393882511728779}
-  m_Layer: 0
-  m_Name: ObjectPooler
+  - component: {fileID: 1512625171421846624}
+  m_Layer: 6
+  m_Name: firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4763615765720563396
+--- !u!4 &1512625171421846624
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952488236611278251}
+  m_GameObject: {fileID: 4518280992757342047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5030949066807183702}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7522393882511728779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952488236611278251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee12802a100978648bc4dbb13e357cfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObject: {fileID: 1046293138078805759, guid: 8131fc8fac5290f4695e5c96529b8d17, type: 3}
-  poolAmount: 10
-  willGrow: 0
 --- !u!1 &5030949066807183690
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,8 +115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 67993080673059192}
-  - {fileID: 8664123966473184433}
-  - {fileID: 4763615765720563396}
+  - {fileID: 1512625171421846624}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,10 +214,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 714b54a91cb69f24886e53a07f02ecbd, type: 2}
   - {fileID: 11400000, guid: db7cf64996a086e4bb59e127dd11fc92, type: 2}
   - {fileID: 11400000, guid: d24835702dcf6d542932f922cf4e1592, type: 2}
-  pool: {fileID: 7522393882511728779}
+  pool: {fileID: 0}
   crosshair: {fileID: 0}
   cam: {fileID: 0}
-  firePoint: {fileID: 8664123966473184433}
+  firePoint: {fileID: 0}
 --- !u!1 &5654245298104915456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,33 +2274,3 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0002542138, y: 0.000000059604645, z: 0.03931535}
     m_Extent: {x: 0.99103147, y: 0.9067649, z: 0.24027756}
   m_DirtyAABB: 0
---- !u!1 &8917411390767543592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8664123966473184433}
-  m_Layer: 0
-  m_Name: Firepoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8664123966473184433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8917411390767543592}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.020109832, y: 1.0392694, z: 0.046426386}
-  m_LocalScale: {x: 0.41579205, y: 0.207439, z: 0.87113833}
-  m_Children: []
-  m_Father: {fileID: 5030949066807183702}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

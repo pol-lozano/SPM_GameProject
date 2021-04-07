@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "EnemyState/Flying/StunState")]
 public class FlyingStunState : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float sinkingSpeed;
+    [SerializeField] private float stunTime;
+    private float timer;
+    
+  
+
+    public override void Enter()
     {
-        AIController.Agent.enabled = false;
+        AIController.Agent.SetDestination(AIController.transform.position);
+        timer = stunTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void HandleUpdate()
     {
-        
+        timer -= Time.deltaTime;
+        Sink();
+    }
+
+    void Sink()
+    {
+        if (AIController.Agent.baseOffset > 0.3)
+            AIController.Agent.baseOffset -= sinkingSpeed * Time.deltaTime;
+        else
+            AIController.Agent.baseOffset = 0;
+    }
+
+    public override void EvaluateTransitions()
+    {
+        //if(timer < 0)
+        //gå till ett RisingState
     }
 }

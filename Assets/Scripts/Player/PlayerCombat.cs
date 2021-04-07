@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour
 
     private StateMachine stateMachine;
     
-    [SerializeField] private ArrowPooler pool;
+    [SerializeField] private ObjectPooler pool;
     [SerializeField] private GameObject crosshair;
     [SerializeField] private Camera cam;
     [SerializeField] private Transform firePoint;
@@ -26,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
     public bool AttackInput { get => attackInput; set => attackInput = value; }
     public bool AimInput { get => aimInput; set => aimInput = value; }
 
-    public ArrowPooler GetObjectPooler() { return pool; }
+    public ObjectPooler GetObjectPooler() { return pool; }
     public Transform FirePoint { get => firePoint; set => firePoint = value; }
     public Camera GetCamera() { return cam; }
         
