@@ -98,4 +98,6 @@ public class OrbitCamera : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, collisionRadius);
         Gizmos.DrawLine(transform.position, target.position);
     }
+
+    public Vector3 GetOffset() { return cameraOffset; }
 }
