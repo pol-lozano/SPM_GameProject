@@ -49,11 +49,18 @@ public class Projectile : MonoBehaviour
             rb.constraints = RigidbodyConstraints.FreezeAll;
             rb.velocity = Vector3.zero;
         }
-
+        
         var hit = collision.gameObject.GetComponent<HitBox>();
         if (hit)
         {
-            hit.OnGetHit(collision);
+            hit.OnGetHit(collision, 1);
+        }
+        
+        var obj = collision.gameObject.GetComponentInParent<AIController>();
+        if (obj)
+        {
+            print("STUN");
+            obj.isStunned = true;
         }
     }
 

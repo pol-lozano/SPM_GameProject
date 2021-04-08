@@ -15,6 +15,7 @@ public class FlyingRisingState : EnemyState
     {
         AIController.Agent.SetDestination(AIController.transform.position);
         timer = stunTime;
+        Debug.Log("STUN");
     }
 
     public override void HandleUpdate()

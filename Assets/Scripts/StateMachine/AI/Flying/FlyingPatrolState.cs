@@ -32,6 +32,8 @@ public class FlyingPatrolState : EnemyState
             stateMachine.Transition<FlyingChaseState>();
         else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)
             stateMachine.Transition<FlyingAlertState>();
+        else if (AIController.isStunned)
+            stateMachine.Transition<FlyingStunState>();
     }
 
     private void ChooseClosest()

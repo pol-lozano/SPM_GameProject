@@ -19,6 +19,8 @@ public abstract class EnemyState : State
 
     public override void EvaluateTransitions()
     {
+        //VI kanske kan lägga stun här men då måste stunState vara båda för båda fienderna?
+        //if (AIController.isStunned) stateMachine.Transition<StunState>();
         if(AIController.HealthComponent.dead) { stateMachine.Transition<EnemyDeadState>(); }
     }
 

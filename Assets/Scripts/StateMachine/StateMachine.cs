@@ -39,7 +39,7 @@ public class StateMachine
     {
         if (states.Count > 1)
         {
-            Debug.Log(" exiting state: " + CurrentState.GetType());
+            //Debug.Log(" exiting state: " + CurrentState.GetType());
             states.Pop();
         }
     }

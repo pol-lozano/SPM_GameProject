@@ -6,8 +6,8 @@ public class HitBox : MonoBehaviour
 {
     public HealthComponent health;
 
-    public void OnGetHit(Collision collision)
+    public void OnGetHit(Collision collision, int dmg)
     {
-        health.TakeDamage(1);
+        health.TakeDamage(dmg);
     }
 }

@@ -8,7 +8,7 @@ public class IdleState : CombatState
 
     public override void Enter()
     {
-        Debug.Log("Idle");
+
     }
     public override void HandleUpdate()
     {

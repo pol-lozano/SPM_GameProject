@@ -27,7 +27,6 @@ public class AimState : CombatState
 
     public override void Exit()
     {
-        Debug.Log("EXIT AIM");
         Player.SetCrosshair(false);
     }
 

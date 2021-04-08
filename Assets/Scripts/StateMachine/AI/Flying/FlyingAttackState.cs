@@ -36,10 +36,10 @@ public class FlyingAttackState : EnemyState
     {
         if (!CanSeePlayer())
             stateMachine.Transition<FlyingAlertState>();
-        if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > chaseDistance)
+        else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > chaseDistance)
             stateMachine.Transition<FlyingChaseState>();
-        //if (Input.GetKeyDown(KeyCode.Space))
-            //stateMachine.Transition<EnemyFleeState>();
+        else if (AIController.isStunned)
+            stateMachine.Transition<FlyingStunState>();
     }
 
     private void Attack()

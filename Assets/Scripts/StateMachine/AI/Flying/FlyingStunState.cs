@@ -7,18 +7,22 @@ public class FlyingStunState : EnemyState
 {
     [SerializeField] private float sinkingSpeed;
     [SerializeField] private float stunTime;
-    private float timer;
+    public float timer;
     
   
 
     public override void Enter()
     {
         AIController.Agent.SetDestination(AIController.transform.position);
+        AIController.isStunned = false;
         timer = stunTime;
+        Debug.Log("STUN");
+        base.Enter();
     }
 
     public override void HandleUpdate()
     {
+        base.HandleUpdate();
         timer -= Time.deltaTime;
         Sink();
     }
@@ -33,7 +37,7 @@ public class FlyingStunState : EnemyState
 
     public override void EvaluateTransitions()
     {
-        if (timer < 0)
+        if (timer <= 0)
             stateMachine.Transition<FlyingRisingState>();
     }
 }
