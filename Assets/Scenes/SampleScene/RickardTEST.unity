@@ -2096,6 +2096,18 @@ PrefabInstance:
       propertyPath: pooler
       value: 
       objectReference: {fileID: 674696876}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 550007a6cfcdd3d47b9d9b70ae40bc0c, type: 2}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: b30a01d1d1dd2cf4886134806070bdf3, type: 2}
     - target: {fileID: 284472125766822081, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
       propertyPath: m_RootOrder
       value: 9

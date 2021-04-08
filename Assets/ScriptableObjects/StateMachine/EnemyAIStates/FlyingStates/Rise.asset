@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf4cbf2fe9cf6648b735617542fa467, type: 3}
-  m_Name: Stun
+  m_Script: {fileID: 11500000, guid: 12d5cb3b10e2d1c42bb5d61d1e4e8cbd, type: 3}
+  m_Name: Rise
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  sinkingSpeed: 4
+  riseSpeed: 4
   stunTime: 3
