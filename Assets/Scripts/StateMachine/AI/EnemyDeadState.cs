@@ -7,7 +7,6 @@ public class EnemyDeadState : EnemyState
 {
     public override void Enter()
     {
-        base.Enter();
         AIController.ActivateRagdoll();
         //Play death sound and fx
     }

@@ -9,6 +9,7 @@ public class AIController : MonoBehaviour
     [HideInInspector] public MeshRenderer Renderer;
     [HideInInspector] public NavMeshAgent Agent;
     [HideInInspector] public Animator Animator;
+    [HideInInspector] public HealthComponent HealthComponent;
 
     Rigidbody[] rigidBodies;
 
@@ -16,16 +17,23 @@ public class AIController : MonoBehaviour
     public CharacterController3D player;
     public ObjectPooler pooler;
 
+
     private void Awake()
     {
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();
+        HealthComponent = GetComponent<HealthComponent>();
 
         rigidBodies = GetComponentsInChildren<Rigidbody>();
         DeactivateRagdoll();
 
         stateMachine = new StateMachine(this, states);
+        foreach(var rb in rigidBodies)
+        {
+            HitBox hitBox = rb.gameObject.AddComponent<HitBox>();
+            hitBox.health = HealthComponent;
+        }
     }
 
     public void DeactivateRagdoll()

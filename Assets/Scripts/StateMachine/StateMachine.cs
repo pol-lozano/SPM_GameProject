@@ -50,7 +50,7 @@ public class StateMachine
     {
         CurrentState.Exit();
         //Ignore transition if it doesn't exist
-        if (stateDictionary.ContainsKey(typeof(T)))
+        if (stateDictionary.ContainsKey(typeof(T)) && CurrentState.GetType() != typeof(T))
         {
             Pop();
             Push<T>();

@@ -22,11 +22,6 @@ public class Projectile : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void SetForce(Vector3 dir)
     {
         rb.AddForce(dir * force);
@@ -53,6 +48,12 @@ public class Projectile : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
             rb.velocity = Vector3.zero;
+        }
+
+        var hit = collision.gameObject.GetComponent<HitBox>();
+        if (hit)
+        {
+            hit.OnGetHit(collision);
         }
     }
 

@@ -42,7 +42,6 @@ public class EnemyAttackState : EnemyState
         if (currentCool > 0)
             return;
 
-        stateMachine.Transition<EnemyDeadState>();
         // Insert some attack logic here
 
         currentCool = cooldown;

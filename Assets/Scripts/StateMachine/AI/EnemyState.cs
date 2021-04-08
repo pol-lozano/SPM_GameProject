@@ -14,8 +14,12 @@ public abstract class EnemyState : State
     }
     public override void HandleUpdate()
     {
-        AIController.Animator.SetFloat("Speed", AIController.Agent.velocity.magnitude);
-        
+        AIController.Animator.SetFloat("Speed", AIController.Agent.velocity.magnitude); 
+    }
+
+    public override void EvaluateTransitions()
+    {
+        if(AIController.HealthComponent.dead) { stateMachine.Transition<EnemyDeadState>(); }
     }
 
     protected bool CanSeePlayer()
