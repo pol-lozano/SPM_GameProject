@@ -669,6 +669,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "CrossHairTarget",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "EnemyAlertState",
             "moduleName": "",
             "usedInScenes": []
@@ -725,14 +732,14 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "FlyingDeadState",
+            "fullManagedTypeName": "FlyingPatrolState",
             "moduleName": "",
             "usedInScenes": []
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "FlyingPatrolState",
+            "fullManagedTypeName": "HealthComponent",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -859,13 +866,6 @@
             "managedAssemblyName": "Unity.Animation.Rigging.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Animations.Rigging.TwoBoneIKConstraint",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.InputSystem.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.InputSystem.InputActionAsset",
             "moduleName": "",
             "usedInScenes": []
         },

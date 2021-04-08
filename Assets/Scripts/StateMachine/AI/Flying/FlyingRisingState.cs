@@ -33,6 +33,8 @@ public class FlyingRisingState : EnemyState
 
     public override void EvaluateTransitions()
     {
+        base.EvaluateTransitions();
+
         if (timer < 0)
             stateMachine.Transition<FlyingPatrolState>();
     }
