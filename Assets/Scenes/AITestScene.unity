@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1478.8593, g: 1831.9368, b: 2425.4312, a: 1}
+  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7826,6 +7826,22 @@ PrefabInstance:
       propertyPath: pooler
       value: 
       objectReference: {fileID: 1813781370}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 550007a6cfcdd3d47b9d9b70ae40bc0c, type: 2}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: b30a01d1d1dd2cf4886134806070bdf3, type: 2}
+    - target: {fileID: 284472125766726958, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: states.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c6b7ee192e24974e9c7b6debe59255c, type: 2}
     - target: {fileID: 284472125766822081, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
       propertyPath: m_RootOrder
       value: 13
