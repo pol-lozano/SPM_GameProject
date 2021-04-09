@@ -9,5 +9,6 @@ public class EnemyDeadState : EnemyState
     {
         AIController.ActivateRagdoll();
         //Play death sound and fx
+        AIController.Agent.SetDestination(AIController.transform.position);
     }
 }

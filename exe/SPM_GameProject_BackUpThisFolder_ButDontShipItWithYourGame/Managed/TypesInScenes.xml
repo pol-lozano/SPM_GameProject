@@ -68,6 +68,7 @@
 		<type fullname="AIController" preserve="nothing"/>
 		<type fullname="AimState" preserve="nothing"/>
 		<type fullname="CharacterController3D" preserve="nothing"/>
+		<type fullname="CrossHairTarget" preserve="nothing"/>
 		<type fullname="EnemyAlertState" preserve="nothing"/>
 		<type fullname="EnemyAttackState" preserve="nothing"/>
 		<type fullname="EnemyChaseState" preserve="nothing"/>
@@ -76,8 +77,8 @@
 		<type fullname="FlyingAlertState" preserve="nothing"/>
 		<type fullname="FlyingAttackState" preserve="nothing"/>
 		<type fullname="FlyingChaseState" preserve="nothing"/>
-		<type fullname="FlyingDeadState" preserve="nothing"/>
 		<type fullname="FlyingPatrolState" preserve="nothing"/>
+		<type fullname="HealthComponent" preserve="nothing"/>
 		<type fullname="IdleState" preserve="nothing"/>
 		<type fullname="InputHandler" preserve="nothing"/>
 		<type fullname="MeleeAttackState" preserve="nothing"/>
@@ -100,7 +101,6 @@
 		<type fullname="UnityEngine.Animations.Rigging.TwoBoneIKConstraint" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
-		<type fullname="UnityEngine.InputSystem.InputActionAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputSystemObject" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
@@ -151,6 +151,7 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.MotionBlur" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ScreenSpaceRefraction" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.StaticLightingSky" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Tonemapping" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.VisualEnvironment" preserve="nothing"/>
 	</assembly>

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 284472125766822081}
   - component: {fileID: 284472125757196121}
   - component: {fileID: 284472125766726958}
+  - component: {fileID: 7012520304643152198}
   - component: {fileID: 284472125766726944}
   m_Layer: 0
   m_Name: FlyingAI
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284472125766726945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.99, y: 7.1800003, z: 38.96}
+  m_LocalPosition: {x: 14.99, y: 7.1800003, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1758339858653636969}
@@ -49,165 +50,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: '
-
-    Transform ''B-head'' has been deleted
-
-    Transform ''B-neck''
-    has been deleted
-
-    Transform ''B-f_index_03_L'' has been deleted
-
-    Transform
-    ''B-f_index_02_L'' has been deleted
-
-    Transform ''B-f_index_01_L'' has been
-    deleted
-
-    Transform ''B-thumb_03_L'' has been deleted
-
-    Transform ''B-thumb_02_L''
-    has been deleted
-
-    Transform ''B-thumb_01_L'' has been deleted
-
-    Transform
-    ''B-palm_01_L'' has been deleted
-
-    Transform ''B-f_middle_03_L'' has been
-    deleted
-
-    Transform ''B-f_middle_02_L'' has been deleted
-
-    Transform ''B-f_middle_01_L''
-    has been deleted
-
-    Transform ''B-palm_02_L'' has been deleted
-
-    Transform
-    ''B-f_ring_03_L'' has been deleted
-
-    Transform ''B-f_ring_02_L'' has been
-    deleted
-
-    Transform ''B-f_ring_01_L'' has been deleted
-
-    Transform ''B-palm_03_L''
-    has been deleted
-
-    Transform ''B-f_pinky_03_L'' has been deleted
-
-    Transform
-    ''B-f_pinky_02_L'' has been deleted
-
-    Transform ''B-f_pinky_01_L'' has been
-    deleted
-
-    Transform ''B-palm_04_L'' has been deleted
-
-    Transform ''B-hand_L''
-    has been deleted
-
-    Transform ''B-forearm_L'' has been deleted
-
-    Transform
-    ''B-upper_arm_L'' has been deleted
-
-    Transform ''B-shoulder_L'' has been deleted
-
-    Transform
-    ''B-f_index_03_R'' has been deleted
-
-    Transform ''B-f_index_02_R'' has been
-    deleted
-
-    Transform ''B-f_index_01_R'' has been deleted
-
-    Transform ''B-thumb_03_R''
-    has been deleted
-
-    Transform ''B-thumb_02_R'' has been deleted
-
-    Transform
-    ''B-thumb_01_R'' has been deleted
-
-    Transform ''B-palm_01_R'' has been deleted
-
-    Transform
-    ''B-f_middle_03_R'' has been deleted
-
-    Transform ''B-f_middle_02_R'' has been
-    deleted
-
-    Transform ''B-f_middle_01_R'' has been deleted
-
-    Transform ''B-palm_02_R''
-    has been deleted
-
-    Transform ''B-f_ring_03_R'' has been deleted
-
-    Transform
-    ''B-f_ring_02_R'' has been deleted
-
-    Transform ''B-f_ring_01_R'' has been
-    deleted
-
-    Transform ''B-palm_03_R'' has been deleted
-
-    Transform ''B-f_pinky_03_R''
-    has been deleted
-
-    Transform ''B-f_pinky_02_R'' has been deleted
-
-    Transform
-    ''B-f_pinky_01_R'' has been deleted
-
-    Transform ''B-palm_04_R'' has been deleted
-
-    Transform
-    ''B-hand_R'' has been deleted
-
-    Transform ''B-forearm_R'' has been deleted
-
-    Transform
-    ''B-upper_arm_R'' has been deleted
-
-    Transform ''B-shoulder_R'' has been deleted
-
-    Transform
-    ''B-upperChest'' has been deleted
-
-    Transform ''B-chest'' has been deleted
-
-    Transform
-    ''B-spine'' has been deleted
-
-    Transform ''B-toe_L'' has been deleted
-
-    Transform
-    ''B-foot_L'' has been deleted
-
-    Transform ''B-shin_L'' has been deleted
-
-    Transform
-    ''B-thigh_L'' has been deleted
-
-    Transform ''B-toe_R'' has been deleted
-
-    Transform
-    ''B-foot_R'' has been deleted
-
-    Transform ''B-shin_R'' has been deleted
-
-    Transform
-    ''B-thigh_R'' has been deleted
-
-    Transform ''B-hips'' has been deleted
-
-    Transform
-    ''root'' has been deleted
-
-    Transform ''DummySkeleton'' has been deleted'
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -228,15 +71,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fad3d8b35fd30184b8bb5816fed2d07c, type: 2}
   - {fileID: 11400000, guid: 7d60ca8a0cb32114baac6d327b73c381, type: 2}
   - {fileID: 11400000, guid: 9b6e7b499de319045a71656758c4b937, type: 2}
-  - {fileID: 11400000, guid: 3aa568c49ccd6684199880271d63ddab, type: 2}
+  - {fileID: 11400000, guid: 7c6b7ee192e24974e9c7b6debe59255c, type: 2}
   Renderer: {fileID: 0}
   Agent: {fileID: 0}
   Animator: {fileID: 0}
+  HealthComponent: {fileID: 0}
   visionMask:
     serializedVersion: 2
     m_Bits: 8
   player: {fileID: 0}
   pooler: {fileID: 0}
+--- !u!114 &7012520304643152198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284472125766726945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88a52f1c793a2c47b0faf82a26b8901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
+  dead: 0
 --- !u!195 &284472125766726944
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -271,6 +130,7 @@ GameObject:
   - component: {fileID: 1758339858653636970}
   - component: {fileID: 1758339858653636971}
   - component: {fileID: 1758339858653636968}
+  - component: {fileID: 8846546574329677175}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -354,3 +214,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8846546574329677175
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758339858653636974}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

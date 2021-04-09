@@ -15,6 +15,10 @@ public class EnemyPatrolState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        //Set to local space
+        for(int i = 0; i < patrolPoints.Length; i++){
+            patrolPoints[i] = AIController.transform.position + patrolPoints[i];
+        }
         ChooseClosest();
     }
 
@@ -28,6 +32,8 @@ public class EnemyPatrolState : EnemyState
     }
     public override void EvaluateTransitions()
     {
+        base.EvaluateTransitions();
+
         if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
         else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)

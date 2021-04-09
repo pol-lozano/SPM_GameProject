@@ -152,23 +152,23 @@ static const Il2CppTokenRangePair s_rgctxIndices[3] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[17] = 
 {
-	{ (Il2CppRGCTXDataType)3, 17366 },
-	{ (Il2CppRGCTXDataType)3, 37664 },
-	{ (Il2CppRGCTXDataType)3, 37667 },
+	{ (Il2CppRGCTXDataType)3, 17363 },
+	{ (Il2CppRGCTXDataType)3, 37663 },
 	{ (Il2CppRGCTXDataType)3, 37666 },
-	{ (Il2CppRGCTXDataType)3, 17372 },
+	{ (Il2CppRGCTXDataType)3, 37665 },
+	{ (Il2CppRGCTXDataType)3, 17369 },
 	{ (Il2CppRGCTXDataType)3, 9114 },
 	{ (Il2CppRGCTXDataType)2, 474 },
 	{ (Il2CppRGCTXDataType)2, 833 },
-	{ (Il2CppRGCTXDataType)3, 17416 },
+	{ (Il2CppRGCTXDataType)3, 17413 },
 	{ (Il2CppRGCTXDataType)3, 9113 },
 	{ (Il2CppRGCTXDataType)2, 1730 },
-	{ (Il2CppRGCTXDataType)3, 17414 },
+	{ (Il2CppRGCTXDataType)3, 17411 },
 	{ (Il2CppRGCTXDataType)2, 832 },
 	{ (Il2CppRGCTXDataType)2, 473 },
-	{ (Il2CppRGCTXDataType)3, 17415 },
-	{ (Il2CppRGCTXDataType)3, 17413 },
 	{ (Il2CppRGCTXDataType)3, 17412 },
+	{ (Il2CppRGCTXDataType)3, 17410 },
+	{ (Il2CppRGCTXDataType)3, 17409 },
 };
 extern const CustomAttributesCacheGenerator g_UnityEngine_SubsystemsModule_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SubsystemsModule_CodeGenModule;

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcb85238635a6643b46333b9b0d4263, type: 3}
   m_Name: EnemyPatrolState
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   patrolPoints:
-  - {x: 0, y: 0, z: 0}
-  - {x: 4, y: 0, z: 0}
-  - {x: 0, y: 0, z: 5}
+  - {x: 0, y: 0, z: -6}
+  - {x: 6, y: 0, z: 0}
+  - {x: 0, y: 0, z: 6}
   chaseDistance: 10
   hearingRange: 15
