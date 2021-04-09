@@ -59,7 +59,6 @@ public class Projectile : MonoBehaviour
         var obj = collision.gameObject.GetComponentInParent<AIController>();
         if (obj)
         {
-            print("STUN");
             obj.isStunned = true;
         }
     }

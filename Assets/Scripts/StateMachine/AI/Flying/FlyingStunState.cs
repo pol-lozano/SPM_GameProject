@@ -37,6 +37,7 @@ public class FlyingStunState : EnemyState
 
     public override void EvaluateTransitions()
     {
+        base.EvaluateTransitions();
         if (timer <= 0)
             stateMachine.Transition<FlyingRisingState>();
     }

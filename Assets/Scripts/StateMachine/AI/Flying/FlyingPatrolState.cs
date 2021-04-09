@@ -11,7 +11,6 @@ public class FlyingPatrolState : EnemyState
 
     private int currentPoint = 0;
 
-    // Methods
     public override void Enter()
     {
         base.Enter();
@@ -28,6 +27,7 @@ public class FlyingPatrolState : EnemyState
     }
     public override void EvaluateTransitions()
     {
+        base.EvaluateTransitions();
         if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
             stateMachine.Transition<FlyingChaseState>();
         else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)

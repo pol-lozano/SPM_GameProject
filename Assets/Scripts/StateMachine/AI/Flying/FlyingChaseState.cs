@@ -20,7 +20,7 @@ public class FlyingChaseState : EnemyState
 
     public override void EvaluateTransitions()
     {
-
+        base.EvaluateTransitions();
         if (!CanSeePlayer())
             stateMachine.Transition<FlyingAlertState>();
         else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < attackDistance)
