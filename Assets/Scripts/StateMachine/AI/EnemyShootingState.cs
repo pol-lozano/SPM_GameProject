@@ -23,6 +23,8 @@ public class EnemyShootingState : EnemyState
             stateMachine.Transition<EnemyAlertState>();
         if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
+        if (AIController.isStunned)
+            stateMachine.Transition<EnemyStunState>();
     }
 
 

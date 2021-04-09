@@ -6,30 +6,33 @@ using UnityEngine;
 public class EnemyStunState : EnemyState
 {
     [SerializeField] private float stunTime;
-    [SerializeField] private float stopTime;
-    [SerializeField] private int comeBackSpeed; /*Hastighet när fienden "vaknar upp igen". borde vara en lägre hastighet än andra moveSpeed.*/
+    //[SerializeField] private float stopTime;
+    //[SerializeField] private int comeBackSpeed; /*Hastighet när fienden "vaknar upp igen". borde vara en lägre hastighet än andra moveSpeed.*/
 
     private float stopTimer;
     private float stunTimer;
     public override void Enter()
     {
         base.Enter();
-        stopTimer = stopTime;
+        //stopTimer = stopTime;
         stunTimer = stunTime;
-        moveSpeed = 0;
+
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        stopTimer -= Time.deltaTime;
-        stunTimer -= Time.deltaTime;
 
+        //stopTimer -= Time.deltaTime;
+        stunTimer -= Time.deltaTime;
+        AIController.isStunned = false;
+
+        /*
         if(stopTimer < 0)
         {
-            stopTimer = 0;
-            moveSpeed = comeBackSpeed;
+            moveSpeed = (stopTimer * -1) * Time.deltaTime;
         }
+        */
     }
 
     public override void EvaluateTransitions()

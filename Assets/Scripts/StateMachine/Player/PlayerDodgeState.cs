@@ -12,7 +12,6 @@ public class PlayerDodgeState : PlayerState
     private float coolTimer;
     public override void Enter()
     {
-        Debug.Log(input);
         coolTimer = cooldown;
 
     }

@@ -36,8 +36,10 @@ public class EnemyPatrolState : EnemyState
 
         if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)
+        if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)
             stateMachine.Transition<EnemyAlertState>();
+        if (AIController.isStunned)
+            stateMachine.Transition<EnemyStunState>();
     }
 
     private void ChooseClosest()

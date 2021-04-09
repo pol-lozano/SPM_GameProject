@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   chaseDistance: 10
+  patrolDistance: 20
+  alertTime: 5

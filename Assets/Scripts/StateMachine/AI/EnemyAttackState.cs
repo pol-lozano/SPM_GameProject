@@ -32,8 +32,10 @@ public class EnemyAttackState : EnemyState
             stateMachine.Transition<EnemyAlertState>();
         if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
+        if (AIController.isStunned)
+            stateMachine.Transition<EnemyStunState>();
         //if (Input.GetKeyDown(KeyCode.Space))
-            //stateMachine.Transition<EnemyFleeState>();
+        //stateMachine.Transition<EnemyFleeState>();
     }
 
     private void Attack()

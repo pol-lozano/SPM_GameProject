@@ -4886,8 +4886,9 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  force: 20
+  force: 30
   lifetime: 10
+  coll: {fileID: 7781284558354789549}
 --- !u!54 &5965819763731391866
 Rigidbody:
   m_ObjectHideFlags: 0

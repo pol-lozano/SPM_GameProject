@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private LayerMask collisionLayer;
     [SerializeField] private float force;
     [SerializeField] private float lifetime;
+    [SerializeField] private BoxCollider coll;
     private Rigidbody rb;
 
     private void Awake()
@@ -44,7 +45,9 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 3)
+        
+
+        if (collision.gameObject.layer == 3 || collision.gameObject.layer == 0)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
             rb.velocity = Vector3.zero;
@@ -61,6 +64,7 @@ public class Projectile : MonoBehaviour
         {
             obj.isStunned = true;
         }
+        coll.enabled = false;
     }
 
 

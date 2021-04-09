@@ -2561,6 +2561,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d682afb2271d5c34f841a07edf2f0a56, type: 2}
   - {fileID: 11400000, guid: 504ab595e5199d44bb966db299e801e4, type: 2}
   - {fileID: 11400000, guid: c87e410671adb6a46bf31d479c77e2cf, type: 2}
+  - {fileID: 11400000, guid: 6a7dd8b5c5213b84dbc7a3ceb3b7e03b, type: 2}
   - {fileID: 11400000, guid: 7c6b7ee192e24974e9c7b6debe59255c, type: 2}
   Renderer: {fileID: 0}
   Agent: {fileID: 0}
@@ -2571,6 +2572,7 @@ MonoBehaviour:
     m_Bits: 8
   player: {fileID: 0}
   pooler: {fileID: 0}
+  isStunned: 0
 --- !u!114 &5197897115592957901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,7 +2585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88a52f1c793a2c47b0faf82a26b8901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 5
   currentHealth: 0
   dead: 0
 --- !u!195 &1987289395923541323
