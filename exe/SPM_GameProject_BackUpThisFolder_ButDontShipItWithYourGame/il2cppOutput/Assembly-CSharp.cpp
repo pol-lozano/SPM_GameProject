@@ -11165,6 +11165,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyDeadState_Enter_m4F3BBA7A14EFD0AD54
 		L_0 = EnemyState_get_AIController_mBE39EFFEDCA584FB29AD977A713094BBC3EBECDC(__this, /*hidden argument*/NULL);
 		NullCheck(L_0);
 		AIController_ActivateRagdoll_mD2072855B3286D2434CDC04CC009A10E2EA9A102(L_0, /*hidden argument*/NULL);
+		// AIController.Agent.SetDestination(AIController.transform.position);
+		AIController_t79B964E91146AC59C27CD306018BA3E368831F34 * L_1;
+		L_1 = EnemyState_get_AIController_mBE39EFFEDCA584FB29AD977A713094BBC3EBECDC(__this, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		NavMeshAgent_tB9746B6C38013341DB63973CA7ED657494EFB41B * L_2 = L_1->get_Agent_7();
+		AIController_t79B964E91146AC59C27CD306018BA3E368831F34 * L_3;
+		L_3 = EnemyState_get_AIController_mBE39EFFEDCA584FB29AD977A713094BBC3EBECDC(__this, /*hidden argument*/NULL);
+		NullCheck(L_3);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_4;
+		L_4 = Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F(L_3, /*hidden argument*/NULL);
+		NullCheck(L_4);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_5;
+		L_5 = Transform_get_position_m40A8A9895568D56FFC687B57F30E8D53CB5EA341(L_4, /*hidden argument*/NULL);
+		NullCheck(L_2);
+		bool L_6;
+		L_6 = NavMeshAgent_SetDestination_m244EFBCDB717576303DA711EE39572B865F43747(L_2, L_5, /*hidden argument*/NULL);
 		// }
 		return;
 	}

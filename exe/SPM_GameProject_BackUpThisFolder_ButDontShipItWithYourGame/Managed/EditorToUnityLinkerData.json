@@ -1194,6 +1194,13 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.StaticLightingSky",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.Tonemapping",
             "moduleName": "",
             "usedInScenes": []

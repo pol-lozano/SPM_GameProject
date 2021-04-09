@@ -151,6 +151,7 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.MotionBlur" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ScreenSpaceRefraction" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.StaticLightingSky" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Tonemapping" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.VisualEnvironment" preserve="nothing"/>
 	</assembly>
