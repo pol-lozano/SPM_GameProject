@@ -5,6 +5,8 @@ public class AIController : MonoBehaviour
 {
     public State[] states;
     private StateMachine stateMachine;
+    public Transform[] patrols;
+    [SerializeField] private AIPath path;
 
     [HideInInspector] public MeshRenderer Renderer;
     [HideInInspector] public NavMeshAgent Agent;
@@ -50,6 +52,8 @@ public class AIController : MonoBehaviour
     }
 
     public void Update() => stateMachine.HandleUpdate();
+
+    public AIPath GetPath() { return path; }
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()

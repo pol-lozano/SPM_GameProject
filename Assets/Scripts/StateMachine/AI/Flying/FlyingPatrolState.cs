@@ -9,20 +9,29 @@ public class FlyingPatrolState : EnemyState
     [SerializeField] private float chaseDistance;
     [SerializeField] private float hearingRange;
 
-    private int currentPoint = 0;
+    private Transform currentPoint;
 
     public override void Enter()
     {
         base.Enter();
-        ChooseClosest();
+        //ChooseClosest();
+        currentPoint = AIController.GetPath().path[0];
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        AIController.Agent.SetDestination(patrolPoints[currentPoint]);
-        if (Vector3.Distance(AIController.transform.position, patrolPoints[currentPoint]) < AIController.Agent.stoppingDistance + 1)
-            currentPoint = (currentPoint + 1) % patrolPoints.Length;
+        
+        
+        Debug.Log(Vector3.Distance(AIController.transform.localPosition, currentPoint.position));
+        Debug.DrawLine(AIController.transform.position, currentPoint.position, Color.cyan, 0.2f);
+        AIController.Agent.SetDestination(currentPoint.position);
+        if (Vector3.Distance(AIController.transform.position, currentPoint.position) < AIController.Agent.stoppingDistance + 1)
+        {
+            Debug.Log("next point");
+            currentPoint = AIController.GetPath().Next();
+        }
+            
         
     }
     public override void EvaluateTransitions()
@@ -35,7 +44,7 @@ public class FlyingPatrolState : EnemyState
         else if (AIController.isStunned)
             stateMachine.Transition<FlyingStunState>();
     }
-
+    /*
     private void ChooseClosest()
     {
         int closest = 0;
@@ -47,4 +56,5 @@ public class FlyingPatrolState : EnemyState
         }
         currentPoint = closest;
     }
+    */
 }
