@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour
 
     private void OnEnable()
     {
+        coll.enabled = true;
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
         Invoke("Disable", lifetime);
