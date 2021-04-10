@@ -24,9 +24,6 @@ public class CrossHairTarget : MonoBehaviour
             transform.position = hitInfo.point;
         else
             transform.position = backupTarget.position;
-
-        //Debug.Log(Vector3.Distance(ray.origin, hitInfo.point));
-        Debug.DrawLine(ray.origin, transform.position, Color.cyan);
         
         if(Vector3.Distance(ray.origin, hitInfo.point) < 2f)
         {

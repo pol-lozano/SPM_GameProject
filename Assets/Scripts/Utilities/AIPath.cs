@@ -21,7 +21,6 @@ public class AIPath : MonoBehaviour
     {
         if (!Application.isPlaying) return;
         Gizmos.color = Color.black;
-        var p = path;
         Vector3 prevCorner = path[0].position;
         foreach (var corner in path)
         {
