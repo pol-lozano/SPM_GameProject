@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb56501b27babb7448d38ddb0ef68abb, type: 3}
   m_Name: Attack
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 0.5
   chaseDistance: 15
   cooldown: 4

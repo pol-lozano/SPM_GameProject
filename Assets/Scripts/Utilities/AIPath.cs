@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AIPath : MonoBehaviour
 {
-    public List<Transform> path;
-    public int current = 0;
+    [SerializeField] private List<Transform> path;
+    private int current = 0;
     
-
+    public List<Transform> GetPath { get => path; }
     public Transform Next()
     {
         current += 1;
@@ -15,4 +15,20 @@ public class AIPath : MonoBehaviour
             current = 0;
         return path[current];
     }
+
+    
+    private void OnDrawGizmos()
+    {
+        if (!Application.isPlaying) return;
+        Gizmos.color = Color.black;
+        var p = path;
+        Vector3 prevCorner = path[0].position;
+        foreach (var corner in path)
+        {
+            Gizmos.DrawLine(prevCorner, corner.position);
+            Gizmos.DrawSphere(corner.position, .2f);
+            prevCorner = corner.position;
+        }
+    }
+    
 }

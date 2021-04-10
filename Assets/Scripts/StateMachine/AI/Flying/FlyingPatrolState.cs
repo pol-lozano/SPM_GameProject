@@ -5,32 +5,28 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "EnemyState/Flying/PatrolState")]
 public class FlyingPatrolState : EnemyState
 { 
-    [SerializeField] private Vector3[] patrolPoints;
     [SerializeField] private float chaseDistance;
     [SerializeField] private float hearingRange;
 
-    private Transform currentPoint;
+    private Transform patrolPoint;
+    private Vector3 aiObj;
+    private Vector3 adjustedPoint;
 
     public override void Enter()
     {
         base.Enter();
-        //ChooseClosest();
-        currentPoint = AIController.GetPath().path[0];
+        patrolPoint = AIController.GetPath().GetPath[0];
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        
-        
-        Debug.Log(Vector3.Distance(AIController.transform.localPosition, currentPoint.position));
-        Debug.DrawLine(AIController.transform.position, currentPoint.position, Color.cyan, 0.2f);
-        AIController.Agent.SetDestination(currentPoint.position);
-        if (Vector3.Distance(AIController.transform.position, currentPoint.position) < AIController.Agent.stoppingDistance + 1)
-        {
-            Debug.Log("next point");
-            currentPoint = AIController.GetPath().Next();
-        }
+        aiObj = AIController.transform.position;
+        SetAdjustedPoint();
+        AIController.Agent.SetDestination(adjustedPoint);
+        if (Vector3.Distance(aiObj, adjustedPoint) < AIController.Agent.stoppingDistance + 1)
+            patrolPoint = AIController.GetPath().Next();
+
             
         
     }
@@ -44,6 +40,12 @@ public class FlyingPatrolState : EnemyState
         else if (AIController.isStunned)
             stateMachine.Transition<FlyingStunState>();
     }
+
+    private void SetAdjustedPoint()
+    {
+        adjustedPoint = new Vector3(patrolPoint.position.x, aiObj.y, patrolPoint.position.z);
+    }
+
     /*
     private void ChooseClosest()
     {

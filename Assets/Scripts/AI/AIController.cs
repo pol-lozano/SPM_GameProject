@@ -65,7 +65,7 @@ public class AIController : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Agent.desiredVelocity);
-
+        /*
         Gizmos.color = Color.black;
         var path = Agent.path;
         Vector3 prevCorner = transform.position;
@@ -75,6 +75,7 @@ public class AIController : MonoBehaviour
             Gizmos.DrawSphere(corner, .2f);
             prevCorner = corner;
         }
+        */
     }
 #endif
 }

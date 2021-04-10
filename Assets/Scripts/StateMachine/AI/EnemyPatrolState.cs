@@ -4,31 +4,31 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "EnemyState/PatrolState")]
 public class EnemyPatrolState : EnemyState
-{ 
-    [SerializeField] private Vector3[] patrolPoints;
+{
     [SerializeField] private float chaseDistance;
     [SerializeField] private float hearingRange;
 
-    private int currentPoint = 0;
+    private Transform patrolPoint;
+    private Vector3 aiObj;
+    private Vector3 adjustedPoint;
 
-    // Methods
     public override void Enter()
     {
         base.Enter();
-        //Set to local space
-        for(int i = 0; i < patrolPoints.Length; i++){
-            patrolPoints[i] = AIController.transform.position + patrolPoints[i];
-        }
-        ChooseClosest();
+        patrolPoint = AIController.GetPath().GetPath[0];
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        AIController.Agent.SetDestination(patrolPoints[currentPoint]);
-        if (Vector3.Distance(AIController.transform.position, patrolPoints[currentPoint]) < AIController.Agent.stoppingDistance + 1)
-            currentPoint = (currentPoint + 1) % patrolPoints.Length;
-        
+        aiObj = AIController.transform.position;
+        SetAdjustedPoint();
+        AIController.Agent.SetDestination(adjustedPoint);
+        if (Vector3.Distance(aiObj, adjustedPoint) < AIController.Agent.stoppingDistance + 1)
+            patrolPoint = AIController.GetPath().Next();
+
+
+
     }
     public override void EvaluateTransitions()
     {
@@ -42,6 +42,12 @@ public class EnemyPatrolState : EnemyState
             stateMachine.Transition<EnemyStunState>();
     }
 
+    private void SetAdjustedPoint()
+    {
+        adjustedPoint = new Vector3(patrolPoint.position.x, aiObj.y, patrolPoint.position.z);
+    }
+
+    /*
     private void ChooseClosest()
     {
         int closest = 0;
@@ -53,4 +59,5 @@ public class EnemyPatrolState : EnemyState
         }
         currentPoint = closest;
     }
+    */
 }

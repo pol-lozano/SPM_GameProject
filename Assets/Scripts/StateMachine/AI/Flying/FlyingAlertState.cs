@@ -7,17 +7,23 @@ public class FlyingAlertState : EnemyState
 {
     // Attributes
     [SerializeField] private float chaseDistance;
+    [SerializeField] private float patrolDistance;
+    [SerializeField] private float alertTime;
+
+    private float alertTimer;
 
     // Methods
     public override void Enter()
     {
         base.Enter();
         AIController.Agent.SetDestination(AIController.player.transform.position);
+        alertTimer = alertTime;
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
+        alertTimer -= Time.deltaTime;
     }
 
     public override void EvaluateTransitions()
@@ -25,7 +31,8 @@ public class FlyingAlertState : EnemyState
         base.EvaluateTransitions();
         if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
             stateMachine.Transition<FlyingChaseState>();
-        else if (AIController.Agent.remainingDistance < 1)
+        //skulle också kunna baseras på avstånd från startpunkten?
+        else if (alertTimer < 0)
             stateMachine.Transition<FlyingPatrolState>();
         else if (AIController.isStunned)
             stateMachine.Transition<FlyingStunState>();

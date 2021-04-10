@@ -46,8 +46,8 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
 
+        coll.enabled = false;
         if (collision.gameObject.layer == 3 || collision.gameObject.layer == 0)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
@@ -65,7 +65,7 @@ public class Projectile : MonoBehaviour
         {
             obj.isStunned = true;
         }
-        coll.enabled = false;
+        
     }
 
 

@@ -10,8 +10,8 @@ public abstract class EnemyState : State
 
     public override void Enter()
     {
-       AIController.Agent.speed = moveSpeed;
-        Debug.Log("ENTER: " + stateMachine.CurrentState + "   " + AIController.transform.position);
+        AIController.Agent.speed = moveSpeed;
+        //Debug.Log("ENTER: " + stateMachine.CurrentState + "   " + AIController.transform.position);
     }
     public override void HandleUpdate()
     {

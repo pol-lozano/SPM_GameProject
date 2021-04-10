@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CrossHairTarget : MonoBehaviour
 {
-    public LayerMask visionLayer;
+    [SerializeField,Tooltip("How far the player is able to aim")] private int viewLength;
+    [SerializeField, Tooltip("What the player will aim at when it isn't looking at anything")] private Transform backupTarget;
+    
     Camera cam;
     Ray ray;
     RaycastHit hitInfo;
@@ -18,7 +20,18 @@ public class CrossHairTarget : MonoBehaviour
     {
         ray.origin = cam.transform.position;
         ray.direction = cam.transform.forward;
-        Physics.Raycast(ray, out hitInfo, visionLayer);
-        transform.position = hitInfo.point;
+        if (Physics.Raycast(ray, out hitInfo, viewLength))
+            transform.position = hitInfo.point;
+        else
+            transform.position = backupTarget.position;
+
+        //Debug.Log(Vector3.Distance(ray.origin, hitInfo.point));
+        Debug.DrawLine(ray.origin, transform.position, Color.cyan);
+        
+        if(Vector3.Distance(ray.origin, hitInfo.point) < 2f)
+        {
+            transform.position = backupTarget.position;
+        }
+        
     }
 }

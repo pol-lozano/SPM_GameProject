@@ -30,6 +30,8 @@ public class EnemyAlertState : EnemyState
         base.EvaluateTransitions();
         if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
+        //Kan också vara baserad på avstånd från startpunkten? 
+        //kanske ha en ReturnState där den typ sprintar tillbaka till sin rutt och där går den lite lugnare igen
         if (alertTimer < 0)
             stateMachine.Transition<EnemyPatrolState>();
         if (AIController.isStunned)
