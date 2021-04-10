@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DodgeState
   m_EditorClassIdentifier: 
   cooldown: 0.4
-  dodgeForce: 0.55
+  dodgeForce: 20

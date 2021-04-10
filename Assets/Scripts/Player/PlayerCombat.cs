@@ -12,7 +12,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject crosshairImage;
     [SerializeField] private CrossHairTarget crosshair;
-    [SerializeField] private ObjectPooler pool;
+    [SerializeField] private ObjectPooler objectPooler;
     [SerializeField] private OrbitCamera cam;
     
     private StateMachine stateMachine;
@@ -25,11 +25,10 @@ public class PlayerCombat : MonoBehaviour
     public bool ShootInput { get => shootInput; set => shootInput = value; }
     public bool AttackInput { get => attackInput; set => attackInput = value; }
     public bool AimInput { get => aimInput; set => aimInput = value; }
-    public CrossHairTarget CrossHair { get => crosshair; }
-
-    public ObjectPooler GetObjectPooler() { return pool; }
-    public Transform FirePoint { get => firePoint; set => firePoint = value; }
-    public OrbitCamera GetCamera() { return cam; }
+    public CrossHairTarget CrossHair => crosshair;
+    public Transform FirePoint => firePoint;
+    public OrbitCamera Camera => cam;
+    public ObjectPooler ObjectPooler => objectPooler;
 
     private void Awake()
     {
@@ -66,8 +65,4 @@ public class PlayerCombat : MonoBehaviour
     {
         crosshairImage.SetActive(b);
     }
-    
-    
-
-
 }

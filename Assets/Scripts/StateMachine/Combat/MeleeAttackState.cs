@@ -10,6 +10,7 @@ public class MeleeAttackState : CombatState
     public override void Enter()
     {
         //Debug.Log("Attack");
+        Attack();
         //logik för attack och animationer
         attackCooldown = attackTimer;
     }
@@ -24,5 +25,22 @@ public class MeleeAttackState : CombatState
     public override void EvaluateTransitions()
     {
         if (attackCooldown < 0) stateMachine.Transition<IdleState>();
+    }
+
+    //This should be redone and use a proper collider for the weapon instead
+    private void Attack()
+    {
+        RaycastHit[] hits = Physics.BoxCastAll(Player.transform.position, Vector3.one * 2, Player.transform.forward);
+        foreach(RaycastHit h in hits)
+        {
+            var hit = h.transform.GetComponent<HitBox>();
+            if (hit)
+            {
+                hit.OnGetHit(1);
+                Debug.Log("HIT MELEE");
+                break;
+            }
+        }
+       
     }
 }

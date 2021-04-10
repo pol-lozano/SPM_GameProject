@@ -12,31 +12,24 @@ public class PlayerDodgeState : PlayerState
     private float coolTimer;
     public override void Enter()
     {
+        Player.dodgeInput = false;
         coolTimer = cooldown;
-
+        Dodge();
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        coolTimer -= Time.deltaTime;
-
-        Dodge();
-        
-        Player.dodgeInput = false;
-
+        coolTimer -= Time.deltaTime;        
     }
 
     public override void EvaluateTransitions()
     {
         if(coolTimer < 0) stateMachine.Transition<PlayerGroundedState>();
-        
     }
 
     private void Dodge()
     {
-        Vector3 dir = Player.GetInput();
-        if (input != Vector3.zero) Player.PhysicsComponent.Velocity += (Player.mainCamera.transform.right * input.x + Player.mainCamera.transform.forward * input.y) * dodgeForce;
-        else Player.PhysicsComponent.Velocity += -Player.mainCamera.transform.forward * dodgeForce;
+        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;      
     }
 }

@@ -10,4 +10,8 @@ public class HitBox : MonoBehaviour
     {
         health.TakeDamage(dmg);
     }
+    public void OnGetHit( int dmg)
+    {
+        health.TakeDamage(dmg);
+    }
 }

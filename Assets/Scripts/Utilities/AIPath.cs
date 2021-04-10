@@ -19,7 +19,6 @@ public class AIPath : MonoBehaviour
     
     private void OnDrawGizmos()
     {
-        if (!Application.isPlaying) return;
         Gizmos.color = Color.black;
         Vector3 prevCorner = path[0].position;
         foreach (var corner in path)

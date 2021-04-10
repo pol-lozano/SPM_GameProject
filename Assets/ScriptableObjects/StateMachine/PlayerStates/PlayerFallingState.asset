@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404b69486ee5cea498863243220b3b27, type: 3}
   m_Name: PlayerFallingState
   m_EditorClassIdentifier: 
-  airSpeed: 10
+  airSpeed: 7
+  acceleration: 50
+  deceleration: 45
