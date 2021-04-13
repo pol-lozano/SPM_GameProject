@@ -37,7 +37,7 @@ public class MeleeAttackState : CombatState
             if (hit)
             {
                 hit.OnGetHit(1);
-                Debug.Log("HIT MELEE");
+                UnityEngine.Debug.Log("HIT MELEE");
                 break;
             }
         }
