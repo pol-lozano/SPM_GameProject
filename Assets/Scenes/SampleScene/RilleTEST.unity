@@ -158,11 +158,6 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 78747532014604014, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
   m_PrefabInstance: {fileID: 1538391759}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &259062885 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1154622033631676078, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
-  m_PrefabInstance: {fileID: 1538391759}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &508047499
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,10 +973,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2090168579322313802, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
-      propertyPath: death.Array.data[0]
-      value: 
-      objectReference: {fileID: 259062885}
     - target: {fileID: 2814293506836745939, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
       propertyPath: spawnParticles
       value: 
@@ -989,6 +980,10 @@ PrefabInstance:
     - target: {fileID: 6893730679346158167, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893730679346158167, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6893730679346158171, guid: 98dee619ddec82c4ea46b4cf2a994362, type: 3}
       propertyPath: m_RootOrder
