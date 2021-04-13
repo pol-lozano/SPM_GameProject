@@ -28,8 +28,8 @@ public abstract class EnemyState : State
     protected bool CanSeePlayer()
     {
         //TODO Fix better line of sight
-        Debug.Assert(aiController);
-        Debug.Assert(aiController.player);
+        UnityEngine.Debug.Assert(aiController);
+        UnityEngine.Debug.Assert(aiController.player);
         return !Physics.Linecast(aiController.transform.position, aiController.player.transform.position, aiController.visionMask);
     }
 }

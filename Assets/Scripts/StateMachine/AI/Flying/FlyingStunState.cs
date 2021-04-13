@@ -16,7 +16,7 @@ public class FlyingStunState : EnemyState
         AIController.Agent.SetDestination(AIController.transform.position);
         AIController.isStunned = false;
         timer = stunTime;
-        Debug.Log("STUN");
+        UnityEngine.Debug.Log("STUN");
         base.Enter();
     }
 
