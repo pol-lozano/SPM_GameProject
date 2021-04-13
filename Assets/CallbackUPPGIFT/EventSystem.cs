@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class EventSystem : MonoBehaviour
 {
-   
 
     delegate void EventListener(EventInfo e);
     private Dictionary<System.Type, List<EventListener>> eventListeners;
-    private Queue<EventInfo> eventQueue = new Queue<EventInfo>();
 
     static private EventSystem _Current;
     static public EventSystem Current
@@ -44,10 +42,10 @@ public class EventSystem : MonoBehaviour
         //TODO
     }
 
-   
-
     public void FireEvent(EventInfo ei)
     {
+
+
         System.Type trueEventType = ei.GetType();
         if (eventListeners == null || eventListeners[trueEventType] == null)
             return;
@@ -58,6 +56,7 @@ public class EventSystem : MonoBehaviour
         }
         Debug.Log(trueEventType);
     }
+
 
 
 }

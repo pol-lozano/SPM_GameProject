@@ -21,7 +21,8 @@ public class UnitDying : EventInfo
 
 public class UnitDeath : EventInfo
 {
-
+    //public List<ParticleSystem> particles;
+    public string audioClip;
 }
 
 public class UnitSpawn : EventInfo

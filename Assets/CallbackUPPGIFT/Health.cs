@@ -15,8 +15,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(clickInput);
-        transform.Rotate(new Vector3(0.3f, 0, 0.2f));
+        transform.Rotate(new Vector3(0.3f, 0, 0));
 
         Vector3 mouse = Mouse.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(mouse);
@@ -45,6 +44,8 @@ public class Health : MonoBehaviour
     {
         UnitDeath udi = new UnitDeath();
         udi.unit = gameObject;
+        //udi.particles = GetComponent<ParticleHolder>().GetParticleDeath();
+        udi.audioClip = "death";
         EventSystem.Current.FireEvent(udi);
     }
 
