@@ -15,7 +15,7 @@ public class StateMachine
     // Methods
     public StateMachine(object owner, State[] states)
     {
-        Debug.Assert(states.Length > 0);
+        UnityEngine.Debug.Assert(states.Length > 0);
         foreach (State state in states)
         {
             State instance = UnityEngine.Object.Instantiate(state);
