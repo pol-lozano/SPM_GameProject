@@ -12,7 +12,6 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject crosshairImage;
     [SerializeField] private CrossHairTarget crosshair;
-    [SerializeField] private ObjectPooler objectPooler;
     [SerializeField] private OrbitCamera cam;
     
     private StateMachine stateMachine;
@@ -20,15 +19,12 @@ public class PlayerCombat : MonoBehaviour
     private bool attackInput = false;
     private bool aimInput = false;
 
-    
-
     public bool ShootInput { get => shootInput; set => shootInput = value; }
     public bool AttackInput { get => attackInput; set => attackInput = value; }
     public bool AimInput { get => aimInput; set => aimInput = value; }
     public CrossHairTarget CrossHair => crosshair;
     public Transform FirePoint => firePoint;
     public OrbitCamera Camera => cam;
-    public ObjectPooler ObjectPooler => objectPooler;
 
     private void Awake()
     {
