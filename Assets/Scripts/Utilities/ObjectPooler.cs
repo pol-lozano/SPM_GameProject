@@ -1,10 +1,12 @@
-using System.Collections;
+//Main Author: Rickard Lindgren
+//Secondary Author: Pol Lozano Llorens
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
     //TODO:: make it proper static not monobehaviour??
+    #region SINGLETON
     public static ObjectPooler instance = null;
 
     private void Awake()
@@ -16,6 +18,7 @@ public class ObjectPooler : MonoBehaviour
         if (poolDictionary == null)
             PopulatePools();
     }
+    #endregion
 
     [System.Serializable]
     public struct Pool
@@ -28,6 +31,9 @@ public class ObjectPooler : MonoBehaviour
     [SerializeField] private List<Pool> pools;
     private Dictionary<string, Queue<GameObject>> poolDictionary;
 
+    /// <summary>
+    /// Populates objects for the pools specified in the inspector
+    /// </summary>
     public void PopulatePools()
     {
         if (poolDictionary == null)
@@ -51,6 +57,11 @@ public class ObjectPooler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawns a gameobject from the pool queue
+    /// </summary>
+    /// <param name="tag">Tag for the pool of objects to spawn from</param>
+    /// <returns>Object that was spawned</returns>
     public GameObject SpawnFromPool(string tag)
     {
         GameObject obj = poolDictionary[tag].Dequeue();

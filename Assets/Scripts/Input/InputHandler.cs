@@ -43,7 +43,7 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
         gameInput.Gameplay.Disable();
     }
 
-    //GAMEPLAY
+    #region GAMEPLAY
     public void OnMove(InputAction.CallbackContext context)
     {
         moveEvent.Invoke(context.ReadValue<Vector2>());
@@ -59,13 +59,6 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
         cameraZoomEvent.Invoke(context.ReadValue<float>());
     }
 
-
-    //*********************************************************
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-        shootEvent.Invoke();
-    }
-
     public void OnAim(InputAction.CallbackContext context)
     {
         switch (context.phase)
@@ -73,6 +66,11 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
             case InputActionPhase.Started: aimEvent.Invoke(); break;
             case InputActionPhase.Canceled: aimEventCanceled.Invoke(); break;
         }
+    }
+
+    public void OnShoot(InputAction.CallbackContext context)
+    {
+        shootEvent.Invoke();
     }
 
     public void OnAttack(InputAction.CallbackContext context)
@@ -84,6 +82,5 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     {
         dodgeEvent.Invoke();
     }
-    //*********************************************************
-
+    #endregion
 }
