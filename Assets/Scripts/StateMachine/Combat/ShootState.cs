@@ -66,7 +66,7 @@ public class ShootState : AimState
         }
         */
         
-        GameObject g = Player.ObjectPooler.SpawnFromPool("arrow");
+        GameObject g = ObjectPooler.instance.SpawnFromPool("arrow");
         Projectile arrow = g.GetComponent<Projectile>();
         arrow.transform.position = Player.FirePoint.position;
         arrow.transform.LookAt(Player.CrossHair.transform.position);

@@ -48,7 +48,7 @@ public class FlyingAttackState : EnemyState
         
         //stateMachine.Transition<FlyingDeadState>();
         // Insert some attack logic here
-        GameObject g = AIController.pooler.SpawnFromPool("shadowball");
+        GameObject g = ObjectPooler.instance.SpawnFromPool("shadowball");
         Projectile proj = g.GetComponent<Projectile>();
         proj.transform.position = AIController.transform.position + AIController.transform.forward;
         proj.transform.rotation = AIController.transform.rotation;

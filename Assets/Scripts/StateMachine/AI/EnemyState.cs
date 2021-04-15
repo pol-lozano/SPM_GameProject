@@ -4,6 +4,7 @@ public abstract class EnemyState : State
 {
     [SerializeField] protected float moveSpeed;
     
+    
 
     private AIController aiController;
     public AIController AIController => aiController = aiController != null ? aiController : (AIController)owner;

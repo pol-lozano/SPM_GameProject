@@ -17,17 +17,20 @@ public class AIController : MonoBehaviour
 
     public LayerMask visionMask;
     public CharacterController3D player;
-    public ObjectPooler pooler;
     public bool isStunned = false;
 
+    private float baseOffset;
+    public float BaseOffset { get => baseOffset; }
 
     private void Awake()
     {
+        
+
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();
         HealthComponent = GetComponent<HealthComponent>();
-
+        baseOffset = Agent.baseOffset;
         rigidBodies = GetComponentsInChildren<Rigidbody>();
         DeactivateRagdoll();
 
