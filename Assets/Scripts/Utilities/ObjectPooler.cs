@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
+    //TODO:: make it proper static not monobehaviour??
+    public static ObjectPooler instance = null;
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+        else if (instance != this) Destroy(this);
+        DontDestroyOnLoad(this);
+
+        if (poolDictionary == null)
+            PopulatePools();
+    }
+
     [System.Serializable]
-    public class Pool
+    public struct Pool
     {
         public string tag;
         public GameObject prefab;
@@ -13,11 +26,12 @@ public class ObjectPooler : MonoBehaviour
     }
 
     [SerializeField] private List<Pool> pools;
-    [SerializeField] private Dictionary<string, Queue<GameObject>> poolDictionary;
+    private Dictionary<string, Queue<GameObject>> poolDictionary;
 
-    void Start()
+    public void PopulatePools()
     {
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+        if (poolDictionary == null)
+            poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool p in pools)
         {

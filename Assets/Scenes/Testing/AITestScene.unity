@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8488,6 +8488,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 284472125766726944, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
+      propertyPath: m_BaseOffset
+      value: 4.21
+      objectReference: {fileID: 0}
     - target: {fileID: 284472125766726945, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
       propertyPath: m_Name
       value: FlyingAI (3)
