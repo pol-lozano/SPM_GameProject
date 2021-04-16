@@ -301,7 +301,7 @@ MonoBehaviour:
       m_Item7:
         transform: {fileID: 0}
         weight: 0
-    m_Offset: {x: 0.08, y: -0.1, z: -0.01}
+    m_Offset: {x: 0.08, y: -0.1, z: 0.02}
     m_ConstrainedAxes:
       x: 1
       y: 1
@@ -686,15 +686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b2aeadbb326e245b320590cf1690f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PhysicsComponent: {fileID: 2104137301}
-  Animator: {fileID: 0}
   input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
-  playerMesh: {fileID: 2559890079040380381}
-  mainCamera: {fileID: 0}
   states:
   - {fileID: 11400000, guid: da4c564b52feea44095156ed082ba9ac, type: 2}
   - {fileID: 11400000, guid: 9f99d12394a9db54abbb99ebfe4b8264, type: 2}
   - {fileID: 11400000, guid: 6f122bc2b3c659a41807a168c769f4e4, type: 2}
+  playerMesh: {fileID: 2559890079040380381}
   rawInput: {x: 0, y: 0}
   dodgeInput: 0
 --- !u!114 &6261909279374753516
@@ -715,17 +712,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 714b54a91cb69f24886e53a07f02ecbd, type: 2}
   - {fileID: 11400000, guid: db7cf64996a086e4bb59e127dd11fc92, type: 2}
   - {fileID: 11400000, guid: d24835702dcf6d542932f922cf4e1592, type: 2}
-  visionLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  invertY: 0
-  pool: {fileID: 0}
-  crosshairImage: {fileID: 0}
-  aimTarget: {fileID: 0}
-  cam: {fileID: 0}
   firePoint: {fileID: 1512625171421846624}
-  crosshair: {fileID: 0}
-  cameraInput: {x: 0, y: 0}
+  crosshairImage: {fileID: 0}
+  crosshair: {fileID: 4448837995412633337}
 --- !u!114 &2104137301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2718,7 +2707,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: ccc50d631d14df84a982c4f4acd00013, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

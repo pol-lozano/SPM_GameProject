@@ -16,7 +16,7 @@ public class EnemyAlertState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        AIController.Agent.SetDestination(AIController.player.transform.position);
+        AIController.Agent.SetDestination(AIController.Player.transform.position);
         alertTimer = alertTime;
     }
 
@@ -28,7 +28,7 @@ public class EnemyAlertState : EnemyState
     public override void EvaluateTransitions()
     {
         base.EvaluateTransitions();
-        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
+        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
         //Kan också vara baserad på avstånd från startpunkten? 
         //kanske ha en ReturnState där den typ sprintar tillbaka till sin rutt och där går den lite lugnare igen

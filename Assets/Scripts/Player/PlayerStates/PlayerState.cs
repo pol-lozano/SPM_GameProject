@@ -17,7 +17,8 @@ public abstract class PlayerState : State
     public override void HandleFixedUpdate()
     {
         //Rotate towards camera rotation
-        float cameraYaw = Player.mainCamera.transform.rotation.eulerAngles.y;
-        Player.playerMesh.rotation = Quaternion.Slerp(Player.playerMesh.rotation, Quaternion.Euler(0, cameraYaw, 0), turnSpeed * Time.fixedDeltaTime);
+        float cameraYaw = Player.Camera.transform.rotation.eulerAngles.y;
+        //TODO: Should be handled properly in animation...
+        Player.PlayerMesh.rotation = Quaternion.Slerp(Player.PlayerMesh.rotation, Quaternion.Euler(0, cameraYaw, 0), turnSpeed * Time.fixedDeltaTime);
     }
 }

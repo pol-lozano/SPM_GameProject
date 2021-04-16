@@ -33,9 +33,9 @@ public class FlyingPatrolState : EnemyState
     public override void EvaluateTransitions()
     {
         base.EvaluateTransitions();
-        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
+        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < chaseDistance)
             stateMachine.Transition<FlyingChaseState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)
+        else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < hearingRange)
             stateMachine.Transition<FlyingAlertState>();
         else if (AIController.isStunned)
             stateMachine.Transition<FlyingStunState>();

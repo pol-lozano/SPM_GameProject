@@ -15,7 +15,6 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction attackEvent = delegate { };
     public event UnityAction dodgeEvent = delegate { };
 
-
     private GameInput gameInput;
 
     private void OnEnable()

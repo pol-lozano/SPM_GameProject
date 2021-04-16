@@ -3,9 +3,9 @@ using UnityEngine.AI;
 
 public class AIController : MonoBehaviour
 {
-    public State[] states;
+    [SerializeField] private State[] states;
     private StateMachine stateMachine;
-    public Transform[] patrols;
+    [SerializeField] private LayerMask visionMask;
     [SerializeField] private AIPath path;
 
     [HideInInspector] public MeshRenderer Renderer;
@@ -13,29 +13,33 @@ public class AIController : MonoBehaviour
     [HideInInspector] public Animator Animator;
     [HideInInspector] public HealthComponent HealthComponent;
 
-    Rigidbody[] rigidBodies;
+    private Rigidbody[] rigidBodies;
 
-    public LayerMask visionMask;
-    public CharacterController3D player;
+    public CharacterController3D Player { get; set; }
+
     public bool isStunned = false;
 
     private float baseOffset;
     public float BaseOffset { get => baseOffset; }
+    public LayerMask VisionMask { get => visionMask; }
 
     private void Awake()
     {
-        
+        Player = GameManager.instance.Player;
 
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();
         HealthComponent = GetComponent<HealthComponent>();
+
         baseOffset = Agent.baseOffset;
+
+        stateMachine = new StateMachine(this, states);
+
         rigidBodies = GetComponentsInChildren<Rigidbody>();
         DeactivateRagdoll();
 
-        stateMachine = new StateMachine(this, states);
-        foreach(var rb in rigidBodies)
+        foreach (var rb in rigidBodies)
         {
             HitBox hitBox = rb.gameObject.AddComponent<HitBox>();
             hitBox.health = HealthComponent;
@@ -54,7 +58,7 @@ public class AIController : MonoBehaviour
         Animator.enabled = false;
     }
 
-    public void Update() => stateMachine.HandleUpdate();
+    public void Update() => stateMachine?.HandleUpdate();
 
     public AIPath GetPath() { return path; }
 
@@ -68,8 +72,8 @@ public class AIController : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Agent.desiredVelocity);
-        /*
-        Gizmos.color = Color.black;
+        
+        Gizmos.color = Color.magenta;
         var path = Agent.path;
         Vector3 prevCorner = transform.position;
         foreach (var corner in path.corners)
@@ -78,7 +82,7 @@ public class AIController : MonoBehaviour
             Gizmos.DrawSphere(corner, .2f);
             prevCorner = corner;
         }
-        */
+        
     }
 #endif
 }

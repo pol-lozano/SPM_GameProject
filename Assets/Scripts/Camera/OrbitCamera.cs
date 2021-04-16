@@ -25,7 +25,6 @@ public class OrbitCamera : MonoBehaviour
     private Vector2 cameraInput;
     private Vector2 cameraRotation;
 
-
     /// <summary> Validates that the fields in the inspector are ok to use, if not changes them </summary>
     private void OnValidate()
     {
@@ -63,7 +62,9 @@ public class OrbitCamera : MonoBehaviour
         MoveCamera();
     }
 
-    /// <summary> Rotates the camera around based on input and turn speed. </summary>
+    /// <summary> 
+    /// Rotates the camera around based on input and turn speed. 
+    /// </summary>
     void TurnCamera()
     {
         if (cameraInput.magnitude > float.Epsilon) cameraRotation += turnSpeed * Time.unscaledDeltaTime * cameraInput;
@@ -71,7 +72,9 @@ public class OrbitCamera : MonoBehaviour
         transform.rotation = Quaternion.Euler(cameraRotation);
     }
 
-    /// <summary> Updates positional and rotational constraints for the camera. </summary>
+    /// <summary> 
+    /// Updates positional and rotational constraints for the camera.
+    /// </summary>
     void UpdateConstraints()
     {
         cameraRotation.x = Mathf.Clamp(cameraRotation.x, minViewAngle, maxViewAngle);
@@ -79,7 +82,9 @@ public class OrbitCamera : MonoBehaviour
         cameraRotation.y %= 360; //Wrap around camera rotation
     }
 
-    /// <summary> Moves the camera to offset position, resolves collisions if there are any. </summary>
+    /// <summary> 
+    /// Moves the camera to offset position, resolves collisions if there are any. 
+    /// </summary>
     private void MoveCamera()
     {
         Vector3 offset = transform.rotation * cameraOffset;
@@ -91,7 +96,9 @@ public class OrbitCamera : MonoBehaviour
         transform.position = newCameraPosition;
     }
 
-    /// <summary> Draws gizmos for the cameras collision sphere and position for debugging in scene mode. </summary>
+    /// <summary> 
+    /// Draws gizmos for the cameras collision sphere and position for debugging in scene mode.
+    /// </summary>
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;

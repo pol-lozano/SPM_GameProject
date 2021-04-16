@@ -6,15 +6,18 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PhysicsComponent))]
 public class CharacterController3D : MonoBehaviour
 {
-    [HideInInspector] public PhysicsComponent PhysicsComponent;
-    [HideInInspector] public Animator Animator;
+    [SerializeField] private InputHandler input;
+    [SerializeField] private PlayerState[] states;
 
-    public InputHandler input;
-    public Transform playerMesh;
-    public Camera mainCamera;
+    //TODO: REMOVE THIS AND FIX PROPER ANIMATION SYSTEM
+    [SerializeField] private Transform playerMesh; //Should fix better later
+    public Transform PlayerMesh => playerMesh;
 
-    public PlayerState[] states;
     private StateMachine stateMachine;
+
+    public PhysicsComponent PhysicsComponent { get; set; }
+    public Animator Animator { get; set; }
+    public OrbitCamera Camera { get; set; }
 
     public Vector2 rawInput;
     public bool dodgeInput;
@@ -24,6 +27,7 @@ public class CharacterController3D : MonoBehaviour
         PhysicsComponent = GetComponent<PhysicsComponent>();
         Animator = GetComponentInChildren<Animator>();
         stateMachine = new StateMachine(this, states);
+        Camera = GameManager.instance.Camera;
     }
 
     private void OnEnable()
@@ -43,16 +47,16 @@ public class CharacterController3D : MonoBehaviour
 
     public Vector3 GetInput()
     {
-        Vector3 correctedHorizontal = mainCamera.transform.right;
+        Vector3 correctedHorizontal = Camera.transform.right;
         correctedHorizontal.y = 0f;
         correctedHorizontal.Normalize();
-        Vector3 correctedVertical = mainCamera.transform.forward;
+        Vector3 correctedVertical = Camera.transform.forward;
         correctedVertical.y = 0f;
         correctedVertical.Normalize();
         return rawInput.x * correctedHorizontal + rawInput.y * correctedVertical;
     }
 
-    private void Update() => stateMachine.HandleUpdate();
-    private void FixedUpdate() => stateMachine.HandleFixedUpdate();
+    private void Update() => stateMachine?.HandleUpdate();
+    private void FixedUpdate() => stateMachine?.HandleFixedUpdate();
 
 }

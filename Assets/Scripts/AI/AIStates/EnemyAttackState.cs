@@ -21,7 +21,7 @@ public class EnemyAttackState : EnemyState
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        AIController.Agent.SetDestination(AIController.player.transform.position);
+        AIController.Agent.SetDestination(AIController.Player.transform.position);
         Attack();
     }
 
@@ -30,7 +30,7 @@ public class EnemyAttackState : EnemyState
         base.EvaluateTransitions();
         if (!CanSeePlayer())
             stateMachine.Transition<EnemyAlertState>();
-        if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > chaseDistance)
+        if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) > chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
         if (AIController.isStunned)
             stateMachine.Transition<EnemyStunState>();
