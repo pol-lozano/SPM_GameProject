@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class AttributeSystem : MonoBehaviour
 {
 
-    [SerializeField] private Text health;
-    [SerializeField] private Text stamina;
+    //[SerializeField] private Text health;
+    //[SerializeField] private Text stamina;
 
     
     [SerializeField] private List<Attribute> activeAttributes = new List<Attribute>();
@@ -79,6 +79,7 @@ public class AttributeSystem : MonoBehaviour
 
     private void Update()
     {
+       
         /*DEN HÄR KOMMER INTE BEHÖVAS SENARE, är bara nu för att kunna lägga till. dett kommer göras i addEffect senare*/
         for(int i = 0; i < activeEffects.Count; i++)
         {
@@ -90,8 +91,8 @@ public class AttributeSystem : MonoBehaviour
 
 
 
-        health.text = ((int)activeAttributes[0].AttributeValue).ToString();
-        stamina.text = ((int)activeAttributes[1].AttributeValue).ToString();
+        //health.text = ((int)activeAttributes[0].AttributeValue).ToString();
+        //stamina.text = ((int)activeAttributes[1].AttributeValue).ToString();
 
         foreach(Effect effect in effectByName.Values)
         {
