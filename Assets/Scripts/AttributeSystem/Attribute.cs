@@ -18,7 +18,7 @@ public class Attribute : ScriptableObject
 
     private void OnEnable()
     {
-        attributeValue = maxValue;
+        Reset();
     }
 
     public float AttributeValue { 
@@ -30,5 +30,9 @@ public class Attribute : ScriptableObject
 
     public ATTRIBUTE_TYPE AttributeType { get => attributeType; }
 
+    public void Reset()
+    {
+        attributeValue = maxValue;
+    }
 
 }

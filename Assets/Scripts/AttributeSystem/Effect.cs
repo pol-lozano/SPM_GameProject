@@ -27,7 +27,7 @@ public class Effect : ScriptableObject
 
     private void OnEnable()
     {
-        duration = startDuration;
+        Reset();   
     }
 
     public float AttributeValue { get => attributeValue; set => attributeValue -= value; }
@@ -35,6 +35,11 @@ public class Effect : ScriptableObject
     public EFFECT_DURATION_TYPE DurationType { get => durationType; }
     public EFFECT_TAG EffectTag { get => effectTag; }
     public Attribute.ATTRIBUTE_TYPE AttributeType { get => attributeType; }
-
+    
+    public void Reset()
+    {
+        duration = startDuration;
+    }
+    
 
 }

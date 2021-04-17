@@ -10885,6 +10885,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 704101936157041712, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 704101936157041714, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: m_Name
       value: Orbital Camera
@@ -17974,6 +17978,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1764a300816905f4fbbfea76804a7482, type: 2}
   activeEffects:
   - {fileID: 11400000, guid: 6fce62de37c66fa4fbf03837b12f7082, type: 2}
+  - {fileID: 11400000, guid: 39cfa70e4c2b4ee4185d4cc388906082, type: 2}
 --- !u!4 &5030949065688228666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
