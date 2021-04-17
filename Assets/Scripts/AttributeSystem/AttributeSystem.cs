@@ -32,13 +32,6 @@ public class AttributeSystem : MonoBehaviour
         
         if (attributeByType[type])
             attributeByType[type].AttributeValue += value;
-        /*
-        foreach(Attribute a in activeAttributes)
-        {
-            if (a.AttributeType == type)
-                a.AttributeValue += value;
-        }
-        */
     }
 
     public void ApplyEffect(Effect effect)
@@ -49,15 +42,9 @@ public class AttributeSystem : MonoBehaviour
             attributeByType[effect.AttributeType].AttributeValue = effect.AttributeValue;
         }
         
-        /*
-        foreach (Attribute a in activeAttributes)
-        {
-            if (a.AttributeType == effect.AttributeType)
-                a.AttributeValue = effect.AttributeValue;
-        }
-        */
     }
 
+    /*Get effectinfo from event and send that effect here*/
     public void ActivateEffect(Effect effect)
     {
         effectByName.Add(effect.name, effect);
@@ -80,17 +67,17 @@ public class AttributeSystem : MonoBehaviour
     private void Update()
     {
        
-        /*DEN HÄR KOMMER INTE BEHÖVAS SENARE, är bara nu för att kunna lägga till. dett kommer göras i addEffect senare*/
+        /*DEN HÄR KOMMER INTE BEHÖVAS SENARE, är bara nu för att kunna lägga till. detta kommer göras i addEffect senare*/
         for(int i = 0; i < activeEffects.Count; i++)
         {
             effectByName.Add(activeEffects[i].name, activeEffects[i]);
             activeEffects.Remove(activeEffects[i]);
         }
-        /*DEN HÄR KOMMER INTE BEHÖVAS SENARE, är bara nu för att kunna lägga till. dett kommer göras i addEffect senare*/
+        /*DEN HÄR KOMMER INTE BEHÖVAS SENARE, är bara nu för att kunna lägga till. detta kommer göras i addEffect senare*/
 
 
 
-
+        /*Here for testing*/
         //health.text = ((int)activeAttributes[0].AttributeValue).ToString();
         //stamina.text = ((int)activeAttributes[1].AttributeValue).ToString();
 
@@ -126,39 +113,6 @@ public class AttributeSystem : MonoBehaviour
         }
         
         /*
-        //Apply effects in activeEffects
-        for(int i = 0; i<activeEffects.Count; i++)
-        {
-            switch (activeEffects[i].DurationType)
-            {
-                //Instant Effects like damage on Hit
-                case Effect.EFFECT_DURATION_TYPE.instant:
-                    ApplyEffect(activeEffects[i]);
-                    activeEffects[i].Reset();
-                    activeEffects.Remove(activeEffects[i]);
-                    break;
-                
-                //temporaryEffects like Stun
-                case Effect.EFFECT_DURATION_TYPE.overtime:
-                    activeEffects[i].Duration -= Time.deltaTime;
-                    if (activeEffects[i].Duration > 0)
-                        ApplyEffect(activeEffects[i]);
-                    else
-                    {
-                        activeEffects[i].Reset();
-                        activeEffects.Remove(activeEffects[i]);
-                    }
-                        
-                    break;
-
-                //Permanent FX like staminaRegen
-                case Effect.EFFECT_DURATION_TYPE.permanent:
-                    ApplyEffect(activeEffects[i]);
-                    break;
-            }
-        }
-
-        
         //checks if any effect is stun effect
         foreach(Effect e in activeEffects)
         {
