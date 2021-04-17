@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Stamina
   m_EditorClassIdentifier: 
   attributeType: 1
-  attributeValue: 100
+  attributeValue: 70.779434
+  minValue: 0
+  maxValue: 100
