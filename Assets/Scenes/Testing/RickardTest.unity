@@ -451,28 +451,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &35626175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 284472125766726945, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
-  m_PrefabInstance: {fileID: 1976549037}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &35626176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35626175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65b3bd5d870045408b40c2b26988cd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  stamina: {fileID: 0}
-  activeAttributes:
-  - {fileID: 11400000, guid: 52a594bb2d8e6a647a8d2e8a1848f71e, type: 2}
-  activeEffects: []
 --- !u!1 &123415511
 GameObject:
   m_ObjectHideFlags: 0
@@ -8745,6 +8723,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: activeAttributes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 49f05024588d2744d8e13d027971b27f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
 --- !u!114 &1422233100 stripped
@@ -16468,6 +16450,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: activeAttributes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4cbcd8fb876a3c43ba000c8ee06d321, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2795b5f5be72da4f990f859c50b0180, type: 3}
 --- !u!1001 &2023204932
@@ -17989,8 +17975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65b3bd5d870045408b40c2b26988cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 968607794}
-  stamina: {fileID: 345950454}
   activeAttributes:
   - {fileID: 11400000, guid: 4e787c088d99fed439d504a27175d749, type: 2}
   - {fileID: 11400000, guid: 1764a300816905f4fbbfea76804a7482, type: 2}

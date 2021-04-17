@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 284472125766726958}
   - component: {fileID: 7012520304643152198}
   - component: {fileID: 284472125766726944}
-  - component: {fileID: 8996940893663741249}
   m_Layer: 0
   m_Name: FlyingAI
   m_TagString: Untagged
@@ -123,23 +122,6 @@ NavMeshAgent:
   m_BaseOffset: 5.71
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!114 &8996940893663741249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284472125766726945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65b3bd5d870045408b40c2b26988cd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 0}
-  stamina: {fileID: 0}
-  activeAttributes:
-  - {fileID: 11400000, guid: 52a594bb2d8e6a647a8d2e8a1848f71e, type: 2}
-  activeEffects: []
 --- !u!1 &1758339858653636974
 GameObject:
   m_ObjectHideFlags: 0
