@@ -26,6 +26,29 @@ public class DebugEvent : IEvent
 }
 #endregion
 
+#region HIT_EVENT
+public struct HitInfo
+{
+    public MonoBehaviour damager;
+    public int amount;
+    public Vector3 direction;
+    public AudioClip sound;
+    public ParticleSystem particleSystem;
+}
+
+public class HitEvent : IEvent
+{
+    public HitInfo Info { get; }
+    public GameObject GameObject { get; }
+
+    public HitEvent(GameObject obj, HitInfo info)
+    {
+        GameObject = obj;
+        Info = info;
+    }
+}
+#endregion
+
 #region DEATH_EVENT
 public struct DeathInfo
 {

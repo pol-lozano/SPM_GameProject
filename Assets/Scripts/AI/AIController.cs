@@ -65,14 +65,14 @@ public class AIController : MonoBehaviour
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if (!Application.isPlaying) return;
+        if (!Application.isPlaying || Agent == null) return;
 
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, transform.position + Agent.velocity);
 
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Agent.desiredVelocity);
-        
+       
         Gizmos.color = Color.magenta;
         var path = Agent.path;
         Vector3 prevCorner = transform.position;

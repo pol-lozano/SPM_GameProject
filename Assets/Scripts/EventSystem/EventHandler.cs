@@ -19,7 +19,7 @@ public static class EventHandler<TEvent> where TEvent : IEvent
     }
 
     /// <summary>
-    /// Adds a listener to a specified Event Type
+    /// Adds a listener to the specified Event Type
     /// </summary>
     /// <param name="listener">Listener to register</param>
     public static void RegisterListener(Action<TEvent> listener)
@@ -29,7 +29,7 @@ public static class EventHandler<TEvent> where TEvent : IEvent
     }
 
     /// <summary>
-    /// Removes a listener from a specified Event Type
+    /// Removes a listener from the specified Event Type
     /// </summary>
     /// <param name="listener">Listener to unregister</param>
     public static void UnregisterListener(Action<TEvent> listener)
@@ -39,7 +39,7 @@ public static class EventHandler<TEvent> where TEvent : IEvent
     }
 
     /// <summary>
-    /// Invokes all registered callbacks for specified Event Type
+    /// Invokes all registered callbacks for the specified Event Type
     /// </summary>
     /// <param name="e">Event Type to Invoke callbacks for </param>
     public static void FireEvent(TEvent e)

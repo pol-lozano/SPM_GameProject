@@ -1,25 +1,62 @@
-using System.Collections;
-using System.Collections.Generic;
+//Pol Lozano Llorens
 using UnityEngine;
 
 public class HealthComponent : MonoBehaviour
 {
-    public float maxHealth = 1;
-    public float currentHealth;
-    public bool dead = false;
+    [SerializeField] private float maxHealth = 1;
+    [SerializeField] private float invulnerabilityTime = 1;
+    private float timeSinceLastHit = 0.0f;
 
-    // Start is called before the first frame update
-    void Start()
+    public bool Invulnerable { get; set; }
+    public float CurrentHealth { get; private set; }
+
+    void Start() => ResetHealth();
+
+    public void ResetHealth()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
+        Invulnerable = false;
+        timeSinceLastHit = 0;
     }
 
-    public void TakeDamage(float damage)
+    public void Update()
     {
-        currentHealth -= damage;
-        if(currentHealth <= 0.0f)
+        if (Invulnerable)
         {
-            dead = true;
+            timeSinceLastHit += Time.deltaTime;
+            if (timeSinceLastHit >= invulnerabilityTime)
+                SetVulnerable();
+        }
+    }
+
+    public void SetInvulnerable() //Maybe rename to something better?
+    {
+        Invulnerable = true;
+        //FIRE BECOME INVULNERABLE EVENT
+    }
+
+    public void SetVulnerable()
+    {
+        Invulnerable = false;
+        timeSinceLastHit = 0;
+        //FIRE BECOME VULNERABLE EVENT
+    }
+
+    public void ApplyDamage(HitInfo damage)
+    {
+        //Ignore damage if invulnerable or already dead
+        if (CurrentHealth <= 0 || Invulnerable)
+            return;
+
+        SetInvulnerable();
+        CurrentHealth -= damage.amount;
+
+        if (CurrentHealth <= 0) {
+            //INVOKE DEATH EVENT
+        }
+        else
+        {
+            //INVOKE TAKE DAMAGE EVENT
         }
     }
 }

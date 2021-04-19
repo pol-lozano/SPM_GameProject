@@ -20,14 +20,14 @@ public class Projectile : MonoBehaviour
         coll.enabled = true;
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
-        Invoke(nameof(Disable), lifetime);
-        
+        Invoke(nameof(Disable), lifetime);    
     }
 
     public void SetForce(Vector3 dir)
     {
         rb.AddForce(dir * force);
     }
+
     public void SetActive(bool b)
     {
         gameObject.SetActive(b);
@@ -35,8 +35,7 @@ public class Projectile : MonoBehaviour
     
     private void Disable()
     {
-        gameObject.SetActive(false);
-        
+        gameObject.SetActive(false);     
     }
 
     private void OnDisable()
@@ -46,7 +45,8 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
+        CheckHit(collision);
+        /*
         coll.enabled = false;
         if (collision.gameObject.layer == 3 || collision.gameObject.layer == 0)
         {
@@ -57,15 +57,35 @@ public class Projectile : MonoBehaviour
         var hit = collision.gameObject.GetComponent<HitBox>();
         if (hit)
         {
-            hit.OnGetHit(collision, 1);
+            hit.ApplyDamage(collision, 1);
         }
         
+        //Everything should be handled by health component?
         var obj = collision.gameObject.GetComponentInParent<AIController>();
         if (obj)
         {
             obj.isStunned = true;
-        }
-        
+        }*/
+    }
+
+    private bool CheckHit(Collision collision)
+    {
+        HitBox h = collision.collider.GetComponent<HitBox>();
+
+        if (h == null)
+            return false;
+
+        //Check if owner of health system
+
+        HitInfo info = new HitInfo()
+        {
+            amount = 1, //Have weapon damage
+            //ADD ALL INFO
+        };
+
+        h.ApplyDamage(info);
+
+        return true;
     }
 
 

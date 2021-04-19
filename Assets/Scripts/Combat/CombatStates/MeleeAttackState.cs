@@ -5,42 +5,35 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class MeleeAttackState : CombatState
 {
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private float attackTimer;
+    [SerializeField] private MeleeWeapon weapon;
+    private bool attacking = false;
+    private float timeSinceLastAttack = 0;
+
     public override void Enter()
     {
-        //Debug.Log("Attack");
-        Attack();
-        //logik för attack och animationer
-        attackCooldown = attackTimer;
+        //Send time since last attack and trigger attack animation based on that
     }
 
     public override void HandleUpdate()
     {
-        attackCooldown -= Time.deltaTime;
+        timeSinceLastAttack += Time.deltaTime;
         Player.AttackInput = false;
         Player.ShootInput = false;
     }
 
-    public override void EvaluateTransitions()
+    //Called by Animation Event in attack animation
+    public void OnBeginAttack()
     {
-        if (attackCooldown < 0) stateMachine.Transition<IdleState>();
+        //Play attack sound
+        attacking = true;
+        //Begin listening for hits
     }
 
-    //This should be redone and use a proper collider for the weapon instead
-    private void Attack()
+    public void OnEndAttack()
     {
-        RaycastHit[] hits = Physics.BoxCastAll(Player.transform.position, Vector3.one * 2, Player.transform.forward);
-        foreach(RaycastHit h in hits)
-        {
-            var hit = h.transform.GetComponent<HitBox>();
-            if (hit)
-            {
-                hit.OnGetHit(1);
-                UnityEngine.Debug.Log("HIT MELEE");
-                break;
-            }
-        }
-       
+        //Stop listening for hits
+        attacking = false; 
+        stateMachine.Transition<IdleState>();
     }
 }
+
