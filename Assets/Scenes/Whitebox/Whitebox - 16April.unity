@@ -2310,7 +2310,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 643174190054300103, guid: aab4e8154c869874095528fa6c109ce7, type: 3}
       propertyPath: m_Name
-      value: "Inneg\xE5rd"
+      value: Courtyard
       objectReference: {fileID: 0}
     - target: {fileID: 643174190054300104, guid: aab4e8154c869874095528fa6c109ce7, type: 3}
       propertyPath: m_RootOrder
