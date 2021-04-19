@@ -23,7 +23,7 @@ public class FlyingAttackState : EnemyState
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        AIController.Agent.SetDestination(AIController.player.transform.position);
+        AIController.Agent.SetDestination(AIController.Player.transform.position);
         currentCool -= Time.deltaTime;
         if(currentCool < 0)
         {
@@ -37,7 +37,7 @@ public class FlyingAttackState : EnemyState
         base.EvaluateTransitions();
         if (!CanSeePlayer())
             stateMachine.Transition<FlyingAlertState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > chaseDistance)
+        else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) > chaseDistance)
             stateMachine.Transition<FlyingChaseState>();
         else if (AIController.isStunned)
             stateMachine.Transition<FlyingStunState>();
@@ -54,7 +54,7 @@ public class FlyingAttackState : EnemyState
         proj.transform.rotation = AIController.transform.rotation;
         proj.SetActive(true);
         //skjuter i fel jävla riktning och fattar inte varför
-        proj.SetForce(AIController.player.transform.position - proj.transform.position);
+        proj.SetForce(AIController.Player.transform.position - proj.transform.position);
 
 
 

@@ -34,9 +34,9 @@ public class EnemyPatrolState : EnemyState
     {
         base.EvaluateTransitions();
 
-        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < chaseDistance)
+        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
-        if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < hearingRange)
+        if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < hearingRange)
             stateMachine.Transition<EnemyAlertState>();
         if (AIController.isStunned)
             stateMachine.Transition<EnemyStunState>();

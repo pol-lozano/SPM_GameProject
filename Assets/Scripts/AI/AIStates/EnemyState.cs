@@ -4,8 +4,6 @@ public abstract class EnemyState : State
 {
     [SerializeField] protected float moveSpeed;
     
-    
-
     private AIController aiController;
     public AIController AIController => aiController = aiController != null ? aiController : (AIController)owner;
 
@@ -29,8 +27,6 @@ public abstract class EnemyState : State
     protected bool CanSeePlayer()
     {
         //TODO Fix better line of sight
-        UnityEngine.Debug.Assert(aiController);
-        UnityEngine.Debug.Assert(aiController.player);
-        return !Physics.Linecast(aiController.transform.position, aiController.player.transform.position, aiController.visionMask);
+        return !Physics.Linecast(aiController.transform.position, aiController.Player.transform.position, aiController.VisionMask);
     }
 }

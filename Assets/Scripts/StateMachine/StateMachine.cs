@@ -1,69 +1,60 @@
-﻿//Pol Lozano Llorens
+﻿//Author: Pol Lozano Llorens
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class StateMachine
 {
-    //Fields
-    private Stack<Type> states = new Stack<Type>();
-    private readonly Dictionary<Type, State> stateDictionary = new Dictionary<Type, State>();
+    private Dictionary<Type, State> stateDictionary = new Dictionary<Type, State>();
+    private State currentState;
 
-    //Properties
-    public State CurrentState => stateDictionary[states.Peek()];
-
-    // Methods
+    /// <summary>
+    /// Instantiates states and initializes statemachine
+    /// </summary>
+    /// <param name="owner">Owner of statemachine</param>
+    /// <param name="states">States that the statemachine can use</param>
     public StateMachine(object owner, State[] states)
     {
         UnityEngine.Debug.Assert(states.Length > 0);
-        foreach (State state in states)
+        for(int i = 0; i < states.Length; i++)
         {
-            State instance = UnityEngine.Object.Instantiate(state);
+            State instance = UnityEngine.Object.Instantiate(states[i]);
             instance.Initialize(this, owner);
             stateDictionary.Add(instance.GetType(), instance);
-            if (this.states.Count == 0) this.states.Push(instance.GetType());
+            if (currentState == null)
+                currentState = instance;
         }
-        CurrentState.Enter();
+        currentState.Enter();
     }
 
-    public void Push<T>(object param = null) where T : State
-    {
-        //CurrentState.Exit();
-        
-        states.Push(typeof(T));
-        //Debug.Log(" entering state: " + CurrentState.GetType());
-        CurrentState.Enter();
-    }
-
-    public void Pop()
-    {
-        if (states.Count > 1)
-        {
-            //Debug.Log(" exiting state: " + CurrentState.GetType());
-            states.Pop();
-        }
-    }
-
-    //State machine should Either use transition or pop from exit
-    //TODO: NOT WORKING PROPERLY
+    /// <summary>
+    /// Transitions from current state to state specified
+    /// </summary>
+    /// <typeparam name="T">State type to transition to</typeparam>
     public void Transition<T>() where T : State
-    {
-        CurrentState.Exit();
+    {   
         //Ignore transition if it doesn't exist
-        if (stateDictionary.ContainsKey(typeof(T)) && CurrentState.GetType() != typeof(T))
+        if (stateDictionary.ContainsKey(typeof(T)))
         {
-            Pop();
-            Push<T>();
+            currentState.Exit();
+            currentState = stateDictionary[typeof(T)];
+            currentState.Enter();
         }        
     }
 
+    /// <summary>
+    /// Handles Update() loop for current state after transitions are evaluated
+    /// </summary>
     public void HandleUpdate()
     {
-        CurrentState?.EvaluateTransitions();
-        CurrentState?.HandleUpdate();
+        currentState?.EvaluateTransitions();
+        currentState?.HandleUpdate();
     }
+
+    /// <summary>
+    /// Handles FixedUpdate() loop for current state
+    /// </summary>
     public void HandleFixedUpdate()
     {
-        CurrentState?.HandleFixedUpdate();
+        currentState?.HandleFixedUpdate();
     }
 }

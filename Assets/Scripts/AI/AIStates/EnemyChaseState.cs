@@ -11,7 +11,7 @@ public class EnemyChaseState : EnemyState
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        AIController.Agent.SetDestination(AIController.player.transform.position);
+        AIController.Agent.SetDestination(AIController.Player.transform.position);
     }
 
     public override void EvaluateTransitions()
@@ -20,9 +20,9 @@ public class EnemyChaseState : EnemyState
 
         if (!CanSeePlayer()) 
             stateMachine.Transition<EnemyAlertState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) < attackDistance)
+        else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < attackDistance) //Maybe make a method for getting the distance between player and enemy
             stateMachine.Transition<EnemyAttackState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.player.transform.position) > lostTargetDistance)
+        else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) > lostTargetDistance)
             stateMachine.Transition<EnemyPatrolState>();
         else if (AIController.isStunned)
             stateMachine.Transition<EnemyStunState>();
