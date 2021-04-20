@@ -1,7 +1,7 @@
 //Pol Lozano Llorens
 using UnityEngine;
 
-public class HealthComponent : MonoBehaviour
+public class HealthComponent : HitComponent
 {
     [SerializeField] private float maxHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;
@@ -42,14 +42,17 @@ public class HealthComponent : MonoBehaviour
         //FIRE BECOME VULNERABLE EVENT
     }
 
-    public void ApplyDamage(HitInfo damage)
+    
+
+    public override void HandleHit(HitInfo info)
     {
+        Debug.Log("Health, HANDLE HIT");
         //Ignore damage if invulnerable or already dead
         if (CurrentHealth <= 0 || Invulnerable)
             return;
 
         SetInvulnerable();
-        CurrentHealth -= damage.amount;
+        CurrentHealth -= info.amount;
 
         if (CurrentHealth <= 0) {
             //INVOKE DEATH EVENT

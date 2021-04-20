@@ -79,6 +79,7 @@ public class Projectile : MonoBehaviour
 
         HitInfo info = new HitInfo()
         {
+            damager = this,
             amount = 1, //Have weapon damage
             //ADD ALL INFO
         };
