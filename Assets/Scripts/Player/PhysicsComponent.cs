@@ -29,7 +29,7 @@ public class PhysicsComponent : MonoBehaviour
 
     public float Gravity { get => gravity; set => gravity = value; }
     public bool IsGrounded => Physics.CapsuleCast(Point1, Point2, col.radius * 0.95f, Vector3.down, out groundHit, groundCheckDistance + skinWidth, collisionMask);
-    public RaycastHit GroundHit => groundHit; //TODO MAKE INTO ITS OWN METHOD
+    public RaycastHit GroundHit => groundHit; //TODO MAKE INTO ITS OWN METHOD?
 
     public void Awake()
     {

@@ -301,7 +301,7 @@ MonoBehaviour:
       m_Item7:
         transform: {fileID: 0}
         weight: 0
-    m_Offset: {x: 0.08, y: -0.1, z: -0.01}
+    m_Offset: {x: 0.08, y: -0.1, z: 0.02}
     m_ConstrainedAxes:
       x: 1
       y: 1
@@ -594,53 +594,6 @@ MonoBehaviour:
     m_MaintainTargetRotationOffset: 0
   m_SourceObjectsGUIToggle: 1
   m_SettingsGUIToggle: 0
---- !u!1 &3367285457991425388
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8883338700129108700}
-  - component: {fileID: 3342498589287467484}
-  m_Layer: 6
-  m_Name: Debugger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8883338700129108700
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3367285457991425388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5030949066807183702}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3342498589287467484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3367285457991425388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66c4f6f08fdf09549bdbb14d30d705aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 5030949066807183697}
-  playerPhysics: {fileID: 2104137301}
-  playerCombat: {fileID: 6261909279374753516}
-  godMode: {fileID: 3456289557566789425}
 --- !u!1 &4518280992757342047
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +637,6 @@ GameObject:
   - component: {fileID: 5030949066807183697}
   - component: {fileID: 6261909279374753516}
   - component: {fileID: 2104137301}
-  - component: {fileID: 3456289557566789425}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -705,7 +657,6 @@ Transform:
   m_Children:
   - {fileID: 2559890079040380381}
   - {fileID: 7498022339476528115}
-  - {fileID: 8883338700129108700}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -735,15 +686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b2aeadbb326e245b320590cf1690f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PhysicsComponent: {fileID: 2104137301}
-  Animator: {fileID: 0}
   input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
-  playerMesh: {fileID: 2559890079040380381}
-  mainCamera: {fileID: 0}
   states:
   - {fileID: 11400000, guid: da4c564b52feea44095156ed082ba9ac, type: 2}
   - {fileID: 11400000, guid: 9f99d12394a9db54abbb99ebfe4b8264, type: 2}
   - {fileID: 11400000, guid: 6f122bc2b3c659a41807a168c769f4e4, type: 2}
+  playerMesh: {fileID: 2559890079040380381}
   rawInput: {x: 0, y: 0}
   dodgeInput: 0
 --- !u!114 &6261909279374753516
@@ -766,9 +714,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d24835702dcf6d542932f922cf4e1592, type: 2}
   firePoint: {fileID: 1512625171421846624}
   crosshairImage: {fileID: 0}
-  crosshair: {fileID: 0}
-  objectPooler: {fileID: 0}
-  cam: {fileID: 0}
+  crosshair: {fileID: 4448837995412633337}
 --- !u!114 &2104137301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,25 +736,6 @@ MonoBehaviour:
   skinWidth: 0.02
   groundCheckDistance: 0.1
   velocity: {x: 0, y: 0, z: 0}
---- !u!114 &3456289557566789425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5030949066807183690}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b29d7a3a8dd033744801a7653aa8b7e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  speed: 10
-  input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
-  playerMesh: {fileID: 67993080673059192}
-  mainCamera: {fileID: 0}
-  rawInput: {x: 0, y: 0}
-  dodgeInput: 0
 --- !u!1 &5654245298104915456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,7 +2707,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: ccc50d631d14df84a982c4f4acd00013, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
