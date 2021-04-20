@@ -15,6 +15,15 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction attackEvent = delegate { };
     public event UnityAction dodgeEvent = delegate { };
 
+    /*DEBUG CONTROLS*/
+    //------------------------------
+    public event UnityAction debugEvent = delegate { };
+    public event UnityAction flyEvent = delegate { };
+    public event UnityAction flyEventCanceled = delegate { };
+    public event UnityAction sinkEvent = delegate { };
+    public event UnityAction sinkEventCanceled = delegate { };
+    public event UnityAction enterEvent = delegate { };
+    //------------------------------
     private GameInput gameInput;
 
     private void OnEnable()
@@ -81,5 +90,35 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     {
         dodgeEvent.Invoke();
     }
+    #endregion
+
+    #region DEBUG
+
+    public void OnDebug(InputAction.CallbackContext context)
+    {
+        debugEvent.Invoke();
+    }
+    public void OnFly(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started: flyEvent.Invoke(); break;
+            case InputActionPhase.Canceled: flyEventCanceled.Invoke(); break;
+        }
+    }
+    public void OnSink(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started: sinkEvent.Invoke(); break;
+            case InputActionPhase.Canceled: sinkEventCanceled.Invoke(); break;
+        }
+    }
+
+    public void OnEnter(InputAction.CallbackContext context)
+    {
+        enterEvent.Invoke();
+    }
+
     #endregion
 }

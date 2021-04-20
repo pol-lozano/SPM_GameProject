@@ -73,6 +73,38 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": ""Normalize(max=1)"",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Debug"",
+                    ""type"": ""Button"",
+                    ""id"": ""9a2b6e03-ae5c-447e-b0d6-54e7818941b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""Normalize(max=1)"",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Fly"",
+                    ""type"": ""Button"",
+                    ""id"": ""a9c99f2a-45b0-4ff6-89e6-9d5180b97be0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""Normalize(max=1)"",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Sink"",
+                    ""type"": ""Button"",
+                    ""id"": ""3d950dd8-204b-4d26-bccf-1f03a8cd439f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""Normalize(max=1)"",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Enter"",
+                    ""type"": ""Button"",
+                    ""id"": ""6d302d66-76b5-4414-9da5-7790df3fc1fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""Normalize(max=1)"",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -262,6 +294,50 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""action"": ""Dodge"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""30d4e5ed-c2f4-4048-aefa-deb0610ec6b0"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Debug"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77694ef5-64b0-408f-b010-c72ce47040eb"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Fly"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a12d2e2e-9ba2-43af-877f-949e57a70c2b"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sink"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f12e28a6-abc0-4ed3-8491-a718749bfa95"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Enter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -288,6 +364,10 @@ public class @GameInput : IInputActionCollection, IDisposable
         m_Gameplay_Shoot = m_Gameplay.FindAction("Shoot", throwIfNotFound: true);
         m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
         m_Gameplay_Dodge = m_Gameplay.FindAction("Dodge", throwIfNotFound: true);
+        m_Gameplay_Debug = m_Gameplay.FindAction("Debug", throwIfNotFound: true);
+        m_Gameplay_Fly = m_Gameplay.FindAction("Fly", throwIfNotFound: true);
+        m_Gameplay_Sink = m_Gameplay.FindAction("Sink", throwIfNotFound: true);
+        m_Gameplay_Enter = m_Gameplay.FindAction("Enter", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -344,6 +424,10 @@ public class @GameInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Shoot;
     private readonly InputAction m_Gameplay_Attack;
     private readonly InputAction m_Gameplay_Dodge;
+    private readonly InputAction m_Gameplay_Debug;
+    private readonly InputAction m_Gameplay_Fly;
+    private readonly InputAction m_Gameplay_Sink;
+    private readonly InputAction m_Gameplay_Enter;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
@@ -355,6 +439,10 @@ public class @GameInput : IInputActionCollection, IDisposable
         public InputAction @Shoot => m_Wrapper.m_Gameplay_Shoot;
         public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
         public InputAction @Dodge => m_Wrapper.m_Gameplay_Dodge;
+        public InputAction @Debug => m_Wrapper.m_Gameplay_Debug;
+        public InputAction @Fly => m_Wrapper.m_Gameplay_Fly;
+        public InputAction @Sink => m_Wrapper.m_Gameplay_Sink;
+        public InputAction @Enter => m_Wrapper.m_Gameplay_Enter;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -385,6 +473,18 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @Dodge.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDodge;
                 @Dodge.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDodge;
                 @Dodge.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDodge;
+                @Debug.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDebug;
+                @Debug.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDebug;
+                @Debug.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDebug;
+                @Fly.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFly;
+                @Fly.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFly;
+                @Fly.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFly;
+                @Sink.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSink;
+                @Sink.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSink;
+                @Sink.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSink;
+                @Enter.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEnter;
+                @Enter.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEnter;
+                @Enter.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEnter;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -410,6 +510,18 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @Dodge.started += instance.OnDodge;
                 @Dodge.performed += instance.OnDodge;
                 @Dodge.canceled += instance.OnDodge;
+                @Debug.started += instance.OnDebug;
+                @Debug.performed += instance.OnDebug;
+                @Debug.canceled += instance.OnDebug;
+                @Fly.started += instance.OnFly;
+                @Fly.performed += instance.OnFly;
+                @Fly.canceled += instance.OnFly;
+                @Sink.started += instance.OnSink;
+                @Sink.performed += instance.OnSink;
+                @Sink.canceled += instance.OnSink;
+                @Enter.started += instance.OnEnter;
+                @Enter.performed += instance.OnEnter;
+                @Enter.canceled += instance.OnEnter;
             }
         }
     }
@@ -441,5 +553,9 @@ public class @GameInput : IInputActionCollection, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
+        void OnDebug(InputAction.CallbackContext context);
+        void OnFly(InputAction.CallbackContext context);
+        void OnSink(InputAction.CallbackContext context);
+        void OnEnter(InputAction.CallbackContext context);
     }
 }
