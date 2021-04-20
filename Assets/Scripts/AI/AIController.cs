@@ -3,8 +3,8 @@ using UnityEngine.AI;
 
 public class AIController : MonoBehaviour
 {
-    [SerializeField] private State[] states;
     private StateMachine stateMachine;
+    [SerializeField] private State[] states;
     [SerializeField] private LayerMask visionMask;
     [SerializeField] private AIPath path;
 
@@ -13,37 +13,29 @@ public class AIController : MonoBehaviour
     [HideInInspector] public Animator Animator;
     [HideInInspector] public HealthComponent HealthComponent;
 
-    private Rigidbody[] rigidBodies;
+    [SerializeField] private Rigidbody[] rigidBodies;
 
     public CharacterController3D Player { get; set; }
 
     public bool isStunned = false;
 
-    private float baseOffset;
-    public float BaseOffset { get => baseOffset; }
     public LayerMask VisionMask { get => visionMask; }
 
     private void Awake()
-    {
-        Player = GameManager.instance.Player;
-
+    {        
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();
         HealthComponent = GetComponent<HealthComponent>();
-
-        baseOffset = Agent.baseOffset;
-
-        stateMachine = new StateMachine(this, states);
-
-        rigidBodies = GetComponentsInChildren<Rigidbody>();
+       
         DeactivateRagdoll();
 
-        foreach (var rb in rigidBodies)
-        {
-            HitBox hitBox = rb.gameObject.AddComponent<HitBox>();
-            hitBox.health = HealthComponent;
-        }
+        stateMachine = new StateMachine(this, states);
+    }
+
+    private void Start()
+    {
+        Player = CharacterController3D.Player;
     }
 
     public void DeactivateRagdoll()
@@ -81,8 +73,7 @@ public class AIController : MonoBehaviour
             Gizmos.DrawLine(prevCorner, corner);
             Gizmos.DrawSphere(corner, .2f);
             prevCorner = corner;
-        }
-        
+        }       
     }
 #endif
 }

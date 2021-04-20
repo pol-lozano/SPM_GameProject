@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 1987289395923541245}
   - component: {fileID: 1987289395923541123}
   - component: {fileID: 1987289395923541121}
+  - component: {fileID: 6032053460708562496}
   m_Layer: 0
   m_Name: B-forearm_L
   m_TagString: Untagged
@@ -137,7 +138,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.25348964, y: -0.000000024214383, z: 0.0000000037252899}
+  m_ConnectedAnchor: {x: -0.25349027, y: 0.00000014714895, z: -0.00000004097819}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -171,6 +172,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6032053460708562496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541126
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +262,7 @@ GameObject:
   - component: {fileID: 1987289395923541127}
   - component: {fileID: 1987289395923541125}
   - component: {fileID: 1987289395923541131}
+  - component: {fileID: 2486961081983264491}
   m_Layer: 0
   m_Name: B-forearm_R
   m_TagString: Untagged
@@ -312,7 +327,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2534895, y: 0.0000002011657, z: -0.000000055879354}
+  m_ConnectedAnchor: {x: -0.25348938, y: 0.00000022724274, z: -0.000000048428774}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -346,6 +361,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2486961081983264491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541132
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +386,7 @@ GameObject:
   - component: {fileID: 1987289395923541129}
   - component: {fileID: 1987289395923541135}
   - component: {fileID: 1987289395923541133}
+  - component: {fileID: 7905019739803499826}
   m_Layer: 0
   m_Name: B-head
   m_TagString: Untagged
@@ -420,7 +449,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.41591376, y: 0.000000032669146, z: 0.03209411}
+  m_ConnectedAnchor: {x: -0.41591373, y: 0.000000036394447, z: 0.03209423}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -454,6 +483,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7905019739803499826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541134
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +849,7 @@ GameObject:
   - component: {fileID: 1987289395923541153}
   - component: {fileID: 1987289395923541159}
   - component: {fileID: 1987289395923541157}
+  - component: {fileID: 5314592304006543976}
   m_Layer: 0
   m_Name: B-shin_R
   m_TagString: Untagged
@@ -871,7 +914,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.46786746, y: 0.000000034807872, z: 0.0000000055879217}
+  m_ConnectedAnchor: {x: -0.46786746, y: -0.00000030430695, z: -0.0000002067531}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -905,6 +948,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5314592304006543976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541158
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +973,7 @@ GameObject:
   - component: {fileID: 1987289395923541151}
   - component: {fileID: 1987289395923541149}
   - component: {fileID: 1987289395923541155}
+  - component: {fileID: 8524235985485097323}
   m_Layer: 0
   m_Name: B-shin_L
   m_TagString: Untagged
@@ -981,7 +1038,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.46786743, y: 0.000000045634394, z: 0.00000002793961}
+  m_ConnectedAnchor: {x: -0.46786746, y: -0.00000054132636, z: -0.00000009685731}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1015,6 +1072,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8524235985485097323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1159,7 @@ GameObject:
   - component: {fileID: 1987289395923541161}
   - component: {fileID: 1987289395923541165}
   - component: {fileID: 1987289395923541167}
+  - component: {fileID: 1760130210433925996}
   m_Layer: 0
   m_Name: B-thigh_L
   m_TagString: Untagged
@@ -1153,7 +1224,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.064631164, y: -0.07962754, z: 0.0051341057}
+  m_ConnectedAnchor: {x: -0.064631164, y: -0.07962797, z: 0.005134046}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1187,6 +1258,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1760130210433925996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1344,7 @@ GameObject:
   - component: {fileID: 1987289395923501202}
   - component: {fileID: 1987289395923541163}
   - component: {fileID: 1987289395923541171}
+  - component: {fileID: 6561025686591142359}
   m_Layer: 0
   m_Name: B-hips
   m_TagString: Untagged
@@ -1313,6 +1398,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6561025686591142359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1888,7 @@ GameObject:
   - component: {fileID: 1987289395923541231}
   - component: {fileID: 1987289395923541235}
   - component: {fileID: 1987289395923541229}
+  - component: {fileID: 2451832254152407426}
   m_Layer: 0
   m_Name: B-chest
   m_TagString: Untagged
@@ -1853,7 +1952,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.32998213, y: 0.00000002494501, z: 0.011051446}
+  m_ConnectedAnchor: {x: -0.32998213, y: 0.000000026807665, z: 0.011051565}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1887,6 +1986,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2451832254152407426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2195,7 @@ GameObject:
   - component: {fileID: 1987289395923541177}
   - component: {fileID: 1987289395923541181}
   - component: {fileID: 1987289395923541183}
+  - component: {fileID: 766275825264850546}
   m_Layer: 0
   m_Name: B-upper_arm_L
   m_TagString: Untagged
@@ -2147,7 +2260,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.25794625, y: -0.16481109, z: -0.025283746}
+  m_ConnectedAnchor: {x: -0.25794622, y: -0.16481014, z: -0.025283521}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2181,6 +2294,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &766275825264850546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,6 +2382,7 @@ GameObject:
   - component: {fileID: 1987289395923541315}
   - component: {fileID: 1987289395923541319}
   - component: {fileID: 1987289395923541313}
+  - component: {fileID: 6293569685486239286}
   m_Layer: 0
   m_Name: B-upper_arm_R
   m_TagString: Untagged
@@ -2320,7 +2447,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.25794625, y: 0.16481109, z: -0.025283808}
+  m_ConnectedAnchor: {x: -0.25794625, y: 0.16481115, z: -0.025283933}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2354,6 +2481,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6293569685486239286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,15 +2703,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c87e410671adb6a46bf31d479c77e2cf, type: 2}
   - {fileID: 11400000, guid: 6a7dd8b5c5213b84dbc7a3ceb3b7e03b, type: 2}
   - {fileID: 11400000, guid: 7c6b7ee192e24974e9c7b6debe59255c, type: 2}
+  visionMask:
+    serializedVersion: 2
+    m_Bits: 8
+  path: {fileID: 0}
   Renderer: {fileID: 0}
   Agent: {fileID: 0}
   Animator: {fileID: 0}
   HealthComponent: {fileID: 0}
-  visionMask:
-    serializedVersion: 2
-    m_Bits: 8
-  player: {fileID: 0}
-  pooler: {fileID: 0}
+  rigidBodies:
+  - {fileID: 1987289395923541171}
+  - {fileID: 1987289395923541235}
+  - {fileID: 1987289395923541135}
+  - {fileID: 1987289395923541181}
+  - {fileID: 1987289395923541123}
+  - {fileID: 1987289395923541319}
+  - {fileID: 1987289395923541125}
+  - {fileID: 1987289395923541165}
+  - {fileID: 1987289395923541149}
+  - {fileID: 1987289395923541331}
+  - {fileID: 1987289395923541159}
   isStunned: 0
 --- !u!114 &5197897115592957901
 MonoBehaviour:
@@ -2586,8 +2737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  currentHealth: 0
-  dead: 0
+  invulnerabilityTime: 1
 --- !u!195 &1987289395923541323
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2684,6 +2834,7 @@ GameObject:
   - component: {fileID: 1987289395923541325}
   - component: {fileID: 1987289395923541331}
   - component: {fileID: 1987289395923541324}
+  - component: {fileID: 6414423885235725990}
   m_Layer: 0
   m_Name: B-thigh_R
   m_TagString: Untagged
@@ -2748,7 +2899,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.06463115, y: 0.07962755, z: 0.0051341206}
+  m_ConnectedAnchor: {x: -0.06463115, y: 0.079628, z: 0.005134061}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -2782,6 +2933,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6414423885235725990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987289395923541330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541332
 GameObject:
   m_ObjectHideFlags: 0

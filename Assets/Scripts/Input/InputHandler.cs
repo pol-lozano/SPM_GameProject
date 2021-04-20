@@ -88,7 +88,7 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
 
     public void OnDodge(InputAction.CallbackContext context)
     {
-        dodgeEvent.Invoke();
+        if (context.started) dodgeEvent.Invoke();
     }
     #endregion
 

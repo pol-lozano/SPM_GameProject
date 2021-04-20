@@ -26,10 +26,10 @@ public class FlyingRisingState : EnemyState
 
     void Rise()
     {
-        if (AIController.Agent.baseOffset < AIController.BaseOffset - 0.1)
+        if (AIController.Agent.baseOffset < AIController.Agent.baseOffset - 0.1)
             AIController.Agent.baseOffset += riseSpeed * Time.deltaTime;
         else
-            AIController.Agent.baseOffset = AIController.BaseOffset;
+            AIController.Agent.baseOffset = AIController.Agent.baseOffset;
     }
 
     public override void EvaluateTransitions()

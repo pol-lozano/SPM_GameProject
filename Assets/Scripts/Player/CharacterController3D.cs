@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PhysicsComponent))]
 public class CharacterController3D : MonoBehaviour
 {
+    public static CharacterController3D Player { get; private set; }
+
     [SerializeField] private InputHandler input;
     [SerializeField] private PlayerState[] states;
 
@@ -24,10 +26,13 @@ public class CharacterController3D : MonoBehaviour
 
     private void Awake()
     {
+        Player = this;
+
         PhysicsComponent = GetComponent<PhysicsComponent>();
         Animator = GetComponentInChildren<Animator>();
+        Camera = OrbitCamera.Camera;
+
         stateMachine = new StateMachine(this, states);
-        Camera = GameManager.instance.Camera;
     }
 
     private void OnEnable()
