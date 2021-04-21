@@ -15,7 +15,7 @@ public class MeleeAttackState : CombatState
     public override void Enter()
     {
         //Send time since last attack and trigger attack animation based on that
-         Player.swordanim.SetTrigger("attack");
+         
     }
 
     public override void HandleUpdate()
@@ -23,8 +23,7 @@ public class MeleeAttackState : CombatState
         timeSinceLastAttack += Time.deltaTime;
         Player.AttackInput = false;
         Player.ShootInput = false;
-        if (Player.weapon.attackEnded == true)
-            OnEndAttack();
+        
 
     }
 

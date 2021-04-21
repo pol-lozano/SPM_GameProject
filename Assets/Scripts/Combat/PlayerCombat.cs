@@ -13,8 +13,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private GameObject crosshairImage;
     [SerializeField] private CrossHairTarget crosshair;
 
-    public MeleeWeapon weapon;
-    public Animator swordanim;
+
 
     private StateMachine stateMachine;
 

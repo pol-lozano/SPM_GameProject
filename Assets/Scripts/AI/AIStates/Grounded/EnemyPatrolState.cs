@@ -24,7 +24,7 @@ public class EnemyPatrolState : EnemyState
         aiObj = AIController.transform.position;
         SetAdjustedPoint();
         AIController.Agent.SetDestination(adjustedPoint);
-        if (Vector3.Distance(aiObj, adjustedPoint) < AIController.Agent.stoppingDistance + 1)
+        if (Vector3.Distance(aiObj, adjustedPoint) < AIController.Agent.stoppingDistance +0.1f)
             patrolPoint = AIController.GetPath().Next();
 
 
