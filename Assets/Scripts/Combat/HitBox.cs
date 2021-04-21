@@ -6,7 +6,7 @@ public class HitBox : MonoBehaviour
 {
     public HitComponent hitComponent;
 
-    public void ApplyDamage(HitInfo info)
+    public void ApplyHit(HitInfo info)
     {
         hitComponent.HandleHit(info);
     }

@@ -15,3 +15,4 @@ MonoBehaviour:
   moveSpeed: 0
   riseSpeed: 4
   stunTime: 3
+  height: 4

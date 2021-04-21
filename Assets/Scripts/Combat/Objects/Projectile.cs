@@ -8,8 +8,11 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float force;
     [SerializeField] private float lifetime;
     [SerializeField] private BoxCollider coll;
+
+    private string owner = "";
     private Rigidbody rb;
 
+    public string Owner { get => owner; set => owner = value; }
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -80,11 +83,12 @@ public class Projectile : MonoBehaviour
         HitInfo info = new HitInfo()
         {
             damager = this,
+            tag = owner,
             amount = 1, //Have weapon damage
             //ADD ALL INFO
         };
 
-        h.ApplyDamage(info);
+        h.ApplyHit(info);
 
         return true;
     }

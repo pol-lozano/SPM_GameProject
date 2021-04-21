@@ -38,7 +38,7 @@ public class EnemyPatrolState : EnemyState
             stateMachine.Transition<EnemyChaseState>();
         if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < hearingRange)
             stateMachine.Transition<EnemyAlertState>();
-        if (AIController.isStunned)
+        if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
     }
 

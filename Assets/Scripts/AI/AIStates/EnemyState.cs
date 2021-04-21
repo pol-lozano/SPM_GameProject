@@ -21,6 +21,7 @@ public abstract class EnemyState : State
     {
         //VI kanske kan lägga stun här men då måste stunState vara båda för båda fienderna?
         //if (AIController.isStunned) stateMachine.Transition<StunState>();
+        //lägg in en HitState som gör typ knockback?
         if(AIController.HealthComponent.CurrentHealth <= 0) { stateMachine.Transition<EnemyDeadState>(); }
     }
 

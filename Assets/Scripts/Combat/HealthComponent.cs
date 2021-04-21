@@ -6,9 +6,12 @@ public class HealthComponent : HitComponent
     [SerializeField] private float maxHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;
     private float timeSinceLastHit = 0.0f;
+    private bool isStunned;
 
     public bool Invulnerable { get; set; }
     public float CurrentHealth { get; private set; }
+
+    public bool IsStunned { get => isStunned; set => isStunned = value; }
 
     void Start() => ResetHealth();
 
@@ -46,7 +49,8 @@ public class HealthComponent : HitComponent
 
     public override void HandleHit(HitInfo info)
     {
-        Debug.Log("Health, HANDLE HIT");
+        if (info.damager.GetType() == typeof(Projectile))
+            isStunned = true;
         //Ignore damage if invulnerable or already dead
         if (CurrentHealth <= 0 || Invulnerable)
             return;

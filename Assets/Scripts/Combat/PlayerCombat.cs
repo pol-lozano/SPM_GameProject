@@ -12,7 +12,10 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject crosshairImage;
     [SerializeField] private CrossHairTarget crosshair;
-    
+
+    public MeleeWeapon weapon;
+    public Animator swordanim;
+
     private StateMachine stateMachine;
 
     //CrossHairTarget and Firepoint should be removed when we properly implement this

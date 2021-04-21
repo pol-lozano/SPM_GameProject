@@ -6,6 +6,15 @@ public interface IEvent
     GameObject GameObject { get; }
 }
 
+public struct HitInfo
+{
+    public MonoBehaviour damager;
+    public string tag;
+    public int amount;
+    public Vector3 direction;
+    public AudioClip sound;
+    public ParticleSystem particleSystem;
+}
 #region DEBUG_EVENT
 public struct DebugInfo
 {
@@ -27,14 +36,7 @@ public class DebugEvent : IEvent
 #endregion
 
 #region HIT_EVENT
-public struct HitInfo
-{
-    public MonoBehaviour damager;
-    public int amount;
-    public Vector3 direction;
-    public AudioClip sound;
-    public ParticleSystem particleSystem;
-}
+
 
 public class HitEvent : IEvent
 {
@@ -47,6 +49,31 @@ public class HitEvent : IEvent
         Info = info;
     }
 }
+#endregion
+
+#region ATTACK_EVENTS
+
+public class StartPlayerAttackEvent : IEvent
+{
+    public GameObject GameObject { get; }
+
+    public StartPlayerAttackEvent(GameObject obj)
+    {
+        GameObject = obj;
+    }
+}
+
+public class EndPlayerAttackEvent : IEvent
+
+{
+    public GameObject GameObject { get; }
+
+    public EndPlayerAttackEvent(GameObject obj)
+    {
+        GameObject = obj;
+    }
+}
+
 #endregion
 
 #region DEATH_EVENT

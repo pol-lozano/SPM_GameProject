@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleHitComponent : HitComponent
+public class MeleePuzzleComponent : HitComponent
 {
-
-    [SerializeField] private Animator anim;
     
+
 
     public override void HandleHit(HitInfo info)
     {
-        
-        if (info.damager.GetType() == typeof(Projectile))
+
+        if (info.damager.GetType() == typeof(MeleeWeapon))
             Unlock(info);
     }
 
@@ -21,8 +20,7 @@ public class PuzzleHitComponent : HitComponent
          * Do some shit to unlock door or lower bridge not sure how we do this
          * start animation and have eventTriggers in animation for sound and particles?
          */
-        anim.SetTrigger("unlock");
+        Destroy(this);
 
     }
-
 }

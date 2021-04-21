@@ -37,7 +37,7 @@ public class FlyingPatrolState : EnemyState
             stateMachine.Transition<FlyingChaseState>();
         else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < hearingRange)
             stateMachine.Transition<FlyingAlertState>();
-        else if (AIController.isStunned)
+        else if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<FlyingStunState>();
     }
 

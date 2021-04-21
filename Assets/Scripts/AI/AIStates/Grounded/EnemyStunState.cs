@@ -25,7 +25,7 @@ public class EnemyStunState : EnemyState
 
         //stopTimer -= Time.deltaTime;
         stunTimer -= Time.deltaTime;
-        AIController.isStunned = false;
+        AIController.HealthComponent.IsStunned = false;
 
         /*
         if(stopTimer < 0)

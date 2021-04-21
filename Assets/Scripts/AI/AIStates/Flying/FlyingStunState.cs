@@ -14,9 +14,9 @@ public class FlyingStunState : EnemyState
     public override void Enter()
     {
         AIController.Agent.SetDestination(AIController.transform.position);
-        AIController.isStunned = false;
+        AIController.HealthComponent.IsStunned = false;
         timer = stunTime;
-        UnityEngine.Debug.Log("STUN");
+        Debug.Log("STUN");
         base.Enter();
     }
 
