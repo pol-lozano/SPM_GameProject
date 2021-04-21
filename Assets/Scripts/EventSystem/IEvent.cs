@@ -6,15 +6,7 @@ public interface IEvent
     GameObject GameObject { get; }
 }
 
-public struct HitInfo
-{
-    public MonoBehaviour damager;
-    public string tag;
-    public int amount;
-    public Vector3 direction;
-    public AudioClip sound;
-    public ParticleSystem particleSystem;
-}
+
 #region DEBUG_EVENT
 public struct DebugInfo
 {
@@ -37,7 +29,16 @@ public class DebugEvent : IEvent
 
 #region HIT_EVENT
 
-
+public struct HitInfo
+{
+    public MonoBehaviour damager;
+    public string tag;
+    public int amount;
+    public Transform location;
+    public Vector3 direction;
+    public AudioClip sound;
+    public ParticleSystem particleSystem;
+}
 public class HitEvent : IEvent
 {
     public HitInfo Info { get; }

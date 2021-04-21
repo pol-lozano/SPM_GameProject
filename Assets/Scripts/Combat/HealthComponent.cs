@@ -60,6 +60,12 @@ public class HealthComponent : HitComponent
 
         if (CurrentHealth <= 0) {
             //INVOKE DEATH EVENT
+            DeathInfo deathInfo = new DeathInfo
+            {
+                killer = info.damager.gameObject,
+            };
+            DeathEvent de = new DeathEvent(this.gameObject, deathInfo);
+            EventHandler<DeathEvent>.FireEvent(de);
         }
         else
         {
