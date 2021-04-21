@@ -937,6 +937,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5170395973732763334, guid: 6a29601dd276bbb4fb8336da81d5da59, type: 3}
+      propertyPath: m_Intensity
+      value: 3183.0989
+      objectReference: {fileID: 0}
     - target: {fileID: 8041429658157207977, guid: 6a29601dd276bbb4fb8336da81d5da59, type: 3}
       propertyPath: m_Name
       value: SM_Chandelier
@@ -2221,8 +2225,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1378202439165740412, guid: 610b85beda08a854ba7e1b30afe7445f, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378202439165740412, guid: 610b85beda08a854ba7e1b30afe7445f, type: 3}
       propertyPath: m_ColorTemperature
       value: 2800
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598215299263128748, guid: 610b85beda08a854ba7e1b30afe7445f, type: 3}
+      propertyPath: useVolumetric
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598215299263128748, guid: 610b85beda08a854ba7e1b30afe7445f, type: 3}
+      propertyPath: m_VolumetricShadowDimmer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9023646525253643039, guid: 610b85beda08a854ba7e1b30afe7445f, type: 3}
       propertyPath: m_Name
