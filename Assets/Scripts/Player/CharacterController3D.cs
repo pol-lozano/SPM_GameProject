@@ -19,7 +19,6 @@ public class CharacterController3D : MonoBehaviour
 
     public PhysicsComponent PhysicsComponent { get; set; }
     public Animator Animator { get; set; }
-    public OrbitCamera Camera { get; set; }
 
     public Vector2 rawInput;
     public bool dodgeInput;
@@ -30,7 +29,6 @@ public class CharacterController3D : MonoBehaviour
 
         PhysicsComponent = GetComponent<PhysicsComponent>();
         Animator = GetComponentInChildren<Animator>();
-        Camera = OrbitCamera.Camera;
 
         stateMachine = new StateMachine(this, states);
     }
@@ -52,10 +50,10 @@ public class CharacterController3D : MonoBehaviour
 
     public Vector3 GetInput()
     {
-        Vector3 correctedHorizontal = Camera.transform.right;
+        Vector3 correctedHorizontal = Camera.main.transform.right;
         correctedHorizontal.y = 0f;
         correctedHorizontal.Normalize();
-        Vector3 correctedVertical = Camera.transform.forward;
+        Vector3 correctedVertical = Camera.main.transform.forward;
         correctedVertical.y = 0f;
         correctedVertical.Normalize();
         return rawInput.x * correctedHorizontal + rawInput.y * correctedVertical;
