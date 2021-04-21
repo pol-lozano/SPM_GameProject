@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7016441684832355321}
   - component: {fileID: 4465898742374782165}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ArrowLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 1046293138078805758}
   - component: {fileID: 1046293138078805746}
   - component: {fileID: 1046293138078805744}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,3 +279,4 @@ MonoBehaviour:
   force: 50
   lifetime: 5
   coll: {fileID: 1046293138078805758}
+  damage: 1

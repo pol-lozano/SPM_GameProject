@@ -8,8 +8,10 @@ public class EnemyAttackState : EnemyState
     // Attributes
     [SerializeField] private float chaseDistance;
     [SerializeField] private float cooldown;
+    [SerializeField] private float attackDistance;
 
     private float currentCool;
+    private bool attacking;
 
     // Methods
     public override void Enter()
@@ -22,7 +24,10 @@ public class EnemyAttackState : EnemyState
     {
         base.HandleUpdate();
         AIController.Agent.SetDestination(AIController.Player.transform.position);
-        Attack();
+        if(DistanceToPlayer() < attackDistance && attacking == false)
+            Attack();
+        if(attacking)
+            HandleCooldown();
     }
 
     public override void EvaluateTransitions()
@@ -30,7 +35,7 @@ public class EnemyAttackState : EnemyState
         base.EvaluateTransitions();
         if (!CanSeePlayer())
             stateMachine.Transition<EnemyAlertState>();
-        if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) > chaseDistance)
+        if (DistanceToPlayer() > chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
         if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
@@ -40,13 +45,19 @@ public class EnemyAttackState : EnemyState
 
     private void Attack()
     {
+        attacking = true;
+        Debug.Log("ATTACK PLAYER");
+        
+        //AIController.Animator.SetTrigger("attack");
+    }
+
+    private void HandleCooldown()
+    {
         currentCool -= Time.deltaTime;
-
-        if (currentCool > 0)
-            return;
-
-        // Insert some attack logic here
-
-        currentCool = cooldown;
+        if(currentCool < 0)
+        {
+            attacking = false;
+            currentCool = cooldown;
+        }
     }
 }

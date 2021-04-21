@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   invulnerabilityTime: 1
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!195 &284472125766726944
 NavMeshAgent:
   m_ObjectHideFlags: 0

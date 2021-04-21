@@ -30,4 +30,10 @@ public abstract class EnemyState : State
         //TODO Fix better line of sight
         return !Physics.Linecast(aiController.transform.position, aiController.Player.transform.position, aiController.VisionMask);
     }
+
+    protected float DistanceToPlayer()
+    {
+        return Vector3.Distance(AIController.transform.position, aiController.Player.transform.position);
+    }
+
 }

@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float force;
     [SerializeField] private float lifetime;
     [SerializeField] private BoxCollider coll;
+    [SerializeField] private int damage;
 
     private string owner = "";
     private Rigidbody rb;
@@ -84,7 +85,7 @@ public class Projectile : MonoBehaviour
         {
             damager = this,
             tag = owner,
-            amount = 1, //Have weapon damage
+            amount = damage, //Have weapon damage
             //ADD ALL INFO
         };
 

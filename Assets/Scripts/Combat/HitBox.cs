@@ -10,4 +10,6 @@ public class HitBox : MonoBehaviour
     {
         hitComponent.HandleHit(info);
     }
+
+    
 }

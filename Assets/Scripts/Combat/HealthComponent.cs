@@ -4,12 +4,14 @@ using UnityEngine;
 public class HealthComponent : HitComponent
 {
     [SerializeField] private float maxHealth = 1;
+    [SerializeField] private float currentHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;
+    [SerializeField] private LayerMask damageLayer;
     private float timeSinceLastHit = 0.0f;
     private bool isStunned;
 
     public bool Invulnerable { get; set; }
-    public float CurrentHealth { get; private set; }
+    public float CurrentHealth { get => currentHealth; }
 
     public bool IsStunned { get => isStunned; set => isStunned = value; }
 
@@ -17,7 +19,7 @@ public class HealthComponent : HitComponent
 
     public void ResetHealth()
     {
-        CurrentHealth = maxHealth;
+        currentHealth = maxHealth;
         Invulnerable = false;
         timeSinceLastHit = 0;
     }
@@ -49,14 +51,18 @@ public class HealthComponent : HitComponent
 
     public override void HandleHit(HitInfo info)
     {
-        if (info.damager.GetType() == typeof(Projectile))
+        //Check for stun. Maybe move somewhere else?
+        if (info.damager.GetType() == typeof(Projectile) && IsOnLayer(info.damager.gameObject.layer))
             isStunned = true;
+
         //Ignore damage if invulnerable or already dead
         if (CurrentHealth <= 0 || Invulnerable)
             return;
 
         SetInvulnerable();
-        CurrentHealth -= info.amount;
+        
+        
+
 
         if (CurrentHealth <= 0) {
             //INVOKE DEATH EVENT
@@ -69,7 +75,17 @@ public class HealthComponent : HitComponent
         }
         else
         {
+            if (IsOnLayer(info.damager.gameObject.layer))
+            {
+                Debug.Log(gameObject.name + " got HURT");
+                currentHealth -= info.amount;
+            }
+                
             //INVOKE TAKE DAMAGE EVENT
         }
+    }
+    private bool IsOnLayer(int layer)
+    {
+        return damageLayer == (damageLayer | (1 << layer));
     }
 }
