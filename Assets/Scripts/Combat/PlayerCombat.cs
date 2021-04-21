@@ -27,7 +27,7 @@ public class PlayerCombat : MonoBehaviour
     private void Awake()
     {
         stateMachine = new StateMachine(this, states);
-        Camera = GameManager.instance.Camera;
+        Camera = OrbitCamera.Camera;
     }
 
     private void Update()

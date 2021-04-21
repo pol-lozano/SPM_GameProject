@@ -6,6 +6,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Camera))]
 public class OrbitCamera : MonoBehaviour
 {
+    public static OrbitCamera Camera { get; private set; }
+
     [Header("Input")]
     public InputHandler input;
 
@@ -31,6 +33,11 @@ public class OrbitCamera : MonoBehaviour
         //Do not allow maxViewAngle to be lower than minViewAngle
         if (maxViewAngle < minViewAngle) maxViewAngle = minViewAngle;
         if (maxDistance < minDistance) maxDistance = minDistance;
+    }
+
+    private void Awake()
+    {
+        Camera = this;
     }
 
     private void OnEnable()

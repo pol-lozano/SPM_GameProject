@@ -74,17 +74,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 550007a6cfcdd3d47b9d9b70ae40bc0c, type: 2}
   - {fileID: 11400000, guid: b30a01d1d1dd2cf4886134806070bdf3, type: 2}
   - {fileID: 11400000, guid: 7c6b7ee192e24974e9c7b6debe59255c, type: 2}
-  patrols: []
+  visionMask:
+    serializedVersion: 2
+    m_Bits: 8
   path: {fileID: 0}
   Renderer: {fileID: 0}
   Agent: {fileID: 0}
   Animator: {fileID: 0}
   HealthComponent: {fileID: 0}
-  visionMask:
-    serializedVersion: 2
-    m_Bits: 8
-  player: {fileID: 0}
-  pooler: {fileID: 0}
+  rigidBodies:
+  - {fileID: 8846546574329677175}
   isStunned: 0
 --- !u!114 &7012520304643152198
 MonoBehaviour:
@@ -99,8 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  currentHealth: 0
-  dead: 0
+  invulnerabilityTime: 1
 --- !u!195 &284472125766726944
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -136,6 +134,7 @@ GameObject:
   - component: {fileID: 1758339858653636971}
   - component: {fileID: 1758339858653636968}
   - component: {fileID: 8846546574329677175}
+  - component: {fileID: 1520214554695711255}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -235,3 +234,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1520214554695711255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758339858653636974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 7012520304643152198}

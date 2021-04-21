@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f4dc55f7f81514a9b19bc64f2c8ee9, type: 3}
   m_Name: MeleeState
   m_EditorClassIdentifier: 
-  attackCooldown: 2
-  attackTimer: 2
+  weapon: {fileID: 0}
