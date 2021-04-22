@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   invulnerabilityTime: 1
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!195 &284472125766726944
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -118,7 +121,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 5.71
+  m_BaseOffset: 3.13
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
 --- !u!1 &1758339858653636974
@@ -246,4 +249,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 7012520304643152198}
+  hitComponent: {fileID: 7012520304643152198}

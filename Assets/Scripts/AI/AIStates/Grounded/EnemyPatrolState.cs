@@ -24,8 +24,9 @@ public class EnemyPatrolState : EnemyState
         aiObj = AIController.transform.position;
         SetAdjustedPoint();
         AIController.Agent.SetDestination(adjustedPoint);
-        if (Vector3.Distance(aiObj, adjustedPoint) < AIController.Agent.stoppingDistance + 1)
+        if (Vector3.Distance(aiObj, adjustedPoint) < AIController.Agent.stoppingDistance + 0.1f)
             patrolPoint = AIController.GetPath().Next();
+
 
 
 
@@ -34,11 +35,11 @@ public class EnemyPatrolState : EnemyState
     {
         base.EvaluateTransitions();
 
-        if (CanSeePlayer() && Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < chaseDistance)
+        if (CanSeePlayer() && DistanceToPlayer() < chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
-        if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < hearingRange)
+        if (DistanceToPlayer() < hearingRange)
             stateMachine.Transition<EnemyAlertState>();
-        if (AIController.isStunned)
+        if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
     }
 
@@ -47,17 +48,5 @@ public class EnemyPatrolState : EnemyState
         adjustedPoint = new Vector3(patrolPoint.position.x, aiObj.y, patrolPoint.position.z);
     }
 
-    /*
-    private void ChooseClosest()
-    {
-        int closest = 0;
-        for (int i = 0; i < patrolPoints.Length; i++)
-        {
-            float dist = Vector3.Distance(AIController.transform.position, patrolPoints[i]);
-            if (dist < Vector3.Distance(AIController.transform.position, patrolPoints[closest]))
-                closest = i;
-        }
-        currentPoint = closest;
-    }
-    */
+    
 }

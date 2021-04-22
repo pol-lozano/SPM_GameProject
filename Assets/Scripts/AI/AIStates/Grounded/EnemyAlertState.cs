@@ -34,7 +34,7 @@ public class EnemyAlertState : EnemyState
         //kanske ha en ReturnState där den typ sprintar tillbaka till sin rutt och där går den lite lugnare igen
         if (alertTimer < 0)
             stateMachine.Transition<EnemyPatrolState>();
-        if (AIController.isStunned)
+        if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
     }
 }

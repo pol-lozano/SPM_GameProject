@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541126
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541132
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 0}
 --- !u!1 &1987289395923541134
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541314
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541320
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2658,7 @@ Transform:
   m_GameObject: {fileID: 1987289395923541322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1987289395923501224}
   - {fileID: 1987289395923501556}
@@ -2738,6 +2738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   invulnerabilityTime: 1
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!195 &1987289395923541323
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2747,7 +2750,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1987289395923541322}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Speed: 3.5
   m_Acceleration: 40
   avoidancePriority: 50
@@ -2945,7 +2948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 5197897115592957901}
+  hitComponent: {fileID: 5197897115592957901}
 --- !u!1 &1987289395923541332
 GameObject:
   m_ObjectHideFlags: 0

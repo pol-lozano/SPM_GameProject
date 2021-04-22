@@ -7,6 +7,7 @@ public class FlyingRisingState : EnemyState
 {
     [SerializeField] private float riseSpeed;
     [SerializeField] private float stunTime;
+    [SerializeField] private float height;
     private float timer;
     
   
@@ -15,7 +16,7 @@ public class FlyingRisingState : EnemyState
     {
         AIController.Agent.SetDestination(AIController.transform.position);
         timer = stunTime;
-        UnityEngine.Debug.Log("STUN");
+        Debug.Log("STUN");
     }
 
     public override void HandleUpdate()
@@ -26,10 +27,9 @@ public class FlyingRisingState : EnemyState
 
     void Rise()
     {
-        if (AIController.Agent.baseOffset < AIController.Agent.baseOffset - 0.1)
+        if (AIController.Agent.baseOffset <= height)
             AIController.Agent.baseOffset += riseSpeed * Time.deltaTime;
-        else
-            AIController.Agent.baseOffset = AIController.Agent.baseOffset;
+        
     }
 
     public override void EvaluateTransitions()

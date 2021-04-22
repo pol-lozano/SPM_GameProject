@@ -20,11 +20,11 @@ public class EnemyChaseState : EnemyState
 
         if (!CanSeePlayer()) 
             stateMachine.Transition<EnemyAlertState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) < attackDistance) //Maybe make a method for getting the distance between player and enemy
+        else if (DistanceToPlayer() < attackDistance) //Maybe make a method for getting the distance between player and enemy
             stateMachine.Transition<EnemyAttackState>();
-        else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) > lostTargetDistance)
+        else if (DistanceToPlayer() > lostTargetDistance)
             stateMachine.Transition<EnemyPatrolState>();
-        else if (AIController.isStunned)
+        else if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
     }
 }

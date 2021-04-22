@@ -27,7 +27,7 @@ public class FlyingChaseState : EnemyState
             stateMachine.Transition<FlyingAttackState>();
         else if (Vector3.Distance(AIController.transform.position, AIController.Player.transform.position) > lostTargetDistance)
             stateMachine.Transition<FlyingPatrolState>();
-        else if (AIController.isStunned)
+        else if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<FlyingStunState>();
     }
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7781284558354789539}
   - component: {fileID: 1719069363589161382}
   - component: {fileID: 5965819763731391866}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ShadowBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4889,6 +4889,7 @@ MonoBehaviour:
   force: 30
   lifetime: 10
   coll: {fileID: 7781284558354789549}
+  damage: 5
 --- !u!54 &5965819763731391866
 Rigidbody:
   m_ObjectHideFlags: 0

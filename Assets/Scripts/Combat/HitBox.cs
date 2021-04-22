@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class HitBox : MonoBehaviour
 {
-    public HealthComponent health;
+    public HitComponent hitComponent;
 
-    public void ApplyDamage(HitInfo info)
+    public void ApplyHit(HitInfo info)
     {
-        health.ApplyDamage(info);
+        hitComponent.HandleHit(info);
     }
+
+    
 }

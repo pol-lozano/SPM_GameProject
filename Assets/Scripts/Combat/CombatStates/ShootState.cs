@@ -68,11 +68,10 @@ public class ShootState : AimState
         
         GameObject g = ObjectPooler.instance.SpawnFromPool("arrow");
         Projectile arrow = g.GetComponent<Projectile>();
+        arrow.Owner = "player";
         arrow.transform.position = Player.FirePoint.position;
         arrow.transform.LookAt(Player.CrossHair.transform.position);
         arrow.SetActive(true);
-        //Vector3 cam = Player.Camera.transform.forward;
-        //Vector3 off = Player.Camera.GetOffset();
         arrow.SetForce((Player.CrossHair.transform.position - arrow.transform.position).normalized);
     }
     public override void EvaluateTransitions()

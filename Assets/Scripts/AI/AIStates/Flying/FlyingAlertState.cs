@@ -34,7 +34,7 @@ public class FlyingAlertState : EnemyState
         //skulle också kunna baseras på avstånd från startpunkten?
         else if (alertTimer < 0)
             stateMachine.Transition<FlyingPatrolState>();
-        else if (AIController.isStunned)
+        else if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<FlyingStunState>();
     }
 }

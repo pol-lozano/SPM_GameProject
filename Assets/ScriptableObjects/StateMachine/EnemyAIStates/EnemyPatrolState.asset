@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcb85238635a6643b46333b9b0d4263, type: 3}
   m_Name: EnemyPatrolState
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1
   chaseDistance: 10
   hearingRange: 15
