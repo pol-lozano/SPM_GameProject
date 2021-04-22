@@ -1,22 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Pol Lozano Llorens
 using UnityEngine;
 
-[CreateAssetMenu()]
+[CreateAssetMenu(menuName = "CombatState/Melee")]
 public class MeleeAttackState : CombatState
-{
-    
-    private bool attacking = true;
+{ 
+    private bool attacking = false;
     private float timeSinceLastAttack = 0;
-
-    /*FÖR TEST*/
-    
 
     public override void Enter()
     {
         //Send time since last attack and trigger attack animation based on that
-        //Trigger animation
-         
+        Player.Animator.SetTrigger(attackTriggerHash);
+        Player.Animator.SetFloat(timeSinceLastAttackHash, timeSinceLastAttack);
     }
 
     public override void HandleUpdate()
@@ -24,15 +19,13 @@ public class MeleeAttackState : CombatState
         timeSinceLastAttack += Time.deltaTime;
         Player.AttackInput = false;
         Player.ShootInput = false;
-        
-
     }
 
     //Called by Animation Event in attack animation
     public void OnBeginAttack()
     {
         //Play attack sound
-       
+        timeSinceLastAttack = 0;
         attacking = true;
         //Begin listening for hits
     }
