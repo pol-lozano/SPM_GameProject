@@ -15,6 +15,7 @@ public class MeleeAttackState : CombatState
     public override void Enter()
     {
         //Send time since last attack and trigger attack animation based on that
+        //Trigger animation
          
     }
 

@@ -80,6 +80,7 @@ public class EndPlayerAttackEvent : IEvent
 #region DEATH_EVENT
 public struct DeathInfo
 {
+    public GameObject unit;
     public GameObject killer;
     public AudioClip sound;
     public ParticleSystem particleSystem;
