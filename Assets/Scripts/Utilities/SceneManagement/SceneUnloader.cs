@@ -14,6 +14,7 @@ public class SceneUnloader : MonoBehaviour
         {
             Debug.Log("Unload SCENE");
             SceneManager.UnloadSceneAsync(sceneToUnload, UnloadSceneOptions.None);
+            
         }
         
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectilePuzzelComponent : HitComponent
+public class ProjectilePuzzleComponent : HitComponent
 {
 
     [SerializeField] private Animator anim;

@@ -9,6 +9,7 @@ public class HealthComponent : HitComponent
     [SerializeField] private LayerMask damageLayer;
     private float timeSinceLastHit = 0.0f;
     private bool isStunned;
+    //bool is PLayer?
 
     public bool Invulnerable { get; set; }
     public float CurrentHealth { get => currentHealth; }
@@ -56,7 +57,7 @@ public class HealthComponent : HitComponent
             isStunned = true;
 
         //Ignore damage if invulnerable or already dead
-        if (CurrentHealth <= 0 || Invulnerable)
+        if (Invulnerable)
             return;
 
         SetInvulnerable();
@@ -64,16 +65,17 @@ public class HealthComponent : HitComponent
         
 
 
-        if (CurrentHealth <= 0) {
+        if (currentHealth <= 0) {
             //INVOKE DEATH EVENT
-            /*
+
             DeathInfo deathInfo = new DeathInfo
             {
+                unit = gameObject,
                 killer = info.damager.gameObject,
             };
             DeathEvent de = new DeathEvent(this.gameObject, deathInfo);
             EventHandler<DeathEvent>.FireEvent(de);
-            */
+            
         }
         else
         {
