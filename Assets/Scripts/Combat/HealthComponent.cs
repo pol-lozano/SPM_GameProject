@@ -88,6 +88,9 @@ public class HealthComponent : HitComponent
             //INVOKE TAKE DAMAGE EVENT
         }
     }
+
+  
+
     private bool IsOnLayer(int layer)
     {
         return damageLayer == (damageLayer | (1 << layer));

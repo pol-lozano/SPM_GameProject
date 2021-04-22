@@ -20,13 +20,16 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player")/*&& input.G*/)
         {
-            ActivateCheckpoint();
+            Debug.Log("player");
+            ActivateCheckpoint(other.gameObject);
         }
     }
 
-    private void ActivateCheckpoint()
+    private void ActivateCheckpoint(GameObject player)
     {
+        Debug.Log("ActivateCheckpoint");
         currentCheckPoint = this;
+        player.GetComponent<HealthComponent>().ResetHealth();
     }
     
     
