@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
 
         //Resets the player to latest checkpoint
-        player.transform.position = CheckPoint.currentCheckPoint.position;
+        //player.transform.position = CheckPoint.currentCheckPoint.position;
 
 
         //Reset player health and stamina 

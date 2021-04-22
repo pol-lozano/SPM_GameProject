@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    public static Transform currentCheckPoint;
+    public static CheckPoint currentCheckPoint;
 
 
     /*DEN BORDE INTE AKTIVERAS SÅ HÄR, SPELAREN BORDE GÅ FRAM OCH INTERAGERA*/
@@ -12,7 +12,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            currentCheckPoint = this.transform;
+            currentCheckPoint = this;
             //call CheckPointEvent. enemies respawns and player resets
         }
     }
