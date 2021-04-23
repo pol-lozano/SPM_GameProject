@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectilePuzzleComponent : HitComponent
 {
     
-
+    [SerializeField] private int puzzleID;
     public override void HandleHit(HitInfo info)
     {
         
@@ -19,7 +19,7 @@ public class ProjectilePuzzleComponent : HitComponent
          * Do some shit to unlock door or lower bridge not sure how we do this
          * start animation and have eventTriggers in animation for sound and particles?
          */
-        PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, gameObject.name);
+        PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, puzzleID);
         EventHandler<PuzzleEvent>.FireEvent(p);
 
     }

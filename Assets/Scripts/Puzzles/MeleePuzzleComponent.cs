@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MeleePuzzleComponent : HitComponent
 {
-    
 
+    [SerializeField] private int puzzleID;
 
     public override void HandleHit(HitInfo info)
     {
@@ -21,7 +21,7 @@ public class MeleePuzzleComponent : HitComponent
          * start animation and have eventTriggers in animation for sound and particles?
          */
 
-        PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, info.damager.gameObject.name);
+        PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, puzzleID);
         EventHandler<PuzzleEvent>.FireEvent(p);
 
         Destroy(this);

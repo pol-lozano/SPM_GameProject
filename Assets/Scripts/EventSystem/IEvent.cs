@@ -106,10 +106,10 @@ public class PuzzleEvent : IEvent{
 
     public GameObject GameObject { get; }
 
-    public PuzzleEvent(GameObject obj, string id)
+    public PuzzleEvent(GameObject obj, int id)
     {
         GameObject = obj;
-        this.id = id.GetHashCode();
+        this.id = id;
     }
 }
 #endregion

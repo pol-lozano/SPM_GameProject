@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuzzleListener : MonoBehaviour
 {
 
-    [SerializeField] private string id;
+    [SerializeField] private int id;
     [SerializeField] private Animator anim;
 
     private void OnEnable() => EventHandler<PuzzleEvent>.RegisterListener(UnlockPuzzle);
@@ -14,7 +14,7 @@ public class PuzzleListener : MonoBehaviour
     private void UnlockPuzzle(PuzzleEvent pe)
     {
 
-        if (pe.id == id.GetHashCode())
+        if (pe.id == id)
         {
             anim.SetTrigger("unlock");
         }
