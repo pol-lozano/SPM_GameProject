@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
+  m_IndirectSpecularColor: {r: 1478.8593, g: 1831.9368, b: 2425.4312, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -536,30 +536,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1987289395923501226, guid: 9d15777b4a1f24d43993ee8c1b8d59c9, type: 3}
   m_PrefabInstance: {fileID: 1047030105}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &81835988 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5030949066807183690, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-  m_PrefabInstance: {fileID: 1952091810191860613}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &81835994
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81835988}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c, type: 3}
-  m_Controller: {fileID: 9100000, guid: fa240a5eda997b84e9ac6bc23aa89ad1, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &123415511
 GameObject:
   m_ObjectHideFlags: 0
@@ -6522,6 +6498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a32d296a8a63a4ba258ad662f985ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleID: 0
 --- !u!114 &900202519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13006,6 +12983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390f7e8c1c95db44d8b1845b6a3dbcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleID: 0
 --- !u!65 &1652032354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17235,7 +17213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Lever1
+  id: 0
   anim: {fileID: 1863693930}
 --- !u!1 &1940013606
 GameObject:
@@ -21280,7 +21258,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2102977659}
-  - component: {fileID: 2102977658}
   - component: {fileID: 2102977660}
   m_Layer: 0
   m_Name: Death Listener
@@ -21289,18 +21266,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2102977658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102977657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7abd73dcdfa6b46ad2354b30fa56fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2102977659
 Transform:
   m_ObjectHideFlags: 0
@@ -21695,14 +21660,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2555512610701749684, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2555512610701749685, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2559890078635756660, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
@@ -21775,7 +21732,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5030949066807183697, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
   m_PrefabInstance: {fileID: 1952091810191860613}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81835988}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41b2aeadbb326e245b320590cf1690f9, type: 3}
