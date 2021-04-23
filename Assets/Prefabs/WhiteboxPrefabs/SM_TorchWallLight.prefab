@@ -83,7 +83,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 6974343818059735593}
   - component: {fileID: 5128807819641132771}
   m_Layer: 0
-  m_Name: TorchWall
+  m_Name: SM_TorchWallLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
