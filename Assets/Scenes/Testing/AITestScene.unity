@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1478.8593, g: 1831.9368, b: 2425.4312, a: 1}
+  m_IndirectSpecularColor: {r: 1481.7754, g: 1835.8867, b: 2430.4492, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12988,7 +12988,7 @@ GameObject:
   - component: {fileID: 1652032353}
   - component: {fileID: 1652032358}
   m_Layer: 0
-  m_Name: Lever
+  m_Name: Lever1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13006,7 +13006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390f7e8c1c95db44d8b1845b6a3dbcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1863693930}
 --- !u!65 &1652032354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17120,6 +17119,7 @@ GameObject:
   - component: {fileID: 1863693929}
   - component: {fileID: 1863693928}
   - component: {fileID: 1863693927}
+  - component: {fileID: 1863693931}
   - component: {fileID: 1863693930}
   m_Layer: 0
   m_Name: Door
@@ -17223,6 +17223,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1863693931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863693925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Lever1
+  anim: {fileID: 1863693930}
 --- !u!1 &1940013606
 GameObject:
   m_ObjectHideFlags: 0
@@ -21267,6 +21281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102977659}
   - component: {fileID: 2102977658}
+  - component: {fileID: 2102977660}
   m_Layer: 0
   m_Name: Death Listener
   m_TagString: Untagged
@@ -21300,6 +21315,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2102977660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102977657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7509f84d218364428227e00e9a33d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2103302451
 GameObject:
   m_ObjectHideFlags: 0
