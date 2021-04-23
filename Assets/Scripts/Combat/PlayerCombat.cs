@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Rickard Lindgren
+//Secondary Author: Pol Lozano Llorens
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] private InputHandler input;
-    [SerializeField] private CombatState[] states;
-
-    [Space(5)]
     [Header("Shooting Related Settings")]
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject crosshairImage;
     [SerializeField] private CrossHairTarget crosshair;
 
-
+    [SerializeField] private InputHandler input;
+    [SerializeField] private CombatState[] states;
 
     private StateMachine stateMachine;
 
@@ -21,15 +18,16 @@ public class PlayerCombat : MonoBehaviour
     public CrossHairTarget CrossHair => crosshair;
     public Transform FirePoint => firePoint;
 
+    public Animator Animator { get; set; }
+
     public bool ShootInput { get; set; }
     public bool AttackInput { get; set; }
     public bool AimInput { get; set; }
-    public OrbitCamera Camera { get; set; }
 
     private void Awake()
     {
+        Animator = GetComponentInChildren<Animator>();
         stateMachine = new StateMachine(this, states);
-        Camera = OrbitCamera.Camera;
     }
 
     private void Update()

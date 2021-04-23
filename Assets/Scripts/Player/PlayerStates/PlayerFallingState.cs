@@ -5,7 +5,6 @@ public class PlayerFallingState : PlayerAirState
 {
     public override void Enter()
     {
-        base.Enter();
-        //Animator set fall trigger??
+        Player.Animator.SetTrigger(fallingTriggerHash);
     }
 }

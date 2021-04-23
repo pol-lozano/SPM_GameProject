@@ -1,4 +1,5 @@
-//Pol Lozano Llorens
+//Author: Pol Lozano Llorens
+using System;
 using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider))]
 public class PhysicsComponent : MonoBehaviour
@@ -7,6 +8,7 @@ public class PhysicsComponent : MonoBehaviour
     [SerializeField] private float gravity = 30f;
     [SerializeField] private PhysicMaterial physicsMaterial;
     [SerializeField, Range(0, 1.0f)] private float airResistance = 0.2f;
+    [SerializeField] private float acceleration = 50f;
 
     [Header("Collision Settings")]
     [SerializeField] private LayerMask collisionMask;
@@ -18,8 +20,8 @@ public class PhysicsComponent : MonoBehaviour
     private CapsuleCollider col;
 
     //TODO: RENAME TO SOMETHING BETTER
-    public Vector3 Point1 => transform.position + col.center + Vector3.up * (col.height / 2 - col.radius);
-    public Vector3 Point2 => transform.position + col.center + Vector3.down * (col.height / 2 - col.radius);
+    public Vector3 Top => transform.position + col.center + Vector3.up * (col.height / 2 - col.radius);
+    public Vector3 Bottom => transform.position + col.center + Vector3.down * (col.height / 2 - col.radius);
 
     public void AddForce(Vector3 force) => velocity += force;
     public Vector3 Velocity { get => velocity; set => velocity = value; }
@@ -28,7 +30,7 @@ public class PhysicsComponent : MonoBehaviour
     public float VelocityZ { get => velocity.z; set => velocity.z = value; }
 
     public float Gravity { get => gravity; set => gravity = value; }
-    public bool IsGrounded => Physics.CapsuleCast(Point1, Point2, col.radius * 0.95f, Vector3.down, out groundHit, groundCheckDistance + skinWidth, collisionMask);
+    public bool IsGrounded => Physics.CapsuleCast(Top, Bottom, col.radius * 0.95f, Vector3.down, out groundHit, groundCheckDistance + skinWidth, collisionMask);
     public RaycastHit GroundHit => groundHit; //TODO MAKE INTO ITS OWN METHOD?
 
     public void Awake()
@@ -70,7 +72,7 @@ public class PhysicsComponent : MonoBehaviour
 
     private void ResolveOverlaps()
     {
-        Collider[] hits = Physics.OverlapCapsule(Point1, Point2, col.radius + skinWidth, collisionMask);
+        Collider[] hits = Physics.OverlapCapsule(Top, Bottom, col.radius + skinWidth, collisionMask);
         foreach (Collider hit in hits)
         {
             if (Physics.ComputePenetration(col, transform.position, transform.rotation, hit, hit.transform.position, hit.transform.rotation, out Vector3 direction, out float distance))
@@ -93,5 +95,17 @@ public class PhysicsComponent : MonoBehaviour
     {
         if (velocity.magnitude < normalForce.magnitude * physicsMaterial.staticFriction) velocity = Vector2.zero;
         else velocity -= velocity.normalized * normalForce.magnitude * physicsMaterial.dynamicFriction;
+    }
+
+    public void Accelerate(Vector3 input, float speed)
+    {
+        velocity.x = Mathf.MoveTowards(velocity.x, input.x * speed, acceleration * Time.deltaTime);
+        velocity.z = Mathf.MoveTowards(velocity.z, input.z * speed, acceleration * Time.deltaTime);
+    }
+
+    public void Decelerate()
+    {
+        velocity.x = Mathf.MoveTowards(velocity.x, 0, acceleration * Time.deltaTime);
+        velocity.z = Mathf.MoveTowards(velocity.z, 0, acceleration * Time.deltaTime);
     }
 }

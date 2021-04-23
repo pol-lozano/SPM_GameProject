@@ -1,4 +1,5 @@
-//Pol Lozano Llorens
+//Author: Pol Lozano Llorens
+//Secondary Author: Rickard Lindgren
 using UnityEngine;
 
 public class HealthComponent : HitComponent
@@ -48,8 +49,6 @@ public class HealthComponent : HitComponent
         //FIRE BECOME VULNERABLE EVENT
     }
 
-    
-
     public override void HandleHit(HitInfo info)
     {
         //Check for stun. Maybe move somewhere else?
@@ -57,37 +56,33 @@ public class HealthComponent : HitComponent
             isStunned = true;
 
         //Ignore damage if invulnerable or already dead
-        if (Invulnerable)
+        if (Invulnerable || currentHealth <= 0)
             return;
 
         SetInvulnerable();
-        
-        
 
-
-        if (currentHealth <= 0) {
-            //INVOKE DEATH EVENT
-
-            DeathInfo deathInfo = new DeathInfo
-            {
-                unit = gameObject,
-                killer = info.damager.gameObject,
-            };
-            DeathEvent de = new DeathEvent(this.gameObject, deathInfo);
-            EventHandler<DeathEvent>.FireEvent(de);
-            
-        }
-        else
+        if (IsOnLayer(info.damager.gameObject.layer))
         {
-            if (IsOnLayer(info.damager.gameObject.layer))
+            Debug.Log(gameObject.name + " got HURT");
+            currentHealth -= info.amount;
+
+            //TODO: INVOKE TAKE DAMAGE EVENT
+
+            if (currentHealth <= 0)
             {
-                Debug.Log(gameObject.name + " got HURT");
-                currentHealth -= info.amount;
+                //TODO: INVOKE DEATH EVENT
+
+                DeathInfo deathInfo = new DeathInfo
+                {
+                    unit = gameObject,
+                    killer = info.damager.gameObject,
+                };
+                DeathEvent de = new DeathEvent(this.gameObject, deathInfo);
+                EventHandler<DeathEvent>.FireEvent(de);
             }
-                
-            //INVOKE TAKE DAMAGE EVENT
-        }
+        }        
     }
+
     private bool IsOnLayer(int layer)
     {
         return damageLayer == (damageLayer | (1 << layer));

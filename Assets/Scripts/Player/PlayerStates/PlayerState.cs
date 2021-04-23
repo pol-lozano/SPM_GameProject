@@ -1,24 +1,50 @@
+//Author: Pol Lozano Llorens
 using UnityEngine;
 
 public abstract class PlayerState : State
 {
     private CharacterController3D player;
-    public CharacterController3D Player => player = player != null ? player : (CharacterController3D)owner;
-    //TODO: Have everything that is really important to the player as a property here
-    protected Vector3 input;
-    private float turnSpeed = 15f;
+    protected CharacterController3D Player => player = player != null ? player : (CharacterController3D)owner;
 
-    public override void HandleUpdate()
+    protected int inputXHash;
+    protected int inputYHash;
+    protected int dodgeTriggerHash;
+    protected int fallingTriggerHash;
+
+    public override void Initialize(StateMachine stateMachine, object owner)
     {
-        input = Player.rawInput;
-        Player.Animator.SetFloat("InputX", input.x, 1f, Time.deltaTime * 10f);
-        Player.Animator.SetFloat("InputY", input.y, 1f, Time.deltaTime * 10f);
+        base.Initialize(stateMachine, owner);
+        InitializeAnimatorHashes();
     }
-    public override void HandleFixedUpdate()
+
+    private void InitializeAnimatorHashes()
     {
-        //Rotate towards camera rotation
-        float cameraYaw = Camera.main.transform.rotation.eulerAngles.y;
-        //TODO: Should be handled properly in animation...
-        Player.PlayerMesh.rotation = Quaternion.Slerp(Player.PlayerMesh.rotation, Quaternion.Euler(0, cameraYaw, 0), turnSpeed * Time.fixedDeltaTime);
+        inputXHash = Animator.StringToHash("InputX");
+        inputYHash = Animator.StringToHash("InputY");
+        dodgeTriggerHash = Animator.StringToHash("Dodge");
+        fallingTriggerHash = Animator.StringToHash("Falling");
+    }
+
+    public override void HandleUpdate() => Animate();
+    private void Animate()
+    {
+        Vector3 input = Player.RawInput;
+        Player.Animator.SetFloat(inputXHash, input.x, 1f, Time.deltaTime * 10f);
+        Player.Animator.SetFloat(inputYHash, input.y, 1f, Time.deltaTime * 10f);
+    }
+
+    /// <summary>
+    /// Moves player and caps speed
+    /// </summary>
+    /// <param name="maxSpeed">speed to cap velocity at</param>
+    protected void Move(float maxSpeed)
+    {
+        Vector3 input = Player.GetInput();
+
+        //Accelerate
+        if (input.magnitude > float.Epsilon)
+            Player.PhysicsComponent.Accelerate(input, maxSpeed);
+        else
+            Player.PhysicsComponent.Decelerate();
     }
 }
