@@ -181,6 +181,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &252821726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7450439289576815607, guid: 23b1b68bad89dc74fb5793e38776a5c2, type: 3}
+  m_PrefabInstance: {fileID: 2101889151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &252821727
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252821726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3675618649541551439, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
 --- !u!4 &296806840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
@@ -204,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 704101936157041714, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 704101936157041718, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: target
@@ -334,6 +353,25 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 704101936157041712, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
   m_PrefabInstance: {fileID: 758218434}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1325087211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5041097083505835842, guid: 23b1b68bad89dc74fb5793e38776a5c2, type: 3}
+  m_PrefabInstance: {fileID: 2101889151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1325087212
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325087211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3675618649541551439, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
 --- !u!1001 &1536846569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183690, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183697, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: mainCamera
