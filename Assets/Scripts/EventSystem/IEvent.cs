@@ -98,3 +98,18 @@ public class DeathEvent : IEvent
     }
 }
 #endregion
+
+#region PUZZLE_EVENT
+public class PuzzleEvent : IEvent{
+
+    public int id;
+
+    public GameObject GameObject { get; }
+
+    public PuzzleEvent(GameObject obj, int id)
+    {
+        GameObject = obj;
+        this.id = id;
+    }
+}
+#endregion
