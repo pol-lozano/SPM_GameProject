@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Pol Lozano Llorens
 using UnityEngine;
 
 public class HitBox : MonoBehaviour
@@ -10,6 +9,4 @@ public class HitBox : MonoBehaviour
     {
         hitComponent.HandleHit(info);
     }
-
-    
 }

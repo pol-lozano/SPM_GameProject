@@ -1,35 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Pol Lozano Llorens
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "PlayerState/Dodge")]
 public class PlayerDodgeState : PlayerState
 {
-    [SerializeField] private float cooldown;
     [SerializeField] private float dodgeForce;
 
-    //Man borde ha en timer som säger typ hur långt man dodgar och sen som säger när man lämnar statet
-    private float coolTimer;
-    public override void Enter()
-    {
-        Player.dodgeInput = false;
-        coolTimer = cooldown;
-        Dodge();
-    }
-
-    public override void HandleUpdate()
-    {
-        base.HandleUpdate();
-        coolTimer -= Time.deltaTime;        
-    }
-
-    public override void EvaluateTransitions()
-    {
-        if(coolTimer < 0) stateMachine.Transition<PlayerGroundedState>();
-    }
-
+    public override void Enter() => Dodge();
     private void Dodge()
     {
-        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;      
+        Player.DodgeInput = false;
+        Player.Animator.SetTrigger(dodgeTriggerHash);
     }
+
+    //ANIMATION CALLBACKS DONT WORK ON SCRIPTABLE OBJECTS
+    /*
+    /// <summary>
+    /// Animation Event Callback when dodge animation begins
+    /// </summary>
+    public void OnDodgeStarted()
+    {
+        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;
+        // Particle effects shaders, sounds etc...
+    }
+
+    /// <summary>
+    /// Animation Event Callback when dodge animation ends
+    /// </summary>
+    public void OnDodgeEnded()
+    {
+        //When animation ends go back to player grounded
+        stateMachine.Transition<PlayerGroundedState>();
+    }*/
 }

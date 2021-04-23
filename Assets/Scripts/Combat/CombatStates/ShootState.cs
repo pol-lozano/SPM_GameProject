@@ -17,14 +17,9 @@ public class ShootState : AimState
     //-------------------------
     public override void Enter()
     {
-        
-        //Debug.Log("SKJUT");
-        //logik för skott
-
+        Player.Animator.SetTrigger(attackTriggerHash);
         StartShooting();
-
-        shotCooldown = shotTimer;
-        
+        shotCooldown = shotTimer;   
     }
 
     public override void HandleUpdate()
@@ -76,6 +71,7 @@ public class ShootState : AimState
     }
     public override void EvaluateTransitions()
     {
-        if (shotCooldown < 0) stateMachine.Transition<AimState>();
+        if (shotCooldown < 0) 
+            stateMachine.Transition<AimState>();
     }
 }

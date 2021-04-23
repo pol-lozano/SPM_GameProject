@@ -66,31 +66,46 @@
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="AIController" preserve="nothing"/>
+		<type fullname="AIPath" preserve="nothing"/>
 		<type fullname="AimState" preserve="nothing"/>
 		<type fullname="CharacterController3D" preserve="nothing"/>
+		<type fullname="Checkpoint" preserve="nothing"/>
 		<type fullname="CrossHairTarget" preserve="nothing"/>
+		<type fullname="DebugController" preserve="nothing"/>
 		<type fullname="EnemyAlertState" preserve="nothing"/>
 		<type fullname="EnemyAttackState" preserve="nothing"/>
 		<type fullname="EnemyChaseState" preserve="nothing"/>
 		<type fullname="EnemyDeadState" preserve="nothing"/>
 		<type fullname="EnemyPatrolState" preserve="nothing"/>
+		<type fullname="EnemyStunState" preserve="nothing"/>
 		<type fullname="FlyingAlertState" preserve="nothing"/>
 		<type fullname="FlyingAttackState" preserve="nothing"/>
 		<type fullname="FlyingChaseState" preserve="nothing"/>
 		<type fullname="FlyingPatrolState" preserve="nothing"/>
+		<type fullname="FlyingRisingState" preserve="nothing"/>
+		<type fullname="FlyingStunState" preserve="nothing"/>
+		<type fullname="GodMode" preserve="nothing"/>
 		<type fullname="HealthComponent" preserve="nothing"/>
+		<type fullname="HitBox" preserve="nothing"/>
 		<type fullname="IdleState" preserve="nothing"/>
 		<type fullname="InputHandler" preserve="nothing"/>
 		<type fullname="MeleeAttackState" preserve="nothing"/>
+		<type fullname="MeleePuzzleComponent" preserve="nothing"/>
 		<type fullname="ObjectPooler" preserve="nothing"/>
 		<type fullname="OrbitCamera" preserve="nothing"/>
 		<type fullname="PhysicsComponent" preserve="nothing"/>
 		<type fullname="PlayerCombat" preserve="nothing"/>
+		<type fullname="PlayerDeathListener" preserve="nothing"/>
+		<type fullname="PlayerDebugger" preserve="nothing"/>
 		<type fullname="PlayerDodgeState" preserve="nothing"/>
 		<type fullname="PlayerFallingState" preserve="nothing"/>
 		<type fullname="PlayerGroundedState" preserve="nothing"/>
 		<type fullname="Projectile" preserve="nothing"/>
+		<type fullname="ProjectilePuzzleComponent" preserve="nothing"/>
+		<type fullname="SceneLoader" preserve="nothing"/>
+		<type fullname="SceneUnloader" preserve="nothing"/>
 		<type fullname="ShootState" preserve="nothing"/>
+		<type fullname="TurnTowardsCameraDirection" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.Animation.Rigging">
 		<type fullname="UnityEngine.Animations.Rigging.MultiAimConstraint" preserve="nothing"/>
@@ -138,7 +153,10 @@
 	<assembly fullname="Unity.RenderPipelines.HighDefinition.Runtime">
 		<type fullname="UnityEngine.Rendering.HighDefinition.AmbientOcclusion" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Bloom" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ColorAdjustments" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ColorCurves" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ContactShadows" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.DepthOfField" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.DiffusionProfileSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Exposure" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.FilmGrain" preserve="nothing"/>
@@ -148,16 +166,17 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRISky" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.LiftGammaGain" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.MotionBlur" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ScreenSpaceRefraction" preserve="nothing"/>
-		<type fullname="UnityEngine.Rendering.HighDefinition.StaticLightingSky" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.ShadowsMidtonesHighlights" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Tonemapping" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.Vignette" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.VisualEnvironment" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.WhiteBalance" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
-		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
-		<type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ContentSizeFitter" preserve="nothing"/>

@@ -1,12 +1,21 @@
-//Pol Lozano Llorens
-using System;
+//Author: Pol Lozano Llorens
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(Camera))]
 public class OrbitCamera : MonoBehaviour
 {
-    public static OrbitCamera Camera { get; private set; }
+    private static OrbitCamera cam;
+    public static OrbitCamera Camera
+    {
+        get
+        {
+            if (cam == null)
+            {
+                cam = FindObjectOfType<OrbitCamera>();
+            }
+            return cam;
+        }
+    }
 
     [Header("Input")]
     public InputHandler input;
@@ -18,7 +27,6 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField, Range(-89, 89), Tooltip("Minimum and maximum vertical angle")] private float minViewAngle = -89f, maxViewAngle = 45f;
     [SerializeField, Range(0, 100), Tooltip("Minimum and maximum vertical angle")] private float minDistance = 1f, maxDistance = 10f;
     [SerializeField, Tooltip("If y axis will be inverted or not")] private bool invertY = false;
-
 
     [Header("Collision Settings")]
     [SerializeField, Tooltip("What layers the camera will check for collision")] private LayerMask collisionMask;
@@ -33,11 +41,6 @@ public class OrbitCamera : MonoBehaviour
         //Do not allow maxViewAngle to be lower than minViewAngle
         if (maxViewAngle < minViewAngle) maxViewAngle = minViewAngle;
         if (maxDistance < minDistance) maxDistance = minDistance;
-    }
-
-    private void Awake()
-    {
-        Camera = this;
     }
 
     private void OnEnable()
@@ -74,7 +77,9 @@ public class OrbitCamera : MonoBehaviour
     /// </summary>
     void TurnCamera()
     {
-        if (cameraInput.magnitude > float.Epsilon) cameraRotation += turnSpeed * Time.unscaledDeltaTime * cameraInput;
+        if (cameraInput.magnitude > float.Epsilon) 
+            cameraRotation += turnSpeed * Time.unscaledDeltaTime * cameraInput;
+
         UpdateConstraints();
         transform.rotation = Quaternion.Euler(cameraRotation);
     }
@@ -112,6 +117,4 @@ public class OrbitCamera : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, collisionRadius);
         Gizmos.DrawLine(transform.position, target.position);
     }
-
-    public Vector3 GetOffset() { return cameraOffset; }
 }

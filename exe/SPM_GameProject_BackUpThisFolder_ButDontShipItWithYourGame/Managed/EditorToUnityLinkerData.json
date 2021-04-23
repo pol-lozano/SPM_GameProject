@@ -7,7 +7,10 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -16,7 +19,10 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -25,7 +31,10 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -34,7 +43,10 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -43,7 +55,10 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -52,7 +67,10 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -61,7 +79,10 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -70,7 +91,10 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -79,7 +103,10 @@
             "fullManagedTypeName": "UnityEngine.Mesh",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -88,7 +115,10 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -97,7 +127,10 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -120,7 +153,10 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -143,7 +179,10 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -152,7 +191,10 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -175,7 +217,7 @@
             "fullManagedTypeName": "UnityEngine.Cubemap",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity"
             ]
         },
         {
@@ -282,7 +324,10 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -291,7 +336,10 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -300,7 +348,10 @@
             "fullManagedTypeName": "UnityEngine.Renderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -309,7 +360,10 @@
             "fullManagedTypeName": "UnityEngine.TrailRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -318,7 +372,10 @@
             "fullManagedTypeName": "UnityEngine.Light",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -327,7 +384,10 @@
             "fullManagedTypeName": "UnityEngine.MeshFilter",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -336,7 +396,10 @@
             "fullManagedTypeName": "UnityEngine.SkinnedMeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -345,7 +408,10 @@
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -354,7 +420,10 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -363,7 +432,10 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -372,7 +444,10 @@
             "fullManagedTypeName": "UnityEngine.ParticleSystem",
             "moduleName": "ParticleSystem",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -381,7 +456,10 @@
             "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
             "moduleName": "ParticleSystem",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -390,7 +468,10 @@
             "fullManagedTypeName": "UnityEngine.Rigidbody",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -399,7 +480,10 @@
             "fullManagedTypeName": "UnityEngine.Collider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -408,7 +492,10 @@
             "fullManagedTypeName": "UnityEngine.MeshCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -417,7 +504,10 @@
             "fullManagedTypeName": "UnityEngine.CapsuleCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -426,7 +516,10 @@
             "fullManagedTypeName": "UnityEngine.BoxCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -435,7 +528,8 @@
             "fullManagedTypeName": "UnityEngine.SphereCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -444,7 +538,7 @@
             "fullManagedTypeName": "UnityEngine.Joint",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity"
             ]
         },
         {
@@ -453,7 +547,7 @@
             "fullManagedTypeName": "UnityEngine.CharacterJoint",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity"
             ]
         },
         {
@@ -462,7 +556,10 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -471,7 +568,10 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -480,7 +580,10 @@
             "fullManagedTypeName": "UnityEngine.GameObject",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -489,7 +592,10 @@
             "fullManagedTypeName": "UnityEngine.AnimationClip",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -498,7 +604,10 @@
             "fullManagedTypeName": "UnityEngine.Animator",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -507,7 +616,10 @@
             "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -516,7 +628,10 @@
             "fullManagedTypeName": "UnityEngine.Motion",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -525,7 +640,10 @@
             "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -534,7 +652,10 @@
             "fullManagedTypeName": "UnityEngine.Avatar",
             "moduleName": "Animation",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -543,7 +664,10 @@
             "fullManagedTypeName": "UnityEngine.LightmapSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -552,7 +676,7 @@
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity"
             ]
         },
         {
@@ -561,7 +685,10 @@
             "fullManagedTypeName": "UnityEngine.Sprite",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -570,7 +697,10 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -579,7 +709,9 @@
             "fullManagedTypeName": "UnityEngine.LightingSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity"
             ]
         },
         {
@@ -588,7 +720,10 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -597,7 +732,7 @@
             "fullManagedTypeName": "UnityEngine.LightProbes",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity"
             ]
         },
         {
@@ -606,7 +741,10 @@
             "fullManagedTypeName": "UnityEngine.RenderSettings",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -615,7 +753,8 @@
             "fullManagedTypeName": "UnityEngine.AI.NavMeshAgent",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -624,7 +763,10 @@
             "fullManagedTypeName": "UnityEngine.PhysicMaterial",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -633,7 +775,10 @@
             "fullManagedTypeName": "",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/TestScenLaddning.unity",
+                "Assets/Scenes/Whitebox/Hubb.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
@@ -642,13 +787,21 @@
             "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
             "moduleName": "AI",
             "usedInScenes": [
-                "Assets/Scenes/AITestScene.unity"
+                "Assets/Scenes/Testing/AITestScene.unity",
+                "Assets/Scenes/Whitebox/Path A.unity"
             ]
         },
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "AIController",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "AIPath",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -669,7 +822,21 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "Checkpoint",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "CrossHairTarget",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "DebugController",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -711,6 +878,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "EnemyStunState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "FlyingAlertState",
             "moduleName": "",
             "usedInScenes": []
@@ -739,7 +913,35 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "FlyingRisingState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "FlyingStunState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "GodMode",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "HealthComponent",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "HitBox",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -761,6 +963,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "MeleeAttackState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "MeleePuzzleComponent",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -795,6 +1004,20 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "PlayerDeathListener",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PlayerDebugger",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "PlayerDodgeState",
             "moduleName": "",
             "usedInScenes": []
@@ -823,7 +1046,35 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "ProjectilePuzzleComponent",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SceneLoader",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "SceneUnloader",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "ShootState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "TurnTowardsCameraDirection",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1103,7 +1354,28 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.ColorAdjustments",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.ColorCurves",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.ContactShadows",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.DepthOfField",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1173,6 +1445,13 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.LiftGammaGain",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.MotionBlur",
             "moduleName": "",
             "usedInScenes": []
@@ -1194,7 +1473,7 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.StaticLightingSky",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.ShadowsMidtonesHighlights",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1208,21 +1487,21 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.Vignette",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.VisualEnvironment",
             "moduleName": "",
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "UnityEngine.UI.dll",
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.EventSystems.EventSystem",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "UnityEngine.UI.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.EventSystems.StandaloneInputModule",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.WhiteBalance",
             "moduleName": "",
             "usedInScenes": []
         },
