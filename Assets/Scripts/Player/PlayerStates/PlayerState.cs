@@ -9,7 +9,7 @@ public abstract class PlayerState : State
     protected int inputXHash;
     protected int inputYHash;
     protected int dodgeTriggerHash;
-    protected int fallingTriggerHash;
+    protected int isGroundedHash;
 
     public override void Initialize(StateMachine stateMachine, object owner)
     {
@@ -22,7 +22,7 @@ public abstract class PlayerState : State
         inputXHash = Animator.StringToHash("InputX");
         inputYHash = Animator.StringToHash("InputY");
         dodgeTriggerHash = Animator.StringToHash("Dodge");
-        fallingTriggerHash = Animator.StringToHash("Falling");
+        isGroundedHash = Animator.StringToHash("IsGrounded");
     }
 
     public override void HandleUpdate() => Animate();
@@ -31,6 +31,7 @@ public abstract class PlayerState : State
         Vector3 input = Player.RawInput;
         Player.Animator.SetFloat(inputXHash, input.x, 1f, Time.deltaTime * 10f);
         Player.Animator.SetFloat(inputYHash, input.y, 1f, Time.deltaTime * 10f);
+        Player.Animator.SetBool(isGroundedHash, player.PhysicsComponent.IsGrounded);
     }
 
     /// <summary>

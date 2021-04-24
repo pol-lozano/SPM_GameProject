@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour
 {
-    private Collider col;
+    public Collider Collider { get; private set; }
     [SerializeField] private int damageAmount;
     private AudioClip hitAudio;
     private AudioClip attackAudio;
@@ -13,17 +13,13 @@ public class MeleeWeapon : MonoBehaviour
 
     private void Awake()
     {
-        col = GetComponent<Collider>();
-        col.enabled = false;
+        Collider = GetComponent<Collider>();
+        Collider.enabled = false;
     }
-
-    private void TurnOnCollider() { col.enabled = true; }
-    private void TurnOffCollider() { col.enabled = false; }
-
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        
-        CheckHit(other);
+        CheckHit(collision.collider);
     }
 
     private bool CheckHit(Collider other)
@@ -32,7 +28,6 @@ public class MeleeWeapon : MonoBehaviour
 
         if (h == null)
             return false;
-        Debug.Log(h.gameObject.name);
 
         //Check if owner of health system
 

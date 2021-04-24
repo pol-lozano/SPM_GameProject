@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b989e6ddcfdab9d48aba646b3d641470, type: 3}
   m_Name: DodgeState
   m_EditorClassIdentifier: 
-  cooldown: 0.4
   dodgeForce: 20

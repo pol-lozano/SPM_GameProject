@@ -4889,7 +4889,7 @@ MonoBehaviour:
   force: 30
   lifetime: 10
   coll: {fileID: 7781284558354789549}
-  damage: 5
+  damage: 1
 --- !u!54 &5965819763731391866
 Rigidbody:
   m_ObjectHideFlags: 0

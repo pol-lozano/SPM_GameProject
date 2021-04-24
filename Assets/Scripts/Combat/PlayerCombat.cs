@@ -24,17 +24,33 @@ public class PlayerCombat : MonoBehaviour
     public bool AttackInput { get; set; }
     public bool AimInput { get; set; }
 
+    public MeleeWeapon meleeWeapon;
+
     private void Awake()
     {
         Animator = GetComponentInChildren<Animator>();
+        meleeWeapon = GetComponentInChildren<MeleeWeapon>(); //TODO: Fix nicer
         stateMachine = new StateMachine(this, states);
     }
 
-    private void Update()
+    public void OnBeginAttack()
     {
-        stateMachine.HandleUpdate();
+        meleeWeapon.Collider.enabled = true;
+        //Play attack sound
+        //timeSinceLastAttack = 0;
+        //attacking = true;
+        //Begin listening for hits
     }
 
+    public void OnEndAttack()
+    {
+        meleeWeapon.Collider.enabled = false;
+        stateMachine.Transition<IdleState>();
+    }
+
+
+    private void Update() => stateMachine?.HandleUpdate();
+    
     private void OnEnable()
     {
         input.shootEvent += OnShoot;
