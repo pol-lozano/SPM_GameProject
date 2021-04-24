@@ -8,7 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
 
     [SerializeField] private string sceneToLoad;
-    //private UnityEvent sceneTrigger;
+    
     
 
     private void OnTriggerEnter(Collider other)
@@ -19,11 +19,6 @@ public class SceneLoader : MonoBehaviour
             Debug.Log("Load SCENE");
             SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
         }
-
-        
-
-        
-        
     }
 
 
