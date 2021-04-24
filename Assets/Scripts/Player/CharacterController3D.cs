@@ -62,25 +62,10 @@ public class CharacterController3D : MonoBehaviour
         return RawInput.x * correctedHorizontal + RawInput.y * correctedVertical;
     }
 
-    /// <summary>
-    /// Animation Event Callback when dodge animation begins
-    /// </summary>
-    public void OnDodgeStarted()
-    {
-        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * 20;
-        // Particle effects shaders, sounds etc...
-    }
-
-    /// <summary>
-    /// Animation Event Callback when dodge animation ends
-    /// </summary>
-    public void OnDodgeEnded()
-    {
-        //When animation ends go back to player grounded
-        stateMachine.Transition<PlayerGroundedState>();
-    }
-
+    //STATE MACHINE
     private void Update() => stateMachine?.HandleUpdate();
     private void FixedUpdate() => stateMachine?.HandleFixedUpdate();
 
+    public void OnAnimationStarted() => stateMachine?.OnAnimationStarted();
+    public void OnAnimationEnded() => stateMachine?.OnAnimationEnded();
 }

@@ -33,21 +33,8 @@ public class PlayerCombat : MonoBehaviour
         stateMachine = new StateMachine(this, states);
     }
 
-    public void OnBeginAttack()
-    {
-        meleeWeapon.Collider.enabled = true;
-        //Play attack sound
-        //timeSinceLastAttack = 0;
-        //attacking = true;
-        //Begin listening for hits
-    }
-
-    public void OnEndAttack()
-    {
-        meleeWeapon.Collider.enabled = false;
-        stateMachine.Transition<IdleState>();
-    }
-
+    public void OnAnimationStarted() => stateMachine?.OnAnimationStarted();
+    public void OnAnimationEnded() => stateMachine?.OnAnimationEnded();
 
     private void Update() => stateMachine?.HandleUpdate();
     

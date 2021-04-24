@@ -486,14 +486,14 @@ ModelImporter:
       curves: []
       events:
       - time: 0
-        functionName: OnDodgeStarted
+        functionName: OnAnimationStarted
         data: 
         objectReferenceParameter: {fileID: 5030949066807183690, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 1
-        functionName: OnDodgeEnded
+        functionName: OnAnimationEnded
         data: 
         objectReferenceParameter: {fileID: 5030949066807183690, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
         floatParameter: 0

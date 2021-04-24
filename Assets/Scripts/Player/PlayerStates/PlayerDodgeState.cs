@@ -13,12 +13,10 @@ public class PlayerDodgeState : PlayerState
         Player.Animator.SetTrigger(dodgeTriggerHash);
     }
 
-    //ANIMATION CALLBACKS DONT WORK ON SCRIPTABLE OBJECTS
-    /*
     /// <summary>
     /// Animation Event Callback when dodge animation begins
     /// </summary>
-    public void OnDodgeStarted()
+    public override void OnAnimationStarted()
     {
         Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;
         // Particle effects shaders, sounds etc...
@@ -27,9 +25,10 @@ public class PlayerDodgeState : PlayerState
     /// <summary>
     /// Animation Event Callback when dodge animation ends
     /// </summary>
-    public void OnDodgeEnded()
+    public override void OnAnimationEnded()
     {
         //When animation ends go back to player grounded
+        
         stateMachine.Transition<PlayerGroundedState>();
-    }*/
+    }
 }

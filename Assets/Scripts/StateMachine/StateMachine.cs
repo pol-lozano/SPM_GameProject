@@ -57,4 +57,20 @@ public class StateMachine
     {
         currentState?.HandleFixedUpdate();
     }
+
+    /// <summary>
+    /// Handles Animation Event (Start) callback for current state
+    /// </summary>
+    public void OnAnimationStarted()
+    {
+        currentState?.OnAnimationStarted();
+    }
+
+    /// <summary>
+    /// Handles Animation Event (End) callback for current state
+    /// </summary>
+    public void OnAnimationEnded()
+    {
+        currentState?.OnAnimationEnded();
+    }
 }
