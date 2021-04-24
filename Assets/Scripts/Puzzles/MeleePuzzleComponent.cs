@@ -1,3 +1,5 @@
+//Author: Rickard Lindgren
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +26,7 @@ public class MeleePuzzleComponent : HitComponent
         PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, puzzleID);
         EventHandler<PuzzleEvent>.FireEvent(p);
 
-        Destroy(this);
+        Destroy(gameObject);
 
     }
 }
