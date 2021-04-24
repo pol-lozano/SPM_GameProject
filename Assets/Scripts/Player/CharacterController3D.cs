@@ -67,7 +67,7 @@ public class CharacterController3D : MonoBehaviour
     /// </summary>
     public void OnDodgeStarted()
     {
-        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * 15;
+        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * 20;
         // Particle effects shaders, sounds etc...
     }
 

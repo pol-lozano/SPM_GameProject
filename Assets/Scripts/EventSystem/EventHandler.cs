@@ -44,6 +44,7 @@ public static class EventHandler<TEvent> where TEvent : IEvent
     /// <param name="e">Event Type to Invoke callbacks for </param>
     public static void FireEvent(TEvent e)
     {
+        RegisterType();
         typeEventListeners[typeof(TEvent)]?.Invoke(e);
     }
 }

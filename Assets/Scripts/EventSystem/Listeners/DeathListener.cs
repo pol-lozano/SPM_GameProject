@@ -8,6 +8,28 @@ public class DeathListener : MonoBehaviour
 
     void OnDeath(DeathEvent deathEvent)
     {
-        Destroy(deathEvent.GameObject);
+        Debug.Log(deathEvent.Info.unit.tag);
+        //TODO: MAKE ENEMY DEATH SEPARATE FROM PLAYER DEATH?
+
+        switch (deathEvent.Info.unit.tag)
+        {
+            case "Player": 
+                HandlePlayerDeath(deathEvent);
+                break;
+            case "Enemy":
+                HandleEnemyDeath(deathEvent);
+                break;
+        }
+    }
+
+    private void HandleEnemyDeath(DeathEvent deathEvent)
+    {
+
+    }
+
+    private void HandlePlayerDeath(DeathEvent deathEvent)
+    {
+        Debug.Log(Checkpoint.currentCheckPoint.transform.position);
+        deathEvent.Info.unit.transform.position = Checkpoint.currentCheckPoint.transform.position;
     }
 }

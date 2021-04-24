@@ -83,7 +83,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.8, y: 0.5}
   m_BounceIntensity: 1
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 6658781256636749382}
   - component: {fileID: 8902570879373550220}
   m_Layer: 0
-  m_Name: Candelabra
+  m_Name: SM_CandelabraLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

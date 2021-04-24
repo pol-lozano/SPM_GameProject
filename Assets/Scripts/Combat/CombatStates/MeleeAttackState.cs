@@ -20,7 +20,7 @@ public class MeleeAttackState : CombatState
         Player.AttackInput = false;
         Player.ShootInput = false;
     }
-
+    /*
     //Called by Animation Event in attack animation
     public void OnBeginAttack()
     {
@@ -35,7 +35,7 @@ public class MeleeAttackState : CombatState
         //Stop listening for hits
         
         attacking = false; 
-    }
+    }*/
 
     public override void EvaluateTransitions()
     {
