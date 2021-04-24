@@ -6,10 +6,11 @@ public abstract class PlayerState : State
     private CharacterController3D player;
     protected CharacterController3D Player => player = player != null ? player : (CharacterController3D)owner;
 
-    protected int inputXHash;
-    protected int inputYHash;
+    protected int inputXFloatHash;
+    protected int inputYFloatHash;
     protected int dodgeTriggerHash;
-    protected int isGroundedHash;
+    protected int isDodgingBoolHash;
+    protected int isGroundedBoolHash;
 
     public override void Initialize(StateMachine stateMachine, object owner)
     {
@@ -19,19 +20,20 @@ public abstract class PlayerState : State
 
     private void InitializeAnimatorHashes()
     {
-        inputXHash = Animator.StringToHash("InputX");
-        inputYHash = Animator.StringToHash("InputY");
+        inputXFloatHash = Animator.StringToHash("InputX");
+        inputYFloatHash = Animator.StringToHash("InputY");
         dodgeTriggerHash = Animator.StringToHash("Dodge");
-        isGroundedHash = Animator.StringToHash("IsGrounded");
+        isDodgingBoolHash = Animator.StringToHash("IsDodging");
+        isGroundedBoolHash = Animator.StringToHash("IsGrounded");
     }
 
     public override void HandleUpdate() => Animate();
     private void Animate()
     {
         Vector3 input = Player.RawInput;
-        Player.Animator.SetFloat(inputXHash, input.x, 1f, Time.deltaTime * 10f);
-        Player.Animator.SetFloat(inputYHash, input.y, 1f, Time.deltaTime * 10f);
-        Player.Animator.SetBool(isGroundedHash, player.PhysicsComponent.IsGrounded);
+        Player.Animator.SetFloat(inputXFloatHash, input.x, 1f, Time.deltaTime * 10f);
+        Player.Animator.SetFloat(inputYFloatHash, input.y, 1f, Time.deltaTime * 10f);
+        Player.Animator.SetBool(isGroundedBoolHash, player.PhysicsComponent.IsGrounded);
     }
 
     /// <summary>

@@ -7,8 +7,8 @@ public class AimState : CombatState
 {   
     public override void Enter()
     {
+        Player.Animator.SetBool(isAimingBoolHash, true);
         Player.SetCrosshair(true);
-        Player.Animator.SetBool(isAimingHash, true);
     }
 
     public override void HandleUpdate()
@@ -22,13 +22,13 @@ public class AimState : CombatState
     {
         if (!Player.AimInput)
             stateMachine.Transition<IdleState>();
-        if (Player.AttackInput) 
-            stateMachine.Transition<ShootState>();
+        if (Player.AttackInput)    
+            stateMachine.Transition<ShootState>();       
     }
 
     public override void Exit()
     {
+        Player.Animator.SetBool(isAimingBoolHash, false);
         Player.SetCrosshair(false);
-        Player.Animator.SetBool(isAimingHash,false);
     }
 }

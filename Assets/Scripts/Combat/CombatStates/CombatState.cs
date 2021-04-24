@@ -7,8 +7,9 @@ public abstract class CombatState : State
     public PlayerCombat Player => player = player != null ? player : (PlayerCombat)owner;
 
     protected int attackTriggerHash;
-    protected int timeSinceLastAttackHash;
-    protected int isAimingHash;
+    protected int timeSinceLastAttackFloatHash;
+    protected int isAimingBoolHash;
+    protected int isAttackingBoolHash;
 
     public override void Initialize(StateMachine stateMachine, object owner)
     {
@@ -19,7 +20,8 @@ public abstract class CombatState : State
     private void InitializeAnimatorHashes()
     {
         attackTriggerHash = Animator.StringToHash("Attack");
-        timeSinceLastAttackHash = Animator.StringToHash("TimeSinceLastAttack");
-        isAimingHash = Animator.StringToHash("IsAiming");
+        timeSinceLastAttackFloatHash = Animator.StringToHash("TimeSinceLastAttack");
+        isAimingBoolHash = Animator.StringToHash("IsAiming");
+        isAttackingBoolHash = Animator.StringToHash("IsAttacking");
     }
 }

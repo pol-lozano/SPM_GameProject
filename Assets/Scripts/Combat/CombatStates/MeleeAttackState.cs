@@ -10,12 +10,10 @@ public class MeleeAttackState : CombatState
     {
         //Send time since last attack and trigger attack animation based on that
         Player.Animator.SetTrigger(attackTriggerHash);
-        Player.Animator.SetFloat(timeSinceLastAttackHash, timeSinceLastAttack);
     }
 
     public override void HandleUpdate()
     {
-        timeSinceLastAttack += Time.deltaTime;
         Player.AttackInput = false;
         Player.ShootInput = false;
     }
@@ -23,19 +21,25 @@ public class MeleeAttackState : CombatState
     //Called by Animation Event in attack animation
     public override void OnAnimationStarted()
     {
+        Player.Animator.SetBool(isAttackingBoolHash, true);
+        timeSinceLastAttack = Time.time - timeSinceLastAttack;
+        Debug.Log("Time since last attack: " + timeSinceLastAttack);
+
         //Play attack sound
-        timeSinceLastAttack = 0;
         //Begin listening for hits
         Player.meleeWeapon.Collider.enabled = true;
-
     }
 
     public override void OnAnimationEnded()
     {
-        Player.meleeWeapon.Collider.enabled = false;
+        Player.Animator.SetBool(isAttackingBoolHash, false);
+        Player.Animator.SetFloat(timeSinceLastAttackFloatHash, timeSinceLastAttack);
+
         //Stop listening for hits     
+        Player.meleeWeapon.Collider.enabled = false;
+
+        timeSinceLastAttack = Time.time;
         stateMachine.Transition<IdleState>();
     }
-
 }
 

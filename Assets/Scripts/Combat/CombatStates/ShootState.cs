@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Rickard Lindgren
 using UnityEngine;
 
 [CreateAssetMenu()]
@@ -17,7 +16,7 @@ public class ShootState : AimState
     //-------------------------
     public override void Enter()
     {
-        Player.Animator.SetTrigger(attackTriggerHash);
+        Player.Animator.SetTrigger("Attack");
         StartShooting();
         shotCooldown = shotTimer;   
     }
@@ -71,7 +70,12 @@ public class ShootState : AimState
     }
     public override void EvaluateTransitions()
     {
-        if (shotCooldown < 0) 
-            stateMachine.Transition<AimState>();
+        if (shotCooldown < 0)
+        {
+            if (Player.AimInput)
+                stateMachine.Transition<AimState>();
+            else
+                stateMachine.Transition<IdleState>();
+        }
     }
 }
