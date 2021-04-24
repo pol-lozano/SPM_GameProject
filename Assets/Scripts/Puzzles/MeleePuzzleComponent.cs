@@ -26,7 +26,7 @@ public class MeleePuzzleComponent : HitComponent
         PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, puzzleID);
         EventHandler<PuzzleEvent>.FireEvent(p);
 
-        Destroy(this);
+        Destroy(gameObject);
 
     }
 }
