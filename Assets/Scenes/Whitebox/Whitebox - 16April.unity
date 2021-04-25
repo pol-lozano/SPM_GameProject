@@ -502,15 +502,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -90.24
+      value: -9.79
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.19
+      value: 13.76
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.16
+      value: 27.67
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7570,6 +7570,11 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!95 &928574162 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7458237703278418296, guid: a76bffe3b47aaf948ad609b2f7ea9a8f, type: 3}
+  m_PrefabInstance: {fileID: 7580604310994461843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &955670457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22667,6 +22672,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3533096467168443010, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533096467168443010, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
+      propertyPath: m_Size.z
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533096467168443010, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3576554496070122480, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -23678,6 +23695,10 @@ PrefabInstance:
     - target: {fileID: 4389358301844497782, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452227511940742018, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4501433161441073878, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30808,6 +30829,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2710858552206949803, guid: a76bffe3b47aaf948ad609b2f7ea9a8f, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 928574162}
+    - target: {fileID: 5222162474157076556, guid: a76bffe3b47aaf948ad609b2f7ea9a8f, type: 3}
+      propertyPath: m_Name
+      value: BossDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 6098550180427145637, guid: a76bffe3b47aaf948ad609b2f7ea9a8f, type: 3}
       propertyPath: m_RootOrder
       value: 2

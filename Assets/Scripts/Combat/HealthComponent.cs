@@ -71,7 +71,7 @@ public class HealthComponent : HitComponent
             if (currentHealth <= 0)
             {
                 //TODO: INVOKE DEATH EVENT
-
+                Debug.Log("an object Died");
                 DeathInfo deathInfo = new DeathInfo
                 {
                     unit = gameObject,
