@@ -5,17 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Testing/AITestScene.unity
     guid: cb6d49b6a97978649bf02610c891e4be
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Whitebox/TestScenLaddning.unity
     guid: 0a23cc1e15c86ea45a8da69c19755205
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Whitebox/Hubb.unity
     guid: 2dc15af977b755c47806a801db548a3c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Whitebox/Path A.unity
     guid: 3eb2c5b8129adfd43bb0ec37012885db
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Whitebox - 16April.unity
+    guid: c416f094dc1aea24abf47c9eeab389e2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cfb7b9ac6a0ad5b45a6b809bf1aa34a6, type: 2}

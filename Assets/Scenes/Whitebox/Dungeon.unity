@@ -616,6 +616,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5654245298104486406, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.017951906
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654245298104486406, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.81721485
+      objectReference: {fileID: 0}
     - target: {fileID: 6261909279374753516, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: cam
       value: 
@@ -652,6 +660,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2746928648652527668, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5678347510913095102, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -700,8 +712,48 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon
       objectReference: {fileID: 0}
+    - target: {fileID: 7955497670833191368, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+--- !u!1 &2067826556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2286842251436019686, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+  m_PrefabInstance: {fileID: 2067826555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067826557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2885304083450287368, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+  m_PrefabInstance: {fileID: 2067826555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2067826558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067826556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 5.425231, z: 0.37}
+  m_Center: {x: -0.06298669, y: 2.7126155, z: -0.072142996}
+--- !u!65 &2067826559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067826557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79, y: 5.425231, z: 0.14428587}
+  m_Center: {x: -0.06300132, y: 2.7126155, z: -0.072142996}
 --- !u!1001 &2072213249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,5 +864,77 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03321ce2f82ae9146b141a0ea4d673d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &5630509957368612126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -80.47977
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.197191
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 108.576126
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839504, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630509955679839507, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: m_Name
+      value: DungeonPuzzlePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994531519798284645, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+      propertyPath: hitComponent
+      value: 
+      objectReference: {fileID: 5630509957368612128}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+--- !u!114 &5630509957368612128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8324191642231202211, guid: a74ad71e5af12a74f92eb54581baa571, type: 3}
+  m_PrefabInstance: {fileID: 5630509957368612126}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a32d296a8a63a4ba258ad662f985ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
