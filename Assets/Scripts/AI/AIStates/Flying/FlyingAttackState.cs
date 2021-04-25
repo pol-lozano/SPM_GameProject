@@ -59,4 +59,14 @@ public class FlyingAttackState : EnemyState
 
         currentCool = cooldown;
     }
+
+    public override void OnAnimationStarted()
+    {
+        base.OnAnimationStarted();
+    }
+
+    public override void OnAnimationEnded()
+    {
+        base.OnAnimationEnded();
+    }
 }

@@ -60,4 +60,15 @@ public class EnemyAttackState : EnemyState
             currentCool = cooldown;
         }
     }
+
+    public override void OnAnimationStarted()
+    {
+        //Turn On AttackCollider
+        base.OnAnimationStarted();
+    }
+    public override void OnAnimationEnded()
+    {
+        //Turn Off AttackCollider
+        base.OnAnimationEnded();
+    }
 }

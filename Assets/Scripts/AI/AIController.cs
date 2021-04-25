@@ -52,6 +52,9 @@ public class AIController : MonoBehaviour
 
     public void Update() => stateMachine?.HandleUpdate();
 
+    public void OnAnimationStarted() => stateMachine?.OnAnimationStarted();
+    public void OnAnimationEnded() => stateMachine?.OnAnimationEnded();
+
     public AIPath GetPath() { return path; }
 
 #if UNITY_EDITOR
