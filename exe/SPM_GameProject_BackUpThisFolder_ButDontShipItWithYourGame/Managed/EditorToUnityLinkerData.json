@@ -836,6 +836,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "DeathListener",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "DebugController",
             "moduleName": "",
             "usedInScenes": []
@@ -976,6 +983,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "MeleeWeapon",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "ObjectPooler",
             "moduleName": "",
             "usedInScenes": []
@@ -998,13 +1012,6 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "PlayerCombat",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "PlayerDeathListener",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1053,6 +1060,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "PuzzleListener",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "SceneLoader",
             "moduleName": "",
             "usedInScenes": []
@@ -1075,48 +1089,6 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TurnTowardsCameraDirection",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.Animation.Rigging.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Animations.Rigging.MultiAimConstraint",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.Animation.Rigging.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Animations.Rigging.MultiParentConstraint",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.Animation.Rigging.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Animations.Rigging.MultiPositionConstraint",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.Animation.Rigging.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Animations.Rigging.Rig",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.Animation.Rigging.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Animations.Rigging.RigBuilder",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.Animation.Rigging.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Animations.Rigging.TwoBoneIKConstraint",
             "moduleName": "",
             "usedInScenes": []
         },

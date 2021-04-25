@@ -71,6 +71,7 @@
 		<type fullname="CharacterController3D" preserve="nothing"/>
 		<type fullname="Checkpoint" preserve="nothing"/>
 		<type fullname="CrossHairTarget" preserve="nothing"/>
+		<type fullname="DeathListener" preserve="nothing"/>
 		<type fullname="DebugController" preserve="nothing"/>
 		<type fullname="EnemyAlertState" preserve="nothing"/>
 		<type fullname="EnemyAttackState" preserve="nothing"/>
@@ -91,29 +92,22 @@
 		<type fullname="InputHandler" preserve="nothing"/>
 		<type fullname="MeleeAttackState" preserve="nothing"/>
 		<type fullname="MeleePuzzleComponent" preserve="nothing"/>
+		<type fullname="MeleeWeapon" preserve="nothing"/>
 		<type fullname="ObjectPooler" preserve="nothing"/>
 		<type fullname="OrbitCamera" preserve="nothing"/>
 		<type fullname="PhysicsComponent" preserve="nothing"/>
 		<type fullname="PlayerCombat" preserve="nothing"/>
-		<type fullname="PlayerDeathListener" preserve="nothing"/>
 		<type fullname="PlayerDebugger" preserve="nothing"/>
 		<type fullname="PlayerDodgeState" preserve="nothing"/>
 		<type fullname="PlayerFallingState" preserve="nothing"/>
 		<type fullname="PlayerGroundedState" preserve="nothing"/>
 		<type fullname="Projectile" preserve="nothing"/>
 		<type fullname="ProjectilePuzzleComponent" preserve="nothing"/>
+		<type fullname="PuzzleListener" preserve="nothing"/>
 		<type fullname="SceneLoader" preserve="nothing"/>
 		<type fullname="SceneUnloader" preserve="nothing"/>
 		<type fullname="ShootState" preserve="nothing"/>
 		<type fullname="TurnTowardsCameraDirection" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="Unity.Animation.Rigging">
-		<type fullname="UnityEngine.Animations.Rigging.MultiAimConstraint" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.Rigging.MultiParentConstraint" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.Rigging.MultiPositionConstraint" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.Rigging.Rig" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.Rigging.RigBuilder" preserve="nothing"/>
-		<type fullname="UnityEngine.Animations.Rigging.TwoBoneIKConstraint" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>

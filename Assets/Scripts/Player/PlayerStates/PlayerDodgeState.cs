@@ -7,10 +7,11 @@ public class PlayerDodgeState : PlayerState
     [SerializeField] private float dodgeForce;
 
     public override void Enter() => Dodge();
+
     private void Dodge()
     {
-        Player.DodgeInput = false;
-        Player.Animator.SetTrigger(dodgeTriggerHash);
+            Player.DodgeInput = false;
+            Player.Animator.SetTrigger(dodgeTriggerHash);
     }
 
     /// <summary>
@@ -18,6 +19,7 @@ public class PlayerDodgeState : PlayerState
     /// </summary>
     public override void OnAnimationStarted()
     {
+        Player.Animator.SetBool(isDodgingBoolHash, true);
         Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;
         // Particle effects shaders, sounds etc...
     }
@@ -28,7 +30,7 @@ public class PlayerDodgeState : PlayerState
     public override void OnAnimationEnded()
     {
         //When animation ends go back to player grounded
-        
+        Player.Animator.SetBool(isDodgingBoolHash, false);
         stateMachine.Transition<PlayerGroundedState>();
     }
 }
