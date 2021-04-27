@@ -140,20 +140,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8108563764783910780, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
---- !u!64 &6820073803410299775
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7243738206601771028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8108563764783910780, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
 --- !u!1 &7514120003791617763
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,14 +554,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
---- !u!4 &1894262724116816707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
-  m_PrefabInstance: {fileID: 2144694823469335720}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225565438261295609 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
+  m_PrefabInstance: {fileID: 2144694823469335720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1894262724116816707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
   m_PrefabInstance: {fileID: 2144694823469335720}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2785920853435403124
@@ -855,14 +841,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
---- !u!4 &4070353806336609334 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
-  m_PrefabInstance: {fileID: 4608999112093150173}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3690450942125807244 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
+  m_PrefabInstance: {fileID: 4608999112093150173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4070353806336609334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
   m_PrefabInstance: {fileID: 4608999112093150173}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5277892569438514067
@@ -1080,14 +1066,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
---- !u!1 &7898657217210241832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
-  m_PrefabInstance: {fileID: 7015696939159744121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7410244718632896914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
+  m_PrefabInstance: {fileID: 7015696939159744121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7898657217210241832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
   m_PrefabInstance: {fileID: 7015696939159744121}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7514120003870868805
@@ -1151,11 +1137,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
---- !u!1 &7243738206601771028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
-  m_PrefabInstance: {fileID: 7514120003870868805}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8056162556900549294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64aa67f0206f13347840c2d614a2eb64, type: 3}
