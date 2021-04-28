@@ -20,24 +20,30 @@ public class Selector : Node
 
     public override NODE_STATE Evaluate()
     {
-        
-        foreach (var node in nodes)
+        if (decorator == null || decorator.Condition())
         {
-            switch (node.Evaluate())
+            foreach (var node in nodes)
             {
-                case NODE_STATE.SUCCESS:
-                    nodeState = NODE_STATE.SUCCESS;
-                    return nodeState;
-                case NODE_STATE.RUNNING:
-                    nodeState = NODE_STATE.RUNNING;
-                    return nodeState;
-                case NODE_STATE.FAILURE:
-                    break;
-                default:
-                    break;
+                switch (node.Evaluate())
+                {
+                    case NODE_STATE.SUCCESS:
+                        nodeState = NODE_STATE.SUCCESS;
+                        return nodeState;
+                    case NODE_STATE.RUNNING:
+                        nodeState = NODE_STATE.RUNNING;
+                        return nodeState;
+                    case NODE_STATE.FAILURE:
+                        break;
+                    default:
+                        break;
+                }
             }
+            nodeState = NODE_STATE.FAILURE;
+            return nodeState;
         }
-        nodeState = NODE_STATE.FAILURE;
-        return nodeState;
+        else
+            return NODE_STATE.FAILURE;
+
+        
     }
 }
