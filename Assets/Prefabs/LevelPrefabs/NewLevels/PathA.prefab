@@ -35405,7 +35405,7 @@ PrefabInstance:
     - {fileID: 7473318528253645413, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
     - {fileID: 2688891213235653708, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
     - {fileID: 5546718518589098356, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
-    - {fileID: 548678935710983791, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
+    - {fileID: 0}
     - {fileID: 3249873236054487089, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
     - {fileID: 7076265131399610728, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
     - {fileID: 7015456883161820758, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
@@ -38216,7 +38216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
       propertyPath: m_Name
-      value: M_Wall
+      value: <M_Wall
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
       propertyPath: m_Layer
@@ -59028,7 +59028,6 @@ PrefabInstance:
     - {fileID: 7473318528253645413, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
     - {fileID: 2688891213235653708, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
     - {fileID: 5546718518589098356, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
-    - {fileID: 548678935710983791, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9d7cafca4309b70418698000a19591e6, type: 3}
 --- !u!1 &1044422497222846475 stripped
 GameObject:
