@@ -6,15 +6,21 @@ public class Selector : Node
 {
 
     protected List<Node> nodes = new List<Node>();
-
+    private Decorator decorator = null;
 
     public Selector(List<Node> list)
     {
         nodes = list;
     }
+    public Selector(List<Node> list, Decorator d)
+    {
+        nodes = list;
+        decorator = d;
+    }
 
     public override NODE_STATE Evaluate()
     {
+        
         foreach (var node in nodes)
         {
             switch (node.Evaluate())
