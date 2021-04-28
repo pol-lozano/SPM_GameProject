@@ -18,6 +18,7 @@ public class EnemyAttackState : EnemyState
     {
         base.Enter();
         currentCool = cooldown;
+        AIController.Animator.SetBool("Attacking", true);
     }
 
     public override void HandleUpdate()
@@ -35,7 +36,7 @@ public class EnemyAttackState : EnemyState
         base.EvaluateTransitions();
         if (!CanSeePlayer())
             stateMachine.Transition<EnemyAlertState>();
-        if (DistanceToPlayer() > chaseDistance)
+        if (Vector3.Distance(AIController.Player.transform.position, AIController.AttackPoint.position) > chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
         if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
@@ -49,6 +50,7 @@ public class EnemyAttackState : EnemyState
         Debug.Log("ATTACK PLAYER");
         
         //AIController.Animator.SetTrigger("attack");
+
     }
 
     private void HandleCooldown()
@@ -70,5 +72,10 @@ public class EnemyAttackState : EnemyState
     {
         //Turn Off AttackCollider
         base.OnAnimationEnded();
+    }
+
+    public override void Exit()
+    {
+        AIController.Animator.SetBool("Attacking", false);
     }
 }

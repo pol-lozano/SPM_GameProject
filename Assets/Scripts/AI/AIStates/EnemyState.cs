@@ -36,4 +36,9 @@ public abstract class EnemyState : State
         return Vector3.Distance(AIController.transform.position, aiController.Player.transform.position);
     }
 
+    protected float DistanceToPoint(Vector3 point)
+    {
+        return Vector3.Distance(AIController.transform.position, point);
+    }
+
 }
