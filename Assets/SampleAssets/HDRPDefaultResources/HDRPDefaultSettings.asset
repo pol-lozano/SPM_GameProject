@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1be1b6c95cd2e41b27903b9270817f, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8bcdf71d7fafa419fca1ed162f5fc9, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
@@ -240,27 +240,27 @@ MonoBehaviour:
     min: 0
   m_NearSampleCount:
     m_OverrideState: 0
-    m_Value: 4
+    m_Value: 5
     min: 3
     max: 8
   m_NearMaxBlur:
     m_OverrideState: 0
-    m_Value: 3
+    m_Value: 4
     min: 0
     max: 8
   m_FarSampleCount:
     m_OverrideState: 0
-    m_Value: 5
+    m_Value: 7
     min: 3
     max: 16
   m_FarMaxBlur:
     m_OverrideState: 0
-    m_Value: 6
+    m_Value: 8
     min: 0
     max: 16
   m_HighQualityFiltering:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1
   m_Resolution:
     m_OverrideState: 0
     m_Value: 2
@@ -330,7 +330,7 @@ MonoBehaviour:
     max: 1
   m_SampleCount:
     m_OverrideState: 0
-    m_Value: 8
+    m_Value: 10
     min: 4
     max: 64
 --- !u!114 &11400000
@@ -559,7 +559,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   skyAmbientMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   fogType:
     m_OverrideState: 0
@@ -576,14 +576,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
   m_Name: Fog
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 0
     m_Value: 1
   enabled:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   colorMode:
     m_OverrideState: 0
     m_Value: 1
@@ -624,7 +624,7 @@ MonoBehaviour:
     m_Value: 50
   meanFreePath:
     m_OverrideState: 0
-    m_Value: 400
+    m_Value: 57
     min: 1
   enableVolumetricFog:
     m_OverrideState: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
     max: 512
   m_VolumetricFogBudget:
     m_OverrideState: 0
-    m_Value: 0.333
+    m_Value: 0.5
     min: 0
     max: 1
   m_ResolutionDepthRatio:
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bff652df78c97c4f963064ad1f34619, type: 3}
   m_Name: ColorCurves
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   master:
     m_OverrideState: 0
@@ -1095,7 +1095,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1.92
+    m_Value: 1
     min: 0
     max: 4
   directLightingStrength:
@@ -1141,12 +1141,12 @@ MonoBehaviour:
     m_Value: 0
   m_MaximumRadiusInPixels:
     m_OverrideState: 0
-    m_Value: 32
+    m_Value: 40
     min: 16
     max: 256
   m_BilateralUpsample:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 1
   m_DirectionCount:
     m_OverrideState: 0
     m_Value: 2

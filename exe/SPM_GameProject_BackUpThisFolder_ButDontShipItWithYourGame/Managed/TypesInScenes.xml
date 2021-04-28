@@ -58,7 +58,7 @@
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.LightingSettings" preserve="nothing"/>
-		<type fullname="UnityEngine.LightProbes" preserve="nothing"/>
+		<type fullname="UnityEngine.ReflectionProbe" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshAgent" preserve="nothing"/>
 		<type fullname="UnityEngine.PhysicMaterial" preserve="nothing"/>
@@ -69,10 +69,7 @@
 		<type fullname="AIPath" preserve="nothing"/>
 		<type fullname="AimState" preserve="nothing"/>
 		<type fullname="CharacterController3D" preserve="nothing"/>
-		<type fullname="Checkpoint" preserve="nothing"/>
 		<type fullname="CrossHairTarget" preserve="nothing"/>
-		<type fullname="DeathListener" preserve="nothing"/>
-		<type fullname="DebugController" preserve="nothing"/>
 		<type fullname="EnemyAlertState" preserve="nothing"/>
 		<type fullname="EnemyAttackState" preserve="nothing"/>
 		<type fullname="EnemyChaseState" preserve="nothing"/>
@@ -104,8 +101,6 @@
 		<type fullname="Projectile" preserve="nothing"/>
 		<type fullname="ProjectilePuzzleComponent" preserve="nothing"/>
 		<type fullname="PuzzleListener" preserve="nothing"/>
-		<type fullname="SceneLoader" preserve="nothing"/>
-		<type fullname="SceneUnloader" preserve="nothing"/>
 		<type fullname="ShootState" preserve="nothing"/>
 		<type fullname="TurnTowardsCameraDirection" preserve="nothing"/>
 	</assembly>
@@ -157,14 +152,18 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.Fog" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDAdditionalCameraData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDAdditionalLightData" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.HDAdditionalReflectionData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRISky" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineEditorResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LiftGammaGain" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.MotionBlur" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.RenderPipelineResources" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.SceneObjectIDMapSceneAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ScreenSpaceRefraction" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.ShadowsMidtonesHighlights" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.HighDefinition.StaticLightingSky" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Tonemapping" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.Vignette" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.VisualEnvironment" preserve="nothing"/>
