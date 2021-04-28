@@ -23,6 +23,7 @@ public class OrbitCamera : MonoBehaviour
     [Header("Camera Settings")]
     [SerializeField, Tooltip("The target that the camera will follow")] private Transform target;
     [SerializeField, Tooltip("The offset the camera will have in relation to the target")] private Vector3 cameraOffset;
+    [SerializeField, Tooltip("Allow to zoom in the camera in and out")] private bool cameraZoomEnabled = false;
     [SerializeField, Range(0, 100), Tooltip("Speed of the rotation of the camera in degrees per second")] private float turnSpeed = 25f;
     [SerializeField, Range(-89, 89), Tooltip("Minimum and maximum vertical angle")] private float minViewAngle = -89f, maxViewAngle = 45f;
     [SerializeField, Range(0, 100), Tooltip("Minimum and maximum vertical angle")] private float minDistance = 1f, maxDistance = 10f;
@@ -63,7 +64,8 @@ public class OrbitCamera : MonoBehaviour
 
     private void OnCameraZoom(float zoom)
     {
-        cameraOffset.z -= zoom * Time.deltaTime;
+        if(cameraZoomEnabled)
+            cameraOffset.z -= zoom * Time.deltaTime;
     }
 
     private void LateUpdate()

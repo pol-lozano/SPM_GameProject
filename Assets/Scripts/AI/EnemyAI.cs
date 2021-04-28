@@ -28,9 +28,7 @@ public class EnemyAI : MonoBehaviour
 
         Sequence checkHealthAndDieSequence = new Sequence(new List<Node> { healthNode, wait, die });
 
-        HealthDecorator healthDecorator = new HealthDecorator(gameObject.GetComponent<HealthComponent>());
-
-        topNode = new Selector(new List<Node> { checkHealthAndDieSequence }, healthDecorator);
+        topNode = new Selector(new List<Node> { checkHealthAndDieSequence });
     }
 
 
