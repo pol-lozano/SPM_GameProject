@@ -2361,8 +2361,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3789008725906699939}
-  - component: {fileID: 8593743491321677476}
-  - component: {fileID: 2782540341248568158}
   - component: {fileID: 8993510916193091282}
   - component: {fileID: 6776152326335526478}
   - component: {fileID: 4575069855431807210}
@@ -2389,33 +2387,6 @@ Transform:
   m_Father: {fileID: 4918959363228933134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8593743491321677476
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850075105932885236}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.14
-  m_Height: 0.97
-  m_Direction: 1
-  m_Center: {x: 0.12, y: 0.15, z: 0}
---- !u!114 &2782540341248568158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850075105932885236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e934e5c19798ded4889a55ea9d7a9f13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 20
 --- !u!136 &8993510916193091282
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2911,7 +2882,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 6776152326335526478}
   - {fileID: 6454170731161125910}
-  isStunned: 0
 --- !u!114 &2364674876880064153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2964,7 +2934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6e22471b0f5bb45923383beb40ff0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: 2782540341248568158}
+  attack: {fileID: 0}
 --- !u!1 &8365259731400017855
 GameObject:
   m_ObjectHideFlags: 0
