@@ -7,6 +7,7 @@ public class AIController : MonoBehaviour
     [SerializeField] private State[] states;
     [SerializeField] private LayerMask visionMask;
     [SerializeField] private AIPath path;
+    [SerializeField] private Transform attackPoint;
 
     [HideInInspector] public MeshRenderer Renderer;
     [HideInInspector] public NavMeshAgent Agent;
@@ -16,6 +17,7 @@ public class AIController : MonoBehaviour
     [SerializeField] private Rigidbody[] rigidBodies;
 
     public CharacterController3D Player { get; set; }
+    public Transform AttackPoint { get => attackPoint; }
 
     public bool isStunned = false;
 
@@ -35,6 +37,7 @@ public class AIController : MonoBehaviour
 
     private void Start()
     {
+
         Player = CharacterController3D.Player;
     }
 

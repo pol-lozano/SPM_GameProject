@@ -22,7 +22,10 @@ public abstract class EnemyState : State
         //VI kanske kan lägga stun här men då måste stunState vara båda för båda fienderna?
         //if (AIController.isStunned) stateMachine.Transition<StunState>();
         //lägg in en HitState som gör typ knockback?
-        if(AIController.HealthComponent.CurrentHealth <= 0) { stateMachine.Transition<EnemyDeadState>(); }
+        if (AIController.HealthComponent.Invulnerable && AIController.HealthComponent.LastType != typeof(Projectile))
+            stateMachine.Transition<EnemyKnockBackState>();
+        if(AIController.HealthComponent.CurrentHealth <= 0) 
+                stateMachine.Transition<EnemyDeadState>(); 
     }
 
     protected bool CanSeePlayer()
@@ -34,6 +37,11 @@ public abstract class EnemyState : State
     protected float DistanceToPlayer()
     {
         return Vector3.Distance(AIController.transform.position, aiController.Player.transform.position);
+    }
+
+    protected float DistanceToPoint(Vector3 point)
+    {
+        return Vector3.Distance(AIController.transform.position, point);
     }
 
 }

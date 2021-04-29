@@ -10,11 +10,13 @@ public class HealthComponent : HitComponent
     [SerializeField] private LayerMask damageLayer;
     private float timeSinceLastHit = 0.0f;
     private bool isStunned;
+    private System.Type lastTypeToHit;
     //bool is PLayer?
 
     public bool Invulnerable { get; set; }
     public float CurrentHealth { get => currentHealth; }
 
+    public System.Type LastType { get => lastTypeToHit; }
     public bool IsStunned { get => isStunned; set => isStunned = value; }
 
     void Start() => ResetHealth();
@@ -51,6 +53,7 @@ public class HealthComponent : HitComponent
 
     public override void HandleHit(HitInfo info)
     {
+        lastTypeToHit = info.damager.GetType();
         //Check for stun. Maybe move somewhere else?
         if (info.damager.GetType() == typeof(Projectile) && IsOnLayer(info.damager.gameObject.layer))
             isStunned = true;
@@ -71,6 +74,7 @@ public class HealthComponent : HitComponent
             if (currentHealth <= 0)
             {
                 //TODO: INVOKE DEATH EVENT
+               
                 Debug.Log("an object Died");
                 DeathInfo deathInfo = new DeathInfo
                 {
