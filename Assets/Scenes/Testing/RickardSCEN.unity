@@ -22550,10 +22550,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UmbralFiend
       objectReference: {fileID: 0}
-    - target: {fileID: 8593743491321677476, guid: 36f7605b9bc29cc4c98df4d1d0a4ee66, type: 3}
-      propertyPath: m_Height
-      value: 1.09
-      objectReference: {fileID: 0}
     - target: {fileID: 8955801791041582836, guid: 36f7605b9bc29cc4c98df4d1d0a4ee66, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -22562,5 +22558,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2782540341248568158, guid: 36f7605b9bc29cc4c98df4d1d0a4ee66, type: 3}
+    - {fileID: 8593743491321677476, guid: 36f7605b9bc29cc4c98df4d1d0a4ee66, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 36f7605b9bc29cc4c98df4d1d0a4ee66, type: 3}
