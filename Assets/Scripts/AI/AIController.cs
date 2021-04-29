@@ -16,15 +16,16 @@ public class AIController : MonoBehaviour
 
     [SerializeField] private Rigidbody[] rigidBodies;
 
+
     public CharacterController3D Player { get; set; }
     public Transform AttackPoint { get => attackPoint; }
 
-    public bool isStunned = false;
 
     public LayerMask VisionMask { get => visionMask; }
 
     private void Awake()
-    {        
+    {
+       
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();

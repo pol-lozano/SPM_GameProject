@@ -22,15 +22,10 @@ public class FlyingRisingState : EnemyState
     public override void HandleUpdate()
     {
         timer -= Time.deltaTime;
-        Rise();
+
     }
 
-    void Rise()
-    {
-        if (AIController.Agent.baseOffset <= height)
-            AIController.Agent.baseOffset += riseSpeed * Time.deltaTime;
-        
-    }
+    
 
     public override void EvaluateTransitions()
     {

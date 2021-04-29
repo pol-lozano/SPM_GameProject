@@ -2536,6 +2536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ' Sword'
       objectReference: {fileID: 0}
+    - target: {fileID: 7072608168107771628, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
+      propertyPath: damageAmount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7654563627156153350, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
       propertyPath: m_RootOrder
       value: 4
