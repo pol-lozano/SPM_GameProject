@@ -78,6 +78,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   path: {fileID: 0}
+  attackPoint: {fileID: 0}
   Renderer: {fileID: 0}
   Agent: {fileID: 0}
   Animator: {fileID: 0}
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  currentHealth: 1
   invulnerabilityTime: 1
   damageLayer:
     serializedVersion: 2
