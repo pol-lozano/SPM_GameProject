@@ -11,6 +11,9 @@ public class HealthComponent : HitComponent
     private float timeSinceLastHit = 0.0f;
     private bool isStunned;
     private System.Type lastTypeToHit;
+
+    [SerializeField] private UIHealthBar healthBar;
+
     //bool is PLayer?
 
     public bool Invulnerable { get; set; }
@@ -69,19 +72,23 @@ public class HealthComponent : HitComponent
             Debug.Log(gameObject.name + " got HURT");
             currentHealth -= info.amount;
 
+            healthBar?.Activate();
+            healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
+
             //TODO: INVOKE TAKE DAMAGE EVENT
 
             if (currentHealth <= 0)
             {
-                //TODO: INVOKE DEATH EVENT
-               
-                Debug.Log("an object Died");
+                if (healthBar != null)
+                    healthBar?.gameObject.SetActive(false);
+
                 DeathInfo deathInfo = new DeathInfo
                 {
                     unit = gameObject,
                     killer = info.damager.gameObject,
                 };
-                DeathEvent de = new DeathEvent(this.gameObject, deathInfo);
+
+                DeathEvent de = new DeathEvent(gameObject, deathInfo);
                 EventHandler<DeathEvent>.FireEvent(de);
             }
         }        
