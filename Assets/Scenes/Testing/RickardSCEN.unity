@@ -5729,6 +5729,7 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 0
+  healthBar: {fileID: 0}
 --- !u!114 &577706143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13031,6 +13032,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 5030949065688228666}
+    - target: {fileID: 704101936157041718, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
+      propertyPath: turnSpeed
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 704101936157041718, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: collisionRadius
       value: 0.4
