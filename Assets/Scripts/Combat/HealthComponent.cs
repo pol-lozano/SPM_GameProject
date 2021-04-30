@@ -65,7 +65,8 @@ public class HealthComponent : HitComponent
         if (Invulnerable || currentHealth <= 0)
             return;
 
-        SetInvulnerable();
+        if(IsOnLayer(info.damager.gameObject.layer))
+            SetInvulnerable();
 
         if (IsOnLayer(info.damager.gameObject.layer))
         {
