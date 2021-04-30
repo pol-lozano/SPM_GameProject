@@ -131,7 +131,8 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
   target: {fileID: 0}
   cameraOffset: {x: -1.1, y: -0.7, z: 3}
-  turnSpeed: 25
+  cameraZoomEnabled: 0
+  turnSpeed: 14
   minViewAngle: -60
   maxViewAngle: 45
   minDistance: 0

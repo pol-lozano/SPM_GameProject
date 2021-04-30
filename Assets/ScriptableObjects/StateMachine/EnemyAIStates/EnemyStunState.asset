@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EnemyStunState
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  stunTime: 2
+  baseOffset: 0
+  stunLength: 4
