@@ -9,8 +9,6 @@ public class MeleeWeapon : MonoBehaviour
     private AudioClip hitAudio;
     private AudioClip attackAudio;
 
-    public bool attackEnded;
-
     private void Awake()
     {
         Collider = GetComponent<Collider>();
@@ -35,7 +33,7 @@ public class MeleeWeapon : MonoBehaviour
         {
             damager = this,
             amount = damageAmount,
-            //ADD ALL INFO
+            hitPosition = other.gameObject.transform.position
         };
 
         h.ApplyHit(info);

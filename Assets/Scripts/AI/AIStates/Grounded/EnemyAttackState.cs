@@ -24,11 +24,13 @@ public class EnemyAttackState : EnemyState
     public override void HandleUpdate()
     {
         base.HandleUpdate();
+        Rotate();
         AIController.Agent.SetDestination(AIController.Player.transform.position);
         if(DistanceToPlayer() < attackDistance && attacking == false)
             Attack();
         if(attacking)
             HandleCooldown();
+
     }
 
     public override void EvaluateTransitions()
@@ -47,8 +49,8 @@ public class EnemyAttackState : EnemyState
     private void Attack()
     {
         attacking = true;
-        Debug.Log("ATTACK PLAYER");
         
+
         //AIController.Animator.SetTrigger("attack");
 
     }
@@ -72,6 +74,14 @@ public class EnemyAttackState : EnemyState
     {
         //Turn Off AttackCollider
         base.OnAnimationEnded();
+    }
+
+    void Rotate()
+    {
+        //Rotate towards camera rotation
+        float cameraYaw = AIController.Player.transform.rotation.eulerAngles.y;
+        Quaternion rotation = Quaternion.Euler(0, cameraYaw, 0);
+        AIController.transform.rotation = Quaternion.Slerp(AIController.transform.rotation, rotation, 10 * Time.deltaTime);
     }
 
     public override void Exit()

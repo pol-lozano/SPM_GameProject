@@ -6,33 +6,45 @@ public class Sequence : Node
 {
 
     protected List<Node> nodes = new List<Node>();
-
+    private Decorator decorator = null;
 
     public Sequence(List<Node> list)
     {
         nodes = list;
     }
 
+    public Sequence(List<Node> list, Decorator d)
+    {
+        nodes = list;
+        decorator = d;
+    }
+
     public override NODE_STATE Evaluate()
     {
-        bool anyChildRunning = false;
-        foreach(var node in nodes)
+        if (decorator == null || decorator.Condition())
         {
-            switch (node.Evaluate())
+            bool anyChildRunning = false;
+            foreach (var node in nodes)
             {
-                case NODE_STATE.SUCCESS:
-                    break;
-                case NODE_STATE.RUNNING:
-                    nodeState = NODE_STATE.RUNNING;
-                    return nodeState;
-                case NODE_STATE.FAILURE:
-                    nodeState = NODE_STATE.FAILURE;
-                    return nodeState;
-                default:
-                    break;
+                switch (node.Evaluate())
+                {
+                    case NODE_STATE.SUCCESS:
+                        break;
+                    case NODE_STATE.RUNNING:
+                        nodeState = NODE_STATE.RUNNING;
+                        return nodeState;
+                    case NODE_STATE.FAILURE:
+                        nodeState = NODE_STATE.FAILURE;
+                        return nodeState;
+                    default:
+                        break;
+                }
             }
-        }
 
-        return nodeState = anyChildRunning ? NODE_STATE.RUNNING : NODE_STATE.SUCCESS;
+            return nodeState = anyChildRunning ? NODE_STATE.RUNNING : NODE_STATE.SUCCESS;
+        }
+        else
+            return NODE_STATE.FAILURE;
+        
     }
 }
