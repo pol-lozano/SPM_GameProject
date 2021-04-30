@@ -6,30 +6,33 @@ using UnityEngine;
 public class EnemyStunState : EnemyState
 {
 
+    [SerializeField] private float stunLength;
+
+    private float timer;
+
     public override void Enter()
     {
         base.Enter();
         AIController.Animator.SetBool("Stunned", true);
+        timer = stunLength;
 
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
+        timer -= Time.deltaTime;
     }
 
     public override void EvaluateTransitions()
     {
         base.EvaluateTransitions();
+        if(timer < 0)
+            stateMachine.Transition<EnemyAlertState>();
     }
 
-    public override void OnAnimationEnded()
+    public override void Exit()
     {
-
-        Debug.Log("WTF VI ÄR HÄR!=?");
-
-        AIController.Animator.SetBool("Stunned", false);
         AIController.HealthComponent.IsStunned = false;
-        stateMachine.Transition<EnemyPatrolState>();
     }
 }
