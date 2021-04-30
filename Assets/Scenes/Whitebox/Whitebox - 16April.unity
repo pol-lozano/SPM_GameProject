@@ -4362,6 +4362,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 611217583025562945, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26c47c1984ea8aa4b91a4103aa20081a, type: 2}
     - target: {fileID: 1405881012256329288, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
       propertyPath: m_Name
       value: AllEnemies
@@ -4410,6 +4414,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2165230169617399666, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26c47c1984ea8aa4b91a4103aa20081a, type: 2}
+    - target: {fileID: 3699120673557182765, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26c47c1984ea8aa4b91a4103aa20081a, type: 2}
+    - target: {fileID: 4534027296897897335, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26c47c1984ea8aa4b91a4103aa20081a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
 --- !u!1001 &1499334477958730133
