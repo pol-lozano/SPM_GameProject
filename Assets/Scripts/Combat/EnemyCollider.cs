@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyCollider : MonoBehaviour
 {
 
-    [SerializeField] private EnemyMeleeAttack attack;
+    [SerializeField] private MeleeWeapon attack;
 
-    public void EnableCollider() { attack.Coll.enabled = true; }
-    public void DisableCollider() { attack.Coll.enabled = false; }
+    public void EnableCollider() { attack.Collider.enabled = true; }
+    public void DisableCollider() { attack.Collider.enabled = false; }
 }

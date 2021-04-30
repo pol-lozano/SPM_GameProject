@@ -9,8 +9,6 @@ public class MeleeWeapon : MonoBehaviour
     private AudioClip hitAudio;
     private AudioClip attackAudio;
 
-    public bool attackEnded;
-
     private void Awake()
     {
         Collider = GetComponent<Collider>();
@@ -28,7 +26,6 @@ public class MeleeWeapon : MonoBehaviour
 
         if (h == null)
             return false;
-
 
         //Check if owner of health system
 

@@ -24,7 +24,7 @@ public class EnemyAttackState : EnemyState
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        Rotate();
+    
         AIController.Agent.SetDestination(AIController.Player.transform.position);
         if(DistanceToPlayer() < attackDistance && attacking == false)
             Attack();

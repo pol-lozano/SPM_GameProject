@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 172649161691771202}
   - component: {fileID: 717417962678725008}
   - component: {fileID: 2623712776558114598}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RubblePathA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.4562683, y: 6.186947, z: 12.384053}
-  m_Center: {x: -0.3299408, y: 1.614584, z: -0.48727846}
+  m_Size: {x: 5.2236176, y: 6.186947, z: 16.088856}
+  m_Center: {x: 0.053733826, y: 1.614584, z: 0.34536695}
 --- !u!1001 &172649160786234855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163,6 +163,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}
       propertyPath: m_Name
       value: SM_RubbleTall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}

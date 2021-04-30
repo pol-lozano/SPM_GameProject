@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376a15a5801599d46a2f9dfa1e14035e, type: 3}
   m_Name: Alert
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1.5
+  baseOffset: 0
   chaseDistance: 15
   patrolDistance: 0
   alertTime: 3

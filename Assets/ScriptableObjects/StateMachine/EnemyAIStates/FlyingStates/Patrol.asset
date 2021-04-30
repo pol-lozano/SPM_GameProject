@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eaaa0377a296974fbdfdcdacb69d290, type: 3}
   m_Name: Patrol
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  patrolPoints:
-  - {x: 0, y: 0, z: 0}
-  - {x: 4, y: 0, z: 0}
-  - {x: 4, y: 0, z: 5}
+  moveSpeed: 0.7
+  baseOffset: 0
   chaseDistance: 15
   hearingRange: 20
