@@ -1941,7 +1941,6 @@ MonoBehaviour:
   m_Script: {fileID: 2095859570}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &353856185
 Transform:
   m_ObjectHideFlags: 19
@@ -3928,7 +3927,6 @@ MonoBehaviour:
   m_Script: {fileID: 2095859570}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &1736160837
 Transform:
   m_ObjectHideFlags: 19
@@ -4426,6 +4424,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 26c47c1984ea8aa4b91a4103aa20081a, type: 2}
+    - target: {fileID: 8244899892787616366, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416840377583563455, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120608741867936840, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
 --- !u!1001 &1499334477958730133
