@@ -34,5 +34,6 @@ public class EnemyStunState : EnemyState
     public override void Exit()
     {
         AIController.HealthComponent.IsStunned = false;
+        AIController.Animator.SetBool("Stunned", false);
     }
 }
