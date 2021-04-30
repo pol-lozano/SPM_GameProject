@@ -49,6 +49,7 @@ public class UIHealthBar : MonoBehaviour
 
     public void Activate()
     {
+        activated = true;
         backgroundMarginImage.enabled = true;
         backgroundImage.enabled = true;
         damageTakenImage.enabled = true;
@@ -57,6 +58,7 @@ public class UIHealthBar : MonoBehaviour
 
     public void Deactivate()
     {
+        activated = false;
         backgroundMarginImage.enabled = false;
         backgroundImage.enabled = false;
         damageTakenImage.enabled = false;
