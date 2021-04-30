@@ -29,13 +29,14 @@ public class MeleeWeapon : MonoBehaviour
         if (h == null)
             return false;
 
+
         //Check if owner of health system
 
         HitInfo info = new HitInfo()
         {
             damager = this,
             amount = damageAmount,
-            //ADD ALL INFO
+            hitPosition = other.gameObject.transform.position
         };
 
         h.ApplyHit(info);

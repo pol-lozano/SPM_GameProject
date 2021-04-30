@@ -34,7 +34,7 @@ public struct HitInfo
     public MonoBehaviour damager;
     public string tag;
     public int amount;
-    public Transform location;
+    public Vector3 hitPosition;
     public Vector3 direction;
     public AudioClip sound;
     public ParticleSystem particleSystem;

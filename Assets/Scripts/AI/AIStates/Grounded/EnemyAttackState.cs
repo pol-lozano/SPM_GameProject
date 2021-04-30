@@ -18,16 +18,19 @@ public class EnemyAttackState : EnemyState
     {
         base.Enter();
         currentCool = cooldown;
+        AIController.Animator.SetBool("Attacking", true);
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
+        Rotate();
         AIController.Agent.SetDestination(AIController.Player.transform.position);
         if(DistanceToPlayer() < attackDistance && attacking == false)
             Attack();
         if(attacking)
             HandleCooldown();
+
     }
 
     public override void EvaluateTransitions()
@@ -35,7 +38,7 @@ public class EnemyAttackState : EnemyState
         base.EvaluateTransitions();
         if (!CanSeePlayer())
             stateMachine.Transition<EnemyAlertState>();
-        if (DistanceToPlayer() > chaseDistance)
+        if (Vector3.Distance(AIController.Player.transform.position, AIController.AttackPoint.position) > chaseDistance)
             stateMachine.Transition<EnemyChaseState>();
         if (AIController.HealthComponent.IsStunned)
             stateMachine.Transition<EnemyStunState>();
@@ -46,9 +49,10 @@ public class EnemyAttackState : EnemyState
     private void Attack()
     {
         attacking = true;
-        Debug.Log("ATTACK PLAYER");
         
+
         //AIController.Animator.SetTrigger("attack");
+
     }
 
     private void HandleCooldown()
@@ -70,5 +74,18 @@ public class EnemyAttackState : EnemyState
     {
         //Turn Off AttackCollider
         base.OnAnimationEnded();
+    }
+
+    void Rotate()
+    {
+        //Rotate towards camera rotation
+        float cameraYaw = AIController.Player.transform.rotation.eulerAngles.y;
+        Quaternion rotation = Quaternion.Euler(0, cameraYaw, 0);
+        AIController.transform.rotation = Quaternion.Slerp(AIController.transform.rotation, rotation, 10 * Time.deltaTime);
+    }
+
+    public override void Exit()
+    {
+        AIController.Animator.SetBool("Attacking", false);
     }
 }
