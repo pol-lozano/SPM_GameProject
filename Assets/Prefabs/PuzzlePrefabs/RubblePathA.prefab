@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 172649161691771196}
   - component: {fileID: 172649161691771203}
   - component: {fileID: 172649161691771202}
+  - component: {fileID: 717417962678725008}
+  - component: {fileID: 2623712776558114598}
   m_Layer: 0
-  m_Name: RubblePathA 1
+  m_Name: RubblePathA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,20 +68,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &110093296552946550
-MeshCollider:
+--- !u!208 &717417962678725008
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055028337411616950}
+  m_GameObject: {fileID: 172649161691771201}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.285, y: 2.735, z: 3.435}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 2.23, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &2623712776558114598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172649161691771201}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7889649520182506200, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 4.4562683, y: 6.186947, z: 12.384053}
+  m_Center: {x: -0.3299408, y: 1.614584, z: -0.48727846}
 --- !u!1001 &172649160786234855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149,11 +166,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}
---- !u!1 &1055028337411616950 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}
-  m_PrefabInstance: {fileID: 172649160786234855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &427813387059309068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98f86a2053be8ae44b1a28bb4b854638, type: 3}
