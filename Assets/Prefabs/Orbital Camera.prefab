@@ -132,7 +132,7 @@ MonoBehaviour:
   target: {fileID: 0}
   cameraOffset: {x: -1.1, y: -0.7, z: 3}
   cameraZoomEnabled: 0
-  turnSpeed: 14
+  turnSpeed: 10
   minViewAngle: -60
   maxViewAngle: 45
   minDistance: 0
