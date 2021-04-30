@@ -20,13 +20,14 @@ public class EnemyMeleeAttack : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("träffa nått");
         CheckHit(collision.collider);
     }
 
 
     private bool CheckHit(Collider other)
     {
-        Debug.Log("träffa nått");
+        
         HitBox h = other.GetComponent<HitBox>();
 
         if (h == null)
