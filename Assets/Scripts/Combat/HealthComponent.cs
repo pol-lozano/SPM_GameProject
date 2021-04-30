@@ -73,6 +73,7 @@ public class HealthComponent : HitComponent
             currentHealth -= info.amount;
 
             healthBar?.Activate();
+            healthBar?.DeactivateDelayed(7);
             healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
 
             //TODO: INVOKE TAKE DAMAGE EVENT
@@ -80,7 +81,7 @@ public class HealthComponent : HitComponent
             if (currentHealth <= 0)
             {
                 if (healthBar != null)
-                    healthBar?.gameObject.SetActive(false);
+                    Invoke("DeactivateHealthBar", 2);
 
                 DeathInfo deathInfo = new DeathInfo
                 {
@@ -92,6 +93,11 @@ public class HealthComponent : HitComponent
                 EventHandler<DeathEvent>.FireEvent(de);
             }
         }        
+    }
+
+    private void DeactivateHealthBar()
+    {
+        healthBar?.gameObject.SetActive(false);
     }
 
     private bool IsOnLayer(int layer)

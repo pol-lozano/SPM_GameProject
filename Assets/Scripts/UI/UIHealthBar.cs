@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,7 +44,7 @@ public class UIHealthBar : MonoBehaviour
 
     private void Update()
     {
-        damageTakenImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 2 * Time.deltaTime));
+        damageTakenImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 1.5f * Time.deltaTime));
     }
 
     public void Activate()
@@ -60,5 +61,11 @@ public class UIHealthBar : MonoBehaviour
         backgroundImage.enabled = false;
         damageTakenImage.enabled = false;
         currentHealthImage.enabled = false;
+    }
+
+    internal void DeactivateDelayed(int t)
+    {
+        CancelInvoke("Deactivate");
+        Invoke("Deactivate", t);
     }
 }
