@@ -56,10 +56,12 @@ public class HealthComponent : HitComponent
 
     public override void HandleHit(HitInfo info)
     {
-        lastTypeToHit = info.damager.GetType();
-        //Check for stun. Maybe move somewhere else?
         if (info.damager.GetType() == typeof(Projectile) && IsOnLayer(info.damager.gameObject.layer))
             isStunned = true;
+
+        lastTypeToHit = info.damager.GetType();
+        //Check for stun. Maybe move somewhere else?
+        
 
         //Ignore damage if invulnerable or already dead
         if (Invulnerable || currentHealth <= 0)
