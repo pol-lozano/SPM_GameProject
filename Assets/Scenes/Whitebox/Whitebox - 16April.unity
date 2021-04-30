@@ -1941,6 +1941,7 @@ MonoBehaviour:
   m_Script: {fileID: 2095859570}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &353856185
 Transform:
   m_ObjectHideFlags: 19
@@ -3927,6 +3928,7 @@ MonoBehaviour:
   m_Script: {fileID: 2095859570}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &1736160837
 Transform:
   m_ObjectHideFlags: 19
@@ -4407,14 +4409,6 @@ PrefabInstance:
     - target: {fileID: 1405881012256329291, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1800471200678761448, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6015570454802213322, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
-      propertyPath: playOnAwake
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 862683a7dc0abbb4eba65d16a6a606f1, type: 3}
