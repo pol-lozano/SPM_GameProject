@@ -7079,8 +7079,8 @@ public:
 	String_t* ___tag_1;
 	// System.Int32 HitInfo::amount
 	int32_t ___amount_2;
-	// UnityEngine.Transform HitInfo::location
-	Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * ___location_3;
+	// UnityEngine.Vector3 HitInfo::hitPosition
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___hitPosition_3;
 	// UnityEngine.Vector3 HitInfo::direction
 	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___direction_4;
 	// UnityEngine.AudioClip HitInfo::sound
@@ -7115,13 +7115,12 @@ public:
 		___amount_2 = value;
 	}
 
-	inline static int32_t get_offset_of_location_3() { return static_cast<int32_t>(offsetof(HitInfo_tFE7DB44DF02DD7122CF35A8520C3F60CC6FF3779, ___location_3)); }
-	inline Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * get_location_3() const { return ___location_3; }
-	inline Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 ** get_address_of_location_3() { return &___location_3; }
-	inline void set_location_3(Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * value)
+	inline static int32_t get_offset_of_hitPosition_3() { return static_cast<int32_t>(offsetof(HitInfo_tFE7DB44DF02DD7122CF35A8520C3F60CC6FF3779, ___hitPosition_3)); }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  get_hitPosition_3() const { return ___hitPosition_3; }
+	inline Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E * get_address_of_hitPosition_3() { return &___hitPosition_3; }
+	inline void set_hitPosition_3(Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  value)
 	{
-		___location_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___location_3), (void*)value);
+		___hitPosition_3 = value;
 	}
 
 	inline static int32_t get_offset_of_direction_4() { return static_cast<int32_t>(offsetof(HitInfo_tFE7DB44DF02DD7122CF35A8520C3F60CC6FF3779, ___direction_4)); }
@@ -7157,7 +7156,7 @@ struct HitInfo_tFE7DB44DF02DD7122CF35A8520C3F60CC6FF3779_marshaled_pinvoke
 	MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A * ___damager_0;
 	char* ___tag_1;
 	int32_t ___amount_2;
-	Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * ___location_3;
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___hitPosition_3;
 	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___direction_4;
 	AudioClip_t16D2E573E7CC1C5118D8EE0F0692D46866A1C0EE * ___sound_5;
 	ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * ___particleSystem_6;
@@ -7168,7 +7167,7 @@ struct HitInfo_tFE7DB44DF02DD7122CF35A8520C3F60CC6FF3779_marshaled_com
 	MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A * ___damager_0;
 	Il2CppChar* ___tag_1;
 	int32_t ___amount_2;
-	Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * ___location_3;
+	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___hitPosition_3;
 	Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  ___direction_4;
 	AudioClip_t16D2E573E7CC1C5118D8EE0F0692D46866A1C0EE * ___sound_5;
 	ParticleSystem_t2F526CCDBD3512879B3FCBE04BCAB20D7B4F391E * ___particleSystem_6;

@@ -22,11 +22,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: UmbralMat
   m_Shader: {fileID: -6465566751694194690, guid: ed9e293a805bbcb4aabd91711291e47e, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 2225
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -39,11 +39,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Cubemap_4ca7653a5c0949ecadd56cc389bb04cd:
-        m_Texture: {fileID: 8900000, guid: 2de387e507fbabb4286268ab33d08a48, type: 3}
+        m_Texture: {fileID: 8900000, guid: 6dc42faeb18300b4b9045fd8e9441a3d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Cubemap_5e3a5da734a34999b241101bd293c5bd:
         m_Texture: {fileID: 8900000, guid: 1e16ce5769b6a9b448133e8d1fca7c06, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_09492ab817524f34a12886ec349b7817:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_c5495e69c97644f2b5a067e7d19c9bf9:
+        m_Texture: {fileID: 2800000, guid: 8fdd795b5d7330e4787e19643ec0f9ad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -106,6 +114,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_093e5093de1c45c6a431b4034dc7713a_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 8fdd795b5d7330e4787e19643ec0f9ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -143,12 +155,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_01094c93d14f4328bd8b0b1f3f17dd9a: 4.64
-    - Vector1_13ce478a6d9c4d6ab4d53fdb0729d34b: 70
-    - Vector1_3ae83b5d59f6486c95a988bd89c9586d: -3.13
-    - Vector1_7bea9d5c09b74d699d25c1750c8a201a: 5.37
-    - Vector1_8be8b986164246a1804ec5e1c9e3458a: 0.03
-    - Vector1_d224ee34b15b4704a648c8e4c5798ec3: 0.7
+    - Vector1_01094c93d14f4328bd8b0b1f3f17dd9a: 5
+    - Vector1_10a94d5812f64e8f971c88bc03a4bd2e: 1
+    - Vector1_23600a7503c24b158e8f1696d0d069cb: 0.5
+    - Vector1_3ae83b5d59f6486c95a988bd89c9586d: 50
+    - Vector1_6f6fdb30d3994c49ae7c8124246922b4: 1
+    - Vector1_7bea9d5c09b74d699d25c1750c8a201a: 5
+    - Vector1_8be8b986164246a1804ec5e1c9e3458a: 0.1
+    - Vector1_96bda0a2ddf24e8588cb0c1d736759eb: 1
+    - Vector1_d224ee34b15b4704a648c8e4c5798ec3: 1.81
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -234,6 +249,7 @@ Material:
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 1
+    - _RequireSplitLighting: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -242,10 +258,10 @@ Material:
     - _SpecularOcclusionMode: 1
     - _SrcBlend: 1
     - _StencilRef: 0
-    - _StencilRefDepth: 0
+    - _StencilRefDepth: 8
     - _StencilRefDistortionVec: 4
-    - _StencilRefGBuffer: 2
-    - _StencilRefMV: 32
+    - _StencilRefGBuffer: 10
+    - _StencilRefMV: 40
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 8
     - _StencilWriteMaskDistortionVec: 4
@@ -276,11 +292,12 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_05a981b72a3f469c980379b25fea82da: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
-    - Color_797a0657418b46798dfc03dde807993b: {r: 0, g: 0.001408108, b: 0.003921569, a: 1}
-    - Color_a1f464c9a4a844cca6893241294374c4: {r: 0, g: 0, b: 0, a: 0}
-    - Vector3_0ba6e936f32642a5a5668c0fbd3a7310: {r: 0.2, g: 0.45, b: 0.2, a: 0.2}
-    - Vector3_87f5b2ef0de74d83bb6e8def10e26332: {r: 0.3, g: 0.7, b: 0, a: 0}
+    - Color_05a981b72a3f469c980379b25fea82da: {r: 0.041829824, g: 0.042562477, b: 0.18867922, a: 1}
+    - Color_797a0657418b46798dfc03dde807993b: {r: 1, g: 1, b: 1, a: 1}
+    - Color_a1f464c9a4a844cca6893241294374c4: {r: 1, g: 1, b: 1, a: 1}
+    - Vector2_13e9f8293219423ca01b65aa2013da8f: {r: 3, g: 3, b: 0, a: 0}
+    - Vector3_0ba6e936f32642a5a5668c0fbd3a7310: {r: 0, g: 0.1, b: 0, a: 0}
+    - Vector3_87f5b2ef0de74d83bb6e8def10e26332: {r: 0, g: -0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
