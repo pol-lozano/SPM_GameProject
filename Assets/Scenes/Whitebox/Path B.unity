@@ -3023,6 +3023,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1341303774}
     m_Modifications:
+    - target: {fileID: 2161732038945064357, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161732039690029141, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161732039709928407, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161732039831191248, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161732040086935476, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161732040717233368, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161732040731207800, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762143897547406987, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762143897713640841, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762143898110047441, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762143898393234789, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762143898832939703, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762143898855724145, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007852728744705876, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007852728744705876, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.704
+      objectReference: {fileID: 0}
     - target: {fileID: 6654531353503693260, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3070,6 +3130,26 @@ PrefabInstance:
     - target: {fileID: 6654531353503693261, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
       propertyPath: m_Name
       value: PathBLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735613512929426068, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 716.1972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735613513211488328, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 716.1972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735613514142215786, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 716.1972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735613514193698552, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 716.1972
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735613514478200098, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
+      propertyPath: m_Intensity
+      value: 716.1972
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0244b3708ac6074b9ebb6be612729bc, type: 3}
