@@ -1820,8 +1820,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab96bee0ef988ad41bc42e270bc2d4cd, type: 2}
-  - {fileID: 2100000, guid: 662123390731739468012fa3f581f5ea, type: 2}
+  - {fileID: 2100000, guid: c7406742af93e024b8a0a48540ed893b, type: 2}
+  - {fileID: 2100000, guid: c7406742af93e024b8a0a48540ed893b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2027,7 +2027,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
-  attackEnded: 0
 --- !u!1 &5575740207856861511
 GameObject:
   m_ObjectHideFlags: 0

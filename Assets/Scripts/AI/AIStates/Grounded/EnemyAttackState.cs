@@ -13,18 +13,25 @@ public class EnemyAttackState : EnemyState
     private float currentCool;
     private bool attacking;
 
+    private float rotationRate = 0.5f;
+    private float rotationTimer;
+
     // Methods
     public override void Enter()
     {
         base.Enter();
         currentCool = cooldown;
         AIController.Animator.SetBool("Attacking", true);
+        rotationTimer = rotationRate;
     }
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-    
+        rotationTimer -= Time.deltaTime;
+        if (rotationTimer < 0)
+            Rotate();
+
         AIController.Agent.SetDestination(AIController.Player.transform.position);
         if(DistanceToPlayer() < attackDistance && attacking == false)
             Attack();
@@ -78,10 +85,11 @@ public class EnemyAttackState : EnemyState
 
     void Rotate()
     {
-        //Rotate towards camera rotation
-        float cameraYaw = AIController.Player.transform.rotation.eulerAngles.y;
-        Quaternion rotation = Quaternion.Euler(0, cameraYaw, 0);
-        AIController.transform.rotation = Quaternion.Slerp(AIController.transform.rotation, rotation, 10 * Time.deltaTime);
+        if (Vector3.Distance(AIController.AttackPoint.position, AIController.Player.transform.position) > 0.1f)
+            AIController.transform.LookAt(
+                new Vector3(AIController.Player.transform.position.x,
+                AIController.transform.position.y,
+                AIController.Player.transform.position.z));
     }
 
     public override void Exit()
