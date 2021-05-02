@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &487547495697129846
+--- !u!1 &3301913499361835502
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 487547495697129844}
-  - component: {fileID: 487547495697129847}
-  - component: {fileID: 6201207326130948357}
+  - component: {fileID: 3301913499361835500}
+  - component: {fileID: 3301913499361835503}
+  - component: {fileID: 9014447498596061585}
   m_Layer: 0
-  m_Name: 'PathAVolume '
+  m_Name: Dungeon Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &487547495697129844
+--- !u!4 &3301913499361835500
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487547495697129846}
+  m_GameObject: {fileID: 3301913499361835502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -74.7, y: -48.333668, z: 75.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &487547495697129847
+--- !u!114 &3301913499361835503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487547495697129846}
+  m_GameObject: {fileID: 3301913499361835502}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
@@ -49,16 +49,16 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 582adbd84082fdb4faf7cd4beb1ccd14, type: 2}
---- !u!65 &6201207326130948357
+--- !u!65 &9014447498596061585
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487547495697129846}
+  m_GameObject: {fileID: 3301913499361835502}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 58.543434, y: 32.2, z: 94.034706}
-  m_Center: {x: -97.90065, y: 6.800001, z: 5.2410545}
+  m_Size: {x: 70.72329, y: 37.290215, z: 65.43145}
+  m_Center: {x: 24.840092, y: 18.145107, z: -34.344006}
