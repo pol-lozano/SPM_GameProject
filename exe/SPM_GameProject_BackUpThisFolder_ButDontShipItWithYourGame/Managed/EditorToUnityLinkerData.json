@@ -638,6 +638,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "NavMeshObstacle",
+            "fullManagedTypeName": "UnityEngine.AI.NavMeshObstacle",
+            "moduleName": "AI",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "PhysicMaterial",
             "fullManagedTypeName": "UnityEngine.PhysicMaterial",
             "moduleName": "Physics",
@@ -722,7 +731,21 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "EnemyCollider",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "EnemyDeadState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "EnemyKnockBackState",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -765,13 +788,6 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "FlyingPatrolState",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "FlyingRisingState",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -926,6 +942,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "TurnTowardsCameraDirection",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UIHealthBar",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1248,13 +1271,6 @@
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
-            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.HDRenderPipelineEditorResources",
             "moduleName": "",
             "usedInScenes": []
         },

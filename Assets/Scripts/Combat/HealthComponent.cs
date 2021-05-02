@@ -56,16 +56,19 @@ public class HealthComponent : HitComponent
 
     public override void HandleHit(HitInfo info)
     {
-        lastTypeToHit = info.damager.GetType();
-        //Check for stun. Maybe move somewhere else?
         if (info.damager.GetType() == typeof(Projectile) && IsOnLayer(info.damager.gameObject.layer))
             isStunned = true;
+
+        lastTypeToHit = info.damager.GetType();
+        //Check for stun. Maybe move somewhere else?
+        
 
         //Ignore damage if invulnerable or already dead
         if (Invulnerable || currentHealth <= 0)
             return;
 
-        SetInvulnerable();
+        if(IsOnLayer(info.damager.gameObject.layer))
+            SetInvulnerable();
 
         if (IsOnLayer(info.damager.gameObject.layer))
         {
@@ -73,6 +76,7 @@ public class HealthComponent : HitComponent
             currentHealth -= info.amount;
 
             healthBar?.Activate();
+            healthBar?.DeactivateDelayed(7);
             healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
 
             //TODO: INVOKE TAKE DAMAGE EVENT
@@ -80,7 +84,7 @@ public class HealthComponent : HitComponent
             if (currentHealth <= 0)
             {
                 if (healthBar != null)
-                    healthBar?.gameObject.SetActive(false);
+                    Invoke("DeactivateHealthBar", 2);
 
                 DeathInfo deathInfo = new DeathInfo
                 {
@@ -92,6 +96,11 @@ public class HealthComponent : HitComponent
                 EventHandler<DeathEvent>.FireEvent(de);
             }
         }        
+    }
+
+    private void DeactivateHealthBar()
+    {
+        healthBar?.gameObject.SetActive(false);
     }
 
     private bool IsOnLayer(int layer)

@@ -15,6 +15,7 @@ public class FlyingPatrolState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        
         patrolPoint = AIController.GetPath().GetPath[0];
     }
 

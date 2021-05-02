@@ -61,6 +61,7 @@
 		<type fullname="UnityEngine.ReflectionProbe" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshAgent" preserve="nothing"/>
+		<type fullname="UnityEngine.AI.NavMeshObstacle" preserve="nothing"/>
 		<type fullname="UnityEngine.PhysicMaterial" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshData" preserve="nothing"/>
 	</assembly>
@@ -73,14 +74,15 @@
 		<type fullname="EnemyAlertState" preserve="nothing"/>
 		<type fullname="EnemyAttackState" preserve="nothing"/>
 		<type fullname="EnemyChaseState" preserve="nothing"/>
+		<type fullname="EnemyCollider" preserve="nothing"/>
 		<type fullname="EnemyDeadState" preserve="nothing"/>
+		<type fullname="EnemyKnockBackState" preserve="nothing"/>
 		<type fullname="EnemyPatrolState" preserve="nothing"/>
 		<type fullname="EnemyStunState" preserve="nothing"/>
 		<type fullname="FlyingAlertState" preserve="nothing"/>
 		<type fullname="FlyingAttackState" preserve="nothing"/>
 		<type fullname="FlyingChaseState" preserve="nothing"/>
 		<type fullname="FlyingPatrolState" preserve="nothing"/>
-		<type fullname="FlyingRisingState" preserve="nothing"/>
 		<type fullname="FlyingStunState" preserve="nothing"/>
 		<type fullname="GodMode" preserve="nothing"/>
 		<type fullname="HealthComponent" preserve="nothing"/>
@@ -103,6 +105,7 @@
 		<type fullname="PuzzleListener" preserve="nothing"/>
 		<type fullname="ShootState" preserve="nothing"/>
 		<type fullname="TurnTowardsCameraDirection" preserve="nothing"/>
+		<type fullname="UIHealthBar" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
@@ -155,7 +158,6 @@
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDAdditionalReflectionData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRISky" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset" preserve="nothing"/>
-		<type fullname="UnityEngine.Rendering.HighDefinition.HDRenderPipelineEditorResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.HDShadowSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.LiftGammaGain" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.HighDefinition.MotionBlur" preserve="nothing"/>
