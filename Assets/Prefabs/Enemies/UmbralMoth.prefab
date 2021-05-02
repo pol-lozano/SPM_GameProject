@@ -425,6 +425,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 5454695381254388835}
+    - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: offset.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2254545870210786065, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_Pivot.x
       value: 0
