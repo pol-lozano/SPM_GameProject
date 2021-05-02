@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Testing/AITestScene.unity
-    guid: cb6d49b6a97978649bf02610c891e4be
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/Whitebox/TestScenLaddning.unity
     guid: 0a23cc1e15c86ea45a8da69c19755205
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Whitebox/Path A.unity
     guid: 3eb2c5b8129adfd43bb0ec37012885db
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/MainMenu.unity
+    guid: 48c8f969fd560bc4ab3f273017eafe83
   - enabled: 1
     path: Assets/Scenes/Whitebox/Whitebox - 16April.unity
     guid: c416f094dc1aea24abf47c9eeab389e2

@@ -15,4 +15,9 @@ public class ChangeScene : MonoBehaviour
         Application.Quit();
         Debug.Log("Exited");
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        SceneManager.LoadScene(0);
+    }
 }
