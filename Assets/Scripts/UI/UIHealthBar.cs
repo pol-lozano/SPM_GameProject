@@ -21,13 +21,6 @@ public class UIHealthBar : MonoBehaviour
         Deactivate();
     }
 
-    public void SetHealthBarPercentage(float percentage)
-    {
-        float parentWidth = rectParent.rect.width;
-        width = parentWidth * percentage;
-        currentHealthImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
-    }
-
     void LateUpdate()
     {
         if (activated)
@@ -44,6 +37,13 @@ public class UIHealthBar : MonoBehaviour
 
         float newWidth = Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 1.5f * Time.deltaTime);
         damageTakenImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newWidth);
+    }
+
+    public void SetHealthBarPercentage(float percentage)
+    {
+        float parentWidth = rectParent.rect.width;
+        width = parentWidth * percentage;
+        currentHealthImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
     }
 
     public void Activate()
