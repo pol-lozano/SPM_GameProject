@@ -57,7 +57,7 @@ MonoBehaviour:
   currentHealthImage: {fileID: 2254545870399671023}
   backgroundImage: {fileID: 5872508300491294449}
   backgroundMarginImage: {fileID: 4247793727027645260}
-  offset: {x: 0, y: 0.4, z: 0}
+  offset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &2254545870210786070
 GameObject:
   m_ObjectHideFlags: 0

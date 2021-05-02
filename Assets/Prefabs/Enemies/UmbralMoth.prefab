@@ -413,7 +413,7 @@ NavMeshAgent:
   m_Height: 1
   m_BaseOffset: 4
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 2
 --- !u!1001 &5214927447048712581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ PrefabInstance:
     - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 5749658656314048313}
+      objectReference: {fileID: 5454695381254388835}
     - target: {fileID: 2254545870210786065, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_Pivot.x
       value: 0
