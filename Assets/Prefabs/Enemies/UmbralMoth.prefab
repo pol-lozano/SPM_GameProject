@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: offset.y
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 2254545869778099355, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 2254545870210786065, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -516,6 +520,14 @@ PrefabInstance:
     - target: {fileID: 2254545870210786070, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254545870399671020, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305915311379637865, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
