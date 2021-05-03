@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
 
     private void Restart(DeathEvent eve)
     {
-        if(eve.Info.unit.tag == "Player")
+        if(eve.Info.unit.tag == "DeathScreen")
         {
             SceneManager.UnloadSceneAsync("Whitebox - 16April");
             SceneManager.LoadSceneAsync("Whitebox - 16April", LoadSceneMode.Additive);
