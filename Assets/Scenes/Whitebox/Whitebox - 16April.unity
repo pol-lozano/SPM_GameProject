@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
+  m_IndirectSpecularColor: {r: 54.836723, g: 61.49475, b: 100.90654, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4535,6 +4535,14 @@ PrefabInstance:
     - target: {fileID: 1298207673992848499, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Intensity
       value: 716.1972
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850331470319, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289851146387365, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1379289851599630065, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Name
@@ -17054,10 +17062,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5678347510913095102, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6174844647233061414, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
