@@ -137,7 +137,7 @@ Material:
     - Vector1_6f6fdb30d3994c49ae7c8124246922b4: 0.05
     - Vector1_7bea9d5c09b74d699d25c1750c8a201a: 3
     - Vector1_96bda0a2ddf24e8588cb0c1d736759eb: 2
-    - Vector1_d224ee34b15b4704a648c8e4c5798ec3: 0.025
+    - Vector1_d224ee34b15b4704a648c8e4c5798ec3: -0.02
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
