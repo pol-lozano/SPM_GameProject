@@ -5,64 +5,57 @@ using UnityEngine.UI;
 public class UIHealthBar : MonoBehaviour
 {
     [SerializeField] private Transform target;
+    [SerializeField] private Vector3 offset;
+
+    [SerializeField] private GameObject UIElements;
     [SerializeField] private Image damageTakenImage;
     [SerializeField] private Image currentHealthImage;
-    [SerializeField] private Image backgroundImage;
-    [SerializeField] private Image backgroundMarginImage;
 
-    [SerializeField] private Vector3 offset;
     private bool activated;
+    private float width;
+    private RectTransform rectParent;
 
     private void Awake()
     {
-        activated = false;
+        rectParent = GetComponent<RectTransform>();
         Deactivate();
     }
 
     void LateUpdate()
     {
-        Vector3 direction = (target.position - Camera.main.transform.position).normalized;
-
         if (activated)
-        {
-            bool isBehind = Vector3.Dot(direction, Camera.main.transform.forward) <= 0.0f;
-            backgroundMarginImage.enabled = !isBehind;
-            backgroundImage.enabled = !isBehind;
-            damageTakenImage.enabled = !isBehind;
-            currentHealthImage.enabled = !isBehind;
-        }
-
-        transform.position = Camera.main.WorldToScreenPoint(target.position + offset);
+            UpdateUI();
     }
-    float width;
+
+    private void UpdateUI()
+    {
+        transform.position = Camera.main.WorldToScreenPoint(target.position + offset);
+
+        Vector3 direction = (target.position - Camera.main.transform.position).normalized;
+        bool isBehind = Vector3.Dot(direction, Camera.main.transform.forward) <= 0.0f;
+        UIElements.SetActive(!isBehind);
+
+        float newWidth = Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 1.5f * Time.deltaTime);
+        damageTakenImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newWidth);
+    }
+
     public void SetHealthBarPercentage(float percentage)
     {
-        float parentWidth = GetComponent<RectTransform>().rect.width;
+        float parentWidth = rectParent.rect.width;
         width = parentWidth * percentage;
         currentHealthImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
-    }
-
-    private void Update()
-    {
-        damageTakenImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 1.5f * Time.deltaTime));
     }
 
     public void Activate()
     {
         activated = true;
-        backgroundMarginImage.enabled = true;
-        backgroundImage.enabled = true;
-        damageTakenImage.enabled = true;
-        currentHealthImage.enabled = true;
+        UIElements.SetActive(true);
     }
 
     public void Deactivate()
     {
         activated = false;
-        backgroundMarginImage.enabled = false;
-        backgroundImage.enabled = false;
-        damageTakenImage.enabled = false;
-        currentHealthImage.enabled = false;
+        UIElements.SetActive(false);
     }
 
     internal void DeactivateDelayed(int t)

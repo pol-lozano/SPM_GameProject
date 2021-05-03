@@ -62,7 +62,6 @@ public class ShootState : AimState
         
         GameObject g = ObjectPooler.instance.SpawnFromPool("arrow");
         Projectile arrow = g.GetComponent<Projectile>();
-        arrow.Owner = "player";
         arrow.transform.position = Player.FirePoint.position;
         arrow.transform.LookAt(Player.CrossHair.transform.position);
         arrow.SetActive(true);

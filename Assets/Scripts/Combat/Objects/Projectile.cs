@@ -1,23 +1,17 @@
 //Author: Rickard Lindgren
 //Secondary Author: Pol Lozano Llorens
-
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private LayerMask collisionLayer;
+    //[SerializeField] private LayerMask collisionLayer;
     [SerializeField] private float force;
     [SerializeField] private float lifetime;
-    [SerializeField] private BoxCollider coll;
-    [SerializeField] private int damage;
+    [SerializeField] private Collider coll;
+    [SerializeField] private int damageAmount;
 
-    private string owner = "";
     private Rigidbody rb;
 
-    public string Owner { get => owner; set => owner = value; }
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -51,32 +45,25 @@ public class Projectile : MonoBehaviour
         rb.velocity = Vector3.zero;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision) => CheckHit(collision);
+    
+    private bool CheckHit(Collision other)
     {
-        CheckHit(collision);
-    }
-
-    private bool CheckHit(Collision collision)
-    {
-        HitBox h = collision.collider.GetComponent<HitBox>();
+        HitBox h = other.collider.GetComponent<HitBox>();
 
         if (h == null)
             return false;
 
         //Check if owner of health system
-
         HitInfo info = new HitInfo()
         {
             damager = this,
-            tag = owner,
-            amount = damage, //Have weapon damage
-            //ADD ALL INFO
+            amount = damageAmount,
+            hitPosition = other.GetContact(0).point
         };
 
         h.ApplyHit(info);
 
         return true;
     }
-
-
 }

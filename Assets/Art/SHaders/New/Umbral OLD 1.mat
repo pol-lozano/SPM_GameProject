@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Umbral
+  m_Name: Umbral OLD 1
   m_Shader: {fileID: -6465566751694194690, guid: ed9e293a805bbcb4aabd91711291e47e, type: 3}
   m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
@@ -133,10 +133,10 @@ Material:
     m_Floats:
     - Vector1_01094c93d14f4328bd8b0b1f3f17dd9a: 0.5
     - Vector1_10a94d5812f64e8f971c88bc03a4bd2e: 5
-    - Vector1_23600a7503c24b158e8f1696d0d069cb: 3
+    - Vector1_23600a7503c24b158e8f1696d0d069cb: 5
     - Vector1_3ae83b5d59f6486c95a988bd89c9586d: 500
-    - Vector1_6f6fdb30d3994c49ae7c8124246922b4: 0.7
-    - Vector1_7bea9d5c09b74d699d25c1750c8a201a: 1.77
+    - Vector1_6f6fdb30d3994c49ae7c8124246922b4: 1
+    - Vector1_7bea9d5c09b74d699d25c1750c8a201a: 5
     - Vector1_96bda0a2ddf24e8588cb0c1d736759eb: 2
     - Vector1_d224ee34b15b4704a648c8e4c5798ec3: 1
     - _AORemapMax: 1
@@ -267,11 +267,11 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_05a981b72a3f469c980379b25fea82da: {r: 0.108179085, g: 0.108179085, b: 0.16037738, a: 1}
+    - Color_05a981b72a3f469c980379b25fea82da: {r: 3.6392157, g: 0, b: 11.984314, a: 1}
     - Color_797a0657418b46798dfc03dde807993b: {r: 0, g: 0, b: 0, a: 1}
     - Vector2_13e9f8293219423ca01b65aa2013da8f: {r: 3, g: 3, b: 0, a: 0}
-    - Vector3_0ba6e936f32642a5a5668c0fbd3a7310: {r: 0.3, g: 0.31, b: 0, a: 0}
-    - Vector3_87f5b2ef0de74d83bb6e8def10e26332: {r: 0.1, g: -0.1, b: 0, a: 0}
+    - Vector3_0ba6e936f32642a5a5668c0fbd3a7310: {r: 0, g: 1, b: 0, a: 0}
+    - Vector3_87f5b2ef0de74d83bb6e8def10e26332: {r: 0, g: -0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
