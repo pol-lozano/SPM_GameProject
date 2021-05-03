@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7566301513986127925
+--- !u!1 &526861870298925727
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 625039699608947465}
-  - component: {fileID: 9179074791308977450}
-  - component: {fileID: 362706542097403010}
+  - component: {fileID: 526861870298925725}
+  - component: {fileID: 526861870298925726}
+  - component: {fileID: 9204499705116619023}
   m_Layer: 0
-  m_Name: Dungeon Volume
+  m_Name: HUB Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &625039699608947465
+--- !u!4 &526861870298925725
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7566301513986127925}
+  m_GameObject: {fileID: 526861870298925727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.762863, y: -26.354256, z: 64.26571}
+  m_LocalPosition: {x: -108.08721, y: 6.398571, z: -52.499554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9179074791308977450
+--- !u!114 &526861870298925726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7566301513986127925}
+  m_GameObject: {fileID: 526861870298925727}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
@@ -48,17 +48,18 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 13915cb4e5f4d87469b9b4231a9aa1d9, type: 2}
---- !u!65 &362706542097403010
-BoxCollider:
+  sharedProfile: {fileID: 11400000, guid: 377ad6f1bd52ee54494b9ef5a846e1ad, type: 2}
+--- !u!136 &9204499705116619023
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7566301513986127925}
+  m_GameObject: {fileID: 526861870298925727}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 71.328804, y: 24.5, z: 67.14175}
-  m_Center: {x: 0.6253319, y: 3.2, z: -22.49139}
+  m_Radius: 17.86
+  m_Height: 56.64
+  m_Direction: 1
+  m_Center: {x: -26, y: -6.1, z: -7.43}
