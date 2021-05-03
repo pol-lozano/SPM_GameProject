@@ -48,7 +48,7 @@ public class ShootState : AimState
 
     private void Shoot()
     {
-        //DETTA KAN ÄNDRAS NÄR KARAKTÄREN ROTERAS PÅ RÄTT SÄTT
+        //DETTA är start på¨ett raybaseratskott istället
        /* 
         Player.FirePoint.rotation = Player.GetCamera().transform.rotation;
         ray.origin = Player.FirePoint.position;
@@ -62,7 +62,6 @@ public class ShootState : AimState
         
         GameObject g = ObjectPooler.instance.SpawnFromPool("arrow");
         Projectile arrow = g.GetComponent<Projectile>();
-        arrow.Owner = "player";
         arrow.transform.position = Player.FirePoint.position;
         arrow.transform.LookAt(Player.CrossHair.transform.position);
         arrow.SetActive(true);

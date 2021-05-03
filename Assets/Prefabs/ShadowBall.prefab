@@ -111,13 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968d965dba1dc546890b1e8c2960f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
   force: 80
   lifetime: 10
   coll: {fileID: 7781284558354789549}
-  damage: 15
+  damageAmount: 15
 --- !u!54 &5965819763731391866
 Rigidbody:
   m_ObjectHideFlags: 0

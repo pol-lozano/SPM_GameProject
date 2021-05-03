@@ -29,7 +29,6 @@ public class DeathListener : MonoBehaviour
 
     private void HandlePlayerDeath(DeathEvent deathEvent)
     {
-        Debug.Log(Checkpoint.currentCheckPoint.transform.position);
-        deathEvent.Info.unit.transform.position = Checkpoint.currentCheckPoint.transform.position;
+        //deathEvent.Info.unit.transform.position = Checkpoint.currentCheckPoint.transform.position;
     }
 }

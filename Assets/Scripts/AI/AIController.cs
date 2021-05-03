@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 public class AIController : MonoBehaviour
 {
@@ -60,8 +61,9 @@ public class AIController : MonoBehaviour
     public void OnAnimationEnded() => stateMachine?.OnAnimationEnded();
 
     public AIPath GetPath() 
-    { 
-        
+    {
+        if (path == null)
+            throw new System.ArgumentNullException("this object has no path");
         return path; 
     }
 
