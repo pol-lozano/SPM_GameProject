@@ -26,7 +26,7 @@ public class AIController : MonoBehaviour
 
     private void Awake()
     {
-       
+        Player = CharacterController3D.Player;
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();
@@ -35,12 +35,6 @@ public class AIController : MonoBehaviour
         DeactivateRagdoll();
 
         stateMachine = new StateMachine(this, states);
-    }
-
-    private void Start()
-    {
-
-        Player = CharacterController3D.Player;
     }
 
     public void DeactivateRagdoll()
