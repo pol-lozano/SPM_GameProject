@@ -292,6 +292,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379289851599630070}
     m_Modifications:
+    - target: {fileID: 241373888554761887, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917062233298000, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917062637531167, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917063030849215, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917063122763922, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917063309144121, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917063421269766, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 399917064226502430, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
+      propertyPath: m_Intensity
+      value: 230.58408
+      objectReference: {fileID: 0}
     - target: {fileID: 9187471112329726588, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
       propertyPath: m_RootOrder
       value: 3
