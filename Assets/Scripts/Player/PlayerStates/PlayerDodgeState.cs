@@ -33,4 +33,9 @@ public class PlayerDodgeState : PlayerState
         Player.Animator.SetBool(isDodgingBoolHash, false);
         stateMachine.Transition<PlayerGroundedState>();
     }
+
+    public override void EvaluateTransitions()
+    {
+        base.EvaluateTransitions();
+    }
 }

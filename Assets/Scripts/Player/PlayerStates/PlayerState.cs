@@ -50,4 +50,12 @@ public abstract class PlayerState : State
         else
             Player.PhysicsComponent.Decelerate();
     }
+
+    public override void EvaluateTransitions()
+    {
+        if(Player.GetComponent<HealthComponent>().CurrentHealth <= 0)
+        {
+            stateMachine.Transition<PlayerDeath>();
+        }
+    }
 }

@@ -10,6 +10,7 @@ public class GameInstance : MonoBehaviour
     private void Reload(ReloadEvent eve)
     {
         CharacterController3D.Player.transform.position = Checkpoint.currentCheckPoint.transform.position;
+        CharacterController3D.Player.GetComponent<HealthComponent>().ResetHealth();
     }
 
 
