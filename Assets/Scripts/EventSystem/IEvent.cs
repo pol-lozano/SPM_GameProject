@@ -77,6 +77,32 @@ public class EndPlayerAttackEvent : IEvent
 
 #endregion
 
+#region DYING_EVENT
+public struct DyingInfo
+{
+    public GameObject unit;
+    public GameObject killer;
+    public AudioClip sound;
+    public ParticleSystem particleSystem;
+
+}
+public class DyingEvent : IEvent
+{
+    
+    public DyingInfo Info { get; }
+    public GameObject GameObject { get; }
+
+    public DyingEvent(GameObject obj, DyingInfo info)
+    {
+        GameObject = obj;
+        Info = info;
+    }
+}
+
+
+
+#endregion
+
 #region DEATH_EVENT
 public struct DeathInfo
 {
@@ -110,6 +136,19 @@ public class PuzzleEvent : IEvent{
     {
         GameObject = obj;
         this.id = id;
+    }
+}
+#endregion
+
+#region RELOAD_EVENT
+
+public class ReloadEvent : IEvent
+{
+    public GameObject GameObject { get; }
+
+    public ReloadEvent(GameObject obj)
+    {
+        GameObject = obj;
     }
 }
 #endregion

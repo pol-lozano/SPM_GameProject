@@ -93,13 +93,28 @@ public class HealthComponent : HitComponent
         if (healthBar != null)
             Invoke("DeactivateHealthBar", 2);
 
-        DeathInfo deathInfo = new DeathInfo
+        if(gameObject.tag == "Player")
         {
-            unit = gameObject,
-            killer = info.damager.gameObject,
-        };
+            DyingInfo dieInfo = new DyingInfo
+            {
+                unit = gameObject,
+                killer = info.damager.gameObject,
+            };
+            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, dieInfo));
+        }
+        //ENEMIES borde också få dyingEvent men det har vi inte just nu
+        else
+        {
+            DeathInfo deathInfo = new DeathInfo
+            {
+                unit = gameObject,
+                killer = info.damager.gameObject,
+            };
+            EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
+        }
+        
 
-        EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
+        
     }
 
     private void DeactivateHealthBar()
