@@ -11,7 +11,7 @@ public class ProjectilePuzzleComponent : HitComponent
     public override void HandleHit(HitInfo info)
     {
         
-        if (info.damager.GetType() == typeof(Projectile) && info.tag.Equals("player"))
+        if (info.damager.GetType() == typeof(Projectile))
             Unlock(info);
     }
 
