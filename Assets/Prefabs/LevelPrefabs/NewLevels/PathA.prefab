@@ -63621,6 +63621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3252216127564576058}
     m_Modifications:
+    - target: {fileID: 1149299832207801647, guid: e24df6a4f16f92e43b1e1dbff7a5a7ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6094244832344845212, guid: e24df6a4f16f92e43b1e1dbff7a5a7ca, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -63668,6 +63672,10 @@ PrefabInstance:
     - target: {fileID: 6906494116287017254, guid: e24df6a4f16f92e43b1e1dbff7a5a7ca, type: 3}
       propertyPath: m_Name
       value: SM_DungeonStairs_V1 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906494116287017254, guid: e24df6a4f16f92e43b1e1dbff7a5a7ca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e24df6a4f16f92e43b1e1dbff7a5a7ca, type: 3}
@@ -79062,6 +79070,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f49ae53e30d40ab4f915956aeccd913d, type: 3}
       propertyPath: m_Name
       value: SM_Wall_Crack2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f49ae53e30d40ab4f915956aeccd913d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f49ae53e30d40ab4f915956aeccd913d, type: 3}
