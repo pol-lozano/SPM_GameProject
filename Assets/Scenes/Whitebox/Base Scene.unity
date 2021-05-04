@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1478.5557, g: 1831.5249, b: 2424.9497, a: 1}
+  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -809,14 +809,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5030949066807183697, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-      propertyPath: states.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5030949066807183697, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-      propertyPath: states.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7841cdc1329dd024791a15e0f8595685, type: 2}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_RootOrder
       value: 4
