@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &6428822303408494444
+--- !u!64 &7745074995780943875
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6087471259289230804}
+  m_GameObject: {fileID: 6087471260782096166}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -28,13 +28,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4237916025470736627, guid: 33ad38c66641c6143b9ab351a9631083, type: 3}
---- !u!64 &7745074995780943875
+--- !u!64 &6428822303408494444
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6087471260782096166}
+  m_GameObject: {fileID: 6087471259289230804}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -110,6 +110,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3e5ea11035b72ef45b7c3083b497628a, type: 3}
       propertyPath: m_Name
       value: SM_DungeonStairs_V1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e5ea11035b72ef45b7c3083b497628a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e5ea11035b72ef45b7c3083b497628a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695304551642739032, guid: 3e5ea11035b72ef45b7c3083b497628a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695304551642739032, guid: 3e5ea11035b72ef45b7c3083b497628a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e5ea11035b72ef45b7c3083b497628a, type: 3}
