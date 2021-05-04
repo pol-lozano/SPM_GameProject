@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa316920b7f12b46beff15f89407764, type: 3}
   m_Name: EnemyAttackState
   m_EditorClassIdentifier: 
-  moveSpeed: 4
+  moveSpeed: 7
+  baseOffset: 0
   chaseDistance: 5
   cooldown: 1
-  attackDistance: 2
+  attackDistance: 0.5

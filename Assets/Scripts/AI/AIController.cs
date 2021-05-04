@@ -26,6 +26,7 @@ public class AIController : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Assert(path != null);
         Player = CharacterController3D.Player;
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
@@ -56,8 +57,6 @@ public class AIController : MonoBehaviour
 
     public AIPath GetPath() 
     {
-        if (path == null)
-            throw new System.ArgumentNullException("this object has no path");
         return path; 
     }
 

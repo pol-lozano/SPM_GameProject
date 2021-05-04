@@ -11,7 +11,6 @@ public class EnemyKnockBackState : EnemyState
 
     public override void Enter()
     {
-        Debug.Log("KNOCK");
         base.Enter();
         timer = length;
         AIController.Animator.SetBool("Hit", true);

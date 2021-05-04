@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: arrow
-    prefab: {fileID: 1046293138078805759, guid: 8131fc8fac5290f4695e5c96529b8d17, type: 3}
+    prefab: {fileID: 8281016752575745382, guid: b6dfdfd1ec7624f44b498c9e9244074b, type: 3}
     size: 10
   - tag: shadowball
     prefab: {fileID: 7781284558354789536, guid: b8b0e2d022f65df4d8c61f6fdac7a6dd, type: 3}
