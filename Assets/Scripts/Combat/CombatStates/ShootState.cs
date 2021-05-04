@@ -4,8 +4,8 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class ShootState : AimState
 {
-    [SerializeField] private float shotCooldown;
     [SerializeField] private float shotTimer;
+    private float shotCooldown;
 
     private Ray ray;
     private RaycastHit hitInfo;
@@ -17,8 +17,15 @@ public class ShootState : AimState
     public override void Enter()
     {
         Player.Animator.SetTrigger("Attack");
+        Player.Animator.SetBool("IsAiming", true);
         StartShooting();
         shotCooldown = shotTimer;   
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        Player.Animator.SetBool("IsAiming", false);
     }
 
     public override void HandleUpdate()

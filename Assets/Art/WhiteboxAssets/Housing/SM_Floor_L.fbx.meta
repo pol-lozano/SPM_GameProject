@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: VeryLightGrey
-    second: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+    second: {fileID: 2100000, guid: cdeefb655ef53984bb1628d13b4d0f10, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
