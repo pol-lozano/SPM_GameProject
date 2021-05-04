@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Attack Shake Camera Event
   m_EditorClassIdentifier: 
   target: 0
-  amplitude: 3
-  frequency: 1
-  duration: 2
+  amplitude: 1
+  frequency: 0.5
+  duration: 1
   blendOverLifetime:
     serializedVersion: 2
     m_Curve:
