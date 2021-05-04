@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 0}
-  speed: 0
+  speed: 18
   input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
   playerMesh: {fileID: 67993080673059192}
   mainCamera: {fileID: 0}

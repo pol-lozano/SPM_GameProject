@@ -28,6 +28,10 @@ public class GodMode : MonoBehaviour
 
     private void OnEnable()
     {
+
+        gameObject.GetComponent<HealthComponent>().enabled = false;
+        PlayerCombat.Player.PickUpObject(true);
+        PlayerCombat.Player.PickUpObject(false);
         input.moveEvent += OnMove;
         input.dodgeEvent += OnDodge;
         input.flyEvent += OnFly;
@@ -38,6 +42,7 @@ public class GodMode : MonoBehaviour
 
     private void OnDisable()
     {
+        gameObject.GetComponent<HealthComponent>().enabled = false;
         input.moveEvent -= OnMove;
         input.dodgeEvent -= OnDodge;
         input.flyEvent -= OnFly;
