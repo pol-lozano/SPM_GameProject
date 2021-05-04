@@ -1,4 +1,5 @@
 //Author: Pol Lozano Llorens
+//Secondary Author: Rickard Lindgren
 using UnityEngine;
 
 public interface IEvent
@@ -150,5 +151,68 @@ public class ReloadEvent : IEvent
     {
         GameObject = obj;
     }
+}
+#endregion
+
+#region SHAKE_EVENT
+//SHAKE EVENT DATA IS A SCRIPTABLE OBJECT
+[System.Serializable]
+public class ShakeEvent : IEvent
+{
+    public GameObject GameObject { get; }
+
+    float duration;
+    float timeRemaining;
+
+    ShakeEventData data;
+
+    public ShakeEventData.Target target
+    {
+        get
+        {
+            return data.target;
+        }
+    }
+
+    Vector3 noiseOffset;
+    public Vector3 noise;
+
+    public ShakeEvent(GameObject obj, ShakeEventData data)
+    {
+        GameObject = obj;
+        this.data = data;
+        duration = data.duration;
+        timeRemaining = duration;
+
+        float rand = 32.0f;
+
+        noiseOffset = new Vector3(
+            Random.Range(0, rand),
+            Random.Range(0, rand),
+            Random.Range(0, rand));
+    }
+
+    public void Update()
+    {
+        timeRemaining -= Time.deltaTime;
+        float noiseOffsetDelta = Time.deltaTime * data.frequency;
+
+        noiseOffset.x += noiseOffsetDelta;
+        noiseOffset.y += noiseOffsetDelta;
+        noiseOffset.z += noiseOffsetDelta;
+
+        noise = new Vector3(
+            Mathf.PerlinNoise(noiseOffset.x, 0),
+            Mathf.PerlinNoise(noiseOffset.y, 1),
+            Mathf.PerlinNoise(noiseOffset.x, 2));
+
+        noise -= Vector3.one * 0.5f;
+        noise *= data.amplitude;
+
+        float agePercent = 1.0f - (timeRemaining / duration);
+        noise *= data.blendOverLifetime.Evaluate(agePercent);
+    }
+
+    public bool IsAlive() => timeRemaining > 0.0f;
 }
 #endregion

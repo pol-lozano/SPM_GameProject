@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Pol Lozano Llorens
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Shake Camera Event",menuName = "Camera/Shake Camera Event")]
-public class CameraShakeEvent : ScriptableObject
+[CreateAssetMenu(fileName = "Shake Camera Event", menuName = "Camera/Shake Camera Event")]
+public class ShakeEventData : ScriptableObject
 {
    public enum Target
     {
@@ -15,7 +14,6 @@ public class CameraShakeEvent : ScriptableObject
 
     public float amplitude = 1.0f;
     public float frequency = 1.0f;
-
     public float duration = 1.0f;
 
     public AnimationCurve blendOverLifetime = new AnimationCurve(
