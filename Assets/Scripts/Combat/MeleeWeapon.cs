@@ -1,39 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Pol Lozano Llorens
 using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour
 {
-    public Collider Collider { get; private set; }
     [SerializeField] private int damageAmount;
-    private AudioClip hitAudio;
-    private AudioClip attackAudio;
+    [SerializeField] private AudioClip hitAudio;
+    [SerializeField] private AudioClip attackAudio;
+
+    public Collider Collider { get; private set; }
 
     private void Awake()
     {
         Collider = GetComponent<Collider>();
         Collider.enabled = false;
     }
-    
-    private void OnCollisionEnter(Collision collision)
-    {
-        CheckHit(collision.collider);
-    }
 
-    private bool CheckHit(Collider other)
+    private void OnCollisionEnter(Collision collision) => CheckHit(collision);
+
+    private bool CheckHit(Collision other)
     {
-        HitBox h = other.GetComponent<HitBox>();
+        HitBox h = other.collider.GetComponent<HitBox>();
 
         if (h == null)
             return false;
 
         //Check if owner of health system
-
         HitInfo info = new HitInfo()
         {
             damager = this,
             amount = damageAmount,
-            hitPosition = other.gameObject.transform.position
+            hitPosition = other.GetContact(0).point
         };
 
         h.ApplyHit(info);

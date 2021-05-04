@@ -6,6 +6,7 @@ public abstract class PlayerState : State
     private CharacterController3D player;
     protected CharacterController3D Player => player = player != null ? player : (CharacterController3D)owner;
 
+    protected int inputMagnitudeFloatHash;
     protected int inputXFloatHash;
     protected int inputYFloatHash;
     protected int dodgeTriggerHash;
@@ -20,6 +21,7 @@ public abstract class PlayerState : State
 
     private void InitializeAnimatorHashes()
     {
+        inputMagnitudeFloatHash = Animator.StringToHash("InputMagnitude");
         inputXFloatHash = Animator.StringToHash("InputX");
         inputYFloatHash = Animator.StringToHash("InputY");
         dodgeTriggerHash = Animator.StringToHash("Dodge");
@@ -31,6 +33,7 @@ public abstract class PlayerState : State
     private void Animate()
     {
         Vector3 input = Player.RawInput;
+        Player.Animator.SetFloat(inputMagnitudeFloatHash, input.magnitude);
         Player.Animator.SetFloat(inputXFloatHash, input.x, 1f, Time.deltaTime * 10f);
         Player.Animator.SetFloat(inputYFloatHash, input.y, 1f, Time.deltaTime * 10f);
         Player.Animator.SetBool(isGroundedBoolHash, player.PhysicsComponent.IsGrounded);
@@ -49,5 +52,13 @@ public abstract class PlayerState : State
             Player.PhysicsComponent.Accelerate(input, maxSpeed);
         else
             Player.PhysicsComponent.Decelerate();
+    }
+
+    public override void EvaluateTransitions()
+    {
+        if(Player.GetComponent<HealthComponent>().CurrentHealth <= 0)
+        {
+            stateMachine.Transition<PlayerDeath>();
+        }
     }
 }

@@ -16,6 +16,7 @@ public abstract class PlayerAirState : PlayerState
 
     public override void EvaluateTransitions()
     {
+        base.EvaluateTransitions();
         if (Player.PhysicsComponent.IsGrounded)
             stateMachine.Transition<PlayerGroundedState>();
     }

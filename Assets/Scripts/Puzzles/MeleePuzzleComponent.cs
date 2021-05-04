@@ -27,7 +27,7 @@ public class MeleePuzzleComponent : HitComponent
         EventHandler<PuzzleEvent>.FireEvent(p);
 
         //saker borde hända via animationsevent istället. där kan man animera och säga till den att byta mesh och förstöra när vi vill
-        Destroy(gameObject);
+       // Destroy(gameObject);
 
     }
 }

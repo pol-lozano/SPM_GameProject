@@ -38,12 +38,8 @@
 		<type fullname="UnityEngine.ParticleSystemRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
-		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.CapsuleCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
-		<type fullname="UnityEngine.SphereCollider" preserve="nothing"/>
-		<type fullname="UnityEngine.Joint" preserve="nothing"/>
-		<type fullname="UnityEngine.CharacterJoint" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
@@ -57,20 +53,32 @@
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.PhysicMaterial" preserve="nothing"/>
+		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
+		<type fullname="UnityEngine.SphereCollider" preserve="nothing"/>
+		<type fullname="UnityEngine.Joint" preserve="nothing"/>
+		<type fullname="UnityEngine.CharacterJoint" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffect" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VFXRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffectAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.LightingSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.ReflectionProbe" preserve="nothing"/>
-		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshAgent" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshObstacle" preserve="nothing"/>
-		<type fullname="UnityEngine.PhysicMaterial" preserve="nothing"/>
 		<type fullname="UnityEngine.AI.NavMeshData" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffectObject" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="AIController" preserve="nothing"/>
 		<type fullname="AIPath" preserve="nothing"/>
 		<type fullname="AimState" preserve="nothing"/>
+		<type fullname="ChangeScene" preserve="nothing"/>
 		<type fullname="CharacterController3D" preserve="nothing"/>
+		<type fullname="Checkpoint" preserve="nothing"/>
 		<type fullname="CrossHairTarget" preserve="nothing"/>
+		<type fullname="DeathListener" preserve="nothing"/>
+		<type fullname="DeathScreen" preserve="nothing"/>
 		<type fullname="EnemyAlertState" preserve="nothing"/>
 		<type fullname="EnemyAttackState" preserve="nothing"/>
 		<type fullname="EnemyChaseState" preserve="nothing"/>
@@ -84,6 +92,7 @@
 		<type fullname="FlyingChaseState" preserve="nothing"/>
 		<type fullname="FlyingPatrolState" preserve="nothing"/>
 		<type fullname="FlyingStunState" preserve="nothing"/>
+		<type fullname="GameInstance" preserve="nothing"/>
 		<type fullname="GodMode" preserve="nothing"/>
 		<type fullname="HealthComponent" preserve="nothing"/>
 		<type fullname="HitBox" preserve="nothing"/>
@@ -96,6 +105,7 @@
 		<type fullname="OrbitCamera" preserve="nothing"/>
 		<type fullname="PhysicsComponent" preserve="nothing"/>
 		<type fullname="PlayerCombat" preserve="nothing"/>
+		<type fullname="PlayerDeath" preserve="nothing"/>
 		<type fullname="PlayerDebugger" preserve="nothing"/>
 		<type fullname="PlayerDodgeState" preserve="nothing"/>
 		<type fullname="PlayerFallingState" preserve="nothing"/>
@@ -103,7 +113,9 @@
 		<type fullname="Projectile" preserve="nothing"/>
 		<type fullname="ProjectilePuzzleComponent" preserve="nothing"/>
 		<type fullname="PuzzleListener" preserve="nothing"/>
+		<type fullname="SceneController" preserve="nothing"/>
 		<type fullname="ShootState" preserve="nothing"/>
+		<type fullname="StartLoader" preserve="nothing"/>
 		<type fullname="TurnTowardsCameraDirection" preserve="nothing"/>
 		<type fullname="UIHealthBar" preserve="nothing"/>
 	</assembly>

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 public class AIController : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class AIController : MonoBehaviour
 
     private void Awake()
     {
-       
+        Player = CharacterController3D.Player;
         Renderer = GetComponent<MeshRenderer>();
         Agent = GetComponent<NavMeshAgent>();
         Animator = GetComponent<Animator>();
@@ -34,12 +35,6 @@ public class AIController : MonoBehaviour
         DeactivateRagdoll();
 
         stateMachine = new StateMachine(this, states);
-    }
-
-    private void Start()
-    {
-
-        Player = CharacterController3D.Player;
     }
 
     public void DeactivateRagdoll()
@@ -60,8 +55,9 @@ public class AIController : MonoBehaviour
     public void OnAnimationEnded() => stateMachine?.OnAnimationEnded();
 
     public AIPath GetPath() 
-    { 
-        
+    {
+        if (path == null)
+            throw new System.ArgumentNullException("this object has no path");
         return path; 
     }
 

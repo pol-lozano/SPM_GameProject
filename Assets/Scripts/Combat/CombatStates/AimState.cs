@@ -1,5 +1,4 @@
 //Author: Rickard Lindgren
-//Secondary Author: Pol Lozano Llorens
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "CombatState/Aiming")]
