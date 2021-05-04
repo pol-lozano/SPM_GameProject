@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu()]
 public class ShootState : AimState
 {
+    [SerializeField] private ShakeEventData shakeData;
     [SerializeField] private float shotTimer;
     private float shotCooldown;
 
@@ -73,6 +74,9 @@ public class ShootState : AimState
         arrow.transform.LookAt(Player.CrossHair.transform.position);
         arrow.SetActive(true);
         arrow.SetForce((Player.CrossHair.transform.position - arrow.transform.position).normalized);
+
+        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(arrow.gameObject, shakeData));
+
     }
     public override void EvaluateTransitions()
     {

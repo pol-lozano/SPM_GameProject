@@ -13205,18 +13205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orbital Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 704101936157041714, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 704101936157041718, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 5030949065688228666}
-    - target: {fileID: 704101936157041718, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: collisionRadius
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 704101936157041719, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -13261,29 +13253,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1439876435381856266, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
     - target: {fileID: 8027133824933946707, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8027133824933946707, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8027133824933946707, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8027133824933946707, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.00000044703478
-      objectReference: {fileID: 0}
-    - target: {fileID: 8027133824933946707, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8027133824933946707, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -21992,7 +21964,7 @@ PrefabInstance:
     - target: {fileID: 1952091810191860618, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: shakeData
       value: 
-      objectReference: {fileID: 11400000, guid: 479f18fca6fb737409dc7d5445bb746a, type: 2}
+      objectReference: {fileID: 11400000, guid: 46c253e64f8fc094aac6be23ff9e9615, type: 2}
     - target: {fileID: 4448837995412633337, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: backupTarget
       value: 
@@ -22050,26 +22022,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6261909279374753516, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-      propertyPath: meleeWeapon
-      value: 
-      objectReference: {fileID: 2884231291437371116}
-    - target: {fileID: 6261909279374753516, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: crosshairImage
       value: 
       objectReference: {fileID: 1434876001}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
---- !u!114 &2884231291437371116 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1074571328447937720, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-  m_PrefabInstance: {fileID: 1952091810191860613}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399b2cff678b7d241a32d9bdb90e2078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &5030949065688228666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}

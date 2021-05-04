@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccec77e41d331c641aceba93aa48e8ac, type: 3}
-  m_Name: Shake Camera Event
+  m_Name: Attack Shake Camera Event
   m_EditorClassIdentifier: 
   target: 0
-  amplitude: 3
-  frequency: 7
-  duration: 2
+  amplitude: 1
+  frequency: 0.5
+  duration: 1
   blendOverLifetime:
     serializedVersion: 2
     m_Curve:
