@@ -13,5 +13,6 @@ public class StartLoader : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("Whitebox - 16April", LoadSceneMode.Additive);
         Checkpoint.currentCheckPoint = startingCheckPoint;
+        
     }
 }
