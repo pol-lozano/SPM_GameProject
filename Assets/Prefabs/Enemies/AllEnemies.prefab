@@ -14505,7 +14505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5749658656314401497, guid: 03975a40f2dd1c946ad5cedbf838b062, type: 3}
       propertyPath: m_Name
-      value: UmbralMoth4 (1)
+      value: UmbralMoth2
       objectReference: {fileID: 0}
     - target: {fileID: 6356610299975114766, guid: 03975a40f2dd1c946ad5cedbf838b062, type: 3}
       propertyPath: m_Materials.Array.data[0]
