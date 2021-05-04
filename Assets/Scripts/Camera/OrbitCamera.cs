@@ -1,7 +1,6 @@
 //Author: Pol Lozano Llorens
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
 public class OrbitCamera : MonoBehaviour
 {
     private static OrbitCamera cam;
@@ -40,8 +39,11 @@ public class OrbitCamera : MonoBehaviour
     private void OnValidate()
     {
         //Do not allow maxViewAngle to be lower than minViewAngle
-        if (maxViewAngle < minViewAngle) maxViewAngle = minViewAngle;
-        if (maxDistance < minDistance) maxDistance = minDistance;
+        if (maxViewAngle < minViewAngle) 
+            maxViewAngle = minViewAngle;
+
+        if (maxDistance < minDistance) 
+            maxDistance = minDistance;
     }
 
     private void OnEnable()

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class HealthComponent : HitComponent
 {
+    [SerializeField] private ShakeEventData shakeData;
+
     [SerializeField] private float maxHealth = 1;
     [SerializeField] private float currentHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;
     [SerializeField] private LayerMask damageLayer;
+
     private float timeSinceLastHit = 0.0f;
     private bool isStunned;
     private System.Type lastTypeToHit;
@@ -86,6 +89,9 @@ public class HealthComponent : HitComponent
         healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
 
         EventHandler<HitEvent>.FireEvent(new HitEvent(gameObject, info));
+
+        if(shakeData != null)
+            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(gameObject, shakeData));
     }
 
     private void Die(HitInfo info)
@@ -111,10 +117,7 @@ public class HealthComponent : HitComponent
                 killer = info.damager.gameObject,
             };
             EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
-        }
-        
-
-        
+        }        
     }
 
     private void DeactivateHealthBar()
