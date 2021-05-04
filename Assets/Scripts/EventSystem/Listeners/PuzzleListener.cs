@@ -15,12 +15,9 @@ public class PuzzleListener : MonoBehaviour
 
     private void UnlockPuzzle(PuzzleEvent pe)
     {
-
         if (pe.id == id)
         {
             anim.SetTrigger("unlock");
         }
-    }
-
-    
+    }  
 }

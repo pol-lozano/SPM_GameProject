@@ -1338,6 +1338,15 @@ public:
 };
 
 
+// UnityEngine.Renderer
+struct  Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C  : public Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684
+{
+public:
+
+public:
+};
+
+
 // UnityEngine.VFX.VFXSpawnerCallbacks
 struct  VFXSpawnerCallbacks_t62128B7E3ADA64EBEA4705691DE0F045104801CA  : public ScriptableObject_t4361E08CEBF052C650D3666C7CEC37EB31DE116A
 {
@@ -1427,6 +1436,15 @@ public:
 		___onPostRender_6 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___onPostRender_6), (void*)value);
 	}
+};
+
+
+// UnityEngine.VFX.VFXRenderer
+struct  VFXRenderer_t4C81CB844B1A2DA17B517D9EDF040C718FAC90F4  : public Renderer_t58147AB5B00224FE1460FD47542DC0DA7EC9378C
+{
+public:
+
+public:
 };
 
 
@@ -1940,6 +1958,14 @@ IL2CPP_EXTERN_C  void VFXOutputEventArgs__ctor_m7C49FC1B34F3582FE08D7A1CAA5024C0
 	VFXOutputEventArgs_tE7E97EDFD67E4561E4412D2E4B1C999F95850BF5 * _thisAdjusted = reinterpret_cast<VFXOutputEventArgs_tE7E97EDFD67E4561E4412D2E4B1C999F95850BF5 *>(__this + _offset);
 	VFXOutputEventArgs__ctor_m7C49FC1B34F3582FE08D7A1CAA5024C09A86F7A2(_thisAdjusted, ___nameId0, ___eventAttribute1, method);
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
