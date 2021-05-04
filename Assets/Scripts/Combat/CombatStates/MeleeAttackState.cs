@@ -27,7 +27,7 @@ public class MeleeAttackState : CombatState
 
         //Play attack sound
         //Begin listening for hits
-        Player.meleeWeapon.Collider.enabled = true;
+        Player.MeleeWeapon.Collider.enabled = true;
     }
 
     public override void OnAnimationEnded()
@@ -36,7 +36,7 @@ public class MeleeAttackState : CombatState
         Player.Animator.SetFloat(timeSinceLastAttackFloatHash, timeSinceLastAttack);
 
         //Stop listening for hits     
-        Player.meleeWeapon.Collider.enabled = false;
+        Player.MeleeWeapon.Collider.enabled = false;
 
         timeSinceLastAttack = Time.time;
         stateMachine.Transition<IdleState>();

@@ -42,15 +42,18 @@ public class PlayerCombat : MonoBehaviour
     public bool SwordPickUp { get => swordPickUp; }
     public bool CrossBowPickUp { get => crossBowPickUp; }
 
-    public MeleeWeapon meleeWeapon;
+    [SerializeField] private MeleeWeapon meleeWeapon;
+    [SerializeField] private GameObject crossbow;
 
     private void Awake()
     {
+        meleeWeapon.gameObject.SetActive(false);
+        crossbow.SetActive(false);
+
         Animator = GetComponentInChildren<Animator>();
-        meleeWeapon = GetComponentInChildren<MeleeWeapon>(); //TODO: Fix nicer
         stateMachine = new StateMachine(this, states);
     }
-
+    public MeleeWeapon MeleeWeapon { get => meleeWeapon; }
     public void OnAnimationStarted() => stateMachine?.OnAnimationStarted();
     public void OnAnimationEnded() => stateMachine?.OnAnimationEnded();
 
@@ -93,6 +96,10 @@ public class PlayerCombat : MonoBehaviour
         ShootInput = false;
         AimInput = false;
         AttackInput = false;
+
+        meleeWeapon.gameObject.SetActive(swordPickUp);
+        crossbow.SetActive(crossBowPickUp);
+
     }
 
 }

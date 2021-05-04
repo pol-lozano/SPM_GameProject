@@ -1775,7 +1775,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 714b54a91cb69f24886e53a07f02ecbd, type: 2}
   - {fileID: 11400000, guid: db7cf64996a086e4bb59e127dd11fc92, type: 2}
   - {fileID: 11400000, guid: d24835702dcf6d542932f922cf4e1592, type: 2}
-  meleeWeapon: {fileID: 0}
+  meleeWeapon: {fileID: 6165528577852295206}
+  crossbow: {fileID: 4245393384929029154}
 --- !u!114 &1952091810191860618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5156,6 +5157,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
+--- !u!114 &6165528577852295206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7072608168107771628, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
+  m_PrefabInstance: {fileID: 4014581089890782922}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399b2cff678b7d241a32d9bdb90e2078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6740992725345397452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7654563627156153350, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
