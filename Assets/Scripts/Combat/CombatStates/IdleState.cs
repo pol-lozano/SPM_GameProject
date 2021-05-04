@@ -7,9 +7,9 @@ public class IdleState : CombatState
 {
     public override void EvaluateTransitions()
     {
-        if (Player.AttackInput) 
+        if (Player.AttackInput && Player.SwordPickUp) 
             stateMachine.Transition<MeleeAttackState>();
-        if (Player.AimInput) 
+        if (Player.AimInput && Player.CrossBowPickUp) 
             stateMachine.Transition<AimState>();
     }
 }

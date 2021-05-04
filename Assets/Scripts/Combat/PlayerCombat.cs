@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    private static PlayerCombat player;
+    public static PlayerCombat Player
+    {
+        get
+        {
+            if (player == null)
+            {
+                player = FindObjectOfType<PlayerCombat>();
+            }
+            return player;
+        }
+    }
+
     [Header("Shooting Related Settings")]
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject crosshairImage;
@@ -11,6 +24,9 @@ public class PlayerCombat : MonoBehaviour
 
     [SerializeField] private InputHandler input;
     [SerializeField] private CombatState[] states;
+
+    private bool crossBowPickUp = false;
+    private bool swordPickUp = false;
 
     private StateMachine stateMachine;
 
@@ -23,6 +39,8 @@ public class PlayerCombat : MonoBehaviour
     public bool ShootInput { get; set; }
     public bool AttackInput { get; set; }
     public bool AimInput { get; set; }
+    public bool SwordPickUp { get => swordPickUp; }
+    public bool CrossBowPickUp { get => crossBowPickUp; }
 
     public MeleeWeapon meleeWeapon;
 
@@ -54,7 +72,7 @@ public class PlayerCombat : MonoBehaviour
         input.aimEventCanceled -= OnAimCanceled;
     }
 
-    private void OnShoot() => ShootInput = true;
+    private void OnShoot() { if(AimInput) ShootInput = true; }
     private void OnAttack() => AttackInput = true;
     private void OnAim() => AimInput = true;
     private void OnAimCanceled() => AimInput = false;
@@ -64,4 +82,17 @@ public class PlayerCombat : MonoBehaviour
     {
         crosshairImage.SetActive(b);
     }
+
+    public void PickUpObject(bool isSword)
+    {
+        if (isSword)
+            swordPickUp = true;
+        else
+            crossBowPickUp = true;
+
+        ShootInput = false;
+        AimInput = false;
+        AttackInput = false;
+    }
+
 }
