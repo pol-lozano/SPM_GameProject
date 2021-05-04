@@ -1769,14 +1769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6654531353503693260}
     m_Modifications:
-    - target: {fileID: 4781035909592413962, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
-      propertyPath: m_Intensity
-      value: 477.4648
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241809145354297306, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 8601720945964946721, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1787,7 +1779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8601720945964946721, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1958227
+      value: -1.327
       objectReference: {fileID: 0}
     - target: {fileID: 8601720945964946721, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1824,14 +1816,6 @@ PrefabInstance:
     - target: {fileID: 8940950436399501211, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
       propertyPath: m_Name
       value: SM_LanternLight
-      objectReference: {fileID: 0}
-    - target: {fileID: 8940950436399501211, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8940950436399501211, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0feaba31c8d732248942e0b25b6e2276, type: 3}
