@@ -42,7 +42,7 @@ public class GodMode : MonoBehaviour
 
     private void OnDisable()
     {
-        gameObject.GetComponent<HealthComponent>().enabled = false;
+        gameObject.GetComponent<HealthComponent>().enabled = true;
         input.moveEvent -= OnMove;
         input.dodgeEvent -= OnDodge;
         input.flyEvent -= OnFly;
