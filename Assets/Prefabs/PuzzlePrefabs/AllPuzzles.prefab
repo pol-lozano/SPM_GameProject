@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
-  anim: {fileID: 0}
+  anim: {fileID: 6457707157940222337}
 --- !u!95 &6457707157940222337
 Animator:
   serializedVersion: 3
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
-  anim: {fileID: 0}
+  anim: {fileID: 6877355563038145062}
 --- !u!95 &6877355563038145062
 Animator:
   serializedVersion: 3
