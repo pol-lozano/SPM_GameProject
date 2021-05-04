@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 625039699608947465}
   - component: {fileID: 9179074791308977450}
+  - component: {fileID: 362706542097403010}
   m_Layer: 0
   m_Name: Dungeon Volume
   m_TagString: Untagged
@@ -43,8 +44,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
+  isGlobal: 0
+  priority: 1
+  blendDistance: 10
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 13915cb4e5f4d87469b9b4231a9aa1d9, type: 2}
+--- !u!65 &362706542097403010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566301513986127925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 71.328804, y: 24.5, z: 50.554943}
+  m_Center: {x: 0.6253319, y: 3.1999998, z: -14.197985}
