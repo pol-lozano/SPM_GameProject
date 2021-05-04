@@ -18,7 +18,6 @@ public class HealthComponent : HitComponent
 
     public bool Invulnerable { get; set; }
     public float CurrentHealth { get => currentHealth; }
-
     public System.Type LastType { get => lastTypeToHit; }
     public bool IsStunned { get => isStunned; set => isStunned = value; }
 
@@ -56,53 +55,73 @@ public class HealthComponent : HitComponent
 
     public override void HandleHit(HitInfo info)
     {
-        if (info.damager.GetType() == typeof(Projectile) && IsOnLayer(info.damager.gameObject.layer))
-            isStunned = true;
-
-        lastTypeToHit = info.damager.GetType();
-        //Check for stun. Maybe move somewhere else?
-        
+        if (IsOnLayer(info.damager.gameObject.layer) == false)
+            return;
 
         //Ignore damage if invulnerable or already dead
         if (Invulnerable || currentHealth <= 0)
             return;
 
-        if(IsOnLayer(info.damager.gameObject.layer))
-            SetInvulnerable();
+        TakeDamage(info);
 
-        if (IsOnLayer(info.damager.gameObject.layer))
+        //TODO: INVOKE TAKE DAMAGE EVENT
+
+        if (currentHealth <= 0)
+            Die(info);
+    }
+
+    private void TakeDamage(HitInfo info)
+    {
+        lastTypeToHit = info.damager.GetType();
+
+        if (lastTypeToHit == typeof(Projectile))
+            isStunned = true;
+        //Check for stun. Maybe move somewhere else?
+
+        SetInvulnerable();
+        currentHealth -= info.amount;
+
+        healthBar?.Activate();
+        healthBar?.DeactivateDelayed(7);
+        healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
+
+        EventHandler<HitEvent>.FireEvent(new HitEvent(gameObject, info));
+    }
+
+    private void Die(HitInfo info)
+    {
+        if (healthBar != null)
+            Invoke("DeactivateHealthBar", 2);
+
+        if(gameObject.tag == "Player")
         {
-            Debug.Log(gameObject.name + " got HURT");
-            currentHealth -= info.amount;
-
-            healthBar?.Activate();
-            healthBar?.DeactivateDelayed(7);
-            healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
-
-            //TODO: INVOKE TAKE DAMAGE EVENT
-
-            if (currentHealth <= 0)
+            DyingInfo dieInfo = new DyingInfo
             {
-                if (healthBar != null)
-                    Invoke("DeactivateHealthBar", 2);
+                unit = gameObject,
+                killer = info.damager.gameObject,
+            };
+            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, dieInfo));
+        }
+        //ENEMIES borde också få dyingEvent men det har vi inte just nu
+        else
+        {
+            DeathInfo deathInfo = new DeathInfo
+            {
+                unit = gameObject,
+                killer = info.damager.gameObject,
+            };
+            EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
+        }
+        
 
-                DeathInfo deathInfo = new DeathInfo
-                {
-                    unit = gameObject,
-                    killer = info.damager.gameObject,
-                };
-
-                DeathEvent de = new DeathEvent(gameObject, deathInfo);
-                EventHandler<DeathEvent>.FireEvent(de);
-            }
-        }        
+        
     }
 
     private void DeactivateHealthBar()
     {
         healthBar?.gameObject.SetActive(false);
     }
-
+   
     private bool IsOnLayer(int layer)
     {
         return damageLayer == (damageLayer | (1 << layer));
