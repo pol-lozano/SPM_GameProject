@@ -13,7 +13,6 @@ public class AimState : CombatState
     public override void HandleUpdate()
     {
         base.HandleUpdate();
-        //vill man sakta ner tiden lite när man siktar... asså typ 0.95%??
         //Maybe zoom in camera
     }
 

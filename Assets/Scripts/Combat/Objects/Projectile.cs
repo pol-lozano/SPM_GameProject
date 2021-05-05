@@ -1,6 +1,7 @@
 //Author: Rickard Lindgren
 //Secondary Author: Pol Lozano Llorens
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Projectile : MonoBehaviour
 {
@@ -9,8 +10,14 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float lifetime;
     [SerializeField] private Collider coll;
     [SerializeField] private int damageAmount;
+    [SerializeField] private MeshRenderer mesh;
+    [SerializeField] private VisualEffect particles;
 
     private Rigidbody rb;
+
+    private bool hit;
+    private float timeToKillAfterHit = 1;
+    private float timer;
 
     private void Awake()
     {
@@ -19,6 +26,8 @@ public class Projectile : MonoBehaviour
 
     private void OnEnable()
     {
+        mesh.enabled = true;
+        timer = timeToKillAfterHit;
         coll.enabled = true;
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
@@ -43,6 +52,7 @@ public class Projectile : MonoBehaviour
     private void OnDisable()
     {
         rb.velocity = Vector3.zero;
+        hit = false;
     }
 
     private void OnCollisionEnter(Collision collision) => CheckHit(collision);
@@ -54,6 +64,7 @@ public class Projectile : MonoBehaviour
         if (h == null)
             return false;
 
+        hit = true;
         //Check if owner of health system
         HitInfo info = new HitInfo()
         {
@@ -65,5 +76,14 @@ public class Projectile : MonoBehaviour
         h.ApplyHit(info);
 
         return true;
+    }
+
+    private void Update()
+    {
+        if (hit)
+        {
+            mesh.enabled = false;
+        }
+            
     }
 }
