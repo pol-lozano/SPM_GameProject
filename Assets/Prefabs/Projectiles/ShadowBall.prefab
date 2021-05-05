@@ -115,6 +115,7 @@ MonoBehaviour:
   coll: {fileID: 7781284558354789549}
   damageAmount: 15
   mesh: {fileID: 7781284558354789548}
+  particles: {fileID: 0}
 --- !u!54 &5965819763731391866
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,9 +129,9 @@ Rigidbody:
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 48
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &9161482562222043338
 GameObject:
   m_ObjectHideFlags: 0

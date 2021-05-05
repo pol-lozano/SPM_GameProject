@@ -16,7 +16,7 @@ public class SceneController : MonoBehaviour
         {
             SceneManager.UnloadSceneAsync("Whitebox - 16April");
             StartCoroutine(LoadScene("Whitebox - 16April"));
-            EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
+            
 
 
             /*
@@ -48,5 +48,6 @@ public class SceneController : MonoBehaviour
         {
             yield return null;
         }
+        EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
     }
 }
