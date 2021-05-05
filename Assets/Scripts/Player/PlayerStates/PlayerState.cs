@@ -33,7 +33,7 @@ public abstract class PlayerState : State
     private void Animate()
     {
         Vector3 input = Player.RawInput;
-        Player.Animator.SetFloat(inputMagnitudeFloatHash, input.magnitude);
+        //Player.Animator.SetFloat(inputMagnitudeFloatHash, input.magnitude);
         Player.Animator.SetFloat(inputXFloatHash, input.x, 1f, Time.deltaTime * 10f);
         Player.Animator.SetFloat(inputYFloatHash, input.y, 1f, Time.deltaTime * 10f);
         Player.Animator.SetBool(isGroundedBoolHash, player.PhysicsComponent.IsGrounded);

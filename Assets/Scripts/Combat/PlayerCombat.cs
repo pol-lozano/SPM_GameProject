@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    private static PlayerCombat player;
+    public static PlayerCombat Player
+    {
+        get
+        {
+            if (player == null)
+            {
+                player = FindObjectOfType<PlayerCombat>();
+            }
+            return player;
+        }
+    }
+
     [Header("Shooting Related Settings")]
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject crosshairImage;
@@ -11,6 +24,9 @@ public class PlayerCombat : MonoBehaviour
 
     [SerializeField] private InputHandler input;
     [SerializeField] private CombatState[] states;
+
+    [SerializeField] private MeleeWeapon meleeWeapon;
+    [SerializeField] private GameObject crossbow;
 
     private StateMachine stateMachine;
 
@@ -24,12 +40,20 @@ public class PlayerCombat : MonoBehaviour
     public bool AttackInput { get; set; }
     public bool AimInput { get; set; }
 
-    public MeleeWeapon meleeWeapon;
+    private bool swordPickup;
+    private bool crossbowPickup;
+
+    public bool SwordPickup { get => swordPickup; }
+    public bool CrossbowPickup { get => crossbowPickup; }
+
+    public MeleeWeapon MeleeWeapon { get => meleeWeapon; }
 
     private void Awake()
     {
+        meleeWeapon.gameObject.SetActive(false);
+        crossbow.SetActive(false);
+
         Animator = GetComponentInChildren<Animator>();
-        meleeWeapon = GetComponentInChildren<MeleeWeapon>(); //TODO: Fix nicer
         stateMachine = new StateMachine(this, states);
     }
 
@@ -63,5 +87,20 @@ public class PlayerCombat : MonoBehaviour
     public void SetCrosshair(bool b)
     {
         crosshairImage.SetActive(b);
+    }
+
+    public void PickUpObject(bool isSword)
+    {
+        if (isSword)
+            swordPickup = true;
+        else
+            crossbowPickup = true;
+
+        AttackInput = false;
+        ShootInput = false;
+        AimInput = false;
+
+        meleeWeapon.gameObject.SetActive(swordPickup);
+        crossbow.SetActive(crossbowPickup);
     }
 }
