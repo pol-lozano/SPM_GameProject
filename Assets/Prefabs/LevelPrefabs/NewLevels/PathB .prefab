@@ -80516,6 +80516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Pillar_Stone_S (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc97b2bfbcb0fc14e82d89ffaddd6436, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc97b2bfbcb0fc14e82d89ffaddd6436, type: 3}
 --- !u!4 &2086362851719862805 stripped
@@ -85220,6 +85224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Pillar_Stone_S (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc97b2bfbcb0fc14e82d89ffaddd6436, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc97b2bfbcb0fc14e82d89ffaddd6436, type: 3}
 --- !u!4 &4116908358173436098 stripped
@@ -88497,6 +88505,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d39e8b125ae7f8e4ba7a5e58727307e2, type: 3}
       propertyPath: m_Name
       value: SM_TorsoStatue (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d39e8b125ae7f8e4ba7a5e58727307e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d39e8b125ae7f8e4ba7a5e58727307e2, type: 3}
