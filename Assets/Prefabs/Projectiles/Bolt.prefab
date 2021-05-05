@@ -130,6 +130,7 @@ MonoBehaviour:
   lifetime: 5
   coll: {fileID: -3336412847428500009}
   damageAmount: 0
+  mesh: {fileID: 7632731296786656435}
 --- !u!1001 &8763662099597091166
 PrefabInstance:
   m_ObjectHideFlags: 0

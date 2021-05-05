@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class AttributeSystem : MonoBehaviour
+public class AttributeSystem : HitComponent
 {
 
     //[SerializeField] private Text health;
@@ -34,6 +34,11 @@ public class AttributeSystem : MonoBehaviour
         
         if (attributeByType[type])
             attributeByType[type].AttributeValue += value;
+    }
+
+    public override void HandleHit(HitInfo info)
+    {
+        throw new System.NotImplementedException();
     }
 
     public void ApplyEffect(Effect effect)
@@ -126,5 +131,5 @@ public class AttributeSystem : MonoBehaviour
         */
     }
 
-
+    
 }

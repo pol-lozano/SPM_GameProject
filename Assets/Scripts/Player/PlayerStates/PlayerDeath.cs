@@ -1,3 +1,5 @@
+//Author: Rickard Lindgren
+//Secondary Author: Sajid Massoud
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "PlayerState/Death")]
