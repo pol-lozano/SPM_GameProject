@@ -7,7 +7,8 @@ public class ShakeEventData : ScriptableObject
    public enum Target
     {
         Rotation,
-        Position
+        Position,
+        Both
     }
 
     public Target target = Target.Position;
