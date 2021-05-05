@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f4dc55f7f81514a9b19bc64f2c8ee9, type: 3}
   m_Name: MeleeState
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
+  shakeData: {fileID: 11400000, guid: 479f18fca6fb737409dc7d5445bb746a, type: 2}
