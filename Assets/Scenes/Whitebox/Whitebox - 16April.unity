@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 54.77218, g: 61.41361, b: 100.78259, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -86373,8 +86373,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2357223970344020048, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 2985166488072350422, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4353564153394184194, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
@@ -86402,14 +86402,6 @@ PrefabInstance:
       value: -58.564533
       objectReference: {fileID: 0}
     - target: {fileID: 4353564153394184194, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000404700310953569, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000404700310953569, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -86452,6 +86444,10 @@ PrefabInstance:
     - target: {fileID: 5872023331968537038, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Intensity
       value: 477.4648
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360686951406785472, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6760507939620372971, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Size.x
@@ -86596,6 +86592,10 @@ PrefabInstance:
     - target: {fileID: 8485904584173256604, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Intensity
       value: 230.58408
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538539262301125875, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
