@@ -7,7 +7,7 @@ public class IdleState : CombatState
 {
     public override void EvaluateTransitions()
     {
-        if (Player.AttackInput && Player.SwordPickup && Player.Animator.GetBool("IsDodging") == false) 
+        if (Player.AttackInput && Player.SwordPickup) 
             stateMachine.Transition<MeleeAttackState>();
         if (Player.AimInput && Player.CrossbowPickup) 
             stateMachine.Transition<AimState>();

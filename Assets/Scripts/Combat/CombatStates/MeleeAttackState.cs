@@ -11,8 +11,6 @@ public class MeleeAttackState : CombatState
     {
         //Send time since last attack and trigger attack animation based on that
         Player.Animator.SetTrigger(attackTriggerHash);
-        Player.Animator.SetBool(isAttackingBoolHash, true);
-
     }
 
     public override void HandleUpdate()
@@ -24,7 +22,7 @@ public class MeleeAttackState : CombatState
     //Called by Animation Event in attack animation
     public override void OnAnimationStarted()
     {
-
+        Player.Animator.SetBool(isAttackingBoolHash, true);
         timeSinceLastAttack = Time.time - timeSinceLastAttack;
         Debug.Log("Time since last attack: " + timeSinceLastAttack);
 

@@ -15,7 +15,7 @@ public class PlayerGroundedState : PlayerState
     public override void EvaluateTransitions()
     {
         base.EvaluateTransitions();
-        if (Player.DodgeInput && Player.Animator.GetBool("IsAttacking") == false) 
+        if (Player.DodgeInput) 
             stateMachine.Transition<PlayerDodgeState>();
         if (!Player.PhysicsComponent.IsGrounded) 
             stateMachine.Transition<PlayerFallingState>();
