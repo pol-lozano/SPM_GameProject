@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.16, y: 9.95, z: 2.2003}
+  m_Size: {x: 16.59, y: 13.9, z: 2.4}
   m_Center: {x: 0.0032525063, y: 0.0014123917, z: 1.0878397}
 --- !u!54 &4670618543908386167
 Rigidbody:
@@ -106,12 +106,12 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8281016752575745382}
   serializedVersion: 2
-  m_Mass: 0.01
+  m_Mass: 0.013
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &2767872017221163623
@@ -131,6 +131,7 @@ MonoBehaviour:
   coll: {fileID: -3336412847428500009}
   damageAmount: 0
   mesh: {fileID: 7632731296786656435}
+  particles: {fileID: 0}
 --- !u!1001 &8763662099597091166
 PrefabInstance:
   m_ObjectHideFlags: 0
