@@ -5199,6 +5199,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5030949066807183702}
     m_Modifications:
+    - target: {fileID: 8569069220141058796, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569069220141058796, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569069220141058796, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222992528263393617, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222992528263393617, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222992528263393617, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6981132
+      objectReference: {fileID: 0}
     - target: {fileID: 9222992529123399848, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
       propertyPath: m_Name
       value: PlayerHealthBarCanvas

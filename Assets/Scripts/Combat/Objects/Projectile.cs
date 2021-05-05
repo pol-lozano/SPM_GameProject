@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private MeshRenderer mesh;
     [SerializeField] private VisualEffect particles;
 
+
     private Rigidbody rb;
 
     private bool hit;
@@ -64,7 +65,11 @@ public class Projectile : MonoBehaviour
         if (h == null)
             return false;
 
-        hit = true;
+        HealthComponent hc = other.gameObject.GetComponent<HealthComponent>();
+
+        if (hc != null && hc.IsOnLayer(gameObject.layer))
+            mesh.enabled = false;
+
         //Check if owner of health system
         HitInfo info = new HitInfo()
         {
@@ -78,12 +83,5 @@ public class Projectile : MonoBehaviour
         return true;
     }
 
-    private void Update()
-    {
-        if (hit)
-        {
-            mesh.enabled = false;
-        }
-            
-    }
+   
 }

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIHealthBar : MonoBehaviour
 {
-    [SerializeField] private bool movable = true;
+    [SerializeField] private bool isPlayer = true;
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset;
 
@@ -19,7 +19,7 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         rectParent = GetComponent<RectTransform>();
-        if(movable)
+        if(isPlayer == false)
             Deactivate();
     }
 
@@ -31,7 +31,7 @@ public class UIHealthBar : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (movable)
+        if (isPlayer)
             MoveHealthBar();
 
         float newWidth = Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 1.5f * Time.deltaTime);
@@ -68,7 +68,11 @@ public class UIHealthBar : MonoBehaviour
 
     internal void DeactivateDelayed(int t)
     {
-        CancelInvoke("Deactivate");
-        Invoke("Deactivate", t);
+        if (isPlayer == false)
+        {
+            CancelInvoke("Deactivate");
+            Invoke("Deactivate", t);
+        }
+        
     }
 }
