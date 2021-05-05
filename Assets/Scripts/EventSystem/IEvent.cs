@@ -7,7 +7,6 @@ public interface IEvent
     GameObject GameObject { get; }
 }
 
-
 #region DEBUG_EVENT
 public struct DebugInfo
 {
