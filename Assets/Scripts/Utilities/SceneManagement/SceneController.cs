@@ -15,26 +15,38 @@ public class SceneController : MonoBehaviour
         if(eve.Info.unit.tag == "DeathScreen")
         {
             SceneManager.UnloadSceneAsync("Whitebox - 16April");
-            SceneManager.LoadSceneAsync("Whitebox - 16April", LoadSceneMode.Additive);
+            StartCoroutine(LoadScene("Whitebox - 16April"));
             EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
+
 
             /*
              * unload all scenes
              * foreach(scene s i currentCheckpoint.relevantScenes)
-             *  LoadAsync(s, LoadsceneMode.Additive)
+             *  LoadAsync(s.name)
              *  
              */
         }
         
     }
 
-    public void LoadScene(/*nånting för att identifiera vilken scen, string eller buildindex?*/)
-    {
-
-    }
 
     public void UnloadScene(/*nånting för att identifiera vilken scen, string eller buildindex?*/)
     {
 
+    }
+
+    IEnumerator LoadScene(string sceneName)
+    {
+        yield return null;
+
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        //Scriptet får gå vidare när scenen laddats färdigt
+        asyncOperation.allowSceneActivation = true;
+        
+        //koden är fast här så länge scenen inte laddat klart (skriva ut nån progress??)
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
+        }
     }
 }
