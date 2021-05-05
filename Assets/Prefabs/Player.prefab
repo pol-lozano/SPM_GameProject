@@ -4279,7 +4279,7 @@ MonoBehaviour:
   backupTarget: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 8200
 --- !u!1 &6672320064345215098
 GameObject:
   m_ObjectHideFlags: 0

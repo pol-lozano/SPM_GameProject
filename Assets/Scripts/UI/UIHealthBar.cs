@@ -19,8 +19,10 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         rectParent = GetComponent<RectTransform>();
-        if(movable)
+        if (movable)
             Deactivate();
+        else
+            Activate();
     }
 
     void LateUpdate()

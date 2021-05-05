@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6059469158543462804}
   - component: {fileID: 6356610299975114766}
   - component: {fileID: 7189451223690410311}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: MothParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4681817405919454940}
   - component: {fileID: 4681817405919454941}
   - component: {fileID: 4681817405919454930}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 4569814102007075947}
   - component: {fileID: 3784235751846107357}
   - component: {fileID: 2366461232628169172}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: s0000.0544
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 5749658656314401494}
   - component: {fileID: 3272212444834287294}
   - component: {fileID: 5749658656314401496}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: UmbralMoth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88a52f1c793a2c47b0faf82a26b8901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeData: {fileID: 0}
   maxHealth: 20
   currentHealth: 1
   invulnerabilityTime: 1
@@ -436,6 +437,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5749658656314048313}
     m_Modifications:
+    - target: {fileID: 2254545869778099352, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: target
       value: 
@@ -536,13 +541,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBarCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2254545870210786070, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2254545870399671020, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_SizeDelta.x
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 2254545870399671021, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2305915311379637865, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_SizeDelta.x
       value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689537251534414932, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388825860034650479, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335560332057161164, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9158314094634886824, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
@@ -572,6 +601,10 @@ PrefabInstance:
     - target: {fileID: 8399919592067099029, guid: 7a3039bb275df8442aae6612c5a3de3a, type: 3}
       propertyPath: m_Name
       value: P_Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399919592067099029, guid: 7a3039bb275df8442aae6612c5a3de3a, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8399919592067099029, guid: 7a3039bb275df8442aae6612c5a3de3a, type: 3}
       propertyPath: m_IsActive
