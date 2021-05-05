@@ -1,3 +1,5 @@
+//Author: Rickard Lindgren
+//SecondaryAuthor: Pol Lozano Llorens
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
