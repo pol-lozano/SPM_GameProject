@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDodgeState : PlayerState
 {
     [SerializeField] private float dodgeForce;
+    private float timeSinceLastDodge = 0;
 
     public override void Enter() => Dodge();
 
@@ -20,6 +21,9 @@ public class PlayerDodgeState : PlayerState
     public override void OnAnimationStarted()
     {
         Player.Animator.SetBool(isDodgingBoolHash, true);
+        timeSinceLastDodge = Time.time - timeSinceLastDodge;
+        Debug.Log("Time since last dodge: " + timeSinceLastDodge);
+
         Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;
         // Particle effects shaders, sounds etc...
     }
@@ -31,6 +35,9 @@ public class PlayerDodgeState : PlayerState
     {
         //When animation ends go back to player grounded
         Player.Animator.SetBool(isDodgingBoolHash, false);
+        Player.Animator.SetFloat(timeSinceLastDodgeFloatHash, timeSinceLastDodge);
+
+        timeSinceLastDodge = Time.time;
         stateMachine.Transition<PlayerGroundedState>();
     }
 

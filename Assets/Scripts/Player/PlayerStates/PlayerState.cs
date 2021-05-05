@@ -6,6 +6,7 @@ public abstract class PlayerState : State
     private CharacterController3D player;
     protected CharacterController3D Player => player = player != null ? player : (CharacterController3D)owner;
 
+    protected int timeSinceLastDodgeFloatHash;
     protected int inputMagnitudeFloatHash;
     protected int inputXFloatHash;
     protected int inputYFloatHash;
@@ -21,6 +22,7 @@ public abstract class PlayerState : State
 
     private void InitializeAnimatorHashes()
     {
+        timeSinceLastDodgeFloatHash = Animator.StringToHash("TimeSinceLastDodge");
         inputMagnitudeFloatHash = Animator.StringToHash("InputMagnitude");
         inputXFloatHash = Animator.StringToHash("InputX");
         inputYFloatHash = Animator.StringToHash("InputY");
