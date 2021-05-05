@@ -15,7 +15,7 @@ public class SceneController : MonoBehaviour
         if(eve.Info.unit.tag == "DeathScreen")
         {
             SceneManager.UnloadSceneAsync("Whitebox - 16April");
-            StartCoroutine(LoadingScene("Whitebox - 16April"));
+            StartCoroutine(LoadScene("Whitebox - 16April"));
             EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
 
 
@@ -29,17 +29,13 @@ public class SceneController : MonoBehaviour
         
     }
 
-    public void LoadScene(string scene)
-    {
-
-    }
 
     public void UnloadScene(/*nånting för att identifiera vilken scen, string eller buildindex?*/)
     {
 
     }
 
-    IEnumerator LoadingScene(string sceneName)
+    IEnumerator LoadScene(string sceneName)
     {
         yield return null;
 

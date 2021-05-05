@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60153bd074e113a4c9b54cc07edeb5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  movable: 1
   target: {fileID: 2254545869778099355}
   offset: {x: 0, y: 0.35, z: 0}
   UIElements: {fileID: 6388825860034650479}

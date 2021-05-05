@@ -125,7 +125,7 @@ public class HealthComponent : HitComponent
         healthBar?.gameObject.SetActive(false);
     }
    
-    public bool IsOnLayer(int layer)
+    private bool IsOnLayer(int layer)
     {
         return damageLayer == (damageLayer | (1 << layer));
     }

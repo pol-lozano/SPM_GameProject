@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Whitebox/Path A.unity
     guid: 3eb2c5b8129adfd43bb0ec37012885db
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Whitebox/MainMenu.unity
     guid: 48c8f969fd560bc4ab3f273017eafe83
   - enabled: 1
