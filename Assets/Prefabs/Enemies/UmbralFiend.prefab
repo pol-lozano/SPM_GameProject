@@ -2071,6 +2071,7 @@ GameObject:
   - component: {fileID: 8136411914480488308}
   - component: {fileID: 1961466935983555069}
   - component: {fileID: 1661123108046890256}
+  - component: {fileID: 9149919078342260747}
   m_Layer: 12
   m_Name: Partricles (1)
   m_TagString: Untagged
@@ -2169,6 +2170,20 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &9149919078342260747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5613825198873178857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efc6bbb8bc111c409f5ab38d756c79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2364674876880064153}
+  vfx: {fileID: 1961466935983555069}
 --- !u!1 &5770916936179316535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,6 +3064,7 @@ GameObject:
   - component: {fileID: 6479218289526687121}
   - component: {fileID: 3721411807382411047}
   - component: {fileID: 7379688683971147219}
+  - component: {fileID: 8407278424860509817}
   m_Layer: 12
   m_Name: Partricles
   m_TagString: Untagged
@@ -3147,6 +3163,20 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8407278424860509817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146847347463052042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1efc6bbb8bc111c409f5ab38d756c79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2364674876880064153}
+  vfx: {fileID: 3721411807382411047}
 --- !u!1 &8157787964320556715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,7 +3238,7 @@ Transform:
   m_GameObject: {fileID: 8315867624838024222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.4641628, y: 1, z: -20.229485}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 5380812897503927491}
   - {fileID: 6691493646674773108}
@@ -3310,7 +3340,7 @@ NavMeshAgent:
   m_Acceleration: 40
   avoidancePriority: 50
   m_AngularSpeed: 720
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

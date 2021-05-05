@@ -1,3 +1,6 @@
+//Author: Pol Lozano Llorens
+//Secondary Author: Rickard Lindgren
+
 using UnityEngine;
 
 public abstract class EnemyState : State
@@ -20,9 +23,6 @@ public abstract class EnemyState : State
 
     public override void EvaluateTransitions()
     {
-        //VI kanske kan lägga stun här men då måste stunState vara båda för båda fienderna?
-        //if (AIController.isStunned) stateMachine.Transition<StunState>();
-        //lägg in en HitState som gör typ knockback?
         if (AIController.HealthComponent.Invulnerable 
             && AIController.HealthComponent.LastType != typeof(Projectile) 
             && AIController.HealthComponent.IsStunned == false)

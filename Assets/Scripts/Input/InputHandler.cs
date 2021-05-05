@@ -1,4 +1,5 @@
-//Pol Lozano Llorens
+//Author: Pol Lozano Llorens
+//Secondary Author: Rickard Lindgren
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;

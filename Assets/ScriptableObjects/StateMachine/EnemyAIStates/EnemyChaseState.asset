@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   baseOffset: 0
-  attackDistance: 5
+  attackDistance: 3
   lostTargetDistance: 10
