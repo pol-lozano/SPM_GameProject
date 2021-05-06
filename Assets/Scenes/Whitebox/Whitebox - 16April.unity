@@ -86801,9 +86801,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: polySurface2
       objectReference: {fileID: 0}
+    - target: {fileID: 3025802538170334617, guid: 950fd423471d27141aa736fb5958a9ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3116485761953212047, guid: 950fd423471d27141aa736fb5958a9ee, type: 3}
       propertyPath: m_Name
       value: polySurface1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116485761953212047, guid: 950fd423471d27141aa736fb5958a9ee, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 950fd423471d27141aa736fb5958a9ee, type: 3}
