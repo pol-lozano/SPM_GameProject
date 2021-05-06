@@ -11,11 +11,6 @@ public class Checkpoint : MonoBehaviour
     //ska ligga i checkpointManager ist
     //[SerializeField] private List<string> scenesOnThisCheckpoint = new List<string>();
 
-    private void Awake()
-    {
-        if (currentCheckPoint == null)
-            currentCheckPoint = this;
-    }
 
     /*DEN BORDE INTE AKTIVERAS SÅ HÄR, SPELAREN BORDE GÅ FRAM OCH INTERAGERA*/
     private void OnTriggerEnter/*STAY!?*/(Collider other)
