@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 1480.3125, g: 1833.8965, b: 2428.0898, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -816,7 +816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002549376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.672, y: 16.237, z: -36.54232}
+  m_LocalPosition: {x: -9.473, y: 17.877, z: -36.53}
   m_LocalScale: {x: 0.43036, y: 2.6698, z: 6.5425572}
   m_Children: []
   m_Father: {fileID: 1775816979}
@@ -1083,7 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34f970842a9ef449b41dce378e65b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToLoad: 030000000a000000
+  indexesToLoad: 03000000
   indexesToUnload: 
 --- !u!65 &1200423474
 BoxCollider:
@@ -1123,13 +1123,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282830533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.357, y: -0.805, z: -2.115}
+  m_LocalRotation: {x: -0, y: 0.6869878, z: -0, w: 0.72666895}
+  m_LocalPosition: {x: 17.1, y: -0.2, z: -8.6}
   m_LocalScale: {x: 1, y: 4.1972, z: 8.4223}
   m_Children: []
   m_Father: {fileID: 1775816979}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 86.784, z: 0}
 --- !u!65 &1282830535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1806,13 +1806,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136293309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.536301, y: 5.3, z: -38.128185}
-  m_LocalScale: {x: 1, y: 4.437339, z: 12.510574}
+  m_LocalRotation: {x: -0, y: -0.70561, z: -0, w: 0.70860046}
+  m_LocalPosition: {x: -18.47, y: 5.3, z: -74.86}
+  m_LocalScale: {x: 1, y: 4.437339, z: 7.853263}
   m_Children: []
   m_Father: {fileID: 1775816979}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -89.758, z: 0}
 --- !u!114 &2136293311
 MonoBehaviour:
   m_ObjectHideFlags: 0
