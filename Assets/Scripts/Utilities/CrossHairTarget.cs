@@ -6,6 +6,7 @@ public class CrossHairTarget : MonoBehaviour
 {
     [SerializeField,Tooltip("How far the player is able to aim")] private int viewLength;
     [SerializeField, Tooltip("What the player will aim at when it isn't looking at anything")] private Transform backupTarget;
+    [SerializeField] LayerMask mask;
     
     Camera cam;
     Ray ray;
@@ -20,7 +21,7 @@ public class CrossHairTarget : MonoBehaviour
     {
         ray.origin = cam.transform.position;
         ray.direction = cam.transform.forward;
-        if (Physics.Raycast(ray, out hitInfo, viewLength))
+        if (Physics.Raycast(ray, out hitInfo, viewLength, mask))
             transform.position = hitInfo.point;
         else
             transform.position = backupTarget.position;

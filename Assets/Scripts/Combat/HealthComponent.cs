@@ -84,8 +84,11 @@ public class HealthComponent : HitComponent
         SetInvulnerable();
         currentHealth -= info.amount;
 
-        healthBar?.Activate();
-        healthBar?.DeactivateDelayed(7);
+        if(gameObject.tag != "Player")
+        {
+            healthBar?.Activate();
+            healthBar?.DeactivateDelayed(7);
+        }
         healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
 
         EventHandler<HitEvent>.FireEvent(new HitEvent(gameObject, info));
@@ -101,12 +104,12 @@ public class HealthComponent : HitComponent
 
         if(gameObject.tag == "Player")
         {
-            DyingInfo dieInfo = new DyingInfo
+            DyingInfo playerDyingInfo = new DyingInfo
             {
                 unit = gameObject,
                 killer = info.damager.gameObject,
             };
-            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, dieInfo));
+            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, playerDyingInfo));
         }
         //ENEMIES borde också få dyingEvent men det har vi inte just nu
         else
@@ -125,7 +128,7 @@ public class HealthComponent : HitComponent
         healthBar?.gameObject.SetActive(false);
     }
    
-    private bool IsOnLayer(int layer)
+    public bool IsOnLayer(int layer)
     {
         return damageLayer == (damageLayer | (1 << layer));
     }

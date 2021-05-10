@@ -16,4 +16,4 @@ MonoBehaviour:
   baseOffset: 0
   chaseDistance: 5
   cooldown: 1
-  attackDistance: 0.5
+  attackDistance: 1

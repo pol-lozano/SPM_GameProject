@@ -44,6 +44,7 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
 
     public void EnableGameplayInput()
     {
+        
         gameInput.Gameplay.Enable();
     }
 

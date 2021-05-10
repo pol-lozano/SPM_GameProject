@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Chase
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  attackDistance: 10
+  baseOffset: 0
+  attackDistance: 15
   lostTargetDistance: 20
