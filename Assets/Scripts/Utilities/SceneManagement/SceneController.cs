@@ -7,20 +7,31 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController scenController;
 
-    private void OnEnable() => EventHandler<DeathEvent>.RegisterListener(Restart);
-    private void OnDisable() => EventHandler<DeathEvent>.UnregisterListener(Restart);
+    private void OnEnable()
+    {
+        EventHandler<LoadSceneEvent>.RegisterListener(LoadScene);
+        EventHandler<UnloadSceneEvent>.RegisterListener(UnloadScene);
+        EventHandler<DeathEvent>.RegisterListener(Restart);
+    }
+    private void OnDisable() 
+    {
+        EventHandler<LoadSceneEvent>.RegisterListener(LoadScene);
+        EventHandler<UnloadSceneEvent>.RegisterListener(UnloadScene);
+        EventHandler<DeathEvent>.UnregisterListener(Restart);
+    }
+
 
     private void Restart(DeathEvent eve)
     {
         if(eve.Info.unit.tag == "DeathScreen")
         {
             SceneManager.UnloadSceneAsync("Whitebox - 16April");
-            StartCoroutine(LoadScene("Whitebox - 16April"));
-            
+            StartCoroutine(ReloadScenes("Whitebox - 16April"));
+            EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
 
 
             /*
-             * unload all scenes
+             * unload all scenes except active sc ene
              * foreach(scene s i currentCheckpoint.relevantScenes)
              *  LoadAsync(s.name)
              *  
@@ -29,13 +40,19 @@ public class SceneController : MonoBehaviour
         
     }
 
-
-    public void UnloadScene(/*nånting för att identifiera vilken scen, string eller buildindex?*/)
+    public void LoadScene(LoadSceneEvent eve)
     {
-
+        if(!SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded)
+            SceneManager.LoadSceneAsync(eve.buildIndex, LoadSceneMode.Additive);
     }
 
-    IEnumerator LoadScene(string sceneName)
+    public void UnloadScene(UnloadSceneEvent eve)
+    {
+        if(SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded)
+            SceneManager.UnloadSceneAsync(eve.buildIndex);
+    }
+
+    IEnumerator ReloadScenes(string sceneName)
     {
         yield return null;
 
@@ -48,6 +65,6 @@ public class SceneController : MonoBehaviour
         {
             yield return null;
         }
-        EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
+        
     }
 }

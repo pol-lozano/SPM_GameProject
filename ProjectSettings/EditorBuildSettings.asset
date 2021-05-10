@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Whitebox/TestScenLaddning.unity
     guid: 0a23cc1e15c86ea45a8da69c19755205
   - enabled: 0
-    path: Assets/Scenes/Whitebox/Hubb.unity
-    guid: 2dc15af977b755c47806a801db548a3c
-  - enabled: 0
     path: Assets/Scenes/Whitebox/Path A.unity
     guid: 3eb2c5b8129adfd43bb0ec37012885db
+  - enabled: 0
+    path: Assets/Scenes/Whitebox/Path B.unity
+    guid: 8109ce864d50f7a4a9a84dac64f5feea
   - enabled: 1
     path: Assets/Scenes/Whitebox/MainMenu.unity
     guid: 48c8f969fd560bc4ab3f273017eafe83
@@ -24,6 +24,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Whitebox/Base Scene.unity
     guid: 0af03046e401b2442bd70cc480a3eb82
   - enabled: 1
+    path: Assets/Scenes/Whitebox/Dungeon.unity
+    guid: 72936a67d4d95e84486d8547a9fa1d76
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Hubb.unity
+    guid: 2dc15af977b755c47806a801db548a3c
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Path A 1.unity
+    guid: bf3c91349abf48a4c954c384eb704d55
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Path A 2.unity
+    guid: 6123f182e6875634b8d193f2e4f2ed0c
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Path A 3.unity
+    guid: 7b2c129947575014b98e46de7e717282
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Path B 1.unity
+    guid: 2ae650129b7bdcd43a518d85028fc3d6
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Path B 2.unity
+    guid: 0b63d4b3bcacc684a829454b5c175e8e
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Path B 3.unity
+    guid: 0953f76705cf6e248a6fbd07bd6a0215
+  - enabled: 1
+    path: Assets/Scenes/Whitebox/Courtyard.unity
+    guid: 153f94a634897684a89af7e93257eb43
+  - enabled: 0
     path: Assets/Scenes/Whitebox/Whitebox - 16April.unity
     guid: c416f094dc1aea24abf47c9eeab389e2
   m_configObjects:

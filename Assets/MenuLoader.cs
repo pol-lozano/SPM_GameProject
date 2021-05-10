@@ -14,7 +14,7 @@ public class MenuLoader : MonoBehaviour
             {
                 SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(i));
             }
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(0);
 
         }
     }

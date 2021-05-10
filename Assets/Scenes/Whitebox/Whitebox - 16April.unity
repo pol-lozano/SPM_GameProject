@@ -22399,7 +22399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &686058085
 Transform:
   m_ObjectHideFlags: 0
@@ -84037,6 +84037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'PathB '
       objectReference: {fileID: 0}
+    - target: {fileID: 5424343839541013522, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8770247827468757001, guid: fd99ad040e87c1a4f9fd142e6467649f, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -84094,7 +84098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1379289850462393530, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1379289850680268826, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_IsActive
@@ -84258,7 +84262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6360686951406785472, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6760507939620372971, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Size.x
@@ -84406,7 +84410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538539262301125875, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
@@ -86610,6 +86614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Courtyard
       objectReference: {fileID: 0}
+    - target: {fileID: 643174190054300103, guid: aab4e8154c869874095528fa6c109ce7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 643174190054300104, guid: aab4e8154c869874095528fa6c109ce7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -86674,6 +86682,10 @@ PrefabInstance:
     - target: {fileID: 3252216127564576057, guid: 23b1b68bad89dc74fb5793e38776a5c2, type: 3}
       propertyPath: m_Name
       value: PathA
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252216127564576057, guid: 23b1b68bad89dc74fb5793e38776a5c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3252216127564576058, guid: 23b1b68bad89dc74fb5793e38776a5c2, type: 3}
       propertyPath: m_RootOrder
@@ -86931,6 +86943,10 @@ PrefabInstance:
     - target: {fileID: 4842053555737344889, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Name
       value: AllPuzzles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842053555737344889, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5913748967093229084, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Enabled
