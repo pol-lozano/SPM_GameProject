@@ -10,7 +10,7 @@ public class MenuLoader : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Cursor.lockState = CursorLockMode.None;
-            for(int i = 1; i <= SceneManager.sceneCount; i++)
+            for(int i = 1; i < SceneManager.sceneCount; i++)
             {
                 SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(i));
             }

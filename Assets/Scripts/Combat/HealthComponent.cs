@@ -35,6 +35,9 @@ public class HealthComponent : HitComponent
 
     public void Update()
     {
+        if (currentHealth <= 0)
+            Die();
+            
         if (Invulnerable)
         {
             timeSinceLastHit += Time.deltaTime;
@@ -121,6 +124,21 @@ public class HealthComponent : HitComponent
             };
             EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
         }        
+    }
+
+    private void Die()
+    {
+        if (healthBar != null)
+            Invoke("DeactivateHealthBar", 2);
+
+        if (gameObject.tag == "Player")
+        {
+            DyingInfo playerDyingInfo = new DyingInfo
+            {
+                unit = gameObject,
+            };
+            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, playerDyingInfo));
+        }
     }
 
     private void DeactivateHealthBar()

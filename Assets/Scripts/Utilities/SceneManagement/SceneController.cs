@@ -7,6 +7,8 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController scenController;
 
+    private int baseSceneIndex = 1;
+
     private void OnEnable()
     {
         EventHandler<LoadSceneEvent>.RegisterListener(LoadScene);
@@ -25,17 +27,26 @@ public class SceneController : MonoBehaviour
     {
         if(eve.Info.unit.tag == "DeathScreen")
         {
-            SceneManager.UnloadSceneAsync("Whitebox - 16April");
-            StartCoroutine(ReloadScenes("Whitebox - 16April"));
+            //Hämta alla scener som är relevanta för checkpoint
+            List<int> relevantScenes = Checkpoint.currentCheckPoint.ScenesOnCheckpoint;
+
+            Scene[] activeScenes = SceneManager.GetAllScenes();
+
+            //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
+            foreach(Scene sc in activeScenes)
+            {
+                if (!relevantScenes.Contains(sc.buildIndex) && sc.buildIndex != baseSceneIndex)
+                    SceneManager.UnloadSceneAsync(sc.name);
+            }
+            //om det finns någon relevant scen som inte är laddad så laddas den in
+            foreach(int s in relevantScenes)
+            {
+                if (!SceneManager.GetSceneByBuildIndex(s).isLoaded)
+                    StartCoroutine(ReloadScene(s));
+            }
+
             EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
-
-
-            /*
-             * unload all scenes except active sc ene
-             * foreach(scene s i currentCheckpoint.relevantScenes)
-             *  LoadAsync(s.name)
-             *  
-             */
+            
         }
         
     }
@@ -52,11 +63,11 @@ public class SceneController : MonoBehaviour
             SceneManager.UnloadSceneAsync(eve.buildIndex);
     }
 
-    IEnumerator ReloadScenes(string sceneName)
+    IEnumerator ReloadScene(int index)
     {
         yield return null;
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
         //Scriptet får gå vidare när scenen laddats färdigt
         asyncOperation.allowSceneActivation = true;
         
