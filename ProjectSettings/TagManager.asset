@@ -13,14 +13,14 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - SceneLoader
   - PostProcessing
-  - Not in Reflection
-  - OBJ
+  - Pickup
+  - Destructable
   - PlayerAttack
   - EnemyAttack
   - Enemy
-  - 
+  - Puzzle
   - 
   - 
   - 

@@ -5,18 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Whitebox/TestScenLaddning.unity
-    guid: 0a23cc1e15c86ea45a8da69c19755205
-  - enabled: 0
-    path: Assets/Scenes/Whitebox/Path A.unity
-    guid: 3eb2c5b8129adfd43bb0ec37012885db
-  - enabled: 0
-    path: Assets/Scenes/Whitebox/Path B.unity
-    guid: 8109ce864d50f7a4a9a84dac64f5feea
   - enabled: 1
     path: Assets/Scenes/Whitebox/MainMenu.unity
     guid: 48c8f969fd560bc4ab3f273017eafe83
@@ -50,8 +38,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Whitebox/Courtyard.unity
     guid: 153f94a634897684a89af7e93257eb43
-  - enabled: 0
-    path: Assets/Scenes/Whitebox/Whitebox - 16April.unity
-    guid: c416f094dc1aea24abf47c9eeab389e2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cfb7b9ac6a0ad5b45a6b809bf1aa34a6, type: 2}

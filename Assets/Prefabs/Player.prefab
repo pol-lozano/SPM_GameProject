@@ -1747,6 +1747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d9e0ec02f09714582934c1a53d2c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravity: 1
   acceleration: 50
   collisionMask:
     serializedVersion: 2

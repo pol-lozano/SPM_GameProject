@@ -45,20 +45,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 0.95, z: 0.47}
   m_Center: {x: -0.0000024189624, y: 0.00000059433734, z: -0.17}
---- !u!64 &8905131613123298802
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8598510596769418559}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3682169199630124851, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
 --- !u!114 &3287253506174942151
 MonoBehaviour:
   m_ObjectHideFlags: 0

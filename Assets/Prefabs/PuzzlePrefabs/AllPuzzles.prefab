@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1471594140714059198}
   - component: {fileID: 3911659722791605193}
   - component: {fileID: 6004102724465669866}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 8443062060790706340}
   - component: {fileID: 7521007183516042228}
   - component: {fileID: 780682303752431611}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4321132761950491967}
   - component: {fileID: 389872930535719474}
   - component: {fileID: 7237004698451811906}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3808521383809756058}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7144251652773719951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 1728388365546905533}
   - component: {fileID: 8594105860858636278}
   - component: {fileID: 9221863733482226221}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 3448746352175595410}
   - component: {fileID: 647579086222726164}
   - component: {fileID: 5404912615202729036}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193073984911561983}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,164 +824,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &810254779456401038
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7635307795048007792}
-  - component: {fileID: 5887770277381270878}
-  - component: {fileID: 4865459778205421580}
-  - component: {fileID: 7883590025176415570}
-  - component: {fileID: 8505704240702883115}
-  - component: {fileID: 9170343813444644140}
-  - component: {fileID: 8981544282321772021}
-  - component: {fileID: 810254779456401041}
-  m_Layer: 3
-  m_Name: Breakable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7635307795048007792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 29.01, y: 5.16, z: 44.656}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4265770360990602916}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!33 &5887770277381270878
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Mesh: {fileID: -6697516197211106571, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
---- !u!23 &4865459778205421580
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 87e36b658b954fd49b72a1ecbb8542f8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7883590025176415570
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.000001, y: 6, z: 1.0000002}
-  m_Center: {x: -2.5000005, y: 3, z: -0.5000001}
---- !u!114 &8505704240702883115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a32d296a8a63a4ba258ad662f985ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleID: 4
---- !u!114 &9170343813444644140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitComponent: {fileID: 8505704240702883115}
---- !u!114 &8981544282321772021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 4
-  anim: {fileID: 810254779456401041}
---- !u!95 &810254779456401041
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810254779456401038}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df890cfdc9d3e0745b30ad15745f880b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &884079488790981016
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +837,7 @@ GameObject:
   - component: {fileID: 6987552244864622347}
   - component: {fileID: 5197974943944363292}
   - component: {fileID: 5723831086111064628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +949,7 @@ GameObject:
   - component: {fileID: 1866247333502772632}
   - component: {fileID: 3561676260495445765}
   - component: {fileID: 3818197168233748809}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1061,7 @@ GameObject:
   - component: {fileID: 576387616950173879}
   - component: {fileID: 2556672963008194423}
   - component: {fileID: 2362153577941979114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1173,7 @@ GameObject:
   - component: {fileID: 2213319305808511611}
   - component: {fileID: 7637508363829344835}
   - component: {fileID: 2123729789492697310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1443,7 +1285,7 @@ GameObject:
   - component: {fileID: 5044813239325394168}
   - component: {fileID: 509174368742300365}
   - component: {fileID: 4918817060511170287}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1542,164 +1384,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7982617, y: 0.2218782, z: 0.08489746}
   m_Center: {x: -0.0000005066395, y: 0.000000037252903, z: 0}
---- !u!1 &995786370930208055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4964993423840816758}
-  - component: {fileID: 6390709211357269560}
-  - component: {fileID: 3241365049927155526}
-  - component: {fileID: 1697291887319318085}
-  - component: {fileID: 8210006895302710928}
-  - component: {fileID: 740775646292132537}
-  - component: {fileID: 5419636643934076320}
-  - component: {fileID: 995786370930208054}
-  m_Layer: 3
-  m_Name: Breakable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &4964993423840816758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.7799225, y: -0.831139, z: 26.42911}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4265770360990602916}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!33 &6390709211357269560
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Mesh: {fileID: -6697516197211106571, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
---- !u!23 &3241365049927155526
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 87e36b658b954fd49b72a1ecbb8542f8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1697291887319318085
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.000001, y: 6, z: 1.0000002}
-  m_Center: {x: -2.5000005, y: 3, z: -0.5000001}
---- !u!114 &8210006895302710928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a32d296a8a63a4ba258ad662f985ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleID: 3
---- !u!114 &740775646292132537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitComponent: {fileID: 8210006895302710928}
---- !u!114 &5419636643934076320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 3
-  anim: {fileID: 995786370930208054}
---- !u!95 &995786370930208054
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995786370930208055}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df890cfdc9d3e0745b30ad15745f880b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1002187094768673879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,7 +1397,7 @@ GameObject:
   - component: {fileID: 7265344955567778731}
   - component: {fileID: 2181610810530996687}
   - component: {fileID: 714199206654288291}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1509,7 @@ GameObject:
   - component: {fileID: 3981592026851362901}
   - component: {fileID: 828066299881782253}
   - component: {fileID: 3803601471741236529}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,7 +1621,7 @@ GameObject:
   - component: {fileID: 881648807587829527}
   - component: {fileID: 4553078358457745724}
   - component: {fileID: 5711872739685018353}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2049,7 +1733,7 @@ GameObject:
   - component: {fileID: 8842405815618588878}
   - component: {fileID: 524684198423626447}
   - component: {fileID: 5658724180012618610}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2157,7 +1841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8418043577284879411}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2195,7 +1879,7 @@ GameObject:
   - component: {fileID: 2950597017548035827}
   - component: {fileID: 1615671167438602750}
   - component: {fileID: 8604723498324467086}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,7 +1991,7 @@ GameObject:
   - component: {fileID: 534019682925364850}
   - component: {fileID: 2687556937111425029}
   - component: {fileID: 4636390521661601062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2419,7 +2103,7 @@ GameObject:
   - component: {fileID: 4384667140314250334}
   - component: {fileID: 2015843243762948056}
   - component: {fileID: 6343043425875799936}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2531,7 +2215,7 @@ GameObject:
   - component: {fileID: 358430960134184049}
   - component: {fileID: 7224190241048847418}
   - component: {fileID: 7854202108317237729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2724,7 +2408,7 @@ GameObject:
   - component: {fileID: 1545469903256869782}
   - component: {fileID: 8433786268347733897}
   - component: {fileID: 1704908957042773725}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2836,7 +2520,7 @@ GameObject:
   - component: {fileID: 219035572259609382}
   - component: {fileID: 8535215474778485415}
   - component: {fileID: 8128408192989112258}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2948,7 +2632,7 @@ GameObject:
   - component: {fileID: 2399823079429031470}
   - component: {fileID: 258578699918657381}
   - component: {fileID: 2075309709746372274}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3060,7 +2744,7 @@ GameObject:
   - component: {fileID: 2249866785772852443}
   - component: {fileID: 3182593187331900144}
   - component: {fileID: 6647800129190504765}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3172,7 +2856,7 @@ GameObject:
   - component: {fileID: 2613332271655766937}
   - component: {fileID: 1763439531131369505}
   - component: {fileID: 2867671883213543165}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3284,7 +2968,7 @@ GameObject:
   - component: {fileID: 7127878732122695882}
   - component: {fileID: 3365912862232903736}
   - component: {fileID: 6686693036507323218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3477,7 +3161,7 @@ GameObject:
   - component: {fileID: 6127105413435754292}
   - component: {fileID: 1447322771733731585}
   - component: {fileID: 6288776664981552419}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3589,7 +3273,7 @@ GameObject:
   - component: {fileID: 8635282569770870887}
   - component: {fileID: 955814776808776195}
   - component: {fileID: 1940004036432700015}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3701,7 +3385,7 @@ GameObject:
   - component: {fileID: 8667284131141130696}
   - component: {fileID: 7221454259439290284}
   - component: {fileID: 6003037945462009261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3813,7 +3497,7 @@ GameObject:
   - component: {fileID: 784507110102165076}
   - component: {fileID: 2479375290294226121}
   - component: {fileID: 2880589729255004805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3925,7 +3609,7 @@ GameObject:
   - component: {fileID: 1511699275646780283}
   - component: {fileID: 3494300193093412027}
   - component: {fileID: 3732658535884770342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4051,9 +3735,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4964993423840816758}
   - {fileID: 9011218315045653261}
-  - {fileID: 7635307795048007792}
   - {fileID: 9011218314205527400}
   m_Father: {fileID: 9214593481825500408}
   m_RootOrder: 2
@@ -4071,7 +3753,7 @@ GameObject:
   - component: {fileID: 1775608995180682774}
   - component: {fileID: 578659585783668044}
   - component: {fileID: 8354361990714268795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4264,7 +3946,7 @@ GameObject:
   - component: {fileID: 9213308256662904101}
   - component: {fileID: 3101020705565191569}
   - component: {fileID: 3323143845539628712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4453,7 +4135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2645335925190068717}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Levers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4556,7 +4238,7 @@ GameObject:
   - component: {fileID: 690788022068504553}
   - component: {fileID: 7572969545336398258}
   - component: {fileID: 4186915964030924997}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4740,7 +4422,7 @@ GameObject:
   - component: {fileID: 3204821863052675212}
   - component: {fileID: 8861941998328376484}
   - component: {fileID: 664119656944779351}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4852,7 +4534,7 @@ GameObject:
   - component: {fileID: 143300874571324714}
   - component: {fileID: 7625537275422362157}
   - component: {fileID: 1633701651599169774}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4964,7 +4646,7 @@ GameObject:
   - component: {fileID: 1980971585950779593}
   - component: {fileID: 1036903085190500076}
   - component: {fileID: 3980182248109354544}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5076,7 +4758,7 @@ GameObject:
   - component: {fileID: 8845161942579885070}
   - component: {fileID: 7715670898118537714}
   - component: {fileID: 1664668908678442943}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +4870,7 @@ GameObject:
   - component: {fileID: 8560718420862251509}
   - component: {fileID: 2840847146462126056}
   - component: {fileID: 3009481346674272089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5296,7 +4978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2306816987141820731}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_WallWithPlanks_Shattered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5331,7 +5013,7 @@ GameObject:
   - component: {fileID: 4132545664344223958}
   - component: {fileID: 3936003951108078776}
   - component: {fileID: 7531949424681988601}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5524,7 +5206,7 @@ GameObject:
   - component: {fileID: 7529942860429465919}
   - component: {fileID: 8071595575314014438}
   - component: {fileID: 213779990785935772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5651,7 +5333,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8609783557168475493}
-  - {fileID: 7929528673204247529}
   - {fileID: 2462447950719514412}
   m_Father: {fileID: 8609783556239529605}
   m_RootOrder: 1
@@ -5669,7 +5350,7 @@ GameObject:
   - component: {fileID: 6877660586207579880}
   - component: {fileID: 4552046448252151553}
   - component: {fileID: 4260756236798682894}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5781,7 +5462,7 @@ GameObject:
   - component: {fileID: 1226315610367750295}
   - component: {fileID: 4093221407687421668}
   - component: {fileID: 1744684025851910838}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5974,7 +5655,7 @@ GameObject:
   - component: {fileID: 5245608211604511070}
   - component: {fileID: 395646615269879334}
   - component: {fileID: 6141525747871399762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6086,7 +5767,7 @@ GameObject:
   - component: {fileID: 432437756715621239}
   - component: {fileID: 7042988079338530918}
   - component: {fileID: 8501342339251466003}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6198,7 +5879,7 @@ GameObject:
   - component: {fileID: 5291431727320184480}
   - component: {fileID: 7533200009442582654}
   - component: {fileID: 6073465249999116484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6310,7 +5991,7 @@ GameObject:
   - component: {fileID: 837992760209317338}
   - component: {fileID: 1946347595070250624}
   - component: {fileID: 6986693768344182711}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6422,7 +6103,7 @@ GameObject:
   - component: {fileID: 8823141320172529067}
   - component: {fileID: 833874132601323976}
   - component: {fileID: 7205441072794981508}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6534,7 +6215,7 @@ GameObject:
   - component: {fileID: 1914930390165316645}
   - component: {fileID: 8799339523994231422}
   - component: {fileID: 2963358531721509641}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6642,7 +6323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3897229764562636165}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Levers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6664,6 +6345,19 @@ Transform:
   m_Father: {fileID: 8609783556239529605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8722271082487452268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907782872767539653}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6, z: 1}
+  m_Center: {x: -2.5, y: 3, z: -0.5}
 --- !u!95 &4806057970565440319
 Animator:
   serializedVersion: 3
@@ -6710,7 +6404,7 @@ GameObject:
   - component: {fileID: 4386311730756810615}
   - component: {fileID: 3577173606394769540}
   - component: {fileID: 5088509000658484042}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6818,7 +6512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4013551704217946657}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Levers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6854,7 +6548,7 @@ GameObject:
   - component: {fileID: 898378469500601389}
   - component: {fileID: 1669366321736317153}
   - component: {fileID: 4310443248787171856}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6962,7 +6656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7837202894476766063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7003,7 +6697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3676743602101768951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_WallWithPlanks_Shattered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7038,7 +6732,7 @@ GameObject:
   - component: {fileID: 4452221797318987266}
   - component: {fileID: 3983253146876321647}
   - component: {fileID: 4250012479346139480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7150,7 +6844,7 @@ GameObject:
   - component: {fileID: 3052560261334102810}
   - component: {fileID: 2709585593839337332}
   - component: {fileID: 8900171796485714485}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7262,7 +6956,7 @@ GameObject:
   - component: {fileID: 7621582524470048706}
   - component: {fileID: 8653260749104689726}
   - component: {fileID: 296965506398809203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7374,7 +7068,7 @@ GameObject:
   - component: {fileID: 3658220052834087133}
   - component: {fileID: 6451333229931560662}
   - component: {fileID: 1809631291591994006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7487,7 +7181,7 @@ GameObject:
   - component: {fileID: 3441280526990030067}
   - component: {fileID: 4897194209444082123}
   - component: {fileID: 4184960674734829026}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BreakableWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7508,7 +7202,7 @@ Transform:
   - {fileID: 8966453418636761075}
   - {fileID: 3676743602101768951}
   m_Father: {fileID: 3618072242988349353}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3915482369100256510
 Animator:
@@ -7722,7 +7416,7 @@ GameObject:
   - component: {fileID: 7743341956149931578}
   - component: {fileID: 2055128608738934619}
   - component: {fileID: 2944810695104328968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7830,7 +7524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1726372566054334330}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8063,7 +7757,7 @@ GameObject:
   - component: {fileID: 130785928033834530}
   - component: {fileID: 4109020758857847289}
   - component: {fileID: 44813956589178814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8175,7 +7869,7 @@ GameObject:
   - component: {fileID: 3508269115664920953}
   - component: {fileID: 5571344640095298424}
   - component: {fileID: 332908722579174085}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8287,7 +7981,7 @@ GameObject:
   - component: {fileID: 3089940689333960380}
   - component: {fileID: 160867050167364779}
   - component: {fileID: 393584595730703235}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8399,7 +8093,7 @@ GameObject:
   - component: {fileID: 6101853301397922764}
   - component: {fileID: 2586342124047457268}
   - component: {fileID: 6296148745252092265}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8511,7 +8205,7 @@ GameObject:
   - component: {fileID: 4553879363013366035}
   - component: {fileID: 2469825540367295043}
   - component: {fileID: 4669357028781442636}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8623,7 +8317,7 @@ GameObject:
   - component: {fileID: 2326593043581552357}
   - component: {fileID: 8484196679186461007}
   - component: {fileID: 3566605673576837698}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8812,7 +8506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 877278046707791742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8931,7 +8625,7 @@ GameObject:
   - component: {fileID: 6875859329607268897}
   - component: {fileID: 4545182042522531390}
   - component: {fileID: 6751006586733309802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9039,7 +8733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4338787426708866314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9077,7 +8771,7 @@ GameObject:
   - component: {fileID: 5265625646265039505}
   - component: {fileID: 4353367106770932496}
   - component: {fileID: 4239155253692892789}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9351,7 +9045,7 @@ GameObject:
   - component: {fileID: 3625690100541241471}
   - component: {fileID: 3327785682532394523}
   - component: {fileID: 1825781000560512026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9463,7 +9157,7 @@ GameObject:
   - component: {fileID: 7733959777772103577}
   - component: {fileID: 5300682765409674962}
   - component: {fileID: 6257068055243579141}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9575,7 +9269,7 @@ GameObject:
   - component: {fileID: 1357195489107777006}
   - component: {fileID: 3027320122172117557}
   - component: {fileID: 1412486576971304050}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9687,7 +9381,7 @@ GameObject:
   - component: {fileID: 2950463450038995325}
   - component: {fileID: 7255148345162375567}
   - component: {fileID: 1644533986854042341}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9799,7 +9493,7 @@ GameObject:
   - component: {fileID: 3696513061436867881}
   - component: {fileID: 7401935287241060995}
   - component: {fileID: 2484368470887313806}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9907,7 +9601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7372737289394259472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9941,7 +9635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4865742657159441238}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10140,7 +9834,7 @@ GameObject:
   - component: {fileID: 5865017365948279166}
   - component: {fileID: 4934459534680551259}
   - component: {fileID: 9017644321531924359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10252,7 +9946,7 @@ GameObject:
   - component: {fileID: 4383305483831087170}
   - component: {fileID: 7887454949023137375}
   - component: {fileID: 7195268165340366574}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10364,7 +10058,7 @@ GameObject:
   - component: {fileID: 7377100218225666363}
   - component: {fileID: 3522545372182301971}
   - component: {fileID: 4840811451258593760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10476,7 +10170,7 @@ GameObject:
   - component: {fileID: 5468621689752829085}
   - component: {fileID: 2578927411826125722}
   - component: {fileID: 6680381885025925465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10588,7 +10282,7 @@ GameObject:
   - component: {fileID: 1543383149847687007}
   - component: {fileID: 8445787729836426934}
   - component: {fileID: 8158365455326594745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10700,7 +10394,7 @@ GameObject:
   - component: {fileID: 6565639805099135264}
   - component: {fileID: 8275190866400677715}
   - component: {fileID: 5922011346472712961}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10893,7 +10587,7 @@ GameObject:
   - component: {fileID: 2478899765400975496}
   - component: {fileID: 4187635686076170577}
   - component: {fileID: 5255162923206371371}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11001,7 +10695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5643137870341244647}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11039,7 +10733,7 @@ GameObject:
   - component: {fileID: 3874597726858902674}
   - component: {fileID: 6994196839242992678}
   - component: {fileID: 7207805224265672479}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11228,7 +10922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7119638006674531720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11347,7 +11041,7 @@ GameObject:
   - component: {fileID: 6273776387437165916}
   - component: {fileID: 7852520531520820259}
   - component: {fileID: 603411737360679543}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11459,7 +11153,7 @@ GameObject:
   - component: {fileID: 7929528671780513313}
   - component: {fileID: 7929528671780513310}
   - component: {fileID: 7929528671780513311}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11571,7 +11265,7 @@ GameObject:
   - component: {fileID: 7929528671828987299}
   - component: {fileID: 7929528671828987296}
   - component: {fileID: 7929528671828987297}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11764,7 +11458,7 @@ GameObject:
   - component: {fileID: 7929528671832345953}
   - component: {fileID: 7929528671832345950}
   - component: {fileID: 7929528671832345951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11876,7 +11570,7 @@ GameObject:
   - component: {fileID: 7929528671937187425}
   - component: {fileID: 7929528671937187422}
   - component: {fileID: 7929528671937187423}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11988,7 +11682,7 @@ GameObject:
   - component: {fileID: 7929528671950965404}
   - component: {fileID: 7929528671950965405}
   - component: {fileID: 7929528671950965402}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12100,7 +11794,7 @@ GameObject:
   - component: {fileID: 7929528671957259596}
   - component: {fileID: 7929528671957259597}
   - component: {fileID: 7929528671957259594}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12212,7 +11906,7 @@ GameObject:
   - component: {fileID: 7929528671977784285}
   - component: {fileID: 7929528671977784282}
   - component: {fileID: 7929528671977784283}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12460,7 +12154,7 @@ GameObject:
   - component: {fileID: 7929528672059270353}
   - component: {fileID: 7929528672059270350}
   - component: {fileID: 7929528672059270351}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12572,7 +12266,7 @@ GameObject:
   - component: {fileID: 7929528672080609492}
   - component: {fileID: 7929528672080609493}
   - component: {fileID: 7929528672080609490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12684,7 +12378,7 @@ GameObject:
   - component: {fileID: 7929528672081040881}
   - component: {fileID: 7929528672081040878}
   - component: {fileID: 7929528672081040879}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12796,7 +12490,7 @@ GameObject:
   - component: {fileID: 7929528672113797216}
   - component: {fileID: 7929528672113797217}
   - component: {fileID: 7929528672113797214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12908,7 +12602,7 @@ GameObject:
   - component: {fileID: 7929528672144580411}
   - component: {fileID: 7929528672144580408}
   - component: {fileID: 7929528672144580409}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13016,7 +12710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672165239830}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13050,7 +12744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672186062188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13088,7 +12782,7 @@ GameObject:
   - component: {fileID: 7929528672228073001}
   - component: {fileID: 7929528672228072998}
   - component: {fileID: 7929528672228072999}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13196,7 +12890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672244937313}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13234,7 +12928,7 @@ GameObject:
   - component: {fileID: 7929528672245390690}
   - component: {fileID: 7929528672245390691}
   - component: {fileID: 7929528672245390688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13342,7 +13036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672260015367}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13376,7 +13070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672279212497}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13414,7 +13108,7 @@ GameObject:
   - component: {fileID: 7929528672357036919}
   - component: {fileID: 7929528672357036916}
   - component: {fileID: 7929528672357036917}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13526,7 +13220,7 @@ GameObject:
   - component: {fileID: 7929528672370631548}
   - component: {fileID: 7929528672370631549}
   - component: {fileID: 7929528672370631546}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13634,7 +13328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672377431285}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13668,7 +13362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672384659706}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13702,7 +13396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672482487153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13736,7 +13430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672496077410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13774,7 +13468,7 @@ GameObject:
   - component: {fileID: 7929528672498131304}
   - component: {fileID: 7929528672498131305}
   - component: {fileID: 7929528672498131302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13886,7 +13580,7 @@ GameObject:
   - component: {fileID: 7929528672498962435}
   - component: {fileID: 7929528672498962432}
   - component: {fileID: 7929528672498962433}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13994,7 +13688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672503334598}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14109,7 +13803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672552383366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14143,7 +13837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672560927529}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14262,7 +13956,7 @@ GameObject:
   - component: {fileID: 7929528672610015385}
   - component: {fileID: 7929528672610015382}
   - component: {fileID: 7929528672610015383}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14370,7 +14064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672624935098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SM_WallWithPlanks_Shattered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14401,7 +14095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672633944817}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14435,7 +14129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672641412580}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14480,7 +14174,7 @@ GameObject:
   - component: {fileID: 7929528672662267376}
   - component: {fileID: 7929528672662267377}
   - component: {fileID: 7929528672662267374}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14673,7 +14367,7 @@ GameObject:
   - component: {fileID: 7929528672667668290}
   - component: {fileID: 7929528672667668291}
   - component: {fileID: 7929528672667668288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14785,7 +14479,7 @@ GameObject:
   - component: {fileID: 7929528672668623277}
   - component: {fileID: 7929528672668623274}
   - component: {fileID: 7929528672668623275}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14893,7 +14587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528672677468145}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14931,7 +14625,7 @@ GameObject:
   - component: {fileID: 7929528672689322285}
   - component: {fileID: 7929528672689322282}
   - component: {fileID: 7929528672689322283}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15043,7 +14737,7 @@ GameObject:
   - component: {fileID: 7929528672705446968}
   - component: {fileID: 7929528672705446969}
   - component: {fileID: 7929528672705446966}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15155,7 +14849,7 @@ GameObject:
   - component: {fileID: 7929528672763211536}
   - component: {fileID: 7929528672763211537}
   - component: {fileID: 7929528672763211534}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15267,7 +14961,7 @@ GameObject:
   - component: {fileID: 7929528672861983120}
   - component: {fileID: 7929528672861983121}
   - component: {fileID: 7929528672861983118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15379,7 +15073,7 @@ GameObject:
   - component: {fileID: 7929528672904188745}
   - component: {fileID: 7929528672904188742}
   - component: {fileID: 7929528672904188743}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15491,7 +15185,7 @@ GameObject:
   - component: {fileID: 7929528672993081353}
   - component: {fileID: 7929528672993081350}
   - component: {fileID: 7929528672993081351}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15603,7 +15297,7 @@ GameObject:
   - component: {fileID: 7929528673002848696}
   - component: {fileID: 7929528673002848697}
   - component: {fileID: 7929528673002848694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15711,7 +15405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673026131076}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15749,7 +15443,7 @@ GameObject:
   - component: {fileID: 7929528673063770747}
   - component: {fileID: 7929528673063770744}
   - component: {fileID: 7929528673063770745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15857,7 +15551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673063949023}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15894,7 +15588,7 @@ GameObject:
   - component: {fileID: 7929528673070258886}
   - component: {fileID: 7929528673070258887}
   - component: {fileID: 7929528673070258884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16006,7 +15700,7 @@ GameObject:
   - component: {fileID: 7929528673085711800}
   - component: {fileID: 7929528673085711801}
   - component: {fileID: 7929528673085711798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16114,7 +15808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673202821726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16139,164 +15833,6 @@ Transform:
   m_Father: {fileID: 7929528672641412580}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7929528673204247526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7929528673204247529}
-  - component: {fileID: 7929528673204247534}
-  - component: {fileID: 7929528673204247535}
-  - component: {fileID: 7929528673204247532}
-  - component: {fileID: 7929528673204247533}
-  - component: {fileID: 7929528673204247530}
-  - component: {fileID: 7929528673204247531}
-  - component: {fileID: 7929528673204247528}
-  m_Layer: 3
-  m_Name: Breakable
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7929528673204247529
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000037252897}
-  m_LocalPosition: {x: 22.120163, y: -1.8405495, z: -34.381516}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3618072242988349353}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!33 &7929528673204247534
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Mesh: {fileID: -6697516197211106571, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
---- !u!23 &7929528673204247535
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 87e36b658b954fd49b72a1ecbb8542f8, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7929528673204247532
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5560718, y: 5.026869, z: 1.0000002}
-  m_Center: {x: -2.4565315, y: 2.5134344, z: -0.5000001}
---- !u!114 &7929528673204247533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a32d296a8a63a4ba258ad662f985ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleID: 21
---- !u!114 &7929528673204247530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitComponent: {fileID: 7929528673204247533}
---- !u!114 &7929528673204247531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 21
-  anim: {fileID: 7929528673204247528}
---- !u!95 &7929528673204247528
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7929528673204247526}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: df890cfdc9d3e0745b30ad15745f880b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7929528673274265678
 GameObject:
   m_ObjectHideFlags: 0
@@ -16391,7 +15927,7 @@ GameObject:
   - component: {fileID: 7929528673282632017}
   - component: {fileID: 7929528673282632014}
   - component: {fileID: 7929528673282632015}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16499,7 +16035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673290529288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16537,7 +16073,7 @@ GameObject:
   - component: {fileID: 7929528673315203556}
   - component: {fileID: 7929528673315203557}
   - component: {fileID: 7929528673315203554}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16649,7 +16185,7 @@ GameObject:
   - component: {fileID: 7929528673331111853}
   - component: {fileID: 7929528673331111850}
   - component: {fileID: 7929528673331111851}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16761,7 +16297,7 @@ GameObject:
   - component: {fileID: 7929528673353774043}
   - component: {fileID: 7929528673353774040}
   - component: {fileID: 7929528673353774041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16950,7 +16486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673403512467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17068,7 +16604,7 @@ GameObject:
   - component: {fileID: 7929528673470482522}
   - component: {fileID: 7929528673470482523}
   - component: {fileID: 7929528673470482520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17180,7 +16716,7 @@ GameObject:
   - component: {fileID: 7929528673502967214}
   - component: {fileID: 7929528673502967215}
   - component: {fileID: 7929528673502967212}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17292,7 +16828,7 @@ GameObject:
   - component: {fileID: 7929528673525902827}
   - component: {fileID: 7929528673525902824}
   - component: {fileID: 7929528673525902825}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17400,7 +16936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673526279920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17438,7 +16974,7 @@ GameObject:
   - component: {fileID: 7929528673543644040}
   - component: {fileID: 7929528673543644041}
   - component: {fileID: 7929528673543644038}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17550,7 +17086,7 @@ GameObject:
   - component: {fileID: 7929528673640668353}
   - component: {fileID: 7929528673640668350}
   - component: {fileID: 7929528673640668351}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17743,7 +17279,7 @@ GameObject:
   - component: {fileID: 7929528673659155177}
   - component: {fileID: 7929528673659155174}
   - component: {fileID: 7929528673659155175}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17851,7 +17387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673668906775}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18051,7 +17587,7 @@ GameObject:
   - component: {fileID: 7929528673755925118}
   - component: {fileID: 7929528673755925119}
   - component: {fileID: 7929528673755925116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18159,7 +17695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929528673817609493}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plank9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18274,7 +17810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2799620020795493080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18319,7 +17855,7 @@ GameObject:
   - component: {fileID: 8633419400471785397}
   - component: {fileID: 9033713647844605656}
   - component: {fileID: 8134198859921506543}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18431,7 +17967,7 @@ GameObject:
   - component: {fileID: 8709384232642269546}
   - component: {fileID: 1413800933793161057}
   - component: {fileID: 5982032663213542177}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18702,7 +18238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8564339435913574166}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BossLever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18734,7 +18270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8564339436054357515}
-  m_Layer: 3
+  m_Layer: 14
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18799,7 +18335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8966453418636761075}
   - component: {fileID: 5913748967093229084}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: SM_WallWithPlanks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18857,7 +18393,7 @@ GameObject:
   - component: {fileID: 2408450991760658317}
   - component: {fileID: 6240900042832830188}
   - component: {fileID: 7117790401784960191}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19460,7 +18996,7 @@ GameObject:
   - component: {fileID: 5483478652184525504}
   - component: {fileID: 3144868542452435409}
   - component: {fileID: 4603730785335725732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19572,7 +19108,7 @@ GameObject:
   - component: {fileID: 249835498229700375}
   - component: {fileID: 2491093606416138697}
   - component: {fileID: 2184282543082535283}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19682,7 +19218,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3675618649541551439, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
 --- !u!95 &8564339436363789877
@@ -19893,7 +19429,7 @@ GameObject:
   - component: {fileID: 204155057542412521}
   - component: {fileID: 5720969629478293393}
   - component: {fileID: 2243492117847416549}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20006,8 +19542,8 @@ GameObject:
   - component: {fileID: 9011218314205527397}
   - component: {fileID: 9011218314205527402}
   - component: {fileID: 9011218314205527403}
-  m_Layer: 0
-  m_Name: BreakableWall1 (1)
+  m_Layer: 14
+  m_Name: BreakableWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20027,7 +19563,7 @@ Transform:
   - {fileID: 7929528672058367082}
   - {fileID: 7929528672624935098}
   m_Father: {fileID: 4265770360990602916}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &9011218314205527399
 Animator:
@@ -20115,8 +19651,8 @@ GameObject:
   - component: {fileID: 9011218315045653262}
   - component: {fileID: 9011218315045653263}
   - component: {fileID: 9011218315045653260}
-  m_Layer: 0
-  m_Name: BreakableWall1
+  m_Layer: 14
+  m_Name: BreakableWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20136,7 +19672,7 @@ Transform:
   - {fileID: 3924417523399489092}
   - {fileID: 2306816987141820731}
   m_Father: {fileID: 4265770360990602916}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &9011218315045653256
 Animator:
@@ -20223,7 +19759,7 @@ GameObject:
   - component: {fileID: 8558570295785838272}
   - component: {fileID: 8916499853596758323}
   - component: {fileID: 902807798948387581}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20335,7 +19871,7 @@ GameObject:
   - component: {fileID: 5075213064485496218}
   - component: {fileID: 6715903618114050390}
   - component: {fileID: 8198992638067968935}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20447,7 +19983,7 @@ GameObject:
   - component: {fileID: 3489006966340142108}
   - component: {fileID: 4723129262330339455}
   - component: {fileID: 3019583749551650099}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20559,7 +20095,7 @@ GameObject:
   - component: {fileID: 4906092776199257744}
   - component: {fileID: 9222491126946666479}
   - component: {fileID: 1971064566569025979}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pasted__shard47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20867,6 +20403,10 @@ PrefabInstance:
       value: SM_LeverBase
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -20954,19 +20494,23 @@ PrefabInstance:
       value: SM_LeverHandle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
---- !u!4 &2539087354626150122 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
-  m_PrefabInstance: {fileID: 2645335926398576897}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2915929934647907408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
+  m_PrefabInstance: {fileID: 2645335926398576897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2539087354626150122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
   m_PrefabInstance: {fileID: 2645335926398576897}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3897229765326935589
@@ -20983,6 +20527,10 @@ PrefabInstance:
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_Name
       value: Lever1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21041,14 +20589,23 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8905131612662122607, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
 --- !u!4 &8756917347050789266 stripped
 Transform:
@@ -21127,19 +20684,23 @@ PrefabInstance:
       value: SM_LeverBase
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
---- !u!4 &3475012545161173622 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
-  m_PrefabInstance: {fileID: 4013551705381076381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4283602550590783692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
+  m_PrefabInstance: {fileID: 4013551705381076381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3475012545161173622 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
   m_PrefabInstance: {fileID: 4013551705381076381}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4013551705425406669
@@ -21214,19 +20775,23 @@ PrefabInstance:
       value: SM_LeverHandle
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
---- !u!1 &4283602550768687004 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
-  m_PrefabInstance: {fileID: 4013551705425406669}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3475012545141935398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
+  m_PrefabInstance: {fileID: 4013551705425406669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4283602550768687004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
   m_PrefabInstance: {fileID: 4013551705425406669}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4056267105365815359
@@ -21243,6 +20808,10 @@ PrefabInstance:
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_Name
       value: LeverHidden
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21297,8 +20866,16 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21380,14 +20957,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
---- !u!4 &4427297356280132479 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
-  m_PrefabInstance: {fileID: 4249799359986078868}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3907782872767539653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
+  m_PrefabInstance: {fileID: 4249799359986078868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4427297356280132479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a87654ae9cf4f1c448df7892d99e0865, type: 3}
   m_PrefabInstance: {fileID: 4249799359986078868}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4945321034970316011
@@ -21537,14 +21114,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
---- !u!1 &8798851175384877928 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
-  m_PrefabInstance: {fileID: 8564339436363789881}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8165057091387019730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
+  m_PrefabInstance: {fileID: 8564339436363789881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8798851175384877928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1884816e52588fc4486a9e92b5deccee, type: 3}
   m_PrefabInstance: {fileID: 8564339436363789881}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9214593481275451007
@@ -21554,6 +21131,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9214593481839116687}
     m_Modifications:
+    - target: {fileID: -1964484154070612181, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5900753464561239432, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -21620,14 +21201,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
---- !u!1 &2686589991322777933 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6532577567069986610, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
-  m_PrefabInstance: {fileID: 9214593481275451007}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3315634421378950135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5900753464561239432, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
+  m_PrefabInstance: {fileID: 9214593481275451007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2686589991322777933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6532577567069986610, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
   m_PrefabInstance: {fileID: 9214593481275451007}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9214593481729579359
@@ -21637,6 +21218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9214593481839116687}
     m_Modifications:
+    - target: {fileID: -1964484154070612181, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5900753464561239432, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -21725,6 +21310,10 @@ PrefabInstance:
       value: Lever2
       objectReference: {fileID: 0}
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -21781,8 +21370,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21809,6 +21406,10 @@ PrefabInstance:
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_Name
       value: Lever1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2330151862379302824, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21867,8 +21468,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510596769418559, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8598510597086084505, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: m_StaticEditorFlags
