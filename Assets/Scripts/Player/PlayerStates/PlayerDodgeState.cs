@@ -24,7 +24,7 @@ public class PlayerDodgeState : PlayerState
         timeSinceLastDodge = Time.time - timeSinceLastDodge;
         Debug.Log("Time since last dodge: " + timeSinceLastDodge);
 
-        Player.PhysicsComponent.Velocity += Player.GetInput().normalized * dodgeForce;
+        Player.PhysicsComponent.AddForce(Player.GetInput().normalized * dodgeForce, ForceMode.Force);
         // Particle effects shaders, sounds etc...
     }
 

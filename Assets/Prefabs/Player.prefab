@@ -1677,6 +1677,7 @@ GameObject:
   - component: {fileID: 1952091810191860615}
   - component: {fileID: 81835994}
   - component: {fileID: 6929837308013904745}
+  - component: {fileID: 324272603}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1746,16 +1747,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d9e0ec02f09714582934c1a53d2c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 30
-  physicsMaterial: {fileID: 13400000, guid: e690b538c3cc4144aac053a0278986e4, type: 2}
-  airResistance: 0.2
   acceleration: 50
   collisionMask:
     serializedVersion: 2
     m_Bits: 8
   skinWidth: 0.02
   groundCheckDistance: 0.1
-  velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &6261909279374753516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1861,11 +1858,19 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!81 &324272603
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030949066807183690}
+  m_Enabled: 1
 --- !u!1 &5202232553018445967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5202,6 +5207,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5030949066807183702}
     m_Modifications:
+    - target: {fileID: 9222992528749700901, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222992528749700901, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222992528749700901, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 9222992529123399848, guid: 31a6536154b74a045b2419183b8dced6, type: 3}
       propertyPath: m_Name
       value: PlayerHealthBarCanvas

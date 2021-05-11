@@ -7,6 +7,7 @@
             "fullManagedTypeName": "UnityEngine.Object",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -17,6 +18,7 @@
             "fullManagedTypeName": "UnityEngine.Behaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -27,6 +29,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -37,6 +40,7 @@
             "fullManagedTypeName": "UnityEngine.Component",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -47,6 +51,7 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -57,6 +62,7 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -67,6 +73,7 @@
             "fullManagedTypeName": "UnityEngine.Material",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -77,6 +84,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -97,6 +105,7 @@
             "fullManagedTypeName": "UnityEngine.Texture",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -107,6 +116,7 @@
             "fullManagedTypeName": "UnityEngine.Texture2D",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -131,6 +141,7 @@
             "fullManagedTypeName": "",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -148,6 +159,7 @@
             "fullManagedTypeName": "UnityEngine.ComputeShader",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
         },
@@ -157,6 +169,7 @@
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -167,6 +180,7 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
@@ -298,8 +312,8 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
             ]
         },
         {
@@ -308,8 +322,234 @@
             "fullManagedTypeName": "UnityEngine.Transform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Light",
+            "fullManagedTypeName": "UnityEngine.Light",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioSource",
+            "fullManagedTypeName": "UnityEngine.AudioSource",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioBehaviour",
+            "fullManagedTypeName": "UnityEngine.AudioBehaviour",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioListener",
+            "fullManagedTypeName": "UnityEngine.AudioListener",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Canvas",
+            "fullManagedTypeName": "UnityEngine.Canvas",
+            "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RectTransform",
+            "fullManagedTypeName": "UnityEngine.RectTransform",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "GameObject",
+            "fullManagedTypeName": "UnityEngine.GameObject",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimationClip",
+            "fullManagedTypeName": "UnityEngine.AnimationClip",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Animator",
+            "fullManagedTypeName": "UnityEngine.Animator",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AnimatorController",
+            "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Motion",
+            "fullManagedTypeName": "UnityEngine.Motion",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RuntimeAnimatorController",
+            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
+            "moduleName": "Animation",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "LightmapSettings",
+            "fullManagedTypeName": "UnityEngine.LightmapSettings",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Font",
+            "fullManagedTypeName": "UnityEngine.Font",
+            "moduleName": "TextRendering",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Sprite",
+            "fullManagedTypeName": "UnityEngine.Sprite",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "CanvasRenderer",
+            "fullManagedTypeName": "UnityEngine.CanvasRenderer",
+            "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "LevelGameManager",
+            "fullManagedTypeName": "",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "RenderSettings",
+            "fullManagedTypeName": "UnityEngine.RenderSettings",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "AudioClip",
+            "fullManagedTypeName": "UnityEngine.AudioClip",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "NavMeshSettings",
+            "fullManagedTypeName": "",
+            "moduleName": "AI",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "",
+            "nativeClass": "SampleClip",
+            "fullManagedTypeName": "",
+            "moduleName": "Audio",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/MainMenu.unity",
+                "Assets/Scenes/Whitebox/Base Scene.unity"
             ]
         },
         {
@@ -328,18 +568,7 @@
             "fullManagedTypeName": "UnityEngine.TrailRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Light",
-            "fullManagedTypeName": "UnityEngine.Light",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+                "Assets/Scenes/Whitebox/Base Scene.unity"
             ]
         },
         {
@@ -367,46 +596,6 @@
             "nativeClass": "MeshRenderer",
             "fullManagedTypeName": "UnityEngine.MeshRenderer",
             "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AudioBehaviour",
-            "fullManagedTypeName": "UnityEngine.AudioBehaviour",
-            "moduleName": "Audio",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AudioListener",
-            "fullManagedTypeName": "UnityEngine.AudioListener",
-            "moduleName": "Audio",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "ParticleSystem",
-            "fullManagedTypeName": "UnityEngine.ParticleSystem",
-            "moduleName": "ParticleSystem",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "ParticleSystemRenderer",
-            "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
-            "moduleName": "ParticleSystem",
             "usedInScenes": [
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
@@ -454,9 +643,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Canvas",
-            "fullManagedTypeName": "UnityEngine.Canvas",
-            "moduleName": "UI",
+            "nativeClass": "VisualEffect",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffect",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
@@ -464,69 +653,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RectTransform",
-            "fullManagedTypeName": "UnityEngine.RectTransform",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "GameObject",
-            "fullManagedTypeName": "UnityEngine.GameObject",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AnimationClip",
-            "fullManagedTypeName": "UnityEngine.AnimationClip",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Animator",
-            "fullManagedTypeName": "UnityEngine.Animator",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "AnimatorController",
-            "fullManagedTypeName": "UnityEditor.Animations.AnimatorController",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Motion",
-            "fullManagedTypeName": "UnityEngine.Motion",
-            "moduleName": "Animation",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RuntimeAnimatorController",
-            "fullManagedTypeName": "UnityEngine.RuntimeAnimatorController",
-            "moduleName": "Animation",
+            "nativeClass": "VFXRenderer",
+            "fullManagedTypeName": "UnityEngine.VFX.VFXRenderer",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
@@ -544,58 +673,9 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "LightmapSettings",
-            "fullManagedTypeName": "UnityEngine.LightmapSettings",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Font",
-            "fullManagedTypeName": "UnityEngine.Font",
-            "moduleName": "TextRendering",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "Sprite",
-            "fullManagedTypeName": "UnityEngine.Sprite",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "CanvasRenderer",
-            "fullManagedTypeName": "UnityEngine.CanvasRenderer",
-            "moduleName": "UI",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "",
-            "nativeClass": "LevelGameManager",
-            "fullManagedTypeName": "",
-            "moduleName": "Core",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Base Scene.unity",
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "RenderSettings",
-            "fullManagedTypeName": "UnityEngine.RenderSettings",
-            "moduleName": "Core",
+            "nativeClass": "VisualEffectAsset",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectAsset",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
@@ -607,17 +687,44 @@
             "fullManagedTypeName": "UnityEngine.PhysicMaterial",
             "moduleName": "Physics",
             "usedInScenes": [
+                "Assets/Scenes/Whitebox/Base Scene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "NavMeshData",
+            "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
+            "moduleName": "AI",
+            "usedInScenes": [
                 "Assets/Scenes/Whitebox/Base Scene.unity",
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
         },
         {
-            "managedAssemblyName": "",
-            "nativeClass": "NavMeshSettings",
-            "fullManagedTypeName": "",
-            "moduleName": "AI",
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VisualEffectObject",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectObject",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/Whitebox/Base Scene.unity",
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ParticleSystem",
+            "fullManagedTypeName": "UnityEngine.ParticleSystem",
+            "moduleName": "ParticleSystem",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ParticleSystemRenderer",
+            "fullManagedTypeName": "UnityEngine.ParticleSystemRenderer",
+            "moduleName": "ParticleSystem",
+            "usedInScenes": [
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
             ]
         },
@@ -659,33 +766,6 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "VisualEffect",
-            "fullManagedTypeName": "UnityEngine.VFX.VisualEffect",
-            "moduleName": "VFX",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "VFXRenderer",
-            "fullManagedTypeName": "UnityEngine.VFX.VFXRenderer",
-            "moduleName": "VFX",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "VisualEffectAsset",
-            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectAsset",
-            "moduleName": "VFX",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "LightingSettings",
             "fullManagedTypeName": "UnityEngine.LightingSettings",
             "moduleName": "Core",
@@ -706,6 +786,15 @@
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "ReflectionProbe",
             "fullManagedTypeName": "UnityEngine.ReflectionProbe",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "LightProbes",
+            "fullManagedTypeName": "UnityEngine.LightProbes",
             "moduleName": "Core",
             "usedInScenes": [
                 "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
@@ -739,24 +828,6 @@
             ]
         },
         {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "NavMeshData",
-            "fullManagedTypeName": "UnityEngine.AI.NavMeshData",
-            "moduleName": "AI",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
-            "managedAssemblyName": "UnityEngine.dll",
-            "nativeClass": "VisualEffectObject",
-            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectObject",
-            "moduleName": "VFX",
-            "usedInScenes": [
-                "Assets/Scenes/Whitebox/Whitebox - 16April.unity"
-            ]
-        },
-        {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "AIController",
@@ -774,6 +845,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "AimState",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Berp",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -816,6 +894,13 @@
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
             "fullManagedTypeName": "DeathScreen",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "DebugController",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -976,6 +1061,13 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "MenuLoader",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "ObjectPooler",
             "moduleName": "",
             "usedInScenes": []
@@ -990,7 +1082,21 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "ParticleStopper",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "PhysicsComponent",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "PickUp",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1067,6 +1173,20 @@
         {
             "managedAssemblyName": "Assembly-CSharp.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "ShakeEventData",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ShakeEventListener",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "ShootState",
             "moduleName": "",
             "usedInScenes": []
@@ -1093,6 +1213,27 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "VolumeReduce",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.InputSystem.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.InputSystem.InputActionAsset",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.InputSystem.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.InputSystem.InputActionReference",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Unity.InputSystem.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.InputSystem.InputSettings",
@@ -1110,6 +1251,13 @@
             "managedAssemblyName": "Unity.InputSystem.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.InputSystem.RemoteInputPlayerConnection",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.InputSystem.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.InputSystem.UI.InputSystemUIInputModule",
             "moduleName": "",
             "usedInScenes": []
         },
@@ -1438,6 +1586,13 @@
         {
             "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.PhysicallyBasedSky",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.RenderPipelines.HighDefinition.Runtime.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.Rendering.HighDefinition.RenderPipelineResources",
             "moduleName": "",
             "usedInScenes": []
@@ -1501,6 +1656,20 @@
         {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.EventSystems.EventSystem",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.EventSystems.EventTrigger",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Button",
             "moduleName": "",
             "usedInScenes": []
@@ -1557,6 +1726,13 @@
         {
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Outline",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.ScrollRect",
             "moduleName": "",
             "usedInScenes": []
@@ -1565,6 +1741,20 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.Scrollbar",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Shadow",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.Slider",
             "moduleName": "",
             "usedInScenes": []
         },
