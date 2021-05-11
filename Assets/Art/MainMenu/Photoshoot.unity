@@ -3027,6 +3027,8 @@ PlayableDirector:
     value: {fileID: 1525231043}
   - key: {fileID: -3758931429130770792, guid: 0c5ed896e99c9e24493ab582d1027df3, type: 2}
     value: {fileID: 377795268}
+  - key: {fileID: -316624519803453840, guid: 0c5ed896e99c9e24493ab582d1027df3, type: 2}
+    value: {fileID: 2742200100442726473}
   m_ExposedReferences:
     m_References:
     - e085d2232d1c4f046bf45e86d6f28d4a: {fileID: 0}
@@ -10556,6 +10558,7 @@ GameObject:
   - component: {fileID: 5161742129667249012}
   - component: {fileID: 3489226166512893271}
   - component: {fileID: 5334004651889284351}
+  - component: {fileID: 2742200100442726473}
   m_Layer: 0
   m_Name: Dungeon Volume
   m_TagString: Untagged
@@ -10563,6 +10566,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &2742200100442726473
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2742200100442726472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abdf0187cb754c841a3d74179dae9389, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2774283661825205775
 PrefabInstance:
   m_ObjectHideFlags: 0
