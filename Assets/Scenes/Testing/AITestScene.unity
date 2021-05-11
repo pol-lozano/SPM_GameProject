@@ -13325,6 +13325,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1562855013 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5640571642305901373, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
+  m_PrefabInstance: {fileID: 1506576681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1652032352
 GameObject:
   m_ObjectHideFlags: 0
@@ -17329,7 +17334,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.19573246, y: 0.34851128, z: -0.006168619}
+  m_ConnectedAnchor: {x: 0.19573258, y: 0.34851107, z: -0.0061679147}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -21961,6 +21966,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2104137301, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: gravity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952091810191860615, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1562855013}
     - target: {fileID: 1952091810191860618, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: shakeData
       value: 
@@ -22025,6 +22038,14 @@ PrefabInstance:
       propertyPath: crosshairImage
       value: 
       objectReference: {fileID: 1434876001}
+    - target: {fileID: 6929837308013904745, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929837308013904745, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
 --- !u!4 &5030949065688228666 stripped

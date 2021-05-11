@@ -120,8 +120,8 @@ static Il2CppMethodPointer s_methodPointers[40] =
 };
 static const int32_t s_InvokerIndices[40] = 
 {
-	6405,
-	6316,
+	6406,
+	6317,
 	5875,
 	4474,
 	3641,
@@ -136,7 +136,7 @@ static const int32_t s_InvokerIndices[40] =
 	4396,
 	4474,
 	4474,
-	6527,
+	6528,
 	4474,
 	4474,
 	-1,
@@ -173,13 +173,13 @@ static const Il2CppTokenRangePair s_rgctxIndices[7] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[13] = 
 {
-	{ (Il2CppRGCTXDataType)3, 34658 },
-	{ (Il2CppRGCTXDataType)3, 35932 },
+	{ (Il2CppRGCTXDataType)3, 34692 },
+	{ (Il2CppRGCTXDataType)3, 35967 },
 	{ (Il2CppRGCTXDataType)2, 383 },
-	{ (Il2CppRGCTXDataType)3, 35938 },
+	{ (Il2CppRGCTXDataType)3, 35973 },
 	{ (Il2CppRGCTXDataType)2, 977 },
 	{ (Il2CppRGCTXDataType)3, 355 },
-	{ (Il2CppRGCTXDataType)3, 35935 },
+	{ (Il2CppRGCTXDataType)3, 35970 },
 	{ (Il2CppRGCTXDataType)3, 357 },
 	{ (Il2CppRGCTXDataType)2, 748 },
 	{ (Il2CppRGCTXDataType)3, 359 },
