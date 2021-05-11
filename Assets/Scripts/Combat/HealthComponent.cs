@@ -20,11 +20,18 @@ public class HealthComponent : HitComponent
     //bool is PLayer?
 
     public bool Invulnerable { get; set; }
-    public float CurrentHealth { get => currentHealth; }
+    public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+    public float MaxHealth { get => maxHealth; }
     public System.Type LastType { get => lastTypeToHit; }
     public bool IsStunned { get => isStunned; set => isStunned = value; }
 
-    void Start() => ResetHealth();
+    void Start() => StartHealth();
+
+    private void StartHealth()
+    {
+        Invulnerable = false;
+        timeSinceLastHit = 0;
+    }
 
     public void ResetHealth()
     {
