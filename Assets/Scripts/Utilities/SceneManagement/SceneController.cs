@@ -1,3 +1,5 @@
+//Author: Rickard Lindgren
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,13 +37,13 @@ public class SceneController : MonoBehaviour
             //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
             foreach(Scene sc in activeScenes)
             {
-                if (!relevantScenes.Contains(sc.buildIndex) && sc.buildIndex != baseSceneIndex)
+                if (relevantScenes.Contains(sc.buildIndex) == false && sc.buildIndex != baseSceneIndex)
                     SceneManager.UnloadSceneAsync(sc.name);
             }
             //om det finns någon relevant scen som inte är laddad så laddas den in
             foreach(int s in relevantScenes)
             {
-                if (!SceneManager.GetSceneByBuildIndex(s).isLoaded)
+                if (SceneManager.GetSceneByBuildIndex(s).isLoaded == false)
                     StartCoroutine(ReloadScene(s));
             }
 
@@ -53,13 +55,13 @@ public class SceneController : MonoBehaviour
 
     public void LoadScene(LoadSceneEvent eve)
     {
-        if(!SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded)
+        if(SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded == false)
             SceneManager.LoadSceneAsync(eve.buildIndex, LoadSceneMode.Additive);
     }
 
     public void UnloadScene(UnloadSceneEvent eve)
     {
-        if(SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded)
+        if(SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded == true)
             SceneManager.UnloadSceneAsync(eve.buildIndex);
     }
 
@@ -72,7 +74,7 @@ public class SceneController : MonoBehaviour
         asyncOperation.allowSceneActivation = true;
         
         //koden är fast här så länge scenen inte laddat klart (skriva ut nån progress??)
-        while (!asyncOperation.isDone)
+        while (asyncOperation.isDone == false)
         {
             yield return null;
         }

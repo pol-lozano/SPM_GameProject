@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Rickard Lindgren
 using UnityEngine;
 
 public class DeathScreen : MonoBehaviour
