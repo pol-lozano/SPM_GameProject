@@ -7,39 +7,67 @@ public class SceneController : MonoBehaviour
 {
     public static SceneController scenController;
 
-    private void OnEnable() => EventHandler<DeathEvent>.RegisterListener(Restart);
-    private void OnDisable() => EventHandler<DeathEvent>.UnregisterListener(Restart);
+    private int baseSceneIndex = 1;
+
+    private void OnEnable()
+    {
+        EventHandler<LoadSceneEvent>.RegisterListener(LoadScene);
+        EventHandler<UnloadSceneEvent>.RegisterListener(UnloadScene);
+        EventHandler<DeathEvent>.RegisterListener(Restart);
+    }
+    private void OnDisable() 
+    {
+        EventHandler<LoadSceneEvent>.RegisterListener(LoadScene);
+        EventHandler<UnloadSceneEvent>.RegisterListener(UnloadScene);
+        EventHandler<DeathEvent>.UnregisterListener(Restart);
+    }
+
 
     private void Restart(DeathEvent eve)
     {
         if(eve.Info.unit.tag == "DeathScreen")
         {
-            SceneManager.UnloadSceneAsync("Whitebox - 16April");
-            StartCoroutine(LoadScene("Whitebox - 16April"));
+            //Hämta alla scener som är relevanta för checkpoint
+            List<int> relevantScenes = Checkpoint.currentCheckPoint.ScenesOnCheckpoint;
+
+            Scene[] activeScenes = SceneManager.GetAllScenes();
+
+            //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
+            foreach(Scene sc in activeScenes)
+            {
+                if (!relevantScenes.Contains(sc.buildIndex) && sc.buildIndex != baseSceneIndex)
+                    SceneManager.UnloadSceneAsync(sc.name);
+            }
+            //om det finns någon relevant scen som inte är laddad så laddas den in
+            foreach(int s in relevantScenes)
+            {
+                if (!SceneManager.GetSceneByBuildIndex(s).isLoaded)
+                    StartCoroutine(ReloadScene(s));
+            }
+
+            EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
             
-
-
-            /*
-             * unload all scenes
-             * foreach(scene s i currentCheckpoint.relevantScenes)
-             *  LoadAsync(s.name)
-             *  
-             */
         }
         
     }
 
-
-    public void UnloadScene(/*nånting för att identifiera vilken scen, string eller buildindex?*/)
+    public void LoadScene(LoadSceneEvent eve)
     {
-
+        if(!SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded)
+            SceneManager.LoadSceneAsync(eve.buildIndex, LoadSceneMode.Additive);
     }
 
-    IEnumerator LoadScene(string sceneName)
+    public void UnloadScene(UnloadSceneEvent eve)
+    {
+        if(SceneManager.GetSceneByBuildIndex(eve.buildIndex).isLoaded)
+            SceneManager.UnloadSceneAsync(eve.buildIndex);
+    }
+
+    IEnumerator ReloadScene(int index)
     {
         yield return null;
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
         //Scriptet får gå vidare när scenen laddats färdigt
         asyncOperation.allowSceneActivation = true;
         
@@ -48,6 +76,6 @@ public class SceneController : MonoBehaviour
         {
             yield return null;
         }
-        EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
+        
     }
 }

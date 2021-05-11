@@ -8,8 +8,6 @@ public class EnemyLoader
 
     private Dictionary<string, Persistance> enemies = new Dictionary<string, Persistance>();
 
-    
-
     public bool LoadEnemy(AIController ai)
     {
         if (!enemies.ContainsKey(ai.gameObject.name))
@@ -18,7 +16,6 @@ public class EnemyLoader
             enemies.Add(ai.gameObject.name, p);
             return true;
         }
-
         else
         {
             if (enemies[ai.gameObject.name].IsDead == false)

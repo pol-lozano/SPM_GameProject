@@ -12,7 +12,7 @@ public class StartLoader : MonoBehaviour
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadSceneAsync("Whitebox - 16April", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         Checkpoint.currentCheckPoint = startingCheckPoint;
         
     }

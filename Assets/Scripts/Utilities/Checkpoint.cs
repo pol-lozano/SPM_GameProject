@@ -8,9 +8,10 @@ public class Checkpoint : MonoBehaviour
 {
     public static Checkpoint currentCheckPoint;
 
-    //ska ligga i checkpointManager ist
-    //[SerializeField] private List<string> scenesOnThisCheckpoint = new List<string>();
 
+    [SerializeField] private List<int> scenesOnThisCheckpoint = new List<int>();
+
+    public List<int> ScenesOnCheckpoint { get => scenesOnThisCheckpoint; }
 
     /*DEN BORDE INTE AKTIVERAS SÅ HÄR, SPELAREN BORDE GÅ FRAM OCH INTERAGERA*/
     private void OnTriggerEnter/*STAY!?*/(Collider other)

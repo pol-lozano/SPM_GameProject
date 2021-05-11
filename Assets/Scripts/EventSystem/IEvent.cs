@@ -215,3 +215,37 @@ public class ShakeEvent : IEvent
     public bool IsAlive() => timeRemaining > 0.0f;
 }
 #endregion
+
+#region LOAD_SCENE_EVENT
+public class LoadSceneEvent : IEvent
+{
+
+    public int buildIndex;
+
+    public GameObject GameObject { get; }
+
+    public LoadSceneEvent(GameObject obj, int id)
+    {
+        GameObject = obj;
+        this.buildIndex = id;
+    }
+}
+
+#endregion
+
+#region UNLOAD_SCENE_EVENT
+public class UnloadSceneEvent : IEvent
+{
+
+    public int buildIndex;
+
+    public GameObject GameObject { get; }
+
+    public UnloadSceneEvent(GameObject obj, int id)
+    {
+        GameObject = obj;
+        this.buildIndex = id;
+    }
+}
+
+#endregion
