@@ -1653,9 +1653,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2491093606416138697, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2687556937111425029, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4842053555737344889, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Name
       value: AllPuzzles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715903618114050390, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799339523994231422, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
