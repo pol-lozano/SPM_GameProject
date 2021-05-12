@@ -11,7 +11,7 @@ public class BT_UmbralMoth : BehaviourTree
         
 
         /*******Death Sequence*******/
-        DieNode dieNode = new DieNode();
+        DieNode dieNode = new DieNode(this);
         IsDeadDecorator isDead = new IsDeadDecorator(this);
         Sequence dieSequence = new Sequence(new List<Node> { dieNode }, isDead);
         Inverter deathInvert = new Inverter(dieSequence);

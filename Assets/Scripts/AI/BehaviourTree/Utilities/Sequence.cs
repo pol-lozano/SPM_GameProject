@@ -7,7 +7,7 @@ public class Sequence : Node
 {
 
     protected List<Node> nodes = new List<Node>();
-    private Decorator decorator = null;
+    private Decorator decorator;
 
     public Sequence(List<Node> list)
     {
@@ -22,8 +22,10 @@ public class Sequence : Node
 
     public override NODE_STATE Evaluate()
     {
+        Debug.Assert(decorator != null);
         if (decorator == null || decorator.Condition() == true)
         {
+            Debug.Log("Decorator = true");
             bool anyChildRunning = false;
             foreach (var node in nodes)
             {

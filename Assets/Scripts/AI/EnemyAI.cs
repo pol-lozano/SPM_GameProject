@@ -8,15 +8,22 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
-    [SerializeField] private Transform target;
+    
     [SerializeField] private BehaviourTree behaviourTree;
+
+    [SerializeField] private Transform target;
+    [SerializeField] private Animator anim;
+    [SerializeField] private AIPath path;
+    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private HealthComponent health;
+    [SerializeField] private List<Rigidbody> ragdoll;
 
     private BlackBoard blackBoard;
 
 
     void Awake()
     {
-        blackBoard = new BlackBoard();
+        blackBoard = new BlackBoard(target, anim, path, this, agent, health, ragdoll);
         behaviourTree = new BT_UmbralMoth();
         behaviourTree.SetBlackBoard(blackBoard);
         behaviourTree.ConstructBehaviourTree();
