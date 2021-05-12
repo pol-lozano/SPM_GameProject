@@ -21,9 +21,9 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         rectParent = GetComponent<RectTransform>();
-        if (owner.IsPlayer)
-            Activate();
-        else
+       // if (owner.IsPlayer)
+           // Activate();
+       // else
             Deactivate();
     }
 
