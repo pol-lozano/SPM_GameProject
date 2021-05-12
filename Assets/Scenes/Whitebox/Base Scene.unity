@@ -367,6 +367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sky and Fog Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 5821747940019759216, guid: 3b19e517fe08bee40ab3f2f341580e9b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b19e517fe08bee40ab3f2f341580e9b, type: 3}
 --- !u!224 &141262151 stripped
@@ -381,6 +385,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1191705673, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
+      propertyPath: priority
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191705673, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 704101936157041713, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
       propertyPath: m_Enabled
       value: 0

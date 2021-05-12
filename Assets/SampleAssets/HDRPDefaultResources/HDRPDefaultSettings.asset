@@ -240,27 +240,27 @@ MonoBehaviour:
     min: 0
   m_NearSampleCount:
     m_OverrideState: 0
-    m_Value: 5
+    m_Value: 4
     min: 3
     max: 8
   m_NearMaxBlur:
     m_OverrideState: 0
-    m_Value: 4
+    m_Value: 3
     min: 0
     max: 8
   m_FarSampleCount:
     m_OverrideState: 0
-    m_Value: 7
+    m_Value: 5
     min: 3
     max: 16
   m_FarMaxBlur:
     m_OverrideState: 0
-    m_Value: 8
+    m_Value: 6
     min: 0
     max: 16
   m_HighQualityFiltering:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   m_Resolution:
     m_OverrideState: 0
     m_Value: 2
@@ -330,7 +330,7 @@ MonoBehaviour:
     max: 1
   m_SampleCount:
     m_OverrideState: 0
-    m_Value: 10
+    m_Value: 8
     min: 4
     max: 64
 --- !u!114 &11400000
@@ -743,7 +743,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   meteringMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   luminanceSource:
     m_OverrideState: 0
@@ -756,10 +756,10 @@ MonoBehaviour:
     m_Value: 1.45
   limitMin:
     m_OverrideState: 0
-    m_Value: 9.054873
+    m_Value: 7.156863
   limitMax:
     m_OverrideState: 0
-    m_Value: 11.413595
+    m_Value: 8.197908
   curveMap:
     m_OverrideState: 0
     m_Value:
@@ -1141,12 +1141,12 @@ MonoBehaviour:
     m_Value: 0
   m_MaximumRadiusInPixels:
     m_OverrideState: 0
-    m_Value: 40
+    m_Value: 32
     min: 16
     max: 256
   m_BilateralUpsample:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   m_DirectionCount:
     m_OverrideState: 0
     m_Value: 2
