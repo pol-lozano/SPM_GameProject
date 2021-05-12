@@ -36,7 +36,7 @@ public class DeathScreen : MonoBehaviour
         {
             unit = gameObject,
         };
-        EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
+        EventHandler<DeathEvent>.FireEvent(new DeathEvent(deathInfo));
     }
 
 }

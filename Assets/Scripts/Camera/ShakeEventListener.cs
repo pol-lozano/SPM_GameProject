@@ -12,7 +12,13 @@ public class ShakeEventListener : MonoBehaviour
     /// Adds a shake event to the list of ongoing shake events
     /// </summary>
     /// <param name="data">Information about the shake</param>
-    public void AddShakeEvent(ShakeEvent data) => shakeEvents.Add(data);
+    public void AddShakeEvent(ShakeEvent data)
+    {
+        if (data != null)
+        {
+            shakeEvents.Add(data);
+        }
+    }
 
     void LateUpdate() => HandleShakeEvents();
 

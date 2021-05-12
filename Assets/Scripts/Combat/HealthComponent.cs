@@ -12,17 +12,18 @@ public class HealthComponent : HitComponent
     [SerializeField] private LayerMask damageLayer;
 
     private float timeSinceLastHit = 0.0f;
-    private bool isStunned;
     private System.Type lastTypeToHit;
 
     [SerializeField] private UIHealthBar healthBar;
+    [SerializeField] private bool isPlayer;
 
-    //bool is PLayer?
+    public bool IsPlayer => isPlayer;
 
     public bool Invulnerable { get; set; }
-    public float CurrentHealth { get => currentHealth; }
-    public System.Type LastType { get => lastTypeToHit; }
-    public bool IsStunned { get => isStunned; set => isStunned = value; }
+    public bool IsStunned { get; set; }
+    public float MaxHealth => maxHealth;
+    public float CurrentHealth => currentHealth;
+    public System.Type LastType => lastTypeToHit;
 
     void Start() => ResetHealth();
 
@@ -34,10 +35,7 @@ public class HealthComponent : HitComponent
     }
 
     public void Update()
-    {
-        if (currentHealth <= 0)
-            Die();
-            
+    {       
         if (Invulnerable)
         {
             timeSinceLastHit += Time.deltaTime;
@@ -70,49 +68,33 @@ public class HealthComponent : HitComponent
 
         TakeDamage(info);
 
-        //TODO: INVOKE TAKE DAMAGE EVENT
-
         if (currentHealth <= 0)
             Die(info);
     }
 
     private void TakeDamage(HitInfo info)
     {
-        lastTypeToHit = info.damager.GetType();
-
-        if (lastTypeToHit == typeof(Projectile))
-            isStunned = true;
-        //Check for stun. Maybe move somewhere else?
-
         SetInvulnerable();
         currentHealth -= info.amount;
 
-        if(gameObject.tag != "Player")
-        {
-            healthBar?.Activate();
-            healthBar?.DeactivateDelayed(7);
-        }
-        healthBar?.SetHealthBarPercentage(CurrentHealth / maxHealth);
+        if (info.damager.GetType() == typeof(Projectile)) //Fix better
+            IsStunned = true;
+        //Check for stun. Maybe move somewhere else?
 
-        EventHandler<HitEvent>.FireEvent(new HitEvent(gameObject, info));
-
-        if(shakeData != null)
-            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(gameObject, shakeData));
+        EventHandler<HitEvent>.FireEvent(new HitEvent(info));
+        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
     }
 
     private void Die(HitInfo info)
-    {
-        if (healthBar != null)
-            Invoke("DeactivateHealthBar", 2);
-
-        if(gameObject.tag == "Player")
+    {    
+        if(IsPlayer)
         {
             DyingInfo playerDyingInfo = new DyingInfo
             {
                 unit = gameObject,
                 killer = info.damager.gameObject,
             };
-            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, playerDyingInfo));
+            EventHandler<DyingEvent>.FireEvent(new DyingEvent(playerDyingInfo));
         }
         //ENEMIES borde också få dyingEvent men det har vi inte just nu
         else
@@ -122,28 +104,8 @@ public class HealthComponent : HitComponent
                 unit = gameObject,
                 killer = info.damager.gameObject,
             };
-            EventHandler<DeathEvent>.FireEvent(new DeathEvent(gameObject, deathInfo));
+            EventHandler<DeathEvent>.FireEvent(new DeathEvent(deathInfo));
         }        
-    }
-
-    private void Die()
-    {
-        if (healthBar != null)
-            Invoke("DeactivateHealthBar", 2);
-
-        if (gameObject.tag == "Player")
-        {
-            DyingInfo playerDyingInfo = new DyingInfo
-            {
-                unit = gameObject,
-            };
-            EventHandler<DyingEvent>.FireEvent(new DyingEvent(gameObject, playerDyingInfo));
-        }
-    }
-
-    private void DeactivateHealthBar()
-    {
-        healthBar?.gameObject.SetActive(false);
     }
    
     public bool IsOnLayer(int layer)

@@ -45,7 +45,7 @@ public class SceneController : MonoBehaviour
                     StartCoroutine(ReloadScene(s));
             }
 
-            EventHandler<ReloadEvent>.FireEvent(new ReloadEvent(gameObject));
+            EventHandler<ReloadEvent>.FireEvent(new ReloadEvent());
             
         }
         

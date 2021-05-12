@@ -2,14 +2,12 @@
 //Secondary Author: Rickard Lindgren
 using UnityEngine;
 
-public interface IEvent
-{
-    GameObject GameObject { get; }
-}
+public interface IEvent { }
 
 #region DEBUG_EVENT
 public struct DebugInfo
 {
+    public GameObject obj;
     public int verbosity;
     public string message;
 }
@@ -17,18 +15,11 @@ public struct DebugInfo
 public class DebugEvent : IEvent
 {
     public DebugInfo Info { get; }
-    public GameObject GameObject { get; }
-
-    public DebugEvent(GameObject obj, DebugInfo info)
-    {
-        GameObject = obj;
-        Info = info;
-    }
+    public DebugEvent(DebugInfo info) => Info = info;
 }
 #endregion
 
 #region HIT_EVENT
-
 public struct HitInfo
 {
     public MonoBehaviour damager;
@@ -39,42 +30,18 @@ public struct HitInfo
     public AudioClip sound;
     public ParticleSystem particleSystem;
 }
+
 public class HitEvent : IEvent
 {
     public HitInfo Info { get; }
-    public GameObject GameObject { get; }
-
-    public HitEvent(GameObject obj, HitInfo info)
-    {
-        GameObject = obj;
-        Info = info;
-    }
+    public HitEvent(HitInfo info) => Info = info;
 }
 #endregion
 
 #region ATTACK_EVENTS
+public class StartPlayerAttackEvent : IEvent { }
 
-public class StartPlayerAttackEvent : IEvent
-{
-    public GameObject GameObject { get; }
-
-    public StartPlayerAttackEvent(GameObject obj)
-    {
-        GameObject = obj;
-    }
-}
-
-public class EndPlayerAttackEvent : IEvent
-
-{
-    public GameObject GameObject { get; }
-
-    public EndPlayerAttackEvent(GameObject obj)
-    {
-        GameObject = obj;
-    }
-}
-
+public class EndPlayerAttackEvent : IEvent { }
 #endregion
 
 #region DYING_EVENT
@@ -88,19 +55,9 @@ public struct DyingInfo
 }
 public class DyingEvent : IEvent
 {
-    
     public DyingInfo Info { get; }
-    public GameObject GameObject { get; }
-
-    public DyingEvent(GameObject obj, DyingInfo info)
-    {
-        GameObject = obj;
-        Info = info;
-    }
+    public DyingEvent(DyingInfo info) => Info = info;
 }
-
-
-
 #endregion
 
 #region DEATH_EVENT
@@ -115,13 +72,7 @@ public struct DeathInfo
 public class DeathEvent : IEvent
 {
     public DeathInfo Info { get; }
-    public GameObject GameObject { get; }
-
-    public DeathEvent(GameObject obj, DeathInfo info)
-    {
-        GameObject = obj;
-        Info = info;
-    }
+    public DeathEvent(DeathInfo info) => Info = info;
 }
 #endregion
 
@@ -129,28 +80,12 @@ public class DeathEvent : IEvent
 public class PuzzleEvent : IEvent{
 
     public int id;
-
-    public GameObject GameObject { get; }
-
-    public PuzzleEvent(GameObject obj, int id)
-    {
-        GameObject = obj;
-        this.id = id;
-    }
+    public PuzzleEvent(int id) => this.id = id;
 }
 #endregion
 
 #region RELOAD_EVENT
-
-public class ReloadEvent : IEvent
-{
-    public GameObject GameObject { get; }
-
-    public ReloadEvent(GameObject obj)
-    {
-        GameObject = obj;
-    }
-}
+public class ReloadEvent : IEvent { }
 #endregion
 
 #region SHAKE_EVENT
@@ -158,8 +93,6 @@ public class ReloadEvent : IEvent
 [System.Serializable]
 public class ShakeEvent : IEvent
 {
-    public GameObject GameObject { get; }
-
     float duration;
     float timeRemaining;
 
@@ -176,9 +109,8 @@ public class ShakeEvent : IEvent
     Vector3 noiseOffset;
     public Vector3 noise;
 
-    public ShakeEvent(GameObject obj, ShakeEventData data)
+    public ShakeEvent(ShakeEventData data)
     {
-        GameObject = obj;
         this.data = data;
         duration = data.duration;
         timeRemaining = duration;
@@ -219,33 +151,15 @@ public class ShakeEvent : IEvent
 #region LOAD_SCENE_EVENT
 public class LoadSceneEvent : IEvent
 {
-
     public int buildIndex;
-
-    public GameObject GameObject { get; }
-
-    public LoadSceneEvent(GameObject obj, int id)
-    {
-        GameObject = obj;
-        this.buildIndex = id;
-    }
+    public LoadSceneEvent(int buildIndex) => this.buildIndex = buildIndex;
 }
-
 #endregion
 
 #region UNLOAD_SCENE_EVENT
 public class UnloadSceneEvent : IEvent
 {
-
     public int buildIndex;
-
-    public GameObject GameObject { get; }
-
-    public UnloadSceneEvent(GameObject obj, int id)
-    {
-        GameObject = obj;
-        this.buildIndex = id;
-    }
+    public UnloadSceneEvent(int buildIndex) => this.buildIndex = buildIndex;
 }
-
 #endregion

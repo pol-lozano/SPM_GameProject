@@ -20,6 +20,6 @@ public class DebugListener : MonoBehaviour
     void OnDebug(DebugEvent debugEvent)
     {       
         if(debugEvent.Info.verbosity <= (int)verboseLevel)
-            Debug.Log("[" + (LoggingLevel)debugEvent.Info.verbosity + "] " + debugEvent.GameObject.name + " " + debugEvent.Info.message);
+            Debug.Log("[" + (LoggingLevel)debugEvent.Info.verbosity + "] " + debugEvent.Info.obj.name + " " + debugEvent.Info.message);
     }
 }
