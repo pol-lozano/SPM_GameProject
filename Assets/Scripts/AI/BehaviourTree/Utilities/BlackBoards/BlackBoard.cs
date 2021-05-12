@@ -6,9 +6,8 @@ using UnityEngine.AI;
 public class BlackBoard
 {
     /****************Values**************/
-    [Header("Values")]
     private float moveSpeed = 1;
-    [SerializeField] private float stunSpeed = 3;
+    [SerializeField] private float stunSpeed = 2;
     [SerializeField] private float stunLength = 3;
     [SerializeField] private float distanceToAttack = 1;
     [SerializeField] private float distanceToPointForSuccess = 1;
@@ -26,7 +25,6 @@ public class BlackBoard
 
 
     /****************References**************/
-    [Header("References")]
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
@@ -52,6 +50,8 @@ public class BlackBoard
         HealthComponent enemyHealth, 
         List<Rigidbody> ragdoll)
     {
+        Debug.Assert(enemyHealth);
+        
         this.target = target;
         this.anim = anim;
         this.path = path;
@@ -59,6 +59,8 @@ public class BlackBoard
         this.agent = agent;
         this.enemyHealth = enemyHealth;
         this.ragdoll = ragdoll;
+
+        Debug.Assert(this.enemyHealth);
     }
 
 }

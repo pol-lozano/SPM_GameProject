@@ -6,12 +6,14 @@ using UnityEngine;
 [System.Serializable]
 public abstract class Node
 {
+    protected int ID;
+
     protected NODE_STATE nodeState;
-    protected BehaviourTree tree;
+    protected BlackBoard blackboard;
     public NODE_STATE NodeState { get => nodeState; }
 
     public abstract NODE_STATE Evaluate();
-    public void SetTree(BehaviourTree bt) { tree = bt; }
+    public void SetBlackBoard(BlackBoard bb) { blackboard = bb; }
 }
 
 public enum NODE_STATE

@@ -10,7 +10,7 @@ public class WaitNode : Node
 
     public WaitNode(float t)
     {
-        timerLength = tree.GetBlackBoard().StunLength;
+        timerLength = t;
         timer = t;
     }
 

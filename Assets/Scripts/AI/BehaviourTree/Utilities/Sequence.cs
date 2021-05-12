@@ -9,23 +9,20 @@ public class Sequence : Node
     protected List<Node> nodes = new List<Node>();
     private Decorator decorator;
 
-    public Sequence(List<Node> list)
-    {
-        nodes = list;
-    }
+    
 
-    public Sequence(List<Node> list, Decorator d)
+    public Sequence(List<Node> list, Decorator d, int ID)
     {
         nodes = list;
         decorator = d;
+        this.ID = ID;
     }
 
     public override NODE_STATE Evaluate()
     {
-        Debug.Assert(decorator != null);
-        if (decorator == null || decorator.Condition() == true)
+        if (decorator.Condition() == true)
         {
-            Debug.Log("Decorator = true");
+            //Debug.Log("Decorator = true ID ::: " + ID);
             bool anyChildRunning = false;
             foreach (var node in nodes)
             {

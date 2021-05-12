@@ -21,12 +21,20 @@ public class EnemyAI : MonoBehaviour
     private BlackBoard blackBoard;
 
 
-    void Awake()
+    void Start()
     {
+        Debug.Assert(health);
         blackBoard = new BlackBoard(target, anim, path, this, agent, health, ragdoll);
+        SetBlackBoardValues();
+
         behaviourTree = new BT_UmbralMoth();
         behaviourTree.SetBlackBoard(blackBoard);
         behaviourTree.ConstructBehaviourTree();
+    }
+
+    private void SetBlackBoardValues()
+    {
+        blackBoard.StartHeight = agent.baseOffset;
     }
 
     void Update()

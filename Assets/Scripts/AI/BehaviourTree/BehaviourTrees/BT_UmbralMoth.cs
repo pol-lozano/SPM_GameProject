@@ -8,24 +8,31 @@ public class BT_UmbralMoth : BehaviourTree
     
     public override void ConstructBehaviourTree()
     {
-        
 
+        Debug.Assert(blackBoard.EnemyHealth);
         /*******Death Sequence*******/
-        DieNode dieNode = new DieNode(this);
-        IsDeadDecorator isDead = new IsDeadDecorator(this);
-        Sequence dieSequence = new Sequence(new List<Node> { dieNode }, isDead);
+        DieNode dieNode = new DieNode(blackBoard);
+        IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard);
+        Sequence dieSequence = new Sequence(new List<Node> { dieNode }, deadDec, 1);
         Inverter deathInvert = new Inverter(dieSequence);
         /*******Death Sequence*******/
 
+        /*******Stun Sequence********/
+        SinkNode sink = new SinkNode(blackBoard);
+        IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard);
+        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, 3);
+
+        /*******Stun Sequence********/
 
 
 
 
 
 
-        Sequence topSequence = new Sequence(new List<Node> { deathInvert /*Place all sequences here*/});
+
+        Sequence topSequence = new Sequence(new List<Node> { deathInvert, stunSequence /*Place all sequences here*/}, new BaseDecorator(), 2);
         topNode = new Selector(new List<Node> { topSequence });
-        topNode.SetTree(this);
+        topNode.SetBlackBoard(blackBoard);
 
         #region LIKE_THIS
         /*

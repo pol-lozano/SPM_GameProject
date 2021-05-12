@@ -1,21 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Rickard Lindgren
 using UnityEngine;
 
 public class IsDeadDecorator : Decorator
 {
-    public IsDeadDecorator(BehaviourTree tree) 
-    { 
-        this.tree = tree; 
-    }
+    
+    public IsDeadDecorator(BlackBoard bb) { this.blackBoard = bb; }
     public override bool Condition()
     {
-        Debug.Assert(tree != null);
-        Debug.Assert(tree.GetBlackBoard().MoveSpeed > 0);
-        Debug.Log("ENEMT HEALTH: " + tree.GetBlackBoard().EnemyHealth.CurrentHealth);
-        if (tree.GetBlackBoard().EnemyHealth.CurrentHealth <= 0)
-            return true;
-        else
-            return false;
+        return blackBoard.EnemyHealth.CurrentHealth <= 0;
     }
 }
