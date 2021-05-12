@@ -22,7 +22,7 @@ public class Sequence : Node
 
     public override NODE_STATE Evaluate()
     {
-        if (decorator == null || decorator.Condition())
+        if (decorator == null || decorator.Condition() == true)
         {
             bool anyChildRunning = false;
             foreach (var node in nodes)

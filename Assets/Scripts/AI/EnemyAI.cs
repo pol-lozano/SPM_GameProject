@@ -1,40 +1,29 @@
+//Author: Rickard Lindgren
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(HealthComponent))]
+[RequireComponent(typeof(HealthComponent), typeof(Animator),typeof(NavMeshAgent))]
 public class EnemyAI : MonoBehaviour
 {
 
-    [SerializeField] private float chasingDistance;
-    [SerializeField] private float attackDistance;
     [SerializeField] private Transform target;
+    [SerializeField] private BehaviourTree behaviourTree;
 
-    private Node topNode;
+    private BlackBoard blackBoard;
 
 
-    // Start is called before the first frame update
     void Awake()
     {
-        ConstructBehaviourTree();
+        blackBoard = GetComponent<BlackBoard>();
+        behaviourTree = new BT_UmbralMoth();
+        behaviourTree.SetBlackBoard(blackBoard);
+        behaviourTree.ConstructBehaviourTree();
     }
 
-
-    private void ConstructBehaviourTree()
-    {
-        HealthNode healthNode = new HealthNode(this, gameObject.GetComponent<HealthComponent>());
-        WaitNode wait = new WaitNode(3);
-        DieNode die = new DieNode(gameObject);
-
-        Sequence checkHealthAndDieSequence = new Sequence(new List<Node> { healthNode, wait, die });
-
-        topNode = new Selector(new List<Node> { checkHealthAndDieSequence });
-    }
-
-
-    // Update is called once per frame
     void Update()
     {
-        topNode.Evaluate();
+        behaviourTree.RunBehaviourTree();
     }
 }

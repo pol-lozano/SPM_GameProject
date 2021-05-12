@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class DieNode : Node
 {
-
-    private GameObject obj;
-
-    public DieNode(GameObject o)
-    {
-        obj = o;
-        
-    }
-
     public override NODE_STATE Evaluate()
     {
-        
-        obj.SetActive(false);
+        Debug.Assert(tree.GetBlackBoard());
+        Debug.Assert(tree.GetBlackBoard().Ragdoll);
+        Debug.Log("Object is Dead");
+        foreach(Rigidbody r in tree.GetBlackBoard().Ragdoll)
+        {
+            r.isKinematic = false;
+        }
+        tree.GetBlackBoard().Anim.enabled = false;
+
         return NODE_STATE.SUCCESS;
     }
 }
