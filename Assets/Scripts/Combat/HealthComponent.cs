@@ -14,7 +14,6 @@ public class HealthComponent : HitComponent
     private float timeSinceLastHit = 0.0f;
     private System.Type lastTypeToHit;
 
-    [SerializeField] private UIHealthBar healthBar;
     [SerializeField] private bool isPlayer;
 
     public bool IsPlayer => isPlayer;
