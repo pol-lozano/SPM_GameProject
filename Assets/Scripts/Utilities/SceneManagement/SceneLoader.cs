@@ -14,27 +14,18 @@ public class SceneLoader : MonoBehaviour
             LoadScene();
             UnloadScene();
         }
-        
     }
 
     private void LoadScene()
     {
-        if(indexesToLoad.Count != 0)
-            foreach(int index in indexesToLoad)
-            {
-            EventHandler<LoadSceneEvent>.FireEvent(new LoadSceneEvent(gameObject, index));
-            }
-
-        
+        for (int i = 0; i < indexesToLoad.Count; i++)
+            EventHandler<LoadSceneEvent>.FireEvent(new LoadSceneEvent(indexesToLoad[i]));
     }
 
     private void UnloadScene()
     {
-        if(indexesToUnload.Count != 0)
-            foreach (int index in indexesToUnload)
-            {
-            EventHandler<UnloadSceneEvent>.FireEvent(new UnloadSceneEvent(gameObject, index));
-            }
+        for (int i = 0; i < indexesToUnload.Count; i++)
+            EventHandler<UnloadSceneEvent>.FireEvent(new UnloadSceneEvent(indexesToUnload[i]));
     }
-
 }
+

@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d9e0ec02f09714582934c1a53d2c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 9.81
+  gravity: 10
   acceleration: 50
   collisionMask:
     serializedVersion: 2
@@ -1777,8 +1777,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d24835702dcf6d542932f922cf4e1592, type: 2}
   meleeWeapon: {fileID: 6165528577852295206}
   crossbow: {fileID: 4245393384929029154}
-  swordPickup: 0
-  crossbowPickup: 0
 --- !u!114 &1952091810191860618
 MonoBehaviour:
   m_ObjectHideFlags: 0

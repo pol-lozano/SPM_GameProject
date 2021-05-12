@@ -60,6 +60,7 @@ public class PhysicsComponent : MonoBehaviour
           //velocity *= Mathf.Pow(airResistance, Time.deltaTime);
           //Perform actual movement
           //transform.Translate(velocity * Time.deltaTime);       
+          
       }
 
   /*
