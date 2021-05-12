@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
 
     void Awake()
     {
-        blackBoard = GetComponent<BlackBoard>();
+        blackBoard = new BlackBoard();
         behaviourTree = new BT_UmbralMoth();
         behaviourTree.SetBlackBoard(blackBoard);
         behaviourTree.ConstructBehaviourTree();

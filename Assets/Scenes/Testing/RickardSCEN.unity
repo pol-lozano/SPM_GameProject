@@ -5213,6 +5213,7 @@ GameObject:
   - component: {fileID: 577706144}
   - component: {fileID: 577706143}
   - component: {fileID: 577706142}
+  - component: {fileID: 577706150}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -5368,6 +5369,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &577706150
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577706141}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &615101443
 GameObject:
   m_ObjectHideFlags: 0
@@ -22185,7 +22205,6 @@ GameObject:
   - component: {fileID: 7012520306035603172}
   - component: {fileID: 284472127092710018}
   - component: {fileID: 1842148505}
-  - component: {fileID: 284472127092710020}
   m_Layer: 13
   m_Name: UmbralMoth
   m_TagString: Untagged
@@ -22193,31 +22212,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &284472127092710020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284472127092710019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6784fb3d244ed3b4d812de3a7570b0e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stunSpeed: 3
-  stunLength: 3
-  distanceToAttack: 1
-  distanceToPointForSuccess: 1
-  shotCooldown: 2
-  target: {fileID: 5030949065688228666}
-  anim: {fileID: 284472127083325691}
-  path: {fileID: 1313605153}
-  thisAI: {fileID: 1842148505}
-  agent: {fileID: 284472127092710018}
-  enemyHealth: {fileID: 7012520306035603172}
-  ragdoll:
-  - {fileID: 919132148979670663}
 --- !u!114 &284472127092710028
 MonoBehaviour:
   m_ObjectHideFlags: 0

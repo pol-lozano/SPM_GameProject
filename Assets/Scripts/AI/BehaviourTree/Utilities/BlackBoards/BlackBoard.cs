@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BlackBoard : MonoBehaviour
+public class BlackBoard
 {
     /****************Values**************/
     [Header("Values")]

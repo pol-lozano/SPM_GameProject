@@ -6,8 +6,8 @@ public class DieNode : Node
 {
     public override NODE_STATE Evaluate()
     {
-        Debug.Assert(tree.GetBlackBoard());
-        Debug.Assert(tree.GetBlackBoard().Ragdoll);
+        Debug.Assert(tree != null);
+        Debug.Assert(tree.GetBlackBoard().Ragdoll.Count > 0);
         Debug.Log("Object is Dead");
         foreach(Rigidbody r in tree.GetBlackBoard().Ragdoll)
         {

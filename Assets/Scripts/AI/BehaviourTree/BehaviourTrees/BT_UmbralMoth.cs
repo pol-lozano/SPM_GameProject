@@ -42,7 +42,7 @@ public class BT_UmbralMoth : BehaviourTree
 
     public override void SetBlackBoard(BlackBoard bb)
     {
-        this.bb = bb;
+        blackBoard = bb;
     }
 
     public override void RunBehaviourTree()
