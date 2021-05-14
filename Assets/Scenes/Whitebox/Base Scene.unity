@@ -1512,6 +1512,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: AllPuzzles
       objectReference: {fileID: 0}
+    - target: {fileID: 8609783556274162870, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609783556411091410, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609783557168475494, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609783557505715041, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8609783557608125613, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
 --- !u!1 &1775816978

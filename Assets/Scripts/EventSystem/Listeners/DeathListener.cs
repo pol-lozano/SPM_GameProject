@@ -1,4 +1,4 @@
-//Author: Pol Lozano Llorens
+/*//Author: Pol Lozano Llorens
 using UnityEngine;
 
 public class DeathListener : MonoBehaviour
@@ -31,4 +31,4 @@ public class DeathListener : MonoBehaviour
     {
         //deathEvent.Info.unit.transform.position = Checkpoint.currentCheckPoint.transform.position;
     }
-}
+}*/

@@ -19,20 +19,21 @@ public class MeleeWeapon : MonoBehaviour
 
     private bool CheckHit(Collision other)
     {
-        HitBox h = other.collider.GetComponent<HitBox>();
+        HitBox hitBox = other.collider.GetComponent<HitBox>();
 
-        if (h == null)
+        if (hitBox == null)
             return false;
 
         //Check if owner of health system
         HitInfo info = new HitInfo()
         {
+            hitComponent = hitBox.hitComponent,
             damager = this,
             amount = damageAmount,
             hitPosition = other.GetContact(0).point
         };
 
-        h.ApplyHit(info);
+        hitBox.ApplyHit(info);
 
         return true;
     }

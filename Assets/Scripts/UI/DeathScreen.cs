@@ -1,10 +1,18 @@
 //Author: Rickard Lindgren
+//Secondary Author: Pol Lozano Llorens
 using UnityEngine;
 
 public class DeathScreen : MonoBehaviour
 {
-
     [SerializeField] private Animator anim;
+    private int fadeOutTriggerHash;
+    private int fadeInTriggerHash;
+
+    private void Awake()
+    {
+        fadeOutTriggerHash = Animator.StringToHash("fadeout");
+        fadeInTriggerHash = Animator.StringToHash("fadein");
+    }
 
     private void OnEnable() 
     {
@@ -12,30 +20,21 @@ public class DeathScreen : MonoBehaviour
         EventHandler<ReloadEvent>.RegisterListener(OnReload);
     }
 
-
     private void OnDisable()
     {
         EventHandler<DyingEvent>.UnregisterListener(OnDying);
         EventHandler<ReloadEvent>.UnregisterListener(OnReload);
     }
 
-    private void OnDying(DyingEvent eve)
+    private void OnDying(DyingEvent data)
     {
-        anim.SetTrigger("fadeout");
+        HealthComponent hc = (HealthComponent) data.Info.hitComponent;
+        if(hc.IsPlayer)
+            anim.SetTrigger(fadeOutTriggerHash);
     }
 
-    private void OnReload(ReloadEvent eve)
+    private void OnReload(ReloadEvent data)
     {
-        anim.SetTrigger("fadein");
+        anim.SetTrigger(fadeInTriggerHash);
     }
-
-    private void SendDeathEvent()
-    {
-        DeathInfo deathInfo = new DeathInfo
-        {
-            unit = gameObject,
-        };
-        EventHandler<DeathEvent>.FireEvent(new DeathEvent(deathInfo));
-    }
-
 }

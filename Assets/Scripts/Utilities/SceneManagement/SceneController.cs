@@ -24,10 +24,9 @@ public class SceneController : MonoBehaviour
         EventHandler<DeathEvent>.UnregisterListener(Restart);
     }
 
-
     private void Restart(DeathEvent eve)
     {
-        if(eve.Info.unit.tag == "DeathScreen")
+        if(eve.Info.hitComponent.CompareTag("DeathScreen"))
         {
             //Hämta alla scener som är relevanta för checkpoint
             List<int> relevantScenes = Checkpoint.currentCheckPoint.ScenesOnCheckpoint;
@@ -35,8 +34,7 @@ public class SceneController : MonoBehaviour
             //Scene[] activeScenes = SceneManager.GetAllScenes();
 
             //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
-            int sceneCount = SceneManager.sceneCount;
-            for(int i = 0; i <= sceneCount; i++)
+            for(int i = 0; i <= SceneManager.sceneCount; i++)
             {
                 if (relevantScenes.Contains(SceneManager.GetSceneAt(i).buildIndex) == false &&
                     SceneManager.GetSceneAt(i).buildIndex != baseSceneIndex)
