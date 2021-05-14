@@ -12,13 +12,10 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            objectToPickup.SetActive(false);
-            PlayerCombat.Player.PickUpObject(isSword);
-            Debug.Log("Picked up!");
-            anim.SetBool("Activated", true);
-        }
+          objectToPickup.SetActive(false);
+          PlayerCombat.Player.PickUpObject(isSword);
+          Debug.Log("Picked up!");
+          anim.SetBool("Activated", true);
     }
 }
 
