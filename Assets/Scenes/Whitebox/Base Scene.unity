@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34f970842a9ef449b41dce378e65b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexesToLoad: 05000000
+  indexesToLoad: 04000000
   indexesToUnload: 
 --- !u!65 &138405891
 BoxCollider:
@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 1013766530}
   - component: {fileID: 1013766532}
   - component: {fileID: 1013766533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MenuLoader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexesToLoad: 04000000
-  indexesToUnload: 0a000000
+  indexesToUnload: 
 --- !u!1 &1403947093
 GameObject:
   m_ObjectHideFlags: 0
