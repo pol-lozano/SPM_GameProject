@@ -3,20 +3,21 @@ using UnityEngine;
 
 public class Persistance 
 {
+    public Vector3 StartingPosition { get; set; }
+    public Vector3 Position { get; set; }
+    public float HP { get; set; }
+    public float StartHP { get; set; }
+    public bool IsDead { get; set; }
 
-    private Transform transform;
-    private float hp;
-    private bool isDead;
-
-    public Transform Transform { get => transform; set => transform = value; }
-    public float HP { get => hp; set => hp = value; }
-    public bool IsDead { get => isDead; set => isDead = value; }
-
-    public Persistance(Transform t, float x, bool dead)
+    public Persistance(Vector3 position, float hp, float starthp, bool isDead)
     {
-        transform = t;
-        hp = x;
-        isDead = dead;
+        StartingPosition = position;
+        Position = position;
+        HP = hp;
+        IsDead = isDead;
+        StartHP = starthp;
     }
+
+
 
 }

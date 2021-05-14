@@ -2,8 +2,13 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(HealthComponent))]
 public class AIController : MonoBehaviour
 {
+    [Header("Persistance Information")]
+    [SerializeField] private int id;
+    [SerializeField] private Transform startingTransform;
+
     private StateMachine stateMachine;
     [SerializeField] private State[] states;
     [SerializeField] private LayerMask visionMask;
@@ -17,7 +22,8 @@ public class AIController : MonoBehaviour
 
     [SerializeField] private Rigidbody[] rigidBodies;
 
-
+    public int ID { get => id; }
+    public Transform StartingTransform { get => startingTransform; }
     public CharacterController3D Player { get; set; }
     public Transform AttackPoint { get => attackPoint; }
 
@@ -26,6 +32,9 @@ public class AIController : MonoBehaviour
 
     private void Awake()
     {
+        startingTransform = transform;
+        
+
         Debug.Assert(path != null);
         Player = CharacterController3D.Player;
         Renderer = GetComponent<MeshRenderer>();
@@ -36,6 +45,8 @@ public class AIController : MonoBehaviour
         DeactivateRagdoll();
 
         stateMachine = new StateMachine(this, states);
+
+        EnemyLoader.LoadEnemy(this);
     }
 
     public void DeactivateRagdoll()
@@ -58,6 +69,11 @@ public class AIController : MonoBehaviour
     public AIPath GetPath() 
     {
         return path; 
+    }
+
+    private void OnDestroy()
+    {
+        EnemyLoader.OnDestroy(this);
     }
 
 #if UNITY_EDITOR
