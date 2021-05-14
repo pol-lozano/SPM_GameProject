@@ -1,4 +1,4 @@
-using System.Collections;
+//Author: Rickard Lindgren
 using System.Collections.Generic;
 using UnityEngine;
 
