@@ -75,7 +75,7 @@ public class ShootState : AimState
         arrow.SetActive(true);
         arrow.SetForce((Player.CrossHair.transform.position - arrow.transform.position).normalized);
 
-        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(arrow.gameObject, shakeData));
+        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
 
     }
     public override void EvaluateTransitions()

@@ -23,7 +23,7 @@ public class MeleePuzzleComponent : HitComponent
          * start animation and have eventTriggers in animation for sound and particles?
          */
 
-        PuzzleEvent p = new PuzzleEvent(info.damager.gameObject, puzzleID);
+        PuzzleEvent p = new PuzzleEvent(puzzleID);
         EventHandler<PuzzleEvent>.FireEvent(p);
 
         //saker borde hända via animationsevent istället. där kan man animera och säga till den att byta mesh och förstöra när vi vill

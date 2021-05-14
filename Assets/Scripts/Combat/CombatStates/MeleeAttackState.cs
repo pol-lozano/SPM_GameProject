@@ -32,8 +32,7 @@ public class MeleeAttackState : CombatState
         //Begin listening for hits
         Player.MeleeWeapon.Collider.enabled = true;
 
-        if (shakeData != null)
-            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(Player.gameObject, shakeData));
+        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
     }
 
     public override void OnAnimationEnded()

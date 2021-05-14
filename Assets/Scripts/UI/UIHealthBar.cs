@@ -12,6 +12,8 @@ public class UIHealthBar : MonoBehaviour
     [SerializeField] private Image damageTakenImage;
     [SerializeField] private Image currentHealthImage;
 
+    [SerializeField] private HealthComponent owner;
+
     private bool activated;
     private float width;
     private RectTransform rectParent;
@@ -19,10 +21,38 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         rectParent = GetComponent<RectTransform>();
-        if (movable)
+       // if (owner.IsPlayer)
+           // Activate();
+       // else
             Deactivate();
-        else
+    }
+
+    private void OnEnable()
+    {
+        EventHandler<HitEvent>.RegisterListener(SetHealth);
+        EventHandler<DyingEvent>.RegisterListener(DeactivateHealthBar);
+    }
+
+    private void OnDisable()
+    {
+        EventHandler<HitEvent>.UnregisterListener(SetHealth);
+        EventHandler<DyingEvent>.UnregisterListener(DeactivateHealthBar);
+    }
+
+    private void DeactivateHealthBar(DyingEvent obj)
+    {
+        Invoke(nameof(DeactivateDelayed), 2);
+    }
+
+    private void SetHealth(HitEvent obj)
+    {
+        if (gameObject.CompareTag("Player") == false)
+        {
             Activate();
+            DeactivateDelayed(7);
+        }
+
+        SetHealthBarPercentage(owner.CurrentHealth / owner.MaxHealth);
     }
 
     void LateUpdate()
@@ -70,7 +100,7 @@ public class UIHealthBar : MonoBehaviour
 
     internal void DeactivateDelayed(int t)
     {
-        CancelInvoke("Deactivate");
-        Invoke("Deactivate", t);
+        CancelInvoke(nameof(Deactivate));
+        Invoke(nameof(Deactivate), t);
     }
 }
