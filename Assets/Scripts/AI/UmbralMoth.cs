@@ -5,9 +5,8 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(HealthComponent), typeof(Animator),typeof(NavMeshAgent))]
-public class EnemyAI : MonoBehaviour
+public class UmbralMoth : MonoBehaviour
 {
-    
 
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
@@ -17,23 +16,27 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private List<Rigidbody> ragdoll;
 
     private BlackBoard blackBoard;
-    private BehaviourTree behaviourTree;
+    private BT_UmbralMoth behaviourTree;
+
 
     void Start()
     {
-        Debug.Assert(health);
-        blackBoard = new BlackBoard(target, anim, path, this, agent, health, ragdoll);
-        SetBlackBoardValues();
+        //NOT LIKE THIS
+        //blackBoard = new BlackBoard(target, anim, path, this, agent, health, ragdoll);
+        //behaviourTree.SetBlackBoard(blackBoard);
+
+
 
         behaviourTree = new BT_UmbralMoth();
-        behaviourTree.SetBlackBoard(blackBoard);
+        SetBlackBoardValues();
         behaviourTree.ConstructBehaviourTree();
     }
 
     private void SetBlackBoardValues()
     {
-        blackBoard.StartHeight = agent.baseOffset;
-        blackBoard.StartPosition = transform.position;
+        behaviourTree.SetBlackBoardValues(target, anim, path, this, agent, health, ragdoll);
+        //blackBoard.StartHeight = agent.baseOffset;
+        //blackBoard.StartPosition = transform.position;
     }
 
     void Update()

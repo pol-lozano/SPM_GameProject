@@ -29,7 +29,7 @@ public class BlackBoard
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
-    [SerializeField] private EnemyAI thisAI;
+    [SerializeField] private UmbralMoth thisAI;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent enemyHealth;
     [SerializeField] private List<Rigidbody> ragdoll;
@@ -46,13 +46,11 @@ public class BlackBoard
         (Transform target, 
         Animator anim, 
         AIPath path, 
-        EnemyAI thisAI, 
+        UmbralMoth thisAI, 
         NavMeshAgent agent, 
         HealthComponent enemyHealth, 
         List<Rigidbody> ragdoll)
     {
-        Debug.Assert(enemyHealth);
-        
         this.target = target;
         this.anim = anim;
         this.path = path;
@@ -60,8 +58,6 @@ public class BlackBoard
         this.agent = agent;
         this.enemyHealth = enemyHealth;
         this.ragdoll = ragdoll;
-
-        Debug.Assert(this.enemyHealth);
     }
 
 }

@@ -1,23 +1,24 @@
 //Author: Rickard Lindgren
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DieNode : Node
 {
 
-    public DieNode(BlackBoard bb)
+    public DieNode(BlackBoard bb, BehaviourTree tree)
     {
         this.blackboard = bb;
+        this.tree = tree;
     }
 
     public override NODE_STATE Evaluate()
     {
-        Debug.Assert(blackboard.Ragdoll.Count > 0);
         Debug.Log("Object is Dead");
-        foreach(Rigidbody r in blackboard.Ragdoll)
+        foreach(Rigidbody r in tree.GetBlackBoardValue<List<Rigidbody>>("Ragdoll").GetVariabel())
         {
             r.isKinematic = false;
         }
-        blackboard.Anim.enabled = false;
+        tree.GetBlackBoardValue<Animator>("Anim").GetVariabel().enabled = false;
 
         return NODE_STATE.SUCCESS;
     }

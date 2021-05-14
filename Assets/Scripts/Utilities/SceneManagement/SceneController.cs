@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+
     public static SceneController scenController;
 
     private int baseSceneIndex = 1;
