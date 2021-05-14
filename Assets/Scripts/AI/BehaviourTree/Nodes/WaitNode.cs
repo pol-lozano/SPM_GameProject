@@ -16,6 +16,9 @@ public class WaitNode : Node
 
     public override NODE_STATE Evaluate()
     {
+
+        blackboard.Agent.nextPosition = tree.GetBlackBoardValue<Vector3>("startPos").GetVariabel();
+
         if(timer > 0)
         {
             Debug.Log(timer);

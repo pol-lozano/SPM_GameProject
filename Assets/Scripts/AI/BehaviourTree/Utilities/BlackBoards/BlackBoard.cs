@@ -7,11 +7,11 @@ public class BlackBoard
 {
     /****************Values**************/
     private float moveSpeed = 1;
-    [SerializeField] private float stunSpeed = 2;
-    [SerializeField] private float stunLength = 3;
-    [SerializeField] private float distanceToAttack = 1;
-    [SerializeField] private float distanceToPointForSuccess = 1;
-    [SerializeField] private float shotCooldown = 2;
+    private float stunSpeed = 2;
+    private float stunLength = 3;
+    private float distanceToAttack = 1;
+    private float distanceToPointForSuccess = 1;
+    private float shotCooldown = 2;
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public float StartHeight { get; set; }
@@ -20,6 +20,7 @@ public class BlackBoard
     public float DistanceToAttack { get => distanceToAttack; }
     public float DistanceToPointForSuccess { get => distanceToPointForSuccess; }
     public float ShotCooldown { get => shotCooldown; }
+    public Vector3 StartPosition { get; set; }
     /****************Values**************/
 
 

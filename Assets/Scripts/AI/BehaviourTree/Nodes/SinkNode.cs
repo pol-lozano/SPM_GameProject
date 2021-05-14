@@ -8,6 +8,7 @@ public class SinkNode : Node
     {
         this.blackboard = bb;
     }
+
     public override NODE_STATE Evaluate()
     {
         if(blackboard.Agent.baseOffset > 1.3f)

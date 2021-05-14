@@ -5,11 +5,10 @@ using UnityEngine.AI;
 
 public class BT_UmbralMoth : BehaviourTree
 {
-    
+
     public override void ConstructBehaviourTree()
     {
 
-        Debug.Assert(blackBoard.EnemyHealth);
         /*******Death Sequence*******/
         DieNode dieNode = new DieNode(blackBoard);
         IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard);
@@ -45,6 +44,12 @@ public class BT_UmbralMoth : BehaviourTree
         topNode = new Selector(new List<Node> { checkHealthAndDieSequence });
         */
         #endregion
+    }
+
+
+    public void SetBlackBoardValues()
+    {
+
     }
 
     public override void SetBlackBoard(BlackBoard bb)

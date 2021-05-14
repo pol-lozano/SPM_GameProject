@@ -7,9 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(HealthComponent), typeof(Animator),typeof(NavMeshAgent))]
 public class EnemyAI : MonoBehaviour
 {
-
     
-    [SerializeField] private BehaviourTree behaviourTree;
 
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
@@ -19,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private List<Rigidbody> ragdoll;
 
     private BlackBoard blackBoard;
-
+    private BehaviourTree behaviourTree;
 
     void Start()
     {
@@ -35,6 +33,7 @@ public class EnemyAI : MonoBehaviour
     private void SetBlackBoardValues()
     {
         blackBoard.StartHeight = agent.baseOffset;
+        blackBoard.StartPosition = transform.position;
     }
 
     void Update()
