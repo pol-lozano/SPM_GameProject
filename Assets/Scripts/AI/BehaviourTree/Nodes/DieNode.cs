@@ -1,22 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Rickard Lindgren
 using UnityEngine;
 
 public class DieNode : Node
 {
 
-    private GameObject obj;
-
-    public DieNode(GameObject o)
+    public DieNode(BlackBoard bb)
     {
-        obj = o;
-        
+        this.blackboard = bb;
     }
 
     public override NODE_STATE Evaluate()
     {
-        
-        obj.SetActive(false);
+        Debug.Assert(blackboard.Ragdoll.Count > 0);
+        Debug.Log("Object is Dead");
+        foreach(Rigidbody r in blackboard.Ragdoll)
+        {
+            r.isKinematic = false;
+        }
+        blackboard.Anim.enabled = false;
+
         return NODE_STATE.SUCCESS;
     }
 }

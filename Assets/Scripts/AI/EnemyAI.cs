@@ -1,40 +1,44 @@
+//Author: Rickard Lindgren
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(HealthComponent))]
+[RequireComponent(typeof(HealthComponent), typeof(Animator),typeof(NavMeshAgent))]
 public class EnemyAI : MonoBehaviour
 {
 
-    [SerializeField] private float chasingDistance;
-    [SerializeField] private float attackDistance;
+    
+    [SerializeField] private BehaviourTree behaviourTree;
+
     [SerializeField] private Transform target;
+    [SerializeField] private Animator anim;
+    [SerializeField] private AIPath path;
+    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private HealthComponent health;
+    [SerializeField] private List<Rigidbody> ragdoll;
 
-    private Node topNode;
+    private BlackBoard blackBoard;
 
 
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        ConstructBehaviourTree();
+        Debug.Assert(health);
+        blackBoard = new BlackBoard(target, anim, path, this, agent, health, ragdoll);
+        SetBlackBoardValues();
+
+        behaviourTree = new BT_UmbralMoth();
+        behaviourTree.SetBlackBoard(blackBoard);
+        behaviourTree.ConstructBehaviourTree();
     }
 
-
-    private void ConstructBehaviourTree()
+    private void SetBlackBoardValues()
     {
-        HealthNode healthNode = new HealthNode(this, gameObject.GetComponent<HealthComponent>());
-        WaitNode wait = new WaitNode(3);
-        DieNode die = new DieNode(gameObject);
-
-        Sequence checkHealthAndDieSequence = new Sequence(new List<Node> { healthNode, wait, die });
-
-        topNode = new Selector(new List<Node> { checkHealthAndDieSequence });
+        blackBoard.StartHeight = agent.baseOffset;
     }
 
-
-    // Update is called once per frame
     void Update()
     {
-        topNode.Evaluate();
+        behaviourTree.RunBehaviourTree();
     }
 }

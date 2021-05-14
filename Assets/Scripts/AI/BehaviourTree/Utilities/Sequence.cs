@@ -7,23 +7,22 @@ public class Sequence : Node
 {
 
     protected List<Node> nodes = new List<Node>();
-    private Decorator decorator = null;
+    private Decorator decorator;
 
-    public Sequence(List<Node> list)
-    {
-        nodes = list;
-    }
+    
 
-    public Sequence(List<Node> list, Decorator d)
+    public Sequence(List<Node> list, Decorator d, int ID)
     {
         nodes = list;
         decorator = d;
+        this.ID = ID;
     }
 
     public override NODE_STATE Evaluate()
     {
-        if (decorator == null || decorator.Condition())
+        if (decorator.Condition() == true)
         {
+            //Debug.Log("Decorator = true ID ::: " + ID);
             bool anyChildRunning = false;
             foreach (var node in nodes)
             {

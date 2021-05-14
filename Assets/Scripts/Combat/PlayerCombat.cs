@@ -40,8 +40,8 @@ public class PlayerCombat : MonoBehaviour
     public bool AttackInput { get; set; }
     public bool AimInput { get; set; }
 
-    private bool swordPickup;
-    private bool crossbowPickup;
+    [SerializeField] private bool swordPickup;
+    [SerializeField] private bool crossbowPickup;
 
     public bool SwordPickup { get => swordPickup; }
     public bool CrossbowPickup { get => crossbowPickup; }
