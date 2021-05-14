@@ -4,10 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(HealthComponent), typeof(Animator),typeof(NavMeshAgent))]
+[RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
 public class UmbralMoth : MonoBehaviour
 {
+    
+    [Header("Gameplay Values")]
+    [SerializeField] private float movementSpeed;
+    [SerializeField] private float sinkSpeed;
+    [SerializeField] private float stunLenght;
+    [SerializeField] private float shotCooldown;
 
+    [Header("Distances")]
+    [SerializeField] private float distanceToAttack;
+    [SerializeField] private float distanceToPointForSucces;
+    
+
+    [Header("References")]
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
@@ -18,15 +30,27 @@ public class UmbralMoth : MonoBehaviour
     private BlackBoard blackBoard;
     private BT_UmbralMoth behaviourTree;
 
+    #region GETTERS
+    /*GETTERS*/
+    public float MoveSpeed { get => movementSpeed; }
+    public float SinkSpeed { get => sinkSpeed; }
+    public float StunLength { get => stunLenght; }
+    public float ShotCooldown { get => shotCooldown; }
+    public float DistanceToAttack { get => distanceToAttack; }
+    public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
+
+    public Transform Target { get => target; }
+    public Animator Anim { get => anim; }
+    public AIPath Path { get => path; }
+    public NavMeshAgent Agent { get => agent; }
+    public HealthComponent Health { get => health; }
+    public List<Rigidbody> Ragdoll { get => ragdoll; }
+    #endregion
+
+
 
     void Start()
     {
-        //NOT LIKE THIS
-        //blackBoard = new BlackBoard(target, anim, path, this, agent, health, ragdoll);
-        //behaviourTree.SetBlackBoard(blackBoard);
-
-
-
         behaviourTree = new BT_UmbralMoth();
         SetBlackBoardValues();
         behaviourTree.ConstructBehaviourTree();
@@ -34,9 +58,7 @@ public class UmbralMoth : MonoBehaviour
 
     private void SetBlackBoardValues()
     {
-        behaviourTree.SetBlackBoardValues(target, anim, path, this, agent, health, ragdoll);
-        //blackBoard.StartHeight = agent.baseOffset;
-        //blackBoard.StartPosition = transform.position;
+        behaviourTree.SetBlackBoardValues(this);
     }
 
     void Update()

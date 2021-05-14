@@ -71,34 +71,27 @@ public class BT_UmbralMoth : BehaviourTree
     }
 
 
-    public void SetBlackBoardValues(
-        Transform target,
-        Animator anim,
-        AIPath path,
-        UmbralMoth thisAI,
-        NavMeshAgent agent,
-        HealthComponent enemyHealth,
-        List<Rigidbody> ragdoll)
+    public void SetBlackBoardValues(UmbralMoth moth)
     {
         //VALUES
-        bb.Add("MoveSpeed", new DataObject<float>(1));
-        bb.Add("SinkAndRiseSpeed", new DataObject<float>(3));
-        bb.Add("StunLength", new DataObject<float>(3));
-        bb.Add("DistanceToAttack", new DataObject<float>(10));
-        bb.Add("DistanceToPointForSucces", new DataObject<float>(0.5f));
-        bb.Add("ShotCooldown", new DataObject<float>(1));
-        bb.Add("StartPosition", new DataObject<Vector3>(thisAI.transform.position));
-        bb.Add("StartHeight", new DataObject<float>(agent.baseOffset));
+        bb.Add("MoveSpeed", new DataObject<float>(moth.MoveSpeed));
+        bb.Add("SinkSpeed", new DataObject<float>(moth.SinkSpeed));
+        bb.Add("StunLength", new DataObject<float>(moth.StunLength));
+        bb.Add("DistanceToAttack", new DataObject<float>(moth.DistanceToAttack));
+        bb.Add("DistanceToPointForSucces", new DataObject<float>(moth.DistanceToPointForSuccess));
+        bb.Add("ShotCooldown", new DataObject<float>(moth.ShotCooldown));
+        bb.Add("StartPosition", new DataObject<Vector3>(moth.transform.position));
+        bb.Add("StartHeight", new DataObject<float>(moth.Agent.baseOffset));
 
 
         //REFERENCES
-        bb.Add("Target", new DataObject<Transform>(target));
-        bb.Add("Anim", new DataObject<Animator>(anim));
-        bb.Add("Path", new DataObject<AIPath>(path));
-        bb.Add("ThisAI", new DataObject<UmbralMoth>(thisAI));
-        bb.Add("Agent", new DataObject<NavMeshAgent>(agent));
-        bb.Add("Health", new DataObject<HealthComponent>(enemyHealth));
-        bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(ragdoll));
+        bb.Add("Target", new DataObject<Transform>(moth.Target));
+        bb.Add("Anim", new DataObject<Animator>(moth.Anim));
+        bb.Add("Path", new DataObject<AIPath>(moth.Path));
+        bb.Add("ThisAI", new DataObject<UmbralMoth>(moth));
+        bb.Add("Agent", new DataObject<NavMeshAgent>(moth.Agent));
+        bb.Add("Health", new DataObject<HealthComponent>(moth.Health));
+        bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(moth.Ragdoll));
     }
 
     public override void SetBlackBoard(BlackBoard bb)
