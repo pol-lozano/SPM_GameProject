@@ -14,13 +14,13 @@ public static class EnemyLoader
         {
             Persistance p = new Persistance(ai.transform.position, ai.HealthComponent.CurrentHealth, ai.HealthComponent.MaxHealth, false);
             enemies.Add(ai.ID, p);
-            ai.HealthComponent.CurrentHealth = enemies[ai.ID].StartHP;
+           // ai.HealthComponent.CurrentHealth = enemies[ai.ID].StartHP;
         }
         //if the enemy has been loaded before, it loads the objects past information
         else
         {
             ai.transform.position = enemies[ai.ID].Position;
-            ai.HealthComponent.CurrentHealth = enemies[ai.ID].HP;
+           // ai.HealthComponent.CurrentHealth = enemies[ai.ID].HP;
         }
     }
 
