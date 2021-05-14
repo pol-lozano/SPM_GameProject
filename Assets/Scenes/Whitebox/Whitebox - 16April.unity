@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
+  m_IndirectSpecularColor: {r: 54.81198, g: 61.404495, b: 100.820755, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17281,6 +17281,10 @@ PrefabInstance:
     - target: {fileID: 1224183932986168, guid: c3b5979cdf315164681df5c9d08153a4, type: 3}
       propertyPath: m_Name
       value: DancingDummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224183932986168, guid: c3b5979cdf315164681df5c9d08153a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4025401360205510, guid: c3b5979cdf315164681df5c9d08153a4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -84044,9 +84048,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1379289850462393529, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.008458401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850462393529, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0066399877
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850462393529, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8155887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850462393529, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.57853216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850462393529, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 70.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850462393530, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289850680268826, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1379289851599630065, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_Name
       value: Lighting
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379289851599630065, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1379289851599630070, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_RootOrder
@@ -84090,6 +84126,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1379289851599630070, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985166488072350422, guid: 391f4f30f2c98654980b8f479ce31475, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
