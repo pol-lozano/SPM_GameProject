@@ -225,68 +225,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &420734642
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1534666330}
-    m_Modifications:
-    - target: {fileID: 7653735945681384585, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_Name
-      value: 'Directional Light '
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -23
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 67.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.008411759
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.0067147836
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.8089728
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5877476
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -181.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.181
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
---- !u!4 &420734643 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
-  m_PrefabInstance: {fileID: 420734642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &559238327
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &721631227
 Transform:
   m_ObjectHideFlags: 0
@@ -522,7 +460,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9187471112329726588, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9187471112329726588, guid: a51448fd29bd67746bfd363fd5689cc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,7 +636,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 721631227}
-  - {fileID: 420734643}
   - {fileID: 1201359710}
   - {fileID: 2126928932}
   m_Father: {fileID: 0}
@@ -1018,7 +955,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1534666330}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2126928933
 MonoBehaviour:
@@ -1051,4 +988,4 @@ MonoBehaviour:
     distanceFadeStart: 10000
     distanceFadeEnd: 10012.52
     textureIndex: 0
-    textureOffset: {x: -0, y: -0, z: 0}
+    textureOffset: {x: 0, y: 0, z: 0}
