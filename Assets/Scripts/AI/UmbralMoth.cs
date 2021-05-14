@@ -13,11 +13,11 @@ public class UmbralMoth : MonoBehaviour
     [SerializeField] private float sinkSpeed;
     [SerializeField] private float stunLenght;
     [SerializeField] private float shotCooldown;
+    [SerializeField] private float waitTime;
 
     [Header("Distances")]
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float distanceToPointForSucces;
-    
 
     [Header("References")]
     [SerializeField] private Transform target;
@@ -27,7 +27,6 @@ public class UmbralMoth : MonoBehaviour
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
 
-    private BlackBoard blackBoard;
     private BT_UmbralMoth behaviourTree;
 
     #region GETTERS
@@ -36,6 +35,7 @@ public class UmbralMoth : MonoBehaviour
     public float SinkSpeed { get => sinkSpeed; }
     public float StunLength { get => stunLenght; }
     public float ShotCooldown { get => shotCooldown; }
+    public float WaitTime { get => waitTime; }
     public float DistanceToAttack { get => distanceToAttack; }
     public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
 
@@ -51,6 +51,7 @@ public class UmbralMoth : MonoBehaviour
 
     void Start()
     {
+        agent.SetDestination(path.Next().position);
         behaviourTree = new BT_UmbralMoth();
         SetBlackBoardValues();
         behaviourTree.ConstructBehaviourTree();

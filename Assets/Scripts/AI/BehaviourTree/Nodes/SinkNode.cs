@@ -13,10 +13,10 @@ public class SinkNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariabel();
+        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
         if (agent.baseOffset > 1.3f)
         {
-            agent.baseOffset -= Time.deltaTime * tree.GetBlackBoardValue<float>("SinkAndRiseSpeed").GetVariabel();
+            agent.baseOffset -= Time.deltaTime * tree.GetBlackBoardValue<float>("SinkSpeed").GetVariable();
             return NODE_STATE.RUNNING;
         }
         else

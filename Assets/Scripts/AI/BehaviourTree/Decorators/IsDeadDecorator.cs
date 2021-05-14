@@ -10,6 +10,6 @@ public class IsDeadDecorator : Decorator
     }
     public override bool Condition()
     {
-        return tree.GetBlackBoardValue<HealthComponent>("Health").GetVariabel().CurrentHealth <= 0;
+        return tree.GetBlackBoardValue<HealthComponent>("Health").GetVariable().CurrentHealth <= 0;
     }
 }

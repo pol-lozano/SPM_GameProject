@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1480.3125, g: 1833.8965, b: 2428.0898, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5257,6 +5257,7 @@ MonoBehaviour:
   sinkSpeed: 0
   stunLenght: 0
   shotCooldown: 0
+  waitTime: 0
   distanceToAttack: 0
   distanceToPointForSucces: 0
   target: {fileID: 0}
@@ -17588,8 +17589,9 @@ MonoBehaviour:
   sinkSpeed: 2
   stunLenght: 3
   shotCooldown: 2
+  waitTime: 3
   distanceToAttack: 10
-  distanceToPointForSucces: 0.5
+  distanceToPointForSucces: 0.1
   target: {fileID: 5030949065688228666}
   anim: {fileID: 284472127083325691}
   path: {fileID: 1313605153}
@@ -22433,7 +22435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148979670659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.662, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8310122383712267313}

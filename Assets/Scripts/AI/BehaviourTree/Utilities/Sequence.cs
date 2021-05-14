@@ -1,5 +1,4 @@
 //Author: Rickard Lindgren
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +18,7 @@ public class Sequence : Node
 
     public override NODE_STATE Evaluate()
     {
+        //Debug.Log(ID);
         if (decorator.Condition() == true)
         {
             bool anyChildRunning = false;

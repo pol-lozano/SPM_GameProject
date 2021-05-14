@@ -11,6 +11,6 @@ public class IsStunnedDecorator : Decorator
 
     public override bool Condition()
     {
-        return tree.GetBlackBoardValue<HealthComponent>("Health").GetVariabel().IsStunned;
+        return tree.GetBlackBoardValue<HealthComponent>("Health").GetVariable().IsStunned;
     }
 }

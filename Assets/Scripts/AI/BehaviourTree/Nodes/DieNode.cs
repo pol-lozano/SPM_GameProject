@@ -14,11 +14,11 @@ public class DieNode : Node
     public override NODE_STATE Evaluate()
     {
         Debug.Log("Object is Dead");
-        foreach(Rigidbody r in tree.GetBlackBoardValue<List<Rigidbody>>("Ragdoll").GetVariabel())
+        foreach(Rigidbody r in tree.GetBlackBoardValue<List<Rigidbody>>("Ragdoll").GetVariable())
         {
             r.isKinematic = false;
         }
-        tree.GetBlackBoardValue<Animator>("Anim").GetVariabel().enabled = false;
+        tree.GetBlackBoardValue<Animator>("Anim").GetVariable().enabled = false;
 
         return NODE_STATE.SUCCESS;
     }

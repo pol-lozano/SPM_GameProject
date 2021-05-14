@@ -18,6 +18,11 @@ public class AIPath : MonoBehaviour
         return path[current];
     }
 
+    public Transform Current()
+    {
+        return path[current];
+    }
+
     
     private void OnDrawGizmos()
     {

@@ -1,4 +1,4 @@
-using System.Collections;
+//Author: Rickard Lindgren
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -40,34 +40,28 @@ public class BT_UmbralMoth : BehaviourTree
         IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard, this);
         Sequence dieSequence = new Sequence(new List<Node> { dieNode }, deadDec, 1);
         Inverter deathInvert = new Inverter(dieSequence);
-        /*******Death Sequence*******/
 
 
         /*******Stun Sequence********/
         SinkNode sink = new SinkNode(blackBoard, this);
         IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard, this);
-        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, 3);
-
-        /*******Stun Sequence********/
-
+        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, 2);
+        Inverter stunInvert = new Inverter(stunSequence);
 
 
 
-        Sequence topSequence = new Sequence(new List<Node> { deathInvert, stunSequence /*Place all sequences here*/}, new BaseDecorator(), 2);
+        /*******Patrol Sequence******/
+        MoveToDestinationNode moveToDestination = new MoveToDestinationNode(this);
+        WaitNode patrolWait = new WaitNode(this);
+        SetNextDestinationNode setNextDestination = new SetNextDestinationNode(this);
+        Sequence patrolSequence = new Sequence(new List<Node> { moveToDestination, patrolWait, setNextDestination }, new BaseDecorator(), 3);
+
+
+        /********Top Sequence********/
+        Sequence topSequence = new Sequence(new List<Node> { deathInvert, stunInvert, patrolSequence /*Place all sequences here*/}, new BaseDecorator(), 0);
         topNode = new Selector(new List<Node> { topSequence });
         topNode.SetBlackBoard(blackBoard);
 
-        #region LIKE_THIS
-        /*
-        HealthNode healthNode = new HealthNode(this, gameObject.GetComponent<HealthComponent>());
-        WaitNode wait = new WaitNode(3);
-        DieNode die = new DieNode(gameObject);
-
-        Sequence checkHealthAndDieSequence = new Sequence(new List<Node> { healthNode, wait, die });
-
-        topNode = new Selector(new List<Node> { checkHealthAndDieSequence });
-        */
-        #endregion
     }
 
 
@@ -82,6 +76,7 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("ShotCooldown", new DataObject<float>(moth.ShotCooldown));
         bb.Add("StartPosition", new DataObject<Vector3>(moth.transform.position));
         bb.Add("StartHeight", new DataObject<float>(moth.Agent.baseOffset));
+        bb.Add("WaitTime", new DataObject<float>(moth.WaitTime));
 
 
         //REFERENCES
