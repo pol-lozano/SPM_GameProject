@@ -305,7 +305,7 @@ MonoBehaviour:
     max: 1024
   m_VolumetricFogBudget:
     m_OverrideState: 0
-    m_Value: 0.5
+    m_Value: 0.333
     min: 0
     max: 1
   m_ResolutionDepthRatio:
@@ -314,5 +314,8 @@ MonoBehaviour:
     min: 0
     max: 1
   directionalLightsOnly:
+    m_OverrideState: 0
+    m_Value: 0
+  filter:
     m_OverrideState: 0
     m_Value: 0
