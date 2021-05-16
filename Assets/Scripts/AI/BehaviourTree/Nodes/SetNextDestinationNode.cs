@@ -4,8 +4,6 @@ using UnityEngine.AI;
 public class SetNextDestinationNode : Node
 {
 
-
-
     public SetNextDestinationNode(BehaviourTree tree)
     {
         this.tree = tree;
@@ -17,4 +15,5 @@ public class SetNextDestinationNode : Node
         agent.SetDestination(tree.GetBlackBoardValue<AIPath>("Path").GetVariable().Next().position);
         return NODE_STATE.SUCCESS;
     }
+
 }

@@ -36,9 +36,9 @@ public class BT_UmbralMoth : BehaviourTree
     {
 
         /*******Death Sequence*******/
-        DieNode dieNode = new DieNode(blackBoard, this);
+        DieNode die = new DieNode(blackBoard, this);
         IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard, this);
-        Sequence dieSequence = new Sequence(new List<Node> { dieNode }, deadDec, 1);
+        Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, 1);
         Inverter deathInvert = new Inverter(dieSequence);
 
 
@@ -48,17 +48,28 @@ public class BT_UmbralMoth : BehaviourTree
         Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, 2);
         Inverter stunInvert = new Inverter(stunSequence);
 
+        /****Return Home Sequence****/
+        GoHomeNode goHome = new GoHomeNode(this);
+        TooFarFromHomeDecorator tooFarFromHomeDec = new TooFarFromHomeDecorator(this);
+        Sequence goHomeSequence = new Sequence(new List<Node> { goHome }, tooFarFromHomeDec, 3);
+        Inverter goHomeInvert = new Inverter(goHomeSequence);
 
 
         /*******Patrol Sequence******/
         MoveToDestinationNode moveToDestination = new MoveToDestinationNode(this);
         WaitNode patrolWait = new WaitNode(this);
         SetNextDestinationNode setNextDestination = new SetNextDestinationNode(this);
-        Sequence patrolSequence = new Sequence(new List<Node> { moveToDestination, patrolWait, setNextDestination }, new BaseDecorator(), 3);
+        Sequence patrolSequence = new Sequence(new List<Node> { moveToDestination, patrolWait, setNextDestination }, new BaseDecorator(), 4);
 
 
         /********Top Sequence********/
-        Sequence topSequence = new Sequence(new List<Node> { deathInvert, stunInvert, patrolSequence /*Place all sequences here*/}, new BaseDecorator(), 0);
+        Sequence topSequence = new Sequence(new List<Node> { 
+            /*Place all sequences here in the order you want*/
+            deathInvert, 
+            stunInvert, 
+            goHomeInvert,
+            patrolSequence 
+            }, new BaseDecorator(), 0);
         topNode = new Selector(new List<Node> { topSequence });
         topNode.SetBlackBoard(blackBoard);
 
@@ -72,11 +83,12 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("SinkSpeed", new DataObject<float>(moth.SinkSpeed));
         bb.Add("StunLength", new DataObject<float>(moth.StunLength));
         bb.Add("DistanceToAttack", new DataObject<float>(moth.DistanceToAttack));
-        bb.Add("DistanceToPointForSucces", new DataObject<float>(moth.DistanceToPointForSuccess));
+        bb.Add("DistanceToPointForSuccess", new DataObject<float>(moth.DistanceToPointForSuccess));
         bb.Add("ShotCooldown", new DataObject<float>(moth.ShotCooldown));
-        bb.Add("StartPosition", new DataObject<Vector3>(moth.transform.position));
+        bb.Add("StartPoint", new DataObject<Vector3>(moth.transform.position));
         bb.Add("StartHeight", new DataObject<float>(moth.Agent.baseOffset));
         bb.Add("WaitTime", new DataObject<float>(moth.WaitTime));
+        bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(moth.MaxDistanceFromStartPoint));
 
 
         //REFERENCES

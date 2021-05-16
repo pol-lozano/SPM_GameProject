@@ -18,9 +18,10 @@ public class Sequence : Node
 
     public override NODE_STATE Evaluate()
     {
-        //Debug.Log(ID);
+        
         if (decorator.Condition() == true)
         {
+            //Debug.Log(ID);
             bool anyChildRunning = false;
             foreach (var node in nodes)
             {

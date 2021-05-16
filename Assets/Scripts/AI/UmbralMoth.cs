@@ -18,6 +18,7 @@ public class UmbralMoth : MonoBehaviour
     [Header("Distances")]
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float distanceToPointForSucces;
+    [SerializeField] private float maxDistanceFromStartPoint;
 
     [Header("References")]
     [SerializeField] private Transform target;
@@ -38,6 +39,7 @@ public class UmbralMoth : MonoBehaviour
     public float WaitTime { get => waitTime; }
     public float DistanceToAttack { get => distanceToAttack; }
     public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
+    public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
 
     public Transform Target { get => target; }
     public Animator Anim { get => anim; }

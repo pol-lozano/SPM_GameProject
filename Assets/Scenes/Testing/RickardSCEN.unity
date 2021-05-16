@@ -5260,6 +5260,7 @@ MonoBehaviour:
   waitTime: 0
   distanceToAttack: 0
   distanceToPointForSucces: 0
+  maxDistanceFromStartPoint: 0
   target: {fileID: 0}
   anim: {fileID: 0}
   path: {fileID: 0}
@@ -5579,7 +5580,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63634
+  m_Name: pb_Mesh23228
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17592,6 +17593,7 @@ MonoBehaviour:
   waitTime: 3
   distanceToAttack: 10
   distanceToPointForSucces: 0.1
+  maxDistanceFromStartPoint: 15
   target: {fileID: 5030949065688228666}
   anim: {fileID: 284472127083325691}
   path: {fileID: 1313605153}
@@ -22198,7 +22200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284472127092710019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.126, y: 5.04, z: 32}
+  m_LocalPosition: {x: -25.14, y: 5.04, z: 31.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 984148207}
