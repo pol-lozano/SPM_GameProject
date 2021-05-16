@@ -32,26 +32,16 @@ public class SceneController : MonoBehaviour
             //Hämta alla scener som är relevanta för checkpoint
             List<int> relevantScenes = Checkpoint.currentCheckPoint.ScenesOnCheckpoint;
 
-            //Scene[] activeScenes = SceneManager.GetAllScenes();
-
             //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
             for(int i = 0; i < SceneManager.sceneCount; i++)
             {
-                
                 if (relevantScenes.Contains(SceneManager.GetSceneAt(i).buildIndex) == false &&
                     SceneManager.GetSceneAt(i).buildIndex != baseSceneIndex)
                 {
                     SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(i).buildIndex);
                 }
             }
-
-            /*
-            foreach(Scene sc in activeScenes)
-            {
-                if (relevantScenes.Contains(sc.buildIndex) == false && sc.buildIndex != baseSceneIndex)
-                    SceneManager.UnloadSceneAsync(sc.name);
-            }
-            */
+    
             //om det finns någon relevant scen som inte är laddad så laddas den in
             foreach(int s in relevantScenes)
             {

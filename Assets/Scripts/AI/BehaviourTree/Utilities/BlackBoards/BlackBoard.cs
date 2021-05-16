@@ -29,7 +29,7 @@ public class BlackBoard : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
-    [SerializeField] private Enemy thisAI;
+    [SerializeField] private UmbralMoth thisAI;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent enemyHealth;
     [SerializeField] private List<Rigidbody> ragdoll;
@@ -46,7 +46,7 @@ public class BlackBoard : MonoBehaviour
         (Transform target, 
         Animator anim, 
         AIPath path, 
-        Enemy thisAI, 
+        UmbralMoth thisAI, 
         NavMeshAgent agent, 
         HealthComponent enemyHealth, 
         List<Rigidbody> ragdoll)

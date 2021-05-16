@@ -25,7 +25,6 @@ public class GoHomeNode : Node
             tree.GetBlackBoardValue<UmbralMoth>("ThisAI").GetVariable().transform.position)
             < tree.GetBlackBoardValue<float>("DistanceToPointForSuccess").GetVariable())
         {
-            Debug.Log("HOME");
             return NODE_STATE.SUCCESS;
         }
 

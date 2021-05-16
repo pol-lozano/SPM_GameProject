@@ -5,10 +5,11 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
-public class UmbralMoth : Enemy
+public class UmbralMoth : MonoBehaviour
 {
     
     [Header("AI speeds")]
+    [Header("THESE VALUES CANNOT CHANGE IN RUNTIME")]
     [SerializeField] private float patrolSpeed;
     [SerializeField] private float attackSpeed;
     [SerializeField] private float chaseSpeed;
