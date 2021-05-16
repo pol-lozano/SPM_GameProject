@@ -9,7 +9,7 @@ public class ParticleListener : MonoBehaviour
     void OnPlayParticles(DeathEvent deathEvent)
     {
         //Object pooler would be better
-        ParticleSystem system = Instantiate(deathEvent.Info.particleSystem, deathEvent.Info.unit.transform.position, Quaternion.identity);
+        ParticleSystem system = Instantiate(deathEvent.Info.particleSystem, deathEvent.Info.hitComponent.transform.position, Quaternion.identity);
         system.gameObject.transform.SetParent(transform);
         system.Play();
         Destroy(system.gameObject, system.main.duration);

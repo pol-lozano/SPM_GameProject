@@ -1779,7 +1779,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5380812897503927491}
   - component: {fileID: 5737258284725448005}
-  - component: {fileID: 199229342}
   m_Layer: 13
   m_Name: mesh
   m_TagString: Untagged
@@ -1906,20 +1905,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00026497245, y: -0.16646612, z: 0.04448241}
     m_Extent: {x: 0.91124403, y: 0.9440024, z: 0.25346297}
   m_DirtyAABB: 0
---- !u!136 &199229342
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4828313031537687043}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.17215271
-  m_Height: 1.2
-  m_Direction: 1
-  m_Center: {x: 0.013630986, y: 1.1499999, z: -0.0141517315}
 --- !u!1 &4927708323031246332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,6 +3263,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9819b1b1b04e546b8004bdfb83c3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  startingTransform: {fileID: 0}
   states:
   - {fileID: 11400000, guid: 4f18957db03c52945a2c457d812e8735, type: 2}
   - {fileID: 11400000, guid: d682afb2271d5c34f841a07edf2f0a56, type: 2}
@@ -3326,7 +3313,7 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 2048
-  healthBar: {fileID: 7562564838385692558}
+  isPlayer: 0
 --- !u!195 &8315867624838024223
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3649,6 +3636,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 2364674876880064153}
+    - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 5107141623429346915}
@@ -3771,14 +3762,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2254545870210786065, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
   m_PrefabInstance: {fileID: 8627314830529016596}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7562564838385692558 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
-  m_PrefabInstance: {fileID: 8627314830529016596}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60153bd074e113a4c9b54cc07edeb5e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

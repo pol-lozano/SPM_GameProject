@@ -59,24 +59,21 @@ public class Projectile : MonoBehaviour
     
     private bool CheckHit(Collision other)
     {
-        HitBox h = other.collider.GetComponent<HitBox>();
+        HitBox hitBox = other.collider.GetComponent<HitBox>();
 
-        if (h == null)
+        if (hitBox == null)
             return false;
 
-        HealthComponent hc = other.gameObject.GetComponent<HealthComponent>();
-
-        if (hc != null && hc.IsOnLayer(gameObject.layer))
-            mesh.enabled = false;
-        //Check if owner of health system
+        //Check if owner of health system?
         HitInfo info = new HitInfo()
         {
+            hitComponent = hitBox.hitComponent,
             damager = this,
             amount = damageAmount,
             hitPosition = other.GetContact(0).point
         };
 
-        h.ApplyHit(info);
+        hitBox.ApplyHit(info);
 
         return true;
     }

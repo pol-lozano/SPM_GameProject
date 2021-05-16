@@ -1,5 +1,6 @@
 //Author: Pol Lozano Llorens
 //Secondary Author: Rickard Lindgren
+using System;
 using UnityEngine;
 
 public class HealthComponent : HitComponent
@@ -12,8 +13,6 @@ public class HealthComponent : HitComponent
     [SerializeField] private LayerMask damageLayer;
 
     private float timeSinceLastHit = 0.0f;
-    private System.Type lastTypeToHit;
-
     [SerializeField] private bool isPlayer;
 
     public bool IsPlayer => isPlayer;
@@ -22,7 +21,7 @@ public class HealthComponent : HitComponent
     public bool IsStunned { get; set; }
     public float MaxHealth => maxHealth;
     public float CurrentHealth => currentHealth;
-    public System.Type LastType => lastTypeToHit;
+    public Type LastType { get; private set; }
 
     void Start() => ResetHealth();
 
@@ -76,35 +75,23 @@ public class HealthComponent : HitComponent
         SetInvulnerable();
         currentHealth -= info.amount;
 
-        if (info.damager.GetType() == typeof(Projectile)) //Fix better
+        LastType = info.damager.GetType();
+        if (LastType == typeof(Projectile)) //Fix better
             IsStunned = true;
-        //Check for stun. Maybe move somewhere else?
 
         EventHandler<HitEvent>.FireEvent(new HitEvent(info));
-        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
+        if(shakeData != null)
+            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
     }
 
     private void Die(HitInfo info)
-    {    
-        if(IsPlayer)
+    {
+        DyingInfo deathInfo = new DyingInfo
         {
-            DyingInfo playerDyingInfo = new DyingInfo
-            {
-                unit = gameObject,
-                killer = info.damager.gameObject,
-            };
-            EventHandler<DyingEvent>.FireEvent(new DyingEvent(playerDyingInfo));
-        }
-        //ENEMIES borde också få dyingEvent men det har vi inte just nu
-        else
-        {
-            DeathInfo deathInfo = new DeathInfo
-            {
-                unit = gameObject,
-                killer = info.damager.gameObject,
-            };
-            EventHandler<DeathEvent>.FireEvent(new DeathEvent(deathInfo));
-        }        
+            hitComponent = this,
+            killer = info.damager
+        };
+        EventHandler<DyingEvent>.FireEvent(new DyingEvent(deathInfo));
     }
    
     public bool IsOnLayer(int layer)

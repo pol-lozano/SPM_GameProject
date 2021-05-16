@@ -22,6 +22,7 @@ public class DebugEvent : IEvent
 #region HIT_EVENT
 public struct HitInfo
 {
+    public HitComponent hitComponent;
     public MonoBehaviour damager;
     public string tag;
     public int amount;
@@ -47,12 +48,12 @@ public class EndPlayerAttackEvent : IEvent { }
 #region DYING_EVENT
 public struct DyingInfo
 {
-    public GameObject unit;
-    public GameObject killer;
+    public HitComponent hitComponent;
+    public MonoBehaviour killer;
     public AudioClip sound;
     public ParticleSystem particleSystem;
-
 }
+
 public class DyingEvent : IEvent
 {
     public DyingInfo Info { get; }
@@ -63,7 +64,7 @@ public class DyingEvent : IEvent
 #region DEATH_EVENT
 public struct DeathInfo
 {
-    public GameObject unit;
+    public HitComponent hitComponent;
     public GameObject killer;
     public AudioClip sound;
     public ParticleSystem particleSystem;

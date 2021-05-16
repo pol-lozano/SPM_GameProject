@@ -4,15 +4,16 @@ using UnityEngine.UI;
 
 public class UIHealthBar : MonoBehaviour
 {
+    [SerializeField] private HealthComponent owner;
+
     [SerializeField] private bool movable = true;
+    [SerializeField] private float deactivateTimer = 7;
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset;
 
     [SerializeField] private GameObject UIElements;
     [SerializeField] private Image damageTakenImage;
     [SerializeField] private Image currentHealthImage;
-
-    [SerializeField] private HealthComponent owner;
 
     private bool activated;
     private float width;
@@ -21,9 +22,9 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         rectParent = GetComponent<RectTransform>();
-       // if (owner.IsPlayer)
-           // Activate();
-       // else
+        if (owner.IsPlayer) 
+            Activate();
+        else 
             Deactivate();
     }
 
@@ -39,23 +40,30 @@ public class UIHealthBar : MonoBehaviour
         EventHandler<DyingEvent>.UnregisterListener(DeactivateHealthBar);
     }
 
-    private void DeactivateHealthBar(DyingEvent obj)
+    private void DeactivateHealthBar(DyingEvent data)
     {
-        Invoke(nameof(DeactivateDelayed), 2);
+        if (data.Info.hitComponent != owner) 
+            return;
+
+        if(owner.IsPlayer == false)
+            Invoke(nameof(DeactivateDelayed), 2);
     }
 
-    private void SetHealth(HitEvent obj)
+    private void SetHealth(HitEvent data)
     {
-        if (gameObject.CompareTag("Player") == false)
+        if (data.Info.hitComponent != owner)
+            return;
+
+        if (owner.IsPlayer == false)
         {
             Activate();
-            DeactivateDelayed(7);
+            DeactivateDelayed(deactivateTimer);
         }
 
         SetHealthBarPercentage(owner.CurrentHealth / owner.MaxHealth);
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         if (activated)
             UpdateUI();
@@ -63,11 +71,11 @@ public class UIHealthBar : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (movable)
-            MoveHealthBar();
-
         float newWidth = Mathf.Lerp(damageTakenImage.rectTransform.rect.width, width, 1.5f * Time.deltaTime);
         damageTakenImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newWidth);
+
+        if (movable)
+            MoveHealthBar();
     }
 
     private void MoveHealthBar()
@@ -79,26 +87,26 @@ public class UIHealthBar : MonoBehaviour
         UIElements.SetActive(!isBehind);
     }
 
-    public void SetHealthBarPercentage(float percentage)
+    private void SetHealthBarPercentage(float percentage)
     {
         float parentWidth = rectParent.rect.width;
         width = parentWidth * percentage;
         currentHealthImage.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
     }
 
-    public void Activate()
+    private void Activate()
     {
         activated = true;
         UIElements.SetActive(true);
     }
 
-    public void Deactivate()
+    private void Deactivate()
     {
         activated = false;
         UIElements.SetActive(false);
     }
 
-    internal void DeactivateDelayed(int t)
+    private void DeactivateDelayed(float t)
     {
         CancelInvoke(nameof(Deactivate));
         Invoke(nameof(Deactivate), t);
