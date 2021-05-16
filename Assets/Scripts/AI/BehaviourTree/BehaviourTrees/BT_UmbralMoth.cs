@@ -6,32 +6,6 @@ using UnityEngine.AI;
 public class BT_UmbralMoth : BehaviourTree
 {
 
-    #region BLACKBOARD
-    /*
-     * Blackboard Should contain:
-     * 
-     * ___________VALUES___________
-     * MoveSpeed
-     * StunSpeed
-     * StunLength
-     * DistanceToAttack
-     * DistanceToPointForSuccess
-     * ShotCooldown
-     * 
-     * 
-     * 
-     *__________REFERENCES_________
-     * Target (Transform)
-     * Anim
-     * Path
-     * ThisAI
-     * Agent
-     * Health
-     * Ragdoll
-     * 
-     */
-    #endregion
-
     public override void ConstructBehaviourTree()
     {
 
@@ -53,6 +27,9 @@ public class BT_UmbralMoth : BehaviourTree
         TooFarFromHomeDecorator tooFarFromHomeDec = new TooFarFromHomeDecorator(this);
         Sequence goHomeSequence = new Sequence(new List<Node> { goHome }, tooFarFromHomeDec, 3);
         Inverter goHomeInvert = new Inverter(goHomeSequence);
+
+        /***Chase n Attack Sequence**/
+
 
 
         /*******Patrol Sequence******/
@@ -79,16 +56,20 @@ public class BT_UmbralMoth : BehaviourTree
     public void SetBlackBoardValues(UmbralMoth moth)
     {
         //VALUES
-        bb.Add("MoveSpeed", new DataObject<float>(moth.MoveSpeed));
+        bb.Add("PatrolSpeed", new DataObject<float>(moth.PatrolSpeed));
+        bb.Add("AttackSpeed", new DataObject<float>(moth.AttackSpeed));
+        bb.Add("ChaseSpeed", new DataObject<float>(moth.ChaseSpeed));
         bb.Add("SinkSpeed", new DataObject<float>(moth.SinkSpeed));
         bb.Add("StunLength", new DataObject<float>(moth.StunLength));
         bb.Add("DistanceToAttack", new DataObject<float>(moth.DistanceToAttack));
+        bb.Add("DistanceToChase", new DataObject<float>(moth.DistanceToChase));
         bb.Add("DistanceToPointForSuccess", new DataObject<float>(moth.DistanceToPointForSuccess));
         bb.Add("ShotCooldown", new DataObject<float>(moth.ShotCooldown));
         bb.Add("StartPoint", new DataObject<Vector3>(moth.transform.position));
         bb.Add("StartHeight", new DataObject<float>(moth.Agent.baseOffset));
         bb.Add("WaitTime", new DataObject<float>(moth.WaitTime));
         bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(moth.MaxDistanceFromStartPoint));
+        bb.Add("InvestigatePoint", new DataObject<Vector3>());
 
 
         //REFERENCES
@@ -100,6 +81,7 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("Health", new DataObject<HealthComponent>(moth.Health));
         bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(moth.Ragdoll));
     }
+
 
     public override void SetBlackBoard(BlackBoard bb)
     {

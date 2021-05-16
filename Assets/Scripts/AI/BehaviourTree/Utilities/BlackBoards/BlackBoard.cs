@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BlackBoard
+public class BlackBoard : MonoBehaviour
 {
     /****************Values**************/
-    private float moveSpeed = 1;
-    private float stunSpeed = 2;
-    private float stunLength = 3;
-    private float distanceToAttack = 1;
-    private float distanceToPointForSuccess = 1;
-    private float shotCooldown = 2;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float stunSpeed;
+    [SerializeField] private float stunLength;
+    [SerializeField] private float distanceToAttack;
+    [SerializeField] private float distanceToPointForSuccess;
+    [SerializeField] private float shotCooldown;
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public float StartHeight { get; set; }
@@ -29,7 +29,7 @@ public class BlackBoard
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
-    [SerializeField] private UmbralMoth thisAI;
+    [SerializeField] private Enemy thisAI;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent enemyHealth;
     [SerializeField] private List<Rigidbody> ragdoll;
@@ -46,7 +46,7 @@ public class BlackBoard
         (Transform target, 
         Animator anim, 
         AIPath path, 
-        UmbralMoth thisAI, 
+        Enemy thisAI, 
         NavMeshAgent agent, 
         HealthComponent enemyHealth, 
         List<Rigidbody> ragdoll)

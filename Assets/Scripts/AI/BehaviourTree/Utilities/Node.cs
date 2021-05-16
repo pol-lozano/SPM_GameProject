@@ -11,6 +11,7 @@ public abstract class Node
     protected NODE_STATE nodeState;
     protected BlackBoard blackboard;
     protected BehaviourTree tree;
+
     public NODE_STATE NodeState { get => nodeState; }
 
     public abstract NODE_STATE Evaluate();

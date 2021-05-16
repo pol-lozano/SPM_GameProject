@@ -25,6 +25,7 @@ public class WaitNode : Node
         else
         {
             timer = tree.GetBlackBoardValue<float>("WaitTime").GetVariable();
+
             return NODE_STATE.SUCCESS;
         }
     }

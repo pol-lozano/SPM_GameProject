@@ -5,7 +5,6 @@ using UnityEngine.AI;
 public class MoveToDestinationNode : Node
 {
 
-    private float moveSpeed = 2;
     Vector3 adjustedPoint;
 
     public MoveToDestinationNode(BehaviourTree tree)
@@ -18,7 +17,7 @@ public class MoveToDestinationNode : Node
         Debug.Log("Patroling somewhere");
 
         NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
-        agent.speed = moveSpeed;
+        agent.speed = tree.GetBlackBoardValue<float>("PatrolSpeed").GetVariable();
         adjustedPoint = new Vector3(agent.destination.x, agent.transform.position.y, agent.destination.z);
         if (Vector3.Distance(agent.transform.position, adjustedPoint) < tree.GetBlackBoardValue<float>("DistanceToPointForSuccess").GetVariable())
         {

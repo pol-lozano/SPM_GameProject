@@ -5,18 +5,23 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
-public class UmbralMoth : MonoBehaviour
+public class UmbralMoth : Enemy
 {
     
-    [Header("Gameplay Values")]
-    [SerializeField] private float movementSpeed;
+    [Header("AI speeds")]
+    [SerializeField] private float patrolSpeed;
+    [SerializeField] private float attackSpeed;
+    [SerializeField] private float chaseSpeed;
     [SerializeField] private float sinkSpeed;
+
+    [Header("Gameplay Values")]
     [SerializeField] private float stunLenght;
     [SerializeField] private float shotCooldown;
     [SerializeField] private float waitTime;
 
     [Header("Distances")]
     [SerializeField] private float distanceToAttack;
+    [SerializeField] private float distanceToChase;
     [SerializeField] private float distanceToPointForSucces;
     [SerializeField] private float maxDistanceFromStartPoint;
 
@@ -32,12 +37,15 @@ public class UmbralMoth : MonoBehaviour
 
     #region GETTERS
     /*GETTERS*/
-    public float MoveSpeed { get => movementSpeed; }
+    public float PatrolSpeed { get => patrolSpeed; }
+    public float AttackSpeed { get => attackSpeed; }
+    public float ChaseSpeed { get => chaseSpeed; }
     public float SinkSpeed { get => sinkSpeed; }
     public float StunLength { get => stunLenght; }
     public float ShotCooldown { get => shotCooldown; }
     public float WaitTime { get => waitTime; }
     public float DistanceToAttack { get => distanceToAttack; }
+    public float DistanceToChase { get => distanceToChase; }
     public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
     public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
 

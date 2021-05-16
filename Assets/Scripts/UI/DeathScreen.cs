@@ -2,7 +2,7 @@
 //Secondary Author: Pol Lozano Llorens
 using UnityEngine;
 
-public class DeathScreen : MonoBehaviour
+public class DeathScreen : HitComponent
 {
     [SerializeField] private Animator anim;
     private int fadeOutTriggerHash;
@@ -36,5 +36,15 @@ public class DeathScreen : MonoBehaviour
     private void OnReload(ReloadEvent data)
     {
         anim.SetTrigger(fadeInTriggerHash);
+    }
+
+    public void SendDeathEvent()
+    {
+        EventHandler<DeathEvent>.FireEvent(new DeathEvent(new DeathInfo { hitComponent = this }));
+    }
+
+    public override void HandleHit(HitInfo info)
+    {
+        throw new System.NotImplementedException();
     }
 }

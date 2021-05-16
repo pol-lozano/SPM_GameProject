@@ -11,5 +11,6 @@ public class DataObject<T> : DataObject
     public DataObject() { variable = default(T); }
 
     public T GetVariable() { return variable; }
-    public void SetVariabel(T value) { variable = value; }
+
+    public void SetVariable(T value) { variable = value; }
 }

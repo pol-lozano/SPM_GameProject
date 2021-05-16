@@ -1,20 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
 
 public class ChaseNode : Node
 {
+    private NavMeshAgent agent;
 
-    private float chaseSpeed = 4;
-
-    public ChaseNode(BehaviourTree tree) { this.tree = tree; }
+    public ChaseNode(BehaviourTree tree) 
+    { 
+        this.tree = tree;
+        agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
+    }
 
     public override NODE_STATE Evaluate()
     {
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
         agent.SetDestination(tree.GetBlackBoardValue<Transform>("Target").GetVariable().position);
-        agent.speed = chaseSpeed;
+        agent.speed = tree.GetBlackBoardValue<float>("ChaseSpeed").GetVariable();
         return NODE_STATE.SUCCESS;
     }
 }
