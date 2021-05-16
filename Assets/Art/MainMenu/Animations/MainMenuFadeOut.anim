@@ -305,7 +305,7 @@ AnimationClip:
   m_Events:
   - time: 1
     functionName: btn_change_scene
-    data: Base Scene
+    data: MainMenu
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
