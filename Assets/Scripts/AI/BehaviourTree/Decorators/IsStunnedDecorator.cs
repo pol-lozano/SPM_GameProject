@@ -3,10 +3,14 @@
 public class IsStunnedDecorator : Decorator
 {
 
-    public IsStunnedDecorator(BlackBoard bb) { this.blackBoard = bb; }
+    public IsStunnedDecorator(BlackBoard bb, BehaviourTree tree)
+    {
+        this.blackBoard = bb;
+        this.tree = tree;
+    }
 
     public override bool Condition()
     {
-        return blackBoard.EnemyHealth.IsStunned;
+        return tree.GetBlackBoardValue<HealthComponent>("Health").GetVariable().IsStunned;
     }
 }

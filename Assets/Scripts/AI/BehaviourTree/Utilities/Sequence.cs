@@ -1,5 +1,4 @@
 //Author: Rickard Lindgren
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +8,6 @@ public class Sequence : Node
     protected List<Node> nodes = new List<Node>();
     private Decorator decorator;
 
-    
 
     public Sequence(List<Node> list, Decorator d, int ID)
     {
@@ -20,9 +18,10 @@ public class Sequence : Node
 
     public override NODE_STATE Evaluate()
     {
+        
         if (decorator.Condition() == true)
         {
-            //Debug.Log("Decorator = true ID ::: " + ID);
+            //Debug.Log(ID);
             bool anyChildRunning = false;
             foreach (var node in nodes)
             {
@@ -40,7 +39,6 @@ public class Sequence : Node
                         break;
                 }
             }
-
             return nodeState = anyChildRunning ? NODE_STATE.RUNNING : NODE_STATE.SUCCESS;
         }
         else

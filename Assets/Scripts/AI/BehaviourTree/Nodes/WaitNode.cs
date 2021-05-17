@@ -1,31 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+//Author: Rickard Lindgren
 using UnityEngine;
 
 public class WaitNode : Node
 {
 
-    private float timerLength;
     private float timer;
 
-    public WaitNode(float t)
+    public WaitNode(BehaviourTree tree)
     {
-        timerLength = t;
-        timer = t;
+        this.tree = tree;
+        timer = tree.GetBlackBoardValue<float>("WaitTime").GetVariable();
     }
 
     public override NODE_STATE Evaluate()
     {
+
+
         if(timer > 0)
         {
-            Debug.Log(timer);
             timer -= Time.deltaTime;
             Debug.Log(timer);
             return NODE_STATE.RUNNING;
         }
         else
         {
-            timer = timerLength;
+            timer = tree.GetBlackBoardValue<float>("WaitTime").GetVariable();
+
             return NODE_STATE.SUCCESS;
         }
     }

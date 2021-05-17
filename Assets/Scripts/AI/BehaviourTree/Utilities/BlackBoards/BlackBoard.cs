@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BlackBoard
+public class BlackBoard : MonoBehaviour
 {
     /****************Values**************/
-    private float moveSpeed = 1;
-    [SerializeField] private float stunSpeed = 2;
-    [SerializeField] private float stunLength = 3;
-    [SerializeField] private float distanceToAttack = 1;
-    [SerializeField] private float distanceToPointForSuccess = 1;
-    [SerializeField] private float shotCooldown = 2;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float stunSpeed;
+    [SerializeField] private float stunLength;
+    [SerializeField] private float distanceToAttack;
+    [SerializeField] private float distanceToPointForSuccess;
+    [SerializeField] private float shotCooldown;
 
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public float StartHeight { get; set; }
@@ -20,6 +20,7 @@ public class BlackBoard
     public float DistanceToAttack { get => distanceToAttack; }
     public float DistanceToPointForSuccess { get => distanceToPointForSuccess; }
     public float ShotCooldown { get => shotCooldown; }
+    public Vector3 StartPosition { get; set; }
     /****************Values**************/
 
 
@@ -28,7 +29,7 @@ public class BlackBoard
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
-    [SerializeField] private EnemyAI thisAI;
+    [SerializeField] private Enemy thisAI;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent enemyHealth;
     [SerializeField] private List<Rigidbody> ragdoll;
@@ -45,13 +46,11 @@ public class BlackBoard
         (Transform target, 
         Animator anim, 
         AIPath path, 
-        EnemyAI thisAI, 
+        Enemy thisAI, 
         NavMeshAgent agent, 
         HealthComponent enemyHealth, 
         List<Rigidbody> ragdoll)
     {
-        Debug.Assert(enemyHealth);
-        
         this.target = target;
         this.anim = anim;
         this.path = path;
@@ -59,8 +58,6 @@ public class BlackBoard
         this.agent = agent;
         this.enemyHealth = enemyHealth;
         this.ragdoll = ragdoll;
-
-        Debug.Assert(this.enemyHealth);
     }
 
 }

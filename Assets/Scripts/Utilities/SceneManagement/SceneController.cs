@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+
     public static SceneController scenController;
 
     private int baseSceneIndex = 1;
@@ -34,8 +35,9 @@ public class SceneController : MonoBehaviour
             //Scene[] activeScenes = SceneManager.GetAllScenes();
 
             //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
-            for(int i = 0; i <= SceneManager.sceneCount; i++)
+            for(int i = 0; i < SceneManager.sceneCount; i++)
             {
+                
                 if (relevantScenes.Contains(SceneManager.GetSceneAt(i).buildIndex) == false &&
                     SceneManager.GetSceneAt(i).buildIndex != baseSceneIndex)
                 {
