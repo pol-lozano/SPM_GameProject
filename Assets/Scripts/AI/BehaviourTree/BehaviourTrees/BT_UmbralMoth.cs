@@ -29,14 +29,21 @@ public class BT_UmbralMoth : BehaviourTree
         Inverter goHomeInvert = new Inverter(goHomeSequence);
 
         /***Chase n Attack Sequence**/
+        ChaseNode chase = new ChaseNode(this);
+        ShootNode shoot = new ShootNode(this);
+        DodgeNode dodge = new DodgeNode(this);
+        WaitNode cooldown = new WaitNode(GetBlackBoardValue<float>("ShotCooldown").GetVariable());
+        Sequence attackSequence = new Sequence(new List<Node> { shoot, dodge, cooldown }, new AttackPlayerDecorator(this), 5);
+        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence}, new ChasePlayerDecorator(this), 4);
+        Inverter attackInvert = new Inverter(chaseAndAttackSequence);
 
 
 
         /*******Patrol Sequence******/
         MoveToDestinationNode moveToDestination = new MoveToDestinationNode(this);
-        WaitNode patrolWait = new WaitNode(this);
+        WaitNode patrolWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
         SetNextDestinationNode setNextDestination = new SetNextDestinationNode(this);
-        Sequence patrolSequence = new Sequence(new List<Node> { moveToDestination, patrolWait, setNextDestination }, new BaseDecorator(), 4);
+        Sequence patrolSequence = new Sequence(new List<Node> { moveToDestination, patrolWait, setNextDestination }, new BaseDecorator(), 6);
 
 
         /********Top Sequence********/
@@ -45,6 +52,7 @@ public class BT_UmbralMoth : BehaviourTree
             deathInvert, 
             stunInvert, 
             goHomeInvert,
+            attackInvert,
             patrolSequence 
             }, new BaseDecorator(), 0);
         topNode = new Selector(new List<Node> { topSequence });
@@ -70,6 +78,7 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("WaitTime", new DataObject<float>(moth.WaitTime));
         bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(moth.MaxDistanceFromStartPoint));
         bb.Add("InvestigatePoint", new DataObject<Vector3>());
+        bb.Add("isCoolingDown", new DataObject<bool>(false));
 
 
         //REFERENCES
@@ -88,8 +97,4 @@ public class BT_UmbralMoth : BehaviourTree
         blackBoard = bb;
     }
 
-    public override void RunBehaviourTree()
-    {
-        topNode.Evaluate();
-    }
 }

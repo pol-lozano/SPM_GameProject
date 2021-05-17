@@ -15,10 +15,6 @@ public class GoHomeNode : Node
         agent.SetDestination(tree.GetBlackBoardValue<Vector3>("StartPoint").GetVariable());
         agent.speed = returnSpeed;
 
-        Debug.Log(Vector3.Distance(
-            tree.GetBlackBoardValue<Vector3>("StartPoint").GetVariable(),
-            tree.GetBlackBoardValue<UmbralMoth>("ThisAI").GetVariable().transform.position));
-
         //Success if Distance between StartPoint and ThisAI is smallen than the accepted distance to point for Success
         if(Vector3.Distance(
             tree.GetBlackBoardValue<Vector3>("StartPoint").GetVariable(),

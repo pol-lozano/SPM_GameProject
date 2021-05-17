@@ -1,4 +1,4 @@
-
+//AUTHOR: Rickard Lindgren
 using UnityEngine;
 using UnityEngine.AI;
 
