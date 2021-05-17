@@ -94,18 +94,11 @@ public class ReloadEvent : IEvent { }
 [System.Serializable]
 public class ShakeEvent : IEvent
 {
-    float duration;
     float timeRemaining;
 
     ShakeEventData data;
 
-    public ShakeEventData.Target target
-    {
-        get
-        {
-            return data.target;
-        }
-    }
+    public ShakeEventData.Target target => data.target;
 
     Vector3 noiseOffset;
     public Vector3 noise;
@@ -113,8 +106,7 @@ public class ShakeEvent : IEvent
     public ShakeEvent(ShakeEventData data)
     {
         this.data = data;
-        duration = data.duration;
-        timeRemaining = duration;
+        timeRemaining = data.duration;
 
         float rand = 32.0f;
 
@@ -141,7 +133,7 @@ public class ShakeEvent : IEvent
         noise -= Vector3.one * 0.5f;
         noise *= data.amplitude;
 
-        float agePercent = 1.0f - (timeRemaining / duration);
+        float agePercent = 1.0f - (timeRemaining / data.duration);
         noise *= data.blendOverLifetime.Evaluate(agePercent);
     }
 
