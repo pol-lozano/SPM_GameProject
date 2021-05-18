@@ -9,7 +9,7 @@ public class Sequence : Node
     private Decorator decorator;
 
 
-    public Sequence(List<Node> list, Decorator d, int ID)
+    public Sequence(List<Node> list, Decorator d, string ID)
     {
         nodes = list;
         decorator = d;
@@ -23,17 +23,20 @@ public class Sequence : Node
         {
             //Debug.Log(ID);
             bool anyChildRunning = false;
-            foreach (var node in nodes)
+            foreach (Node node in nodes)
             {
+                //if (node.STATUS == NODE_STATUS.START)
+                    //node.OnInitialize();
                 switch (node.Evaluate())
                 {
+                    case NODE_STATE.FAILURE:
+                        nodeState = NODE_STATE.FAILURE;
+                        return nodeState;
                     case NODE_STATE.SUCCESS:
+                        //node.OnTerminate();
                         break;
                     case NODE_STATE.RUNNING:
                         nodeState = NODE_STATE.RUNNING;
-                        return nodeState;
-                    case NODE_STATE.FAILURE:
-                        nodeState = NODE_STATE.FAILURE;
                         return nodeState;
                     default:
                         break;
@@ -42,7 +45,11 @@ public class Sequence : Node
             return nodeState = anyChildRunning ? NODE_STATE.RUNNING : NODE_STATE.SUCCESS;
         }
         else
+        {
+            //Debug.Log("fail " + ID);
             return NODE_STATE.FAILURE;
+        }
+            
         
     }
 }

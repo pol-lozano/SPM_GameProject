@@ -15,19 +15,20 @@ public class ChasePlayerDecorator : Decorator
         this.tree = tree;
         origin = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable().transform;
         target = tree.GetBlackBoardValue<Transform>("Target").GetVariable();
-        layersToIgnore = (1 << 13);
+        layersToIgnore = tree.GetBlackBoardValue<LayerMask>("LayersToIgnore").GetVariable();
     }
 
     public override bool Condition()
     {
-        
+
         if (Physics.Linecast(origin.position, target.position, out hitinfo, layersToIgnore))
         {
             return false;
         }
         else if (Vector3.Distance(origin.position, target.position) < tree.GetBlackBoardValue<float>("DistanceToChase").GetVariable())
         {
-            Debug.Log("CLOSE ENOUGH");
+            tree.GetBlackBoardValue<Vector3>("TargetLastSeenPoint").SetVariable(tree.GetBlackBoardValue<Transform>("Target").GetVariable().position);
+            tree.GetBlackBoardValue<bool>("RecentlySawTarget").SetVariable(true);
             return true;
         }
 

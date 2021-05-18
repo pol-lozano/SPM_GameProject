@@ -2,12 +2,12 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MoveToDestinationNode : Node
+public class MoveToPatrolPoint : Node
 {
 
     Vector3 adjustedPoint;
 
-    public MoveToDestinationNode(BehaviourTree tree)
+    public MoveToPatrolPoint(BehaviourTree tree)
     {
         this.tree = tree;
     }
@@ -22,7 +22,10 @@ public class MoveToDestinationNode : Node
         {
             return NODE_STATE.SUCCESS;
         }
-        else 
+        else
+        {
             return NODE_STATE.RUNNING;
+        }
+            
     }
 }

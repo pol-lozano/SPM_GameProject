@@ -107,10 +107,10 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.5
-    agentHeight: 1
-    agentSlope: 45
-    agentClimb: 0.4
-    ledgeDropHeight: 0
+    agentHeight: 2.41
+    agentSlope: 41.8
+    agentClimb: 0.73
+    ledgeDropHeight: -0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
@@ -4761,7 +4761,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23238
+  m_Name: pb_Mesh152490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5165,75 +5165,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1486500959}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &699730946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 699730949}
-  - component: {fileID: 699730948}
-  - component: {fileID: 699730947}
-  m_Layer: 0
-  m_Name: BT
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &699730947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699730946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6784fb3d244ed3b4d812de3a7570b0e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  stunSpeed: 0
-  stunLength: 0
-  distanceToAttack: 0
-  distanceToPointForSuccess: 0
-  shotCooldown: 0
-  target: {fileID: 0}
-  anim: {fileID: 0}
-  path: {fileID: 0}
-  thisAI: {fileID: 0}
-  agent: {fileID: 0}
-  enemyHealth: {fileID: 0}
-  ragdoll: []
---- !u!114 &699730948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699730946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 462ac696b2c4976408089ca359f35fc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &699730949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699730946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &747320974
 Mesh:
@@ -12383,7 +12314,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23212
+  m_Name: pb_Mesh152464
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14448,7 +14379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1747015557
 Transform:
   m_ObjectHideFlags: 0
@@ -16682,12 +16613,16 @@ MonoBehaviour:
   chaseSpeed: 2.5
   sinkSpeed: 2
   stunLenght: 3
-  shotCooldown: 4
+  shotCooldown: 3
   waitTime: 3
-  distanceToAttack: 10
+  layersToIgnore:
+    serializedVersion: 2
+    m_Bits: 229311
+  distanceToAttack: 15
   distanceToChase: 20
-  distanceToPointForSucces: 0.1
-  maxDistanceFromStartPoint: 25
+  distanceToInvestigate: 10
+  distanceToPointForSucces: 5
+  maxDistanceFromStartPoint: 100
   target: {fileID: 5030949065688228666}
   anim: {fileID: 284472127083325691}
   path: {fileID: 1313605153}
@@ -19803,7 +19738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.72
+      value: -36.65
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19811,7 +19746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.82
+      value: 47.71
       objectReference: {fileID: 0}
     - target: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w

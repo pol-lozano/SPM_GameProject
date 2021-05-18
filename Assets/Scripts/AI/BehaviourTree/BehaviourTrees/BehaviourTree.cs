@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
-public abstract class BehaviourTree : MonoBehaviour
+public abstract class BehaviourTree
 {
     protected Node topNode;
     protected BlackBoard blackBoard;

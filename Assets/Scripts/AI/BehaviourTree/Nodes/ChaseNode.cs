@@ -14,8 +14,12 @@ public class ChaseNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        agent.SetDestination(tree.GetBlackBoardValue<Transform>("Target").GetVariable().position);
-        agent.speed = tree.GetBlackBoardValue<float>("ChaseSpeed").GetVariable();
+        if(tree.GetBlackBoardValue<bool>("MovingToPoint").GetVariable() == false)
+        {
+            Debug.Log("CHASE");
+            agent.SetDestination(tree.GetBlackBoardValue<Transform>("Target").GetVariable().position);
+            agent.speed = tree.GetBlackBoardValue<float>("ChaseSpeed").GetVariable();
+        }
         return NODE_STATE.SUCCESS;
     }
 }

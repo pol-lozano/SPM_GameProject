@@ -12,50 +12,65 @@ public class BT_UmbralMoth : BehaviourTree
         /*******Death Sequence*******/
         DieNode die = new DieNode(blackBoard, this);
         IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard, this);
-        Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, 1);
-        Inverter deathInvert = new Inverter(dieSequence);
+        Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, "die");
+
 
 
         /*******Stun Sequence********/
         SinkNode sink = new SinkNode(blackBoard, this);
         IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard, this);
-        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, 2);
-        Inverter stunInvert = new Inverter(stunSequence);
+        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, "Stun");
+
 
         /****Return Home Sequence****/
         GoHomeNode goHome = new GoHomeNode(this);
         TooFarFromHomeDecorator tooFarFromHomeDec = new TooFarFromHomeDecorator(this);
-        Sequence goHomeSequence = new Sequence(new List<Node> { goHome }, tooFarFromHomeDec, 3);
-        Inverter goHomeInvert = new Inverter(goHomeSequence);
+        Sequence goHomeSequence = new Sequence(new List<Node> { goHome }, tooFarFromHomeDec, "Return");
+
 
         /***Chase n Attack Sequence**/
         ChaseNode chase = new ChaseNode(this);
         ShootNode shoot = new ShootNode(this);
-        DodgeNode dodge = new DodgeNode(this);
-        WaitNode cooldown = new WaitNode(GetBlackBoardValue<float>("ShotCooldown").GetVariable());
-        Sequence attackSequence = new Sequence(new List<Node> { shoot, dodge, cooldown }, new AttackPlayerDecorator(this), 5);
-        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence}, new ChasePlayerDecorator(this), 4);
-        Inverter attackInvert = new Inverter(chaseAndAttackSequence);
+        CooldownNode cooldown = new CooldownNode(this, GetBlackBoardValue<float>("ShotCooldown").GetVariable());
+            /*Dodge sequence*/
+            SetRandomPoint setRandom = new SetRandomPoint(this);
+            MoveToRandomPoint moveToRandom = new MoveToRandomPoint(this);
+            Sequence dodgeSequence = new Sequence(new List<Node> { setRandom, moveToRandom, cooldown }, new BaseDecorator(), "Dodge");
+            Asserter dodgeAsserter = new Asserter(dodgeSequence);
+        Sequence attackSequence = new Sequence(new List<Node> { shoot, dodgeAsserter}, new AttackPlayerDecorator(this), "Attack");
+        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence}, new ChasePlayerDecorator(this), "Chase");
 
+        /***Investigate Selector***/
+        InvestigatePointNode investigatePoint = new InvestigatePointNode(this);
+        WaitNode investigateWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        GoHomeNode returnInvest = new GoHomeNode(this);
+        Sequence heardSomethingSequence = new Sequence(new List<Node> { investigatePoint, investigateWait, returnInvest }, new InvestigateDecorator(this), "Investigate");
+
+        MoveToTargetLastSeenPoint moveToTargetLastSeen = new MoveToTargetLastSeenPoint(this);
+        WaitNode lastSeenWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        Sequence targetLastSeenSequence = new Sequence(new List<Node> { moveToTargetLastSeen, lastSeenWait }, new SeenTargetDecorator(this), "To Target Last Seen");
+
+        Selector investigateSelector = new Selector(new List<Node> { heardSomethingSequence, targetLastSeenSequence }, new BaseDecorator());
 
 
         /*******Patrol Sequence******/
-        MoveToDestinationNode moveToDestination = new MoveToDestinationNode(this);
+        MoveToPatrolPoint moveToPatrolPoint = new MoveToPatrolPoint(this);
         WaitNode patrolWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
-        SetNextDestinationNode setNextDestination = new SetNextDestinationNode(this);
-        Sequence patrolSequence = new Sequence(new List<Node> { moveToDestination, patrolWait, setNextDestination }, new BaseDecorator(), 6);
+        SetNextPatrolPoint setNextPatrolPoint = new SetNextPatrolPoint(this);
+        Sequence patrolSequence = new Sequence(new List<Node> { moveToPatrolPoint, patrolWait, setNextPatrolPoint }, new CanPatrolDecorator(this), "Patrol");
 
 
         /********Top Sequence********/
-        Sequence topSequence = new Sequence(new List<Node> { 
+        Selector topSequence = new Selector(new List<Node> { 
             /*Place all sequences here in the order you want*/
-            deathInvert, 
-            stunInvert, 
-            goHomeInvert,
-            attackInvert,
+            dieSequence,
+            stunSequence,
+            goHomeSequence,
+            chaseAndAttackSequence,
+            investigateSelector,
             patrolSequence 
-            }, new BaseDecorator(), 0);
-        topNode = new Selector(new List<Node> { topSequence });
+            }, new BaseDecorator());
+        topNode = topSequence;
         topNode.SetBlackBoard(blackBoard);
 
     }
@@ -71,6 +86,7 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("StunLength", new DataObject<float>(moth.StunLength));
         bb.Add("DistanceToAttack", new DataObject<float>(moth.DistanceToAttack));
         bb.Add("DistanceToChase", new DataObject<float>(moth.DistanceToChase));
+        bb.Add("DistanceToInvestigate", new DataObject<float>(moth.DistanceToInvestigate));
         bb.Add("DistanceToPointForSuccess", new DataObject<float>(moth.DistanceToPointForSuccess));
         bb.Add("ShotCooldown", new DataObject<float>(moth.ShotCooldown));
         bb.Add("StartPoint", new DataObject<Vector3>(moth.transform.position));
@@ -78,7 +94,16 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("WaitTime", new DataObject<float>(moth.WaitTime));
         bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(moth.MaxDistanceFromStartPoint));
         bb.Add("InvestigatePoint", new DataObject<Vector3>());
+        bb.Add("RandomPoint", new DataObject<Vector3>());
+        bb.Add("TargetLastSeenPoint", new DataObject<Vector3>());
+
         bb.Add("isCoolingDown", new DataObject<bool>(false));
+        bb.Add("MovingToPoint", new DataObject<bool>(false));
+        bb.Add("RecentlyFired", new DataObject<bool>(false));
+        bb.Add("RecentlySawTarget", new DataObject<bool>(false));
+        bb.Add("Investigating", new DataObject<bool>(false));
+
+        bb.Add("LayersToIgnore", new DataObject<LayerMask>(moth.LayersToIgnore));
 
 
         //REFERENCES

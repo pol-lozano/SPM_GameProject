@@ -1,30 +1,32 @@
 //Author: Rickard Lindgren
 using UnityEngine;
 
-public class WaitNode : Node
+public class CooldownNode : Node
 {
     private float timerLength;
     private float timer;
 
-    public WaitNode(float t)
+    public CooldownNode(BehaviourTree tree, float t)
     {
+        this.tree = tree;
         timerLength = t;
         timer = t;
     }
 
     public override NODE_STATE Evaluate()
     {
-
-
         if(timer > 0)
         {
             timer -= Time.deltaTime;
+            //Debug.Log(timer);
             return NODE_STATE.RUNNING;
         }
         else
         {
+            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
+            tree.GetBlackBoardValue<bool>("MovingToPoint").SetVariable(false);
             timer = timerLength;
-            //Debug.Log("WAIT DONE");
+            Debug.Log("Cooldown DONE");
             return NODE_STATE.SUCCESS;
         }
     }
