@@ -19,7 +19,13 @@ public class AttackPlayerDecorator : Decorator
             tree.GetBlackBoardValue<Transform>("Target").GetVariable().position) 
             < tree.GetBlackBoardValue<float>("DistanceToAttack").GetVariable())
             return true;
-
-        return false;
+        else
+        {
+            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
+            tree.GetBlackBoardValue<bool>("MovingToPoint").SetVariable(false);
+            tree.GetBlackBoardValue<bool>("RecentlyFired").SetVariable(false);
+            return false;
+        }
+        
     }
 }

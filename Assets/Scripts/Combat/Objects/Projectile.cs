@@ -55,11 +55,11 @@ public class Projectile : MonoBehaviour
         hit = false;
     }
 
-    private void OnCollisionEnter(Collision collision) => CheckHit(collision);
+    private void OnTriggerEnter(Collider collision) => CheckHit(collision);
     
-    private bool CheckHit(Collision other)
+    private bool CheckHit(Collider other)
     {
-        HitBox hitBox = other.collider.GetComponent<HitBox>();
+        HitBox hitBox = other.GetComponent<HitBox>();
 
         if (hitBox == null)
             return false;
@@ -70,7 +70,6 @@ public class Projectile : MonoBehaviour
             hitComponent = hitBox.hitComponent,
             damager = this,
             amount = damageAmount,
-            hitPosition = other.GetContact(0).point
         };
 
         hitBox.ApplyHit(info);

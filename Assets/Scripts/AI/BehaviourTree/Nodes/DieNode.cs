@@ -13,7 +13,6 @@ public class DieNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        Debug.Log("Object is Dead");
         foreach(Rigidbody r in tree.GetBlackBoardValue<List<Rigidbody>>("Ragdoll").GetVariable())
         {
             r.isKinematic = false;

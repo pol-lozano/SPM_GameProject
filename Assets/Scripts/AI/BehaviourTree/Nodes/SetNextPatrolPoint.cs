@@ -1,10 +1,11 @@
 //Author: Rickard Lindgren
+using UnityEngine;
 using UnityEngine.AI;
 
-public class SetNextDestinationNode : Node
+public class SetNextPatrolPoint : Node
 {
 
-    public SetNextDestinationNode(BehaviourTree tree)
+    public SetNextPatrolPoint(BehaviourTree tree)
     {
         this.tree = tree;
     }
