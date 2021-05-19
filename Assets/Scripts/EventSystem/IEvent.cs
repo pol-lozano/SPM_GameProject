@@ -156,3 +156,11 @@ public class UnloadSceneEvent : IEvent
     public UnloadSceneEvent(int buildIndex) => this.buildIndex = buildIndex;
 }
 #endregion
+
+#region SOUND_EVENT
+public class SoundEvent : IEvent
+{
+    public AudioData Info { get; }
+    public SoundEvent(AudioData info) => Info = info;
+}
+#endregion

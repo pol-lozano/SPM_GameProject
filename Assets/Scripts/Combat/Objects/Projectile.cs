@@ -55,11 +55,11 @@ public class Projectile : MonoBehaviour
         hit = false;
     }
 
-    private void OnTriggerEnter(Collider collision) => CheckHit(collision);
+    private void OnCollisionEnter(Collision collision) => CheckHit(collision);
     
-    private bool CheckHit(Collider other)
+    private bool CheckHit(Collision other)
     {
-        HitBox hitBox = other.GetComponent<HitBox>();
+        HitBox hitBox = other.collider.GetComponent<HitBox>();
 
         if (hitBox == null)
             return false;

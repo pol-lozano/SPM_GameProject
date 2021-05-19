@@ -1,4 +1,4 @@
-//Author: Pol Lozano Llorens
+//Author: Pol Lozano Llorens 
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -15,14 +15,15 @@ public class SoundListener : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void OnEnable() => EventHandler<DeathEvent>.RegisterListener(OnDeath);
-    private void OnDisable() => EventHandler<DeathEvent>.UnregisterListener(OnDeath);
+    private void OnEnable() => EventHandler<SoundEvent>.RegisterListener(OnSoundEvent);
+    private void OnDisable() => EventHandler<SoundEvent>.UnregisterListener(OnSoundEvent);
 
-    void OnDeath(DeathEvent deathEvent) => PlayClip(deathEvent.Info.sound);
+    void OnSoundEvent(SoundEvent soundEvent) => PlayClip(soundEvent.Info.GetRandomSound());
 
     void PlayClip(AudioClip clip)
     {
         source.pitch = Random.Range(minPitch, maxPitch);
         source.PlayOneShot(clip);
+        Debug.Log("PlayedAudioClip" + clip.name + "Hej angelina");
     }
 }
