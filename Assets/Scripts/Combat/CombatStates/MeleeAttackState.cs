@@ -2,9 +2,12 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "CombatState/Melee")]
+
 public class MeleeAttackState : CombatState
 {
     [SerializeField] private ShakeEventData shakeData;
+    [SerializeField] private AudioData attackSoundData;
+
     private float timeSinceLastAttack = 0;
 
     public override void Enter()
@@ -33,6 +36,7 @@ public class MeleeAttackState : CombatState
         Player.MeleeWeapon.Collider.enabled = true;
 
         EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
+    //    EventHandler<AudioEvent>.FireEvent(new AudioEvent(attackSoundData));
     }
 
     public override void OnAnimationEnded()

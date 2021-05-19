@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d1eefb663d7214997743141688ab43, type: 3}
   m_Name: PlayerDeathState
   m_EditorClassIdentifier: 
+  playerDeathSound: {fileID: 11400000, guid: 3ae18fec7d8f1fe428199844461bc79b, type: 2}
