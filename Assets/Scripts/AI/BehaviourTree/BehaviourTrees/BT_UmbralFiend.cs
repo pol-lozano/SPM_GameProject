@@ -1,11 +1,10 @@
-//Author: Rickard Lindgren
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BT_UmbralMoth : BehaviourTree
+public class BT_UmbralFiend : BehaviourTree
 {
-
     public override void ConstructBehaviourTree()
     {
 
@@ -18,10 +17,8 @@ public class BT_UmbralMoth : BehaviourTree
 
         /*******Stun Sequence********/
         SinkNode sink = new SinkNode(blackBoard, this);
-        WaitNode stunWait = new WaitNode(GetBlackBoardValue<float>("StunLenght").GetVariable());
-        //RISE NODE
         IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard, this);
-        Sequence stunSequence = new Sequence(new List<Node> { sink, stunWait }, stunDec, "Stun");
+        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, "Stun");
 
 
         /****Return Home Sequence****/
@@ -34,13 +31,13 @@ public class BT_UmbralMoth : BehaviourTree
         ChaseNode chase = new ChaseNode(this);
         ShootNode shoot = new ShootNode(this);
         CooldownNode cooldown = new CooldownNode(this, GetBlackBoardValue<float>("ShotCooldown").GetVariable());
-            /*Dodge sequence*/
-            SetRandomPoint setRandom = new SetRandomPoint(this);
-            MoveToRandomPoint moveToRandom = new MoveToRandomPoint(this);
-            Sequence dodgeSequence = new Sequence(new List<Node> { setRandom, moveToRandom, cooldown }, new BaseDecorator(), "Dodge");
-            Asserter dodgeAsserter = new Asserter(dodgeSequence);
-        Sequence attackSequence = new Sequence(new List<Node> { shoot, dodgeAsserter}, new AttackPlayerDecorator(this), "Attack");
-        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence}, new ChasePlayerDecorator(this), "Chase");
+        /*Dodge sequence*/
+        SetRandomPoint setRandom = new SetRandomPoint(this);
+        MoveToRandomPoint moveToRandom = new MoveToRandomPoint(this);
+        Sequence dodgeSequence = new Sequence(new List<Node> { setRandom, moveToRandom, cooldown }, new BaseDecorator(), "Dodge");
+        Asserter dodgeAsserter = new Asserter(dodgeSequence);
+        Sequence attackSequence = new Sequence(new List<Node> { shoot, dodgeAsserter }, new AttackPlayerDecorator(this), "Attack");
+        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence }, new ChasePlayerDecorator(this), "Chase");
 
         /***Investigate Selector***/
         InvestigatePointNode investigatePoint = new InvestigatePointNode(this);
@@ -70,31 +67,29 @@ public class BT_UmbralMoth : BehaviourTree
             goHomeSequence,
             chaseAndAttackSequence,
             investigateSelector,
-            patrolSequence 
+            patrolSequence
             }, new BaseDecorator());
         topNode = topSequence;
         topNode.SetBlackBoard(blackBoard);
 
     }
 
-
-    public void SetBlackBoardValues(UmbralMoth moth)
+    public void SetBlackBoardValues(UmbralMoth fiend)
     {
         //VALUES
-        bb.Add("PatrolSpeed", new DataObject<float>(moth.PatrolSpeed));
-        bb.Add("AttackSpeed", new DataObject<float>(moth.AttackSpeed));
-        bb.Add("ChaseSpeed", new DataObject<float>(moth.ChaseSpeed));
-        bb.Add("SinkSpeed", new DataObject<float>(moth.SinkSpeed));
-        bb.Add("StunLength", new DataObject<float>(moth.StunLength));
-        bb.Add("DistanceToAttack", new DataObject<float>(moth.DistanceToAttack));
-        bb.Add("DistanceToChase", new DataObject<float>(moth.DistanceToChase));
-        bb.Add("DistanceToInvestigate", new DataObject<float>(moth.DistanceToInvestigate));
-        bb.Add("DistanceToPointForSuccess", new DataObject<float>(moth.DistanceToPointForSuccess));
-        bb.Add("ShotCooldown", new DataObject<float>(moth.ShotCooldown));
-        bb.Add("StartPoint", new DataObject<Vector3>(moth.transform.position));
-        bb.Add("StartHeight", new DataObject<float>(moth.Agent.baseOffset));
-        bb.Add("WaitTime", new DataObject<float>(moth.WaitTime));
-        bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(moth.MaxDistanceFromStartPoint));
+        bb.Add("PatrolSpeed", new DataObject<float>(fiend.PatrolSpeed));
+        bb.Add("AttackSpeed", new DataObject<float>(fiend.AttackSpeed));
+        bb.Add("ChaseSpeed", new DataObject<float>(fiend.ChaseSpeed));
+        bb.Add("StunLength", new DataObject<float>(fiend.StunLength));
+        bb.Add("DistanceToAttack", new DataObject<float>(fiend.DistanceToAttack));
+        bb.Add("DistanceToChase", new DataObject<float>(fiend.DistanceToChase));
+        bb.Add("DistanceToInvestigate", new DataObject<float>(fiend.DistanceToInvestigate));
+        bb.Add("DistanceToPointForSuccess", new DataObject<float>(fiend.DistanceToPointForSuccess));
+        bb.Add("AttackCooldown", new DataObject<float>(fiend.ShotCooldown)); ////////////////////////////////////////
+        bb.Add("StartPoint", new DataObject<Vector3>(fiend.transform.position));
+        bb.Add("StartHeight", new DataObject<float>(fiend.Agent.baseOffset)); ////////////////////////////////////////
+        bb.Add("WaitTime", new DataObject<float>(fiend.WaitTime));
+        bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(fiend.MaxDistanceFromStartPoint));
         bb.Add("InvestigatePoint", new DataObject<Vector3>());
         bb.Add("RandomPoint", new DataObject<Vector3>());
         bb.Add("TargetLastSeenPoint", new DataObject<Vector3>());
@@ -105,23 +100,21 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("RecentlySawTarget", new DataObject<bool>(false));
         bb.Add("Investigating", new DataObject<bool>(false));
 
-        bb.Add("LayersToIgnore", new DataObject<LayerMask>(moth.LayersToIgnore));
+        bb.Add("LayersToIgnore", new DataObject<LayerMask>(fiend.LayersToIgnore));
 
 
         //REFERENCES
-        bb.Add("Target", new DataObject<Transform>(moth.Target));
-        bb.Add("Anim", new DataObject<Animator>(moth.Anim));
-        bb.Add("Path", new DataObject<AIPath>(moth.Path));
-        bb.Add("ThisAI", new DataObject<UmbralMoth>(moth));
-        bb.Add("Agent", new DataObject<NavMeshAgent>(moth.Agent));
-        bb.Add("Health", new DataObject<HealthComponent>(moth.Health));
-        bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(moth.Ragdoll));
+        bb.Add("Target", new DataObject<Transform>(fiend.Target));
+        bb.Add("Anim", new DataObject<Animator>(fiend.Anim));
+        bb.Add("Path", new DataObject<AIPath>(fiend.Path));
+        bb.Add("ThisAI", new DataObject<UmbralMoth>(fiend));////////////////////////////////////////
+        bb.Add("Agent", new DataObject<NavMeshAgent>(fiend.Agent));
+        bb.Add("Health", new DataObject<HealthComponent>(fiend.Health));
+        bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(fiend.Ragdoll));
     }
-
 
     public override void SetBlackBoard(BlackBoard bb)
     {
-        blackBoard = bb;
+        throw new System.NotImplementedException();
     }
-
 }

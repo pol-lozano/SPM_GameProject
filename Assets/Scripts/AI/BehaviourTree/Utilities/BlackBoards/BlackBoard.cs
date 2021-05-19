@@ -6,21 +6,43 @@ using UnityEngine.AI;
 public class BlackBoard : MonoBehaviour
 {
     /****************Values**************/
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float patrolSpeed;
+    [SerializeField] private float attackSpeed;
+    [SerializeField] private float chaseSpeed;
     [SerializeField] private float stunSpeed;
     [SerializeField] private float stunLength;
     [SerializeField] private float distanceToAttack;
+    [SerializeField] private float distanceToChase;
+    [SerializeField] private float distanceToInvestigate;
     [SerializeField] private float distanceToPointForSuccess;
+    [SerializeField] private float maxDistanceFromStartPoint;
     [SerializeField] private float shotCooldown;
+    [SerializeField] private float waitTime;
+    [SerializeField] private LayerMask layersToIgnore;
 
-    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public float PatrolSpeed { get => patrolSpeed; }
+    public float AttackSpeed { get => attackSpeed; }
+    public float ChaseSpeed { get => chaseSpeed; }
     public float StartHeight { get; set; }
     public float StunSpeed { get => stunSpeed; }
     public float StunLength { get => stunLength; }
     public float DistanceToAttack { get => distanceToAttack; }
+    public float DistanceToChase { get => distanceToChase; }
+    public float DistanceToInvestigate { get => distanceToInvestigate; }
     public float DistanceToPointForSuccess { get => distanceToPointForSuccess; }
+    public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
     public float ShotCooldown { get => shotCooldown; }
-    public Vector3 StartPosition { get; set; }
+    public float WaitTime { get => waitTime; }
+    public bool IsCoolingDown { get; set; }
+    public bool MovingToPoint { get; set; }
+    public bool RecentlyFired { get; set; }
+    public bool RecentlySawTarget { get; set; }
+    public bool Investigating { get; set; }
+    public Vector3 StartPoint { get; set; }
+    public Vector3 InvestigatePoint { get; set; }
+    public Vector3 RandomPoint { get; set; }
+    public Vector3 TargetLastSeenPoint { get; set; }
+    public LayerMask LayersToIgnore { get => layersToIgnore; }
     /****************Values**************/
 
 
@@ -31,11 +53,11 @@ public class BlackBoard : MonoBehaviour
     [SerializeField] private AIPath path;
     [SerializeField] private UmbralMoth thisAI;
     [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private HealthComponent enemyHealth;
+    [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
 
     public Transform Target { get => target; }
-    public HealthComponent EnemyHealth { get => enemyHealth; }
+    public HealthComponent Health { get => health; }
     public List<Rigidbody> Ragdoll { get => ragdoll; }
     public Animator Anim { get => anim; }
     public NavMeshAgent Agent { get => agent; }
@@ -56,7 +78,7 @@ public class BlackBoard : MonoBehaviour
         this.path = path;
         this.thisAI = thisAI;
         this.agent = agent;
-        this.enemyHealth = enemyHealth;
+        this.health = enemyHealth;
         this.ragdoll = ragdoll;
     }
 
