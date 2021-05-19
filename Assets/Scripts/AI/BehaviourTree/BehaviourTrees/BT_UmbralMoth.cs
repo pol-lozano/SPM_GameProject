@@ -18,10 +18,10 @@ public class BT_UmbralMoth : BehaviourTree
 
         /*******Stun Sequence********/
         SinkNode sink = new SinkNode(blackBoard, this);
-        WaitNode stunWait = new WaitNode(GetBlackBoardValue<float>("StunLenght").GetVariable());
-        //RISE NODE
+        WaitNode stunWait = new WaitNode(GetBlackBoardValue<float>("StunLength").GetVariable());
+        RiseNode rise = new RiseNode(this);
         IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard, this);
-        Sequence stunSequence = new Sequence(new List<Node> { sink, stunWait }, stunDec, "Stun");
+        Sequence stunSequence = new Sequence(new List<Node> { sink, stunWait, rise }, stunDec, "Stun");
 
 
         /****Return Home Sequence****/

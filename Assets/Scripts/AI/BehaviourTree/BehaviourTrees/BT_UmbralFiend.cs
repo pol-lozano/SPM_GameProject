@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class BT_UmbralFiend : BehaviourTree
 {
+
     public override void ConstructBehaviourTree()
     {
 
@@ -74,7 +75,7 @@ public class BT_UmbralFiend : BehaviourTree
 
     }
 
-    public void SetBlackBoardValues(UmbralMoth fiend)
+    public void SetBlackBoardValues(UmbralFiend fiend)
     {
         //VALUES
         bb.Add("PatrolSpeed", new DataObject<float>(fiend.PatrolSpeed));
@@ -85,9 +86,8 @@ public class BT_UmbralFiend : BehaviourTree
         bb.Add("DistanceToChase", new DataObject<float>(fiend.DistanceToChase));
         bb.Add("DistanceToInvestigate", new DataObject<float>(fiend.DistanceToInvestigate));
         bb.Add("DistanceToPointForSuccess", new DataObject<float>(fiend.DistanceToPointForSuccess));
-        bb.Add("AttackCooldown", new DataObject<float>(fiend.ShotCooldown)); ////////////////////////////////////////
+        bb.Add("AttackCooldown", new DataObject<float>(fiend.AttackCooldown));
         bb.Add("StartPoint", new DataObject<Vector3>(fiend.transform.position));
-        bb.Add("StartHeight", new DataObject<float>(fiend.Agent.baseOffset)); ////////////////////////////////////////
         bb.Add("WaitTime", new DataObject<float>(fiend.WaitTime));
         bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(fiend.MaxDistanceFromStartPoint));
         bb.Add("InvestigatePoint", new DataObject<Vector3>());
@@ -99,6 +99,7 @@ public class BT_UmbralFiend : BehaviourTree
         bb.Add("RecentlyFired", new DataObject<bool>(false));
         bb.Add("RecentlySawTarget", new DataObject<bool>(false));
         bb.Add("Investigating", new DataObject<bool>(false));
+        bb.Add("isStunned", new DataObject<bool>(false));
 
         bb.Add("LayersToIgnore", new DataObject<LayerMask>(fiend.LayersToIgnore));
 
@@ -107,7 +108,7 @@ public class BT_UmbralFiend : BehaviourTree
         bb.Add("Target", new DataObject<Transform>(fiend.Target));
         bb.Add("Anim", new DataObject<Animator>(fiend.Anim));
         bb.Add("Path", new DataObject<AIPath>(fiend.Path));
-        bb.Add("ThisAI", new DataObject<UmbralMoth>(fiend));////////////////////////////////////////
+        bb.Add("ThisAI", new DataObject<UmbralFiend>(fiend));
         bb.Add("Agent", new DataObject<NavMeshAgent>(fiend.Agent));
         bb.Add("Health", new DataObject<HealthComponent>(fiend.Health));
         bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(fiend.Ragdoll));

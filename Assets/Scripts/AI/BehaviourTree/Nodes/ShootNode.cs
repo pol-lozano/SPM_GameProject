@@ -29,7 +29,7 @@ public class ShootNode : Node
             proj.transform.rotation = thisAI.transform.rotation;
             proj.SetActive(true);
             proj.SetForce(target.position - proj.transform.position);
-            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
+            //tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
             tree.GetBlackBoardValue<bool>("RecentlyFired").SetVariable(true);
         }
 

@@ -17,6 +17,7 @@ public class CooldownNode : Node
     {
         if(timer > 0)
         {
+            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
             timer -= Time.deltaTime;
             //Debug.Log(timer);
             return NODE_STATE.RUNNING;

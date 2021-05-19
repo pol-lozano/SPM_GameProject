@@ -15,5 +15,8 @@ public abstract class BehaviourTree
 
     public BlackBoard GetBlackBoard() { return blackBoard; }
 
-    public DataObject<T> GetBlackBoardValue<T>(string s) { return (DataObject<T>)bb[s]; }
+    public DataObject<T> GetBlackBoardValue<T>(string s) 
+    { 
+        return (DataObject<T>)bb[s]; 
+    }
 }
