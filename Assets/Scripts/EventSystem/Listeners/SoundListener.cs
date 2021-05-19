@@ -24,6 +24,6 @@ public class SoundListener : MonoBehaviour
     {
         source.pitch = Random.Range(minPitch, maxPitch);
         source.PlayOneShot(clip);
-        Debug.Log("PlayedAudioClip" + clip.name);
+        Debug.Log("PlayedAudioClip" + clip.name + "Hej angelina");
     }
 }
