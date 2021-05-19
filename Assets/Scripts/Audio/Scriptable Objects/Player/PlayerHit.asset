@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
   m_Name: PlayerHit
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 1d208f57e2d3ee34799cc9d2ccc094a0, type: 3}
+  - {fileID: 8300000, guid: 0967d93e1cc91994ca023f54034b8e5e, type: 3}
+  - {fileID: 8300000, guid: 7763d55c3e1887b42b73f73b1eaf6f77, type: 3}

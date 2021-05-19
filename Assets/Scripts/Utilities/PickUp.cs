@@ -8,6 +8,8 @@ public class PickUp : MonoBehaviour
 
     [SerializeField] private GameObject objectToPickup;
     [SerializeField] private bool isSword;
+    [SerializeField] private AudioData playerPickUp;
+
     public Animator anim;
 
     private void OnTriggerEnter(Collider other)
@@ -16,6 +18,8 @@ public class PickUp : MonoBehaviour
           PlayerCombat.Player.PickUpObject(isSword);
           Debug.Log("Picked up!");
           anim.SetBool("Activated", true);
+          EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerPickUp));
+
     }
 }
 

@@ -1586,11 +1586,20 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5645015817842682064, guid: cc9cfc919dc25e4428d867ae63aa7ff9, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1622121245}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9cfc919dc25e4428d867ae63aa7ff9, type: 3}
 --- !u!1 &1542658358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2550849673798653226, guid: cc9cfc919dc25e4428d867ae63aa7ff9, type: 3}
+  m_PrefabInstance: {fileID: 1542658357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1622121245 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2801253941937046452, guid: cc9cfc919dc25e4428d867ae63aa7ff9, type: 3}
   m_PrefabInstance: {fileID: 1542658357}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1629741674 stripped
@@ -2117,7 +2126,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2560,10 +2569,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManagement
       objectReference: {fileID: 0}
+    - target: {fileID: 2390210145833446796, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: playerPickUp
+      value: 
+      objectReference: {fileID: 11400000, guid: 4443154e7e383554a9445e948d9965b0, type: 2}
     - target: {fileID: 2390210145833446799, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 2390210146072222130, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: isSword
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390210146072222130, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: playerPickUp
+      value: 
+      objectReference: {fileID: 11400000, guid: 4443154e7e383554a9445e948d9965b0, type: 2}
     - target: {fileID: 2390210146072222140, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.056
@@ -2998,6 +3019,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1439095076}
+    - target: {fileID: 1952091810191860618, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: hitAudio
+      value: 
+      objectReference: {fileID: 11400000, guid: 26a85ca8745b51548a50f577faf4ab4e, type: 2}
     - target: {fileID: 2109309907315314129, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.91691476

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: DodgeState
   m_EditorClassIdentifier: 
   dodgeForce: 500
+  playerDodgeSound: {fileID: 11400000, guid: 255cac5a153d038438c0438c2545a349, type: 2}

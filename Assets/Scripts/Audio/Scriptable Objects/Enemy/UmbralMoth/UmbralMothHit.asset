@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
   m_Name: UmbralMothHit
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 73f938638097f8042ad7842aa5b04ac5, type: 3}
+  - {fileID: 8300000, guid: 6b2e76abd1e172b4a8ccd127196e21b5, type: 3}
+  - {fileID: 8300000, guid: 637965149d0d0d44a83b067475ee90de, type: 3}

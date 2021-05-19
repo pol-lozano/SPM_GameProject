@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
   m_Name: PlayerPickups
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 486346013d39a4340aca18498b727807, type: 3}
+  - {fileID: 8300000, guid: 8432a435d9068f24e8508daf869e3ca1, type: 3}
+  - {fileID: 8300000, guid: 637965149d0d0d44a83b067475ee90de, type: 3}

@@ -5,14 +5,20 @@ using UnityEngine;
 public class PlayerDodgeState : PlayerState
 {
     [SerializeField] private float dodgeForce;
+    [SerializeField] private AudioData playerDodgeSound;
+
+
     private float timeSinceLastDodge = 0;
 
     public override void Enter() => Dodge();
 
     private void Dodge()
     {
-            Player.DodgeInput = false;
-            Player.Animator.SetTrigger(dodgeTriggerHash);
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDodgeSound));
+        Player.DodgeInput = false;
+        Player.Animator.SetTrigger(dodgeTriggerHash);
+        Debug.Log("Dodge soundevent has been sent");
+
     }
 
     /// <summary>
