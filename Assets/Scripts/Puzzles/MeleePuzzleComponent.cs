@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleePuzzleComponent : HitComponent
-{
+{   
     [SerializeField] private int puzzleID;
     private bool isUnlocked;
 
