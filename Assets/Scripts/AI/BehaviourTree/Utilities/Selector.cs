@@ -9,6 +9,13 @@ public class Selector : Node
     protected List<Node> nodes = new List<Node>();
     private Decorator decorator = null;
 
+    /*
+    public Selector(List<Node> list)
+    {
+        nodes = list;
+        decorator = null;
+    }
+    */
     public Selector(List<Node> list, Decorator d)
     {
         nodes = list;

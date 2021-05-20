@@ -8,20 +8,22 @@ public class BT_UmbralMoth : BehaviourTree
 
     public override void ConstructBehaviourTree()
     {
-
         /*******Death Sequence*******/
-        DieNode die = new DieNode(blackBoard, this);
-        IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard, this);
+        DieNode die = new DieNode(this);
+        IsDeadDecorator deadDec = new IsDeadDecorator(this);
         Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, "die");
 
 
 
         /*******Stun Sequence********/
-        SinkNode sink = new SinkNode(blackBoard, this);
-        WaitNode stunWait = new WaitNode(GetBlackBoardValue<float>("StunLength").GetVariable());
+        SinkNode sink = new SinkNode(this);
+        CooldownNode stunWait = new CooldownNode(this, BlackBoard.StunLength);
         RiseNode rise = new RiseNode(this);
-        IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard, this);
-        Sequence stunSequence = new Sequence(new List<Node> { sink, stunWait, rise }, stunDec, "Stun");
+
+        Sequence waitSequence = new Sequence(new List<Node> { stunWait }, new IsRisingDecorator(this), "WaitStun");
+        Asserter waitInvert = new Asserter(waitSequence);
+        IsStunnedDecorator stunDec = new IsStunnedDecorator(this);
+        Sequence stunSequence = new Sequence(new List<Node> { sink, waitInvert, rise }, stunDec, "Stun");
 
 
         /****Return Home Sequence****/
@@ -33,10 +35,10 @@ public class BT_UmbralMoth : BehaviourTree
         /***Chase n Attack Sequence**/
         ChaseNode chase = new ChaseNode(this);
         ShootNode shoot = new ShootNode(this);
-        CooldownNode cooldown = new CooldownNode(this, GetBlackBoardValue<float>("ShotCooldown").GetVariable());
             /*Dodge sequence*/
             SetRandomPoint setRandom = new SetRandomPoint(this);
             MoveToRandomPoint moveToRandom = new MoveToRandomPoint(this);
+            CooldownNode cooldown = new CooldownNode(this, BlackBoard.AttackCooldown);
             Sequence dodgeSequence = new Sequence(new List<Node> { setRandom, moveToRandom, cooldown }, new BaseDecorator(), "Dodge");
             Asserter dodgeAsserter = new Asserter(dodgeSequence);
         Sequence attackSequence = new Sequence(new List<Node> { shoot, dodgeAsserter}, new AttackPlayerDecorator(this), "Attack");
@@ -44,23 +46,21 @@ public class BT_UmbralMoth : BehaviourTree
 
         /***Investigate Selector***/
         InvestigatePointNode investigatePoint = new InvestigatePointNode(this);
-        WaitNode investigateWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        WaitNode investigateWait = new WaitNode(BlackBoard.WaitTime);
         GoHomeNode returnInvest = new GoHomeNode(this);
         Sequence heardSomethingSequence = new Sequence(new List<Node> { investigatePoint, investigateWait, returnInvest }, new InvestigateDecorator(this), "Investigate");
 
         MoveToTargetLastSeenPoint moveToTargetLastSeen = new MoveToTargetLastSeenPoint(this);
-        WaitNode lastSeenWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        WaitNode lastSeenWait = new WaitNode(BlackBoard.WaitTime);
         Sequence targetLastSeenSequence = new Sequence(new List<Node> { moveToTargetLastSeen, lastSeenWait }, new SeenTargetDecorator(this), "To Target Last Seen");
 
         Selector investigateSelector = new Selector(new List<Node> { heardSomethingSequence, targetLastSeenSequence }, new BaseDecorator());
 
-
         /*******Patrol Sequence******/
         MoveToPatrolPoint moveToPatrolPoint = new MoveToPatrolPoint(this);
-        WaitNode patrolWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        WaitNode patrolWait = new WaitNode(BlackBoard.WaitTime);
         SetNextPatrolPoint setNextPatrolPoint = new SetNextPatrolPoint(this);
         Sequence patrolSequence = new Sequence(new List<Node> { moveToPatrolPoint, patrolWait, setNextPatrolPoint }, new CanPatrolDecorator(this), "Patrol");
-
 
         /********Top Sequence********/
         Selector topSequence = new Selector(new List<Node> { 
@@ -73,13 +73,13 @@ public class BT_UmbralMoth : BehaviourTree
             patrolSequence 
             }, new BaseDecorator());
         topNode = topSequence;
-        topNode.SetBlackBoard(blackBoard);
-
+        Debug.Log("tree DONE");
     }
 
 
     public void SetBlackBoardValues(UmbralMoth moth)
     {
+        /*
         //VALUES
         bb.Add("PatrolSpeed", new DataObject<float>(moth.PatrolSpeed));
         bb.Add("AttackSpeed", new DataObject<float>(moth.AttackSpeed));
@@ -104,6 +104,7 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("RecentlyFired", new DataObject<bool>(false));
         bb.Add("RecentlySawTarget", new DataObject<bool>(false));
         bb.Add("Investigating", new DataObject<bool>(false));
+        bb.Add("Rising", new DataObject<bool>(false));
 
         bb.Add("LayersToIgnore", new DataObject<LayerMask>(moth.LayersToIgnore));
 
@@ -116,6 +117,7 @@ public class BT_UmbralMoth : BehaviourTree
         bb.Add("Agent", new DataObject<NavMeshAgent>(moth.Agent));
         bb.Add("Health", new DataObject<HealthComponent>(moth.Health));
         bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(moth.Ragdoll));
+        */
     }
 
 

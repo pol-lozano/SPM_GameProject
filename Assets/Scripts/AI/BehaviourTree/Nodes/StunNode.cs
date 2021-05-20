@@ -8,9 +8,9 @@ public class StunNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        if(tree.GetBlackBoardValue<bool>("isCoolingDown").GetVariable() == false)
+        if(BlackBoard.IsCoolingDown == false)
         {
-            tree.GetBlackBoardValue<Animator>("Anim").GetVariable().SetBool("Stunned", true);
+            BlackBoard.Anim.SetBool("Stunned", true);
         }
         return NODE_STATE.SUCCESS;
     }

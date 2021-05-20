@@ -36,7 +36,9 @@ public class UmbralMoth : MonoBehaviour
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
 
-    private BT_UmbralMoth behaviourTree;
+
+    private GameObject treePrefab;
+    //private BT_UmbralMoth behaviourTree;
 
     #region GETTERS
     /*GETTERS*/
@@ -62,24 +64,33 @@ public class UmbralMoth : MonoBehaviour
     public List<Rigidbody> Ragdoll { get => ragdoll; }
     #endregion
 
+    BT_UmbralMoth bt;
 
-
-    void Start()
+    void Awake()
     {
+        //NEW
+
+        treePrefab = ObjectPooler.instance.SpawnFromPool("MothTree");
+        bt = treePrefab.GetComponent<BT_UmbralMoth>();
+        BlackBoard bb = treePrefab.GetComponent<BlackBoard>();
+        bb.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
+
+        
+        
         agent.SetDestination(path.Next().position);
-        behaviourTree = new BT_UmbralMoth();
-        SetBlackBoardValues();
-        behaviourTree.ConstructBehaviourTree();
-    }
+        
+        //OLD
+        //behaviourTree = new BT_UmbralMoth();
+        //SetBlackBoardValues();
+        //behaviourTree.ConstructBehaviourTree();
 
-    private void SetBlackBoardValues()
-    {
-        behaviourTree.SetBlackBoardValues(this);
+        //BlackBoard bb = new BlackBoard(Target, Anim, Path, transform, agent, Health, Ragdoll);
+        //behaviourTree.SetBlackBoard(bb);
     }
 
     void Update()
     {
         Debug.DrawLine(transform.position, agent.destination, Color.magenta);
-        behaviourTree.RunBehaviourTree();
+        bt.RunBehaviourTree();
     }
 }

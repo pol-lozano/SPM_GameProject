@@ -4,21 +4,19 @@ using UnityEngine.AI;
 
 public class ChaseNode : Node
 {
-    private NavMeshAgent agent;
 
     public ChaseNode(BehaviourTree tree) 
     { 
         this.tree = tree;
-        agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
     }
 
     public override NODE_STATE Evaluate()
     {
-        if(tree.GetBlackBoardValue<bool>("MovingToPoint").GetVariable() == false)
+        if(BlackBoard.MovingToPoint == false)
         {
             Debug.Log("CHASE");
-            agent.SetDestination(tree.GetBlackBoardValue<Transform>("Target").GetVariable().position);
-            agent.speed = tree.GetBlackBoardValue<float>("ChaseSpeed").GetVariable();
+            BlackBoard.Agent.SetDestination(BlackBoard.Target.position);
+            BlackBoard.Agent.speed = BlackBoard.ChaseSpeed;
         }
         return NODE_STATE.SUCCESS;
     }

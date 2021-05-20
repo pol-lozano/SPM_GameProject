@@ -15,7 +15,6 @@ public class WaitNode : Node
     public override NODE_STATE Evaluate()
     {
 
-
         if(timer > 0)
         {
             timer -= Time.deltaTime;
@@ -24,7 +23,7 @@ public class WaitNode : Node
         else
         {
             timer = timerLength;
-            //Debug.Log("WAIT DONE");
+            Debug.Log("WAIT DONE");
             return NODE_STATE.SUCCESS;
         }
     }

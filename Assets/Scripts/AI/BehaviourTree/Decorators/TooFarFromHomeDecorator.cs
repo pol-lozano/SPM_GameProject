@@ -8,9 +8,6 @@ public class TooFarFromHomeDecorator : Decorator
     public TooFarFromHomeDecorator(BehaviourTree tree) { this.tree = tree; }
     public override bool Condition()
     {
-        return Vector3.Distance(
-            tree.GetBlackBoardValue<Vector3>("StartPoint").GetVariable(),
-            tree.GetBlackBoardValue<UmbralMoth>("ThisAI").GetVariable().transform.position)
-            > tree.GetBlackBoardValue<float>("MaxDistanceFromStartPoint").GetVariable();
+        return Vector3.Distance(BlackBoard.StartPoint, BlackBoard.ThisAI.position) > BlackBoard.MaxDistanceFromStartPoint;
     }
 }

@@ -10,16 +10,18 @@ public class BT_UmbralFiend : BehaviourTree
     {
 
         /*******Death Sequence*******/
-        DieNode die = new DieNode(blackBoard, this);
-        IsDeadDecorator deadDec = new IsDeadDecorator(blackBoard, this);
+        DieNode die = new DieNode(this);
+        IsDeadDecorator deadDec = new IsDeadDecorator(this);
         Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, "die");
 
 
 
         /*******Stun Sequence********/
-        SinkNode sink = new SinkNode(blackBoard, this);
-        IsStunnedDecorator stunDec = new IsStunnedDecorator(blackBoard, this);
-        Sequence stunSequence = new Sequence(new List<Node> { sink }, stunDec, "Stun");
+        StunNode stun = new StunNode(this);
+        WaitNode stunWait = new WaitNode(BlackBoard.StunLength);
+        ExitStunNode exitStun = new ExitStunNode(this);
+        IsStunnedDecorator stunDec = new IsStunnedDecorator(this);
+        Sequence stunSequence = new Sequence(new List<Node> { stun, stunWait, exitStun }, stunDec, "Stun");
 
 
         /****Return Home Sequence****/
@@ -30,24 +32,20 @@ public class BT_UmbralFiend : BehaviourTree
 
         /***Chase n Attack Sequence**/
         ChaseNode chase = new ChaseNode(this);
-        ShootNode shoot = new ShootNode(this);
-        CooldownNode cooldown = new CooldownNode(this, GetBlackBoardValue<float>("ShotCooldown").GetVariable());
-        /*Dodge sequence*/
-        SetRandomPoint setRandom = new SetRandomPoint(this);
-        MoveToRandomPoint moveToRandom = new MoveToRandomPoint(this);
-        Sequence dodgeSequence = new Sequence(new List<Node> { setRandom, moveToRandom, cooldown }, new BaseDecorator(), "Dodge");
-        Asserter dodgeAsserter = new Asserter(dodgeSequence);
-        Sequence attackSequence = new Sequence(new List<Node> { shoot, dodgeAsserter }, new AttackPlayerDecorator(this), "Attack");
+        
+        CooldownNode cooldown = new CooldownNode(this, BlackBoard.AttackCooldown);
+        
+        Sequence attackSequence = new Sequence(new List<Node> { }, new AttackPlayerDecorator(this), "Attack");
         Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence }, new ChasePlayerDecorator(this), "Chase");
 
         /***Investigate Selector***/
         InvestigatePointNode investigatePoint = new InvestigatePointNode(this);
-        WaitNode investigateWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        WaitNode investigateWait = new WaitNode(BlackBoard.WaitTime);
         GoHomeNode returnInvest = new GoHomeNode(this);
         Sequence heardSomethingSequence = new Sequence(new List<Node> { investigatePoint, investigateWait, returnInvest }, new InvestigateDecorator(this), "Investigate");
 
         MoveToTargetLastSeenPoint moveToTargetLastSeen = new MoveToTargetLastSeenPoint(this);
-        WaitNode lastSeenWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        WaitNode lastSeenWait = new WaitNode(BlackBoard.WaitTime);
         Sequence targetLastSeenSequence = new Sequence(new List<Node> { moveToTargetLastSeen, lastSeenWait }, new SeenTargetDecorator(this), "To Target Last Seen");
 
         Selector investigateSelector = new Selector(new List<Node> { heardSomethingSequence, targetLastSeenSequence }, new BaseDecorator());
@@ -55,7 +53,7 @@ public class BT_UmbralFiend : BehaviourTree
 
         /*******Patrol Sequence******/
         MoveToPatrolPoint moveToPatrolPoint = new MoveToPatrolPoint(this);
-        WaitNode patrolWait = new WaitNode(GetBlackBoardValue<float>("WaitTime").GetVariable());
+        WaitNode patrolWait = new WaitNode(BlackBoard.WaitTime);
         SetNextPatrolPoint setNextPatrolPoint = new SetNextPatrolPoint(this);
         Sequence patrolSequence = new Sequence(new List<Node> { moveToPatrolPoint, patrolWait, setNextPatrolPoint }, new CanPatrolDecorator(this), "Patrol");
 
@@ -71,7 +69,6 @@ public class BT_UmbralFiend : BehaviourTree
             patrolSequence
             }, new BaseDecorator());
         topNode = topSequence;
-        topNode.SetBlackBoard(blackBoard);
 
     }
 
@@ -99,7 +96,6 @@ public class BT_UmbralFiend : BehaviourTree
         bb.Add("RecentlyFired", new DataObject<bool>(false));
         bb.Add("RecentlySawTarget", new DataObject<bool>(false));
         bb.Add("Investigating", new DataObject<bool>(false));
-        bb.Add("isStunned", new DataObject<bool>(false));
 
         bb.Add("LayersToIgnore", new DataObject<LayerMask>(fiend.LayersToIgnore));
 

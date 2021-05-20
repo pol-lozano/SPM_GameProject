@@ -5,21 +5,20 @@ using UnityEngine.AI;
 
 public class GoHomeNode : Node
 {
-    private float returnSpeed = 3;
-    public GoHomeNode(BehaviourTree tree) { this.tree = tree; }
+    float returnSpeed = 3;
+    public GoHomeNode(BehaviourTree tree) 
+    { 
+        this.tree = tree;
+    }
 
     public override NODE_STATE Evaluate()
     {
-        
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
-        agent.SetDestination(tree.GetBlackBoardValue<Vector3>("StartPoint").GetVariable());
-        agent.speed = returnSpeed;
+        BlackBoard.Agent.SetDestination(BlackBoard.StartPoint);
+        BlackBoard.Agent.speed = returnSpeed;
+        BlackBoard.RecentlySawTarget = false;
 
         //Success if Distance between StartPoint and ThisAI is smallen than the accepted distance to point for Success
-        if(Vector3.Distance(
-            tree.GetBlackBoardValue<Vector3>("StartPoint").GetVariable(),
-            tree.GetBlackBoardValue<UmbralMoth>("ThisAI").GetVariable().transform.position)
-            < tree.GetBlackBoardValue<float>("DistanceToPointForSuccess").GetVariable())
+        if(Vector3.Distance(BlackBoard.StartPoint, BlackBoard.ThisAI.position) < BlackBoard.DistanceToPointForSuccess)
         {
             return NODE_STATE.SUCCESS;
         }

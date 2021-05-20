@@ -10,7 +10,6 @@ public abstract class Node
 
     protected NODE_STATUS status = NODE_STATUS.START;
     protected NODE_STATE nodeState;
-    protected BlackBoard blackboard;
     protected BehaviourTree tree;
 
     public NODE_STATE NodeState { get => nodeState; }
@@ -19,7 +18,8 @@ public abstract class Node
     public void OnInitialize() { }
     public void OnTerminate() { }
     public abstract NODE_STATE Evaluate();
-    public void SetBlackBoard(BlackBoard bb) { blackboard = bb; }
+
+    protected BlackBoard BlackBoard { get => tree.BlackBoard; }
 }
 
 public enum NODE_STATE

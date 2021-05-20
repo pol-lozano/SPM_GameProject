@@ -12,16 +12,20 @@ public class RiseNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
-        if (agent.baseOffset < tree.GetBlackBoardValue<float>("StartHeight").GetVariable())
+        if (BlackBoard.Agent.baseOffset < BlackBoard.StartHeight && BlackBoard.IsCoolingDown == false)
         {
-            agent.baseOffset += Time.deltaTime * tree.GetBlackBoardValue<float>("SinkSpeed").GetVariable();
+            BlackBoard.Rising = true;
+            BlackBoard.Agent.baseOffset += Time.deltaTime * BlackBoard.StunSpeed;
             return NODE_STATE.RUNNING;
         }
-        else
+        else if (BlackBoard.IsCoolingDown == false)
         {
-            agent.baseOffset = tree.GetBlackBoardValue<float>("StartHeight").GetVariable();
+            BlackBoard.Rising = false;
+            BlackBoard.Health.IsStunned = false;
+            BlackBoard.Agent.baseOffset = BlackBoard.StartHeight;
             return NODE_STATE.SUCCESS;
         }
+        else
+            return NODE_STATE.FAILURE;
     }
 }

@@ -3207,7 +3207,6 @@ GameObject:
   - component: {fileID: 2364674876880064153}
   - component: {fileID: 8315867624838024223}
   - component: {fileID: 5853692981001490968}
-  - component: {fileID: 2781723789301839563}
   m_Layer: 13
   m_Name: UmbralFiend
   m_TagString: Untagged
@@ -3309,7 +3308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeData: {fileID: 0}
   maxHealth: 100
-  currentHealth: 1
+  currentHealth: 100
   invulnerabilityTime: 1
   damageLayer:
     serializedVersion: 2
@@ -3350,22 +3349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 2269204160888225942}
---- !u!208 &2781723789301839563
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8315867624838024222}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.32, y: 1, z: 0.32}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.91, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &8365259731400017855
 GameObject:
   m_ObjectHideFlags: 0

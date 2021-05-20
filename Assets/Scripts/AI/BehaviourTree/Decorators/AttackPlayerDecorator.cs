@@ -14,16 +14,14 @@ public class AttackPlayerDecorator : Decorator
 
     public override bool Condition()
     {
-        if (Vector3.Distance(
-            tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable().transform.position, 
-            tree.GetBlackBoardValue<Transform>("Target").GetVariable().position) 
-            < tree.GetBlackBoardValue<float>("DistanceToAttack").GetVariable())
+        if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) 
+            < BlackBoard.DistanceToAttack)
             return true;
         else
         {
-            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
-            tree.GetBlackBoardValue<bool>("MovingToPoint").SetVariable(false);
-            tree.GetBlackBoardValue<bool>("RecentlyFired").SetVariable(false);
+            //tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
+            BlackBoard.MovingToPoint = false;
+            BlackBoard.RecentlyFired = false;
             return false;
         }
         

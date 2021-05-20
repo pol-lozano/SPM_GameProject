@@ -6,31 +6,26 @@ using UnityEngine.AI;
 public class ShootNode : Node
 {
 
-    UmbralMoth thisAI;
-    Transform target;
-
     public ShootNode(BehaviourTree tree) 
     { 
         this.tree = tree;
-        thisAI = tree.GetBlackBoardValue<UmbralMoth>("ThisAI").GetVariable();
-        target = tree.GetBlackBoardValue<Transform>("Target").GetVariable();
     }
 
 
     public override NODE_STATE Evaluate()
     {
-        if (tree.GetBlackBoardValue<bool>("isCoolingDown").GetVariable() == false)
+        if (BlackBoard.IsCoolingDown == false)
         {
             //Debug.Log("Shoot");
-            tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable().speed = tree.GetBlackBoardValue<float>("AttackSpeed").GetVariable();
+            BlackBoard.Agent.speed = BlackBoard.AttackSpeed;
             GameObject g = ObjectPooler.instance.SpawnFromPool("shadowball");
             Projectile proj = g.GetComponent<Projectile>();
-            proj.transform.position = thisAI.transform.position + thisAI.transform.forward;
-            proj.transform.rotation = thisAI.transform.rotation;
+            proj.transform.position = BlackBoard.ThisAI.position + BlackBoard.ThisAI.forward;
+            proj.transform.rotation = BlackBoard.ThisAI.rotation;
             proj.SetActive(true);
-            proj.SetForce(target.position - proj.transform.position);
+            proj.SetForce(BlackBoard.Target.position - proj.transform.position);
             //tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
-            tree.GetBlackBoardValue<bool>("RecentlyFired").SetVariable(true);
+            BlackBoard.RecentlyFired = true;
         }
 
         

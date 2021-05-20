@@ -5,7 +5,7 @@ public class CooldownNode : Node
 {
     private float timerLength;
     private float timer;
-
+  
     public CooldownNode(BehaviourTree tree, float t)
     {
         this.tree = tree;
@@ -17,17 +17,17 @@ public class CooldownNode : Node
     {
         if(timer > 0)
         {
-            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
+            BlackBoard.IsCoolingDown = true;
             timer -= Time.deltaTime;
             //Debug.Log(timer);
             return NODE_STATE.RUNNING;
         }
         else
         {
-            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
-            tree.GetBlackBoardValue<bool>("MovingToPoint").SetVariable(false);
+            BlackBoard.IsCoolingDown = false;
+            BlackBoard.MovingToPoint = false;
             timer = timerLength;
-            Debug.Log("Cooldown DONE");
+            //Debug.Log("Cooldown DONE");
             return NODE_STATE.SUCCESS;
         }
     }

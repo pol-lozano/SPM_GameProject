@@ -9,6 +9,6 @@ public class SeenTargetDecorator : Decorator
 
     public override bool Condition()
     {
-        return tree.GetBlackBoardValue<bool>("RecentlySawTarget").GetVariable();
+        return BlackBoard.RecentlySawTarget;
     }
 }

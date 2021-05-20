@@ -16,10 +16,11 @@ public class BlackBoard : MonoBehaviour
     [SerializeField] private float distanceToInvestigate;
     [SerializeField] private float distanceToPointForSuccess;
     [SerializeField] private float maxDistanceFromStartPoint;
-    [SerializeField] private float shotCooldown;
+    [SerializeField] private float attackCooldown;
     [SerializeField] private float waitTime;
     [SerializeField] private LayerMask layersToIgnore;
 
+    #region GETTERS
     public float PatrolSpeed { get => patrolSpeed; }
     public float AttackSpeed { get => attackSpeed; }
     public float ChaseSpeed { get => chaseSpeed; }
@@ -31,18 +32,24 @@ public class BlackBoard : MonoBehaviour
     public float DistanceToInvestigate { get => distanceToInvestigate; }
     public float DistanceToPointForSuccess { get => distanceToPointForSuccess; }
     public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
-    public float ShotCooldown { get => shotCooldown; }
+    public float AttackCooldown { get => attackCooldown; }
     public float WaitTime { get => waitTime; }
+    #endregion
+
+    #region PROPERTIES
     public bool IsCoolingDown { get; set; }
     public bool MovingToPoint { get; set; }
     public bool RecentlyFired { get; set; }
     public bool RecentlySawTarget { get; set; }
     public bool Investigating { get; set; }
+    public bool Rising { get; set; }
     public Vector3 StartPoint { get; set; }
     public Vector3 InvestigatePoint { get; set; }
     public Vector3 RandomPoint { get; set; }
     public Vector3 TargetLastSeenPoint { get; set; }
     public LayerMask LayersToIgnore { get => layersToIgnore; }
+
+    #endregion
     /****************Values**************/
 
 
@@ -51,35 +58,43 @@ public class BlackBoard : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
-    [SerializeField] private UmbralMoth thisAI;
+    [SerializeField] private Transform thisAI;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
 
+    #region GETTERS
     public Transform Target { get => target; }
+    public Animator Anim { get => anim; }
+    public AIPath Path { get => path; }
+    public Transform ThisAI { get => thisAI; }
+    public NavMeshAgent Agent { get => agent; }
     public HealthComponent Health { get => health; }
     public List<Rigidbody> Ragdoll { get => ragdoll; }
-    public Animator Anim { get => anim; }
-    public NavMeshAgent Agent { get => agent; }
+    #endregion
+
 
     /****************References**************/
 
-    public BlackBoard
+    public void SetBlackBoardValues
         (Transform target, 
         Animator anim, 
         AIPath path, 
-        UmbralMoth thisAI, 
+        Transform thisAI, 
         NavMeshAgent agent, 
-        HealthComponent enemyHealth, 
+        HealthComponent health, 
         List<Rigidbody> ragdoll)
     {
+        
+        StartPoint = thisAI.position;
         this.target = target;
         this.anim = anim;
         this.path = path;
         this.thisAI = thisAI;
         this.agent = agent;
-        this.health = enemyHealth;
+        this.health = health;
         this.ragdoll = ragdoll;
+        Debug.Log(ThisAI.name);
     }
 
 }

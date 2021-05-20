@@ -9,13 +9,8 @@ public class InvestigateDecorator : Decorator
 
     public override bool Condition()
     {
-        if (tree.GetBlackBoardValue<bool>("Investigating").GetVariable() == false)
-        {
-            
-            return Vector3.Distance(tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable().transform.position,
-                tree.GetBlackBoardValue<Transform>("Target").GetVariable().position) <
-                tree.GetBlackBoardValue<float>("DistanceToInvestigate").GetVariable();
-        }
+        if (BlackBoard.Investigating == false)
+            return Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) <BlackBoard.DistanceToInvestigate;
         else
             return false;
         

@@ -21,7 +21,7 @@ public class Sequence : Node
         
         if (decorator.Condition() == true)
         {
-            //Debug.Log(ID);
+            Debug.Log(ID);
             bool anyChildRunning = false;
             foreach (Node node in nodes)
             {
@@ -46,7 +46,7 @@ public class Sequence : Node
         }
         else
         {
-            //Debug.Log("fail " + ID);
+            Debug.Log("fail " + ID);
             return NODE_STATE.FAILURE;
         }
             
