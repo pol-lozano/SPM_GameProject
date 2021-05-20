@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Secondary author: Sajid Masoud
 public class PickUp : MonoBehaviour
 {
-
-
     [SerializeField] private GameObject objectToPickup;
     [SerializeField] private bool isSword;
-    [SerializeField] private AudioData playerPickUp;
+    [SerializeField] private AudioData pickUpAudio;
+    [SerializeField] private Collider pickupCollider;
+    [SerializeField] private AudioSource audioSource;
 
     public Animator anim;
 
@@ -18,7 +19,9 @@ public class PickUp : MonoBehaviour
           PlayerCombat.Player.PickUpObject(isSword);
           Debug.Log("Picked up!");
           anim.SetBool("Activated", true);
-          EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerPickUp));
+          EventHandler<SoundEvent>.FireEvent(new SoundEvent(pickUpAudio, audioSource));
+          pickupCollider.enabled = false;
+
 
     }
 }

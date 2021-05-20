@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerRoll
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: aeda62f1871e7164c96ec680c560e6c4, type: 3}
-  - {fileID: 8300000, guid: 7763d55c3e1887b42b73f73b1eaf6f77, type: 3}
+  - {fileID: 8300000, guid: 07fb145a8be720649b3477bc46e5cb82, type: 3}
+  source: {fileID: 0}

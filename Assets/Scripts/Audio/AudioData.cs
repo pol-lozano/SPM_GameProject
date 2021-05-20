@@ -11,7 +11,6 @@ public class AudioData : ScriptableObject
 
     public AudioClip GetRandomSound()
     {
-
         if(sounds.Length > 1)
         {
             int n = Random.Range(1, sounds.Length);
@@ -32,5 +31,6 @@ public class AudioData : ScriptableObject
     }
  
 }
+
 
 

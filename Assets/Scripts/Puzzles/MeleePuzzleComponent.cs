@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class MeleePuzzleComponent : HitComponent
 {
-
     [SerializeField] private int puzzleID;
+    private bool isUnlocked;
 
     public override void HandleHit(HitInfo info)
     {
 
-        if (info.damager.GetType() == typeof(MeleeWeapon))
+        if (isUnlocked == false && info.damager.GetType() == typeof(MeleeWeapon))
             Unlock(info);
+            
     }
 
     private void Unlock(HitInfo info)
@@ -22,10 +23,13 @@ public class MeleePuzzleComponent : HitComponent
          * Do some shit to unlock door or lower bridge not sure how we do this
          * start animation and have eventTriggers in animation for sound and particles?
          */
+        isUnlocked = true;
 
         PuzzleEvent p = new PuzzleEvent(puzzleID);
-        EventHandler<PuzzleEvent>.FireEvent(p);
 
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(hitSounds, audioSource));
+        EventHandler<PuzzleEvent>.FireEvent(p);
+        
         //saker borde hända via animationsevent istället. där kan man animera och säga till den att byta mesh och förstöra när vi vill
        // Destroy(gameObject);
 

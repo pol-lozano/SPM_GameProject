@@ -4,10 +4,12 @@ using UnityEngine;
 public class MeleeWeapon : MonoBehaviour
 {
     [SerializeField] private int damageAmount;
-    [SerializeField] private AudioClip hitAudio;
-    [SerializeField] private AudioClip attackAudio;
+    [SerializeField] private AudioData fleshHit;
+    [SerializeField] private AudioData defaultHit;
+    [SerializeField] private AudioSource audioSource;
 
     public Collider Collider { get; private set; }
+    public AudioSource AudioSource { get => audioSource; set => audioSource = value; }
 
     private void Awake()
     {
@@ -34,6 +36,13 @@ public class MeleeWeapon : MonoBehaviour
         };
 
         hitBox.ApplyHit(info);
+        if (hitBox.hitComponent is HealthComponent)
+        {
+            EventHandler<SoundEvent>.FireEvent(new SoundEvent(fleshHit, audioSource));
+        } else
+        {
+            EventHandler<SoundEvent>.FireEvent(new SoundEvent(defaultHit, audioSource));
+        }
 
         return true;
     }

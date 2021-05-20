@@ -160,7 +160,11 @@ public class UnloadSceneEvent : IEvent
 #region SOUND_EVENT
 public class SoundEvent : IEvent
 {
-    public AudioData Info { get; }
-    public SoundEvent(AudioData info) => Info = info;
+    public AudioSource AudioSource { get; }
+    public AudioData Data { get; }
+    public SoundEvent(AudioData data, AudioSource source) { 
+        Data = data;
+        AudioSource = source;
+    }
 }
 #endregion

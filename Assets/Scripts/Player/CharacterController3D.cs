@@ -25,11 +25,13 @@ public class CharacterController3D : MonoBehaviour
 
     public PhysicsComponent PhysicsComponent { get; set; }
     public Animator Animator { get; set; }
+    public AudioSource AudioSource { get; set; }
     public Vector2 RawInput { get; private set; }
     public bool DodgeInput { get; set; }
 
     private void Awake()
     {
+        AudioSource = GetComponent<AudioSource>();
         PhysicsComponent = GetComponent<PhysicsComponent>();
         Animator = GetComponentInChildren<Animator>();
 

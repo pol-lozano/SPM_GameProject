@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    public AudioSource AudioSource { get; private set; }
+
     private static PlayerCombat player;
     public static PlayerCombat Player
     {
@@ -52,6 +54,8 @@ public class PlayerCombat : MonoBehaviour
     {
         meleeWeapon.gameObject.SetActive(false);
         crossbow.SetActive(false);
+
+        AudioSource = GetComponent<AudioSource>();
 
         Animator = GetComponentInChildren<Animator>();
         stateMachine = new StateMachine(this, states);
