@@ -563,10 +563,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2746928648652527668, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5678347510913095102, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -614,10 +610,6 @@ PrefabInstance:
     - target: {fileID: 6174844647233061414, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_Name
       value: Dungeon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7955497670833191368, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
