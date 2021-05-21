@@ -9,10 +9,6 @@ public class Selector : Node
     protected List<Node> nodes = new List<Node>();
     private Decorator decorator = null;
 
-    public Selector(List<Node> list)
-    {
-        nodes = list;
-    }
     public Selector(List<Node> list, Decorator d)
     {
         nodes = list;
@@ -21,7 +17,7 @@ public class Selector : Node
 
     public override NODE_STATE Evaluate()
     {
-        if (decorator == null || decorator.Condition())
+        if (decorator.Condition() == true)
         {
             foreach (var node in nodes)
             {
@@ -34,12 +30,12 @@ public class Selector : Node
                         nodeState = NODE_STATE.RUNNING;
                         return nodeState;
                     case NODE_STATE.FAILURE:
+                        nodeState = NODE_STATE.FAILURE;
                         break;
                     default:
                         break;
                 }
             }
-            nodeState = NODE_STATE.FAILURE;
             return nodeState;
         }
         else

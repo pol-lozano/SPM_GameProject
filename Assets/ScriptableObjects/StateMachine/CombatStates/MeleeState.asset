@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: MeleeState
   m_EditorClassIdentifier: 
   shakeData: {fileID: 11400000, guid: 479f18fca6fb737409dc7d5445bb746a, type: 2}
+  attackSound: {fileID: 11400000, guid: 4812182fee17b6b409b502d9d6d47cac, type: 2}

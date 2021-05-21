@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class WaitNode : Node
 {
-
+    private float timerLength;
     private float timer;
 
-    public WaitNode(BehaviourTree tree)
+    public WaitNode(float t)
     {
-        this.tree = tree;
-        timer = tree.GetBlackBoardValue<float>("WaitTime").GetVariable();
+        timerLength = t;
+        timer = t;
     }
 
     public override NODE_STATE Evaluate()
@@ -19,13 +19,12 @@ public class WaitNode : Node
         if(timer > 0)
         {
             timer -= Time.deltaTime;
-            Debug.Log(timer);
             return NODE_STATE.RUNNING;
         }
         else
         {
-            timer = tree.GetBlackBoardValue<float>("WaitTime").GetVariable();
-
+            timer = timerLength;
+            //Debug.Log("WAIT DONE");
             return NODE_STATE.SUCCESS;
         }
     }

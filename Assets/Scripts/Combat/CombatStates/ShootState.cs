@@ -6,6 +6,9 @@ public class ShootState : AimState
 {
     [SerializeField] private ShakeEventData shakeData;
     [SerializeField] private float shotTimer;
+    [SerializeField] private AudioData shootSound;
+    
+
     private float shotCooldown;
 
     private Ray ray;
@@ -75,6 +78,7 @@ public class ShootState : AimState
         arrow.SetActive(true);
         arrow.SetForce((Player.CrossHair.transform.position - arrow.transform.position).normalized);
 
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(shootSound, Player.AudioSource));
         EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
 
     }

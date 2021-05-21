@@ -35,7 +35,7 @@ AnimatorController:
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: fadeOut
-    m_Type: 4
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -117,7 +117,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4571637092712648018}
-    m_Position: {x: 300, y: 150, z: 0}
+    m_Position: {x: 310, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1429380328433446461}
     m_Position: {x: 310, y: 60, z: 0}

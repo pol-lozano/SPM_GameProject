@@ -6,11 +6,11 @@ using UnityEngine;
 public class HealthComponent : HitComponent
 {
     [SerializeField] private ShakeEventData shakeData;
-
     [SerializeField] private float maxHealth = 1;
     [SerializeField] private float currentHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;
     [SerializeField] private LayerMask damageLayer;
+    [SerializeField] private AudioData deathSound;
 
     private float timeSinceLastHit = 0.0f;
     [SerializeField] private bool isPlayer;
@@ -74,6 +74,7 @@ public class HealthComponent : HitComponent
     {
         SetInvulnerable();
         currentHealth -= info.amount;
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(hitSounds, audioSource));
 
         LastType = info.damager.GetType();
         if (LastType == typeof(Projectile)) //Fix better
@@ -81,7 +82,7 @@ public class HealthComponent : HitComponent
 
         EventHandler<HitEvent>.FireEvent(new HitEvent(info));
         if(shakeData != null)
-            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
+            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));    
     }
 
     private void Die(HitInfo info)
@@ -91,6 +92,7 @@ public class HealthComponent : HitComponent
             hitComponent = this,
             killer = info.damager
         };
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(deathSound, audioSource));
         EventHandler<DyingEvent>.FireEvent(new DyingEvent(deathInfo));
     }
    

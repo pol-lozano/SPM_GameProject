@@ -1,0 +1,31 @@
+//Author: Rickard Lindgren
+using UnityEngine;
+using UnityEngine.AI;
+
+public class MoveToPatrolPoint : Node
+{
+
+    Vector3 adjustedPoint;
+
+    public MoveToPatrolPoint(BehaviourTree tree)
+    {
+        this.tree = tree;
+    }
+
+    public override NODE_STATE Evaluate()
+    {
+
+        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
+        agent.speed = tree.GetBlackBoardValue<float>("PatrolSpeed").GetVariable();
+        adjustedPoint = new Vector3(agent.destination.x, agent.transform.position.y, agent.destination.z);
+        if (Vector3.Distance(agent.transform.position, adjustedPoint) < tree.GetBlackBoardValue<float>("DistanceToPointForSuccess").GetVariable())
+        {
+            return NODE_STATE.SUCCESS;
+        }
+        else
+        {
+            return NODE_STATE.RUNNING;
+        }
+            
+    }
+}

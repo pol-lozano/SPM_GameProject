@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4968d965dba1dc546890b1e8c2960f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 80
+  force: 40
   lifetime: 10
   coll: {fileID: 7781284558354789549}
   damageAmount: 15

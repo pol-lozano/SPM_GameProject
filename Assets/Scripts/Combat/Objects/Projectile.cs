@@ -70,7 +70,6 @@ public class Projectile : MonoBehaviour
             hitComponent = hitBox.hitComponent,
             damager = this,
             amount = damageAmount,
-            hitPosition = other.GetContact(0).point
         };
 
         hitBox.ApplyHit(info);

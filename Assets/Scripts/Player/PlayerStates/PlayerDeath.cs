@@ -5,9 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "PlayerState/Death")]
 public class PlayerDeath : PlayerState
 {
+    [SerializeField] private AudioData playerDeathSound;
     public override void Enter()
     {
         Player.Animator.SetBool("Death", true);
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDeathSound, Player.AudioSource));
+
     }
 
     public override void Exit()

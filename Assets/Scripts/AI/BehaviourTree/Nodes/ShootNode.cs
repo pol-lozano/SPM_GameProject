@@ -19,14 +19,21 @@ public class ShootNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable().speed = tree.GetBlackBoardValue<float>("AttackSpeed").GetVariable();
+        if (tree.GetBlackBoardValue<bool>("isCoolingDown").GetVariable() == false)
+        {
+            //Debug.Log("Shoot");
+            tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable().speed = tree.GetBlackBoardValue<float>("AttackSpeed").GetVariable();
+            GameObject g = ObjectPooler.instance.SpawnFromPool("shadowball");
+            Projectile proj = g.GetComponent<Projectile>();
+            proj.transform.position = thisAI.transform.position + thisAI.transform.forward;
+            proj.transform.rotation = thisAI.transform.rotation;
+            proj.SetActive(true);
+            proj.SetForce(target.position - proj.transform.position);
+            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
+            tree.GetBlackBoardValue<bool>("RecentlyFired").SetVariable(true);
+        }
 
-        GameObject g = ObjectPooler.instance.SpawnFromPool("shadowball");
-        Projectile proj = g.GetComponent<Projectile>();
-        proj.transform.position = thisAI.transform.position + thisAI.transform.forward;
-        proj.transform.rotation = thisAI.transform.rotation;
-        proj.SetActive(true);
-        proj.SetForce(target.position - proj.transform.position);
+        
 
         return NODE_STATE.SUCCESS;
     }
