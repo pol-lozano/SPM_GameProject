@@ -6,6 +6,11 @@ using UnityEngine.AI;
 public class BT_UmbralFiend : BehaviourTree
 {
 
+    private void OnEnable()
+    {
+        
+    }
+
     public override void ConstructBehaviourTree()
     {
 
@@ -23,6 +28,12 @@ public class BT_UmbralFiend : BehaviourTree
         IsStunnedDecorator stunDec = new IsStunnedDecorator(this);
         Sequence stunSequence = new Sequence(new List<Node> { stun, stunWait, exitStun }, stunDec, "Stun");
 
+        /*****Aid Ally Sequence*****/
+        
+        
+        /******Alarm Sequence*******/
+
+
 
         /****Return Home Sequence****/
         GoHomeNode goHome = new GoHomeNode(this);
@@ -35,8 +46,8 @@ public class BT_UmbralFiend : BehaviourTree
         
         CooldownNode cooldown = new CooldownNode(this, BlackBoard.AttackCooldown);
         
-        Sequence attackSequence = new Sequence(new List<Node> { }, new AttackPlayerDecorator(this), "Attack");
-        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence }, new ChasePlayerDecorator(this), "Chase");
+       
+        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase}, new ChasePlayerDecorator(this), "Chase");
 
         /***Investigate Selector***/
         InvestigatePointNode investigatePoint = new InvestigatePointNode(this);
@@ -64,7 +75,6 @@ public class BT_UmbralFiend : BehaviourTree
             dieSequence,
             stunSequence,
             goHomeSequence,
-            chaseAndAttackSequence,
             investigateSelector,
             patrolSequence
             }, new BaseDecorator());
@@ -72,46 +82,10 @@ public class BT_UmbralFiend : BehaviourTree
 
     }
 
-    public void SetBlackBoardValues(UmbralFiend fiend)
-    {
-        //VALUES
-        bb.Add("PatrolSpeed", new DataObject<float>(fiend.PatrolSpeed));
-        bb.Add("AttackSpeed", new DataObject<float>(fiend.AttackSpeed));
-        bb.Add("ChaseSpeed", new DataObject<float>(fiend.ChaseSpeed));
-        bb.Add("StunLength", new DataObject<float>(fiend.StunLength));
-        bb.Add("DistanceToAttack", new DataObject<float>(fiend.DistanceToAttack));
-        bb.Add("DistanceToChase", new DataObject<float>(fiend.DistanceToChase));
-        bb.Add("DistanceToInvestigate", new DataObject<float>(fiend.DistanceToInvestigate));
-        bb.Add("DistanceToPointForSuccess", new DataObject<float>(fiend.DistanceToPointForSuccess));
-        bb.Add("AttackCooldown", new DataObject<float>(fiend.AttackCooldown));
-        bb.Add("StartPoint", new DataObject<Vector3>(fiend.transform.position));
-        bb.Add("WaitTime", new DataObject<float>(fiend.WaitTime));
-        bb.Add("MaxDistanceFromStartPoint", new DataObject<float>(fiend.MaxDistanceFromStartPoint));
-        bb.Add("InvestigatePoint", new DataObject<Vector3>());
-        bb.Add("RandomPoint", new DataObject<Vector3>());
-        bb.Add("TargetLastSeenPoint", new DataObject<Vector3>());
-
-        bb.Add("isCoolingDown", new DataObject<bool>(false));
-        bb.Add("MovingToPoint", new DataObject<bool>(false));
-        bb.Add("RecentlyFired", new DataObject<bool>(false));
-        bb.Add("RecentlySawTarget", new DataObject<bool>(false));
-        bb.Add("Investigating", new DataObject<bool>(false));
-
-        bb.Add("LayersToIgnore", new DataObject<LayerMask>(fiend.LayersToIgnore));
-
-
-        //REFERENCES
-        bb.Add("Target", new DataObject<Transform>(fiend.Target));
-        bb.Add("Anim", new DataObject<Animator>(fiend.Anim));
-        bb.Add("Path", new DataObject<AIPath>(fiend.Path));
-        bb.Add("ThisAI", new DataObject<UmbralFiend>(fiend));
-        bb.Add("Agent", new DataObject<NavMeshAgent>(fiend.Agent));
-        bb.Add("Health", new DataObject<HealthComponent>(fiend.Health));
-        bb.Add("Ragdoll", new DataObject<List<Rigidbody>>(fiend.Ragdoll));
-    }
+   
 
     public override void SetBlackBoard(BlackBoard bb)
     {
-        throw new System.NotImplementedException();
+        blackBoard = bb;
     }
 }

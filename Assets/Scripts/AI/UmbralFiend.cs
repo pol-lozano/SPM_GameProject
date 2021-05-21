@@ -36,6 +36,7 @@ public class UmbralFiend : MonoBehaviour
     [SerializeField] private List<Rigidbody> ragdoll;
 
     private BT_UmbralFiend behaviourTree;
+    private GameObject treePrefab;
 
     #region GETTERS
     /*GETTERS*/
@@ -61,18 +62,16 @@ public class UmbralFiend : MonoBehaviour
     #endregion
 
 
-
-    void Start()
+    void Awake()
     {
+
+        treePrefab = ObjectPooler.instance.SpawnFromPool("FiendTree");
+        behaviourTree = treePrefab.GetComponent<BT_UmbralFiend>();
+        BlackBoard bb = treePrefab.GetComponent<BlackBoard>();
+        bb.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
+
         agent.SetDestination(path.Next().position);
-        behaviourTree = new BT_UmbralFiend();
-        SetBlackBoardValues();
-        behaviourTree.ConstructBehaviourTree();
-    }
 
-    private void SetBlackBoardValues()
-    {
-        behaviourTree.SetBlackBoardValues(this);
     }
 
     void Update()

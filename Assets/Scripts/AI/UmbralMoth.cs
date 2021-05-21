@@ -75,17 +75,8 @@ public class UmbralMoth : MonoBehaviour
         BlackBoard bb = treePrefab.GetComponent<BlackBoard>();
         bb.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
 
-        
-        
         agent.SetDestination(path.Next().position);
         
-        //OLD
-        //behaviourTree = new BT_UmbralMoth();
-        //SetBlackBoardValues();
-        //behaviourTree.ConstructBehaviourTree();
-
-        //BlackBoard bb = new BlackBoard(Target, Anim, Path, transform, agent, Health, Ragdoll);
-        //behaviourTree.SetBlackBoard(bb);
     }
 
     void Update()
