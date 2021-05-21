@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 114.18977
       objectReference: {fileID: 0}
+    - target: {fileID: 7292562766093134585, guid: ef939272119d3ba4b8e4293da6e6644c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.194
+      objectReference: {fileID: 0}
     - target: {fileID: 7523173760841258075, guid: ef939272119d3ba4b8e4293da6e6644c, type: 3}
       propertyPath: m_Intensity
       value: 87.53522
@@ -563,9 +567,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2746928648652527668, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2376500138125415089, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000016212463
+      objectReference: {fileID: 0}
+    - target: {fileID: 2376500138125415089, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 35.014385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466228860667954708, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.000015258789
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466228860667954708, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 29.814392
       objectReference: {fileID: 0}
     - target: {fileID: 5678347510913095102, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_RootOrder
@@ -614,10 +630,6 @@ PrefabInstance:
     - target: {fileID: 6174844647233061414, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_Name
       value: Dungeon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7955497670833191368, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
