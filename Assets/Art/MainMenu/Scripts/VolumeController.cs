@@ -17,9 +17,10 @@ public class VolumeController : MonoBehaviour
     void Start()
     {
         masterSlider.value = 0.85f;
-        musicSlider.value = 0.91f;
+        musicSlider.value = 0.41f;
         effectSlider.value = 0.85f;
         }
+
 
     }
 
