@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
   m_Name: PlayerRoll
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: aeda62f1871e7164c96ec680c560e6c4, type: 3}
+  - {fileID: 8300000, guid: 7763d55c3e1887b42b73f73b1eaf6f77, type: 3}

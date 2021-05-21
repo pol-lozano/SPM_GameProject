@@ -11,6 +11,7 @@ public class HealthComponent : HitComponent
     [SerializeField] private float currentHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;
     [SerializeField] private LayerMask damageLayer;
+    [SerializeField] private AudioData hitAudio;
 
     private float timeSinceLastHit = 0.0f;
     [SerializeField] private bool isPlayer;
@@ -74,6 +75,7 @@ public class HealthComponent : HitComponent
     {
         SetInvulnerable();
         currentHealth -= info.amount;
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(hitAudio));
 
         LastType = info.damager.GetType();
         if (LastType == typeof(Projectile)) //Fix better
@@ -81,7 +83,7 @@ public class HealthComponent : HitComponent
 
         EventHandler<HitEvent>.FireEvent(new HitEvent(info));
         if(shakeData != null)
-            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
+            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));    
     }
 
     private void Die(HitInfo info)

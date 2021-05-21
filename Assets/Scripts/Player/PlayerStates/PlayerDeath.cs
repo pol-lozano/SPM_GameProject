@@ -10,6 +10,7 @@ public class PlayerDeath : PlayerState
     {
         Player.Animator.SetBool("Death", true);
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDeathSound));
+
     }
 
     public override void Exit()

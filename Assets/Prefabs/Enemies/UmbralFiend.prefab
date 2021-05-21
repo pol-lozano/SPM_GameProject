@@ -3313,6 +3313,7 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 2048
+  hitAudio: {fileID: 11400000, guid: 8ce7eaac8754aaa48928440a765b8a81, type: 2}
   isPlayer: 0
 --- !u!195 &8315867624838024223
 NavMeshAgent:
