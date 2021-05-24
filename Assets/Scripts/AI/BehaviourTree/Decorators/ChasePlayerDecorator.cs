@@ -7,7 +7,6 @@ public class ChasePlayerDecorator : Decorator
 {
     private RaycastHit hitinfo;
 
-
     public ChasePlayerDecorator(BehaviourTree tree)
     {
         this.tree = tree;
@@ -16,9 +15,9 @@ public class ChasePlayerDecorator : Decorator
 
     public override bool Condition()
     {
-
         if (Physics.Linecast(BlackBoard.ThisAI.position, BlackBoard.Target.position, out hitinfo, BlackBoard.LayersToIgnore))
         {
+            Debug.Log("Lost Player due to " + hitinfo.collider.name);
             BlackBoard.Chasing = false;
             return false;
         }

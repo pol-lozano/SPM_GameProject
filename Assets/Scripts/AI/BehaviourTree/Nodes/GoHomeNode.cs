@@ -20,7 +20,7 @@ public class GoHomeNode : Node
         //Success if Distance between StartPoint and ThisAI is smallen than the accepted distance to point for Success
         if(Vector3.Distance(BlackBoard.StartPoint, BlackBoard.ThisAI.position) < BlackBoard.DistanceToPointForSuccess)
         {
-            Debug.Log("CameHome");
+            //Debug.Log("CameHome");
             BlackBoard.ReturningHome = false;
             return NODE_STATE.SUCCESS;
         }

@@ -40,22 +40,12 @@ public class BT_UmbralFiend : BehaviourTree
 
         /***Chase n Attack Sequence**/
         ChaseNode chase = new ChaseNode(this);
-            
-        /*****Rotate SEQUENCE*****/
-        //tittar jag inte på spelaren? haveToRotateDec?
-        RotateTowardsTarget rotateTowardsTarget = new RotateTowardsTarget(this);
-        Sequence rotateSequence = new Sequence(new List<Node> { rotateTowardsTarget }, new NotLookingAtTarget(this), "Rotate");
-        Asserter rotateAsserter = new Asserter(rotateSequence);
-
-        /*****Attack SEQUENCE*****/
         AttackNode attack = new AttackNode(this);
-        Sequence attackSequence = new Sequence(new List<Node> { attack }, new AttackPlayerDecorator(this), "Attack");
-        Asserter attackAsserter = new Asserter(attackSequence);
-            
         CooldownNode cooldown = new CooldownNode(this, BlackBoard.AttackCooldown);
-        
+        Sequence attackSequence = new Sequence(new List<Node> { attack, cooldown}, new AttackPlayerDecorator(this), "Attack");
+            
        
-        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackAsserter, cooldown}, new ChasePlayerDecorator(this), "Chase");
+        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence}, new ChasePlayerDecorator(this), "Chase");
 
 
 
@@ -90,10 +80,10 @@ public class BT_UmbralFiend : BehaviourTree
             dieSequence,
             stunSequence,
             alarmSequence, 
-            aidSequence,
             knockBackSequence,
             goHomeSequence, 
             chaseAndAttackSequence,
+            aidSequence,
             investigateSelector,
             patrolSequence
             }, new BaseDecorator());

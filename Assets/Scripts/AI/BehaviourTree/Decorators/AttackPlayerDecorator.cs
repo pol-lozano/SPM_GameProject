@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class AttackPlayerDecorator : Decorator
 {
-    private RaycastHit hitinfo;
 
     public AttackPlayerDecorator(BehaviourTree tree) 
     { 

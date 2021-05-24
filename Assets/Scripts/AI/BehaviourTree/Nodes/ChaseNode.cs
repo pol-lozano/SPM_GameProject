@@ -15,11 +15,11 @@ public class ChaseNode : Node
         lookAtPos = new Vector3(BlackBoard.Target.position.x,
                                 BlackBoard.ThisAI.position.y,
                                 BlackBoard.Target.position.z);
+        BlackBoard.ThisAI.LookAt(lookAtPos);
 
-        if(BlackBoard.MovingToPoint == false)
+        if (BlackBoard.MovingToPoint == false)
         {
-            //Debug.Log("CHASE");
-            BlackBoard.ThisAI.LookAt(lookAtPos);
+            
             BlackBoard.Agent.SetDestination(BlackBoard.Target.position);
             BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, BlackBoard.ChaseSpeed, 3);
             BlackBoard.Anim.SetFloat("Speed", BlackBoard.ChaseSpeed);
@@ -30,6 +30,9 @@ public class ChaseNode : Node
             return NODE_STATE.SUCCESS;
         }
         else
+        {
+            Debug.Log("Not there yet");
+        }
             return NODE_STATE.RUNNING;
 
     }

@@ -6121,6 +6121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a32d296a8a63a4ba258ad662f985ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  hitSounds: {fileID: 0}
   puzzleID: 0
 --- !u!114 &900202519
 MonoBehaviour:
@@ -12682,6 +12684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390f7e8c1c95db44d8b1845b6a3dbcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  hitSounds: {fileID: 0}
   puzzleID: 0
 --- !u!65 &1652032354
 BoxCollider:
@@ -19481,6 +19485,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 5030949065688228666}
+    - target: {fileID: 3421437935308927447, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: viewPoint
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7254645021475901608, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -19528,6 +19536,10 @@ PrefabInstance:
     - target: {fileID: 8188568301334606981, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188568301334767972, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8188568301334767973, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_Name
@@ -20260,6 +20272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88a52f1c793a2c47b0faf82a26b8901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  hitSounds: {fileID: 0}
   shakeData: {fileID: 0}
   maxHealth: 20
   currentHealth: 20
@@ -20267,7 +20281,7 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 2048
-  hitAudio: {fileID: 0}
+  deathSound: {fileID: 0}
   isPlayer: 0
 --- !u!23 &7849521272345723278
 MeshRenderer:
@@ -20481,7 +20495,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPickup: {fileID: 3402098470451286085}
   isSword: 0
-  playerPickUp: {fileID: 0}
+  pickUpAudio: {fileID: 0}
+  pickupCollider: {fileID: 7945887627381376218}
+  audioSource: {fileID: 0}
   anim: {fileID: 1070625467}
 --- !u!65 &7945887627947389156
 BoxCollider:
@@ -20510,7 +20526,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPickup: {fileID: 7945887626797469265}
   isSword: 1
-  playerPickUp: {fileID: 0}
+  pickUpAudio: {fileID: 0}
+  pickupCollider: {fileID: 7945887627947389156}
+  audioSource: {fileID: 0}
   anim: {fileID: 1070625466}
 --- !u!1 &7945887627947389158
 GameObject:

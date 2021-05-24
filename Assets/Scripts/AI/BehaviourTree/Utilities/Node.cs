@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public abstract class Node
 {
-    protected string ID;
+    public string ID;
 
     protected NODE_STATUS status = NODE_STATUS.START;
     protected NODE_STATE nodeState;

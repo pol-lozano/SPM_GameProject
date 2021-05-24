@@ -26,19 +26,19 @@ public class Sequence : Node
             foreach (Node node in nodes)
             {
                 //if (node.STATUS == NODE_STATUS.START)
-                    //node.OnInitialize();
+                //node.OnInitialize();
+                //Debug.Log(ID);
                 switch (node.Evaluate())
                 {
                     case NODE_STATE.FAILURE:
-                        nodeState = NODE_STATE.FAILURE;
-                        Debug.Log(ID + "FAIL");
-                        return nodeState;
+                        //Debug.Log(ID + "FAIL");
+                        return NODE_STATE.FAILURE;
                     case NODE_STATE.SUCCESS:
-                        Debug.Log(ID + "SUCC");
+                        //Debug.Log(ID + "SUCC");
                         break;
                     case NODE_STATE.RUNNING:
                         nodeState = NODE_STATE.RUNNING;
-                        Debug.Log(ID + "RUNN");
+                        //Debug.Log(ID + "RUNN");
                         return nodeState;
                     default:
                         break;
