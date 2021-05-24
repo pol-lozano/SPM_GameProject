@@ -9,6 +9,6 @@ public class SeenTargetDecorator : Decorator
 
     public override bool Condition()
     {
-        return BlackBoard.RecentlySawTarget;
+        return BlackBoard.RecentlySawTarget == true && BlackBoard.Chasing == false;
     }
 }

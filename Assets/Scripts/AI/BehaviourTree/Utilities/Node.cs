@@ -17,6 +17,8 @@ public abstract class Node
     public NODE_STATUS STATUS { get => status; }
     public void OnInitialize() { }
     public void OnTerminate() { }
+
+    public void SetBehaviourTree(BehaviourTree tree) { this.tree = tree; }
     public abstract NODE_STATE Evaluate();
 
     protected BlackBoard BlackBoard { get => tree.BlackBoard; }

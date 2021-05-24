@@ -19,15 +19,17 @@ public class ChasePlayerDecorator : Decorator
 
         if (Physics.Linecast(BlackBoard.ThisAI.position, BlackBoard.Target.position, out hitinfo, BlackBoard.LayersToIgnore))
         {
+            BlackBoard.Chasing = false;
             return false;
         }
-        else if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) < BlackBoard.DistanceToChase)
+        else if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) < BlackBoard.DistanceToChase && BlackBoard.ReturningHome == false)
         {
+            BlackBoard.Chasing = true;
             BlackBoard.TargetLastSeenPoint = BlackBoard.Target.position;
             BlackBoard.RecentlySawTarget = true;
             return true;
         }
-
+        BlackBoard.Chasing = false;
         return false;
         
     }

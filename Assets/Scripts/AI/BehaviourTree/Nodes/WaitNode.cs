@@ -6,10 +6,12 @@ public class WaitNode : Node
     private float timerLength;
     private float timer;
 
+
     public WaitNode(float t)
     {
         timerLength = t;
         timer = t;
+
     }
 
     public override NODE_STATE Evaluate()

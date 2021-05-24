@@ -15,6 +15,7 @@ public class MoveToRandomPoint : Node
     {
         BlackBoard.Agent.SetDestination(BlackBoard.RandomPoint);
         BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, 3, 1);
+        BlackBoard.Anim.SetFloat("Speed", 3);
         //Debug.DrawLine(agent.transform.position, agent.destination, Color.magenta, 3);
         BlackBoard.MovingToPoint = true;
 

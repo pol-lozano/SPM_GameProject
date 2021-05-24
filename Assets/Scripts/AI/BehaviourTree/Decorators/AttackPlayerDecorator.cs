@@ -21,7 +21,7 @@ public class AttackPlayerDecorator : Decorator
         {
             //tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
             BlackBoard.MovingToPoint = false;
-            BlackBoard.RecentlyFired = false;
+            BlackBoard.RecentlyAttacked = false;
             return false;
         }
         

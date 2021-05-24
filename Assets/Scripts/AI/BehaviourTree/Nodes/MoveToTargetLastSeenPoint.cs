@@ -12,6 +12,7 @@ public class MoveToTargetLastSeenPoint : Node
     public override NODE_STATE Evaluate()
     {
         BlackBoard.Agent.SetDestination(BlackBoard.TargetLastSeenPoint);
+        //Debug.Log("LastTarget");
 
         if (Vector3.Distance(BlackBoard.Agent.transform.position, BlackBoard.Agent.destination) < BlackBoard.DistanceToPointForSuccess)
         {

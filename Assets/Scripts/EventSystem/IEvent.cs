@@ -164,3 +164,11 @@ public class SoundEvent : IEvent
     public SoundEvent(AudioData info) => Info = info;
 }
 #endregion
+
+#region ALARM_EVENT
+public class AlarmEvent : IEvent
+{
+    public Vector3 Position { get; }
+    public AlarmEvent(Vector3 pos) => Position = pos;
+}
+#endregion

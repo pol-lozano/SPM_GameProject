@@ -5,11 +5,7 @@ using UnityEngine.AI;
 
 public class BT_UmbralFiend : BehaviourTree
 {
-
-    private void OnEnable()
-    {
-        
-    }
+    [SerializeField] private DieNode dieNode;
 
     public override void ConstructBehaviourTree()
     {
@@ -19,8 +15,6 @@ public class BT_UmbralFiend : BehaviourTree
         IsDeadDecorator deadDec = new IsDeadDecorator(this);
         Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, "die");
 
-
-
         /*******Stun Sequence********/
         StunNode stun = new StunNode(this);
         WaitNode stunWait = new WaitNode(BlackBoard.StunLength);
@@ -28,12 +22,15 @@ public class BT_UmbralFiend : BehaviourTree
         IsStunnedDecorator stunDec = new IsStunnedDecorator(this);
         Sequence stunSequence = new Sequence(new List<Node> { stun, stunWait, exitStun }, stunDec, "Stun");
 
-        /*****Aid Ally Sequence*****/
-        
-        
         /******Alarm Sequence*******/
+        SendForHelp sendForHelp = new SendForHelp(this);
+        Sequence alarmSequence = new Sequence(new List<Node> { sendForHelp }, new NeedHelpDecorator(this), "Alarm");
 
 
+        /*****Knock Back Sequence****/
+        KnockBackNode knockBack = new KnockBackNode(this);
+        WaitNode knockWait = new WaitNode(1.3f);
+        Sequence knockBackSequence = new Sequence(new List<Node> { knockBack, knockWait }, new KnockBackDecorator(this), "Knock");
 
         /****Return Home Sequence****/
         GoHomeNode goHome = new GoHomeNode(this);
@@ -43,11 +40,29 @@ public class BT_UmbralFiend : BehaviourTree
 
         /***Chase n Attack Sequence**/
         ChaseNode chase = new ChaseNode(this);
-        
+            
+        /*****Rotate SEQUENCE*****/
+        //tittar jag inte på spelaren? haveToRotateDec?
+        RotateTowardsTarget rotateTowardsTarget = new RotateTowardsTarget(this);
+        Sequence rotateSequence = new Sequence(new List<Node> { rotateTowardsTarget }, new NotLookingAtTarget(this), "Rotate");
+        Asserter rotateAsserter = new Asserter(rotateSequence);
+
+        /*****Attack SEQUENCE*****/
+        AttackNode attack = new AttackNode(this);
+        Sequence attackSequence = new Sequence(new List<Node> { attack }, new AttackPlayerDecorator(this), "Attack");
+        Asserter attackAsserter = new Asserter(attackSequence);
+            
         CooldownNode cooldown = new CooldownNode(this, BlackBoard.AttackCooldown);
         
        
-        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase}, new ChasePlayerDecorator(this), "Chase");
+        Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackAsserter, cooldown}, new ChasePlayerDecorator(this), "Chase");
+
+
+
+        /*****Aid Ally Sequence*****/
+        AidAlly aidAlly = new AidAlly(this);
+        Sequence aidSequence = new Sequence(new List<Node> { aidAlly }, new AidAllyDecorator(this), "Aid Ally");
+
 
         /***Investigate Selector***/
         InvestigatePointNode investigatePoint = new InvestigatePointNode(this);
@@ -66,7 +81,7 @@ public class BT_UmbralFiend : BehaviourTree
         MoveToPatrolPoint moveToPatrolPoint = new MoveToPatrolPoint(this);
         WaitNode patrolWait = new WaitNode(BlackBoard.WaitTime);
         SetNextPatrolPoint setNextPatrolPoint = new SetNextPatrolPoint(this);
-        Sequence patrolSequence = new Sequence(new List<Node> { moveToPatrolPoint, patrolWait, setNextPatrolPoint }, new CanPatrolDecorator(this), "Patrol");
+        Sequence patrolSequence = new Sequence(new List<Node> {  moveToPatrolPoint, patrolWait, setNextPatrolPoint }, new CanPatrolDecorator(this), "Patrol");
 
 
         /********Top Sequence********/
@@ -74,7 +89,11 @@ public class BT_UmbralFiend : BehaviourTree
             /*Place all sequences here in the order you want*/
             dieSequence,
             stunSequence,
-            goHomeSequence,
+            alarmSequence, 
+            aidSequence,
+            knockBackSequence,
+            goHomeSequence, 
+            chaseAndAttackSequence,
             investigateSelector,
             patrolSequence
             }, new BaseDecorator());

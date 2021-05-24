@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class SetRandomPoint : Node
 {
 
-    float sampleDistance = 5;
-    float maxDistance = 5;
+    float sampleDistance = 3;
+    float maxDistance = 3;
 
     public SetRandomPoint(BehaviourTree tree) 
     { 

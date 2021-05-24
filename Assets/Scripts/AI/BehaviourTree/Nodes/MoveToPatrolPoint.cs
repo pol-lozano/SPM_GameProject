@@ -14,11 +14,15 @@ public class MoveToPatrolPoint : Node
 
     public override NODE_STATE Evaluate()
     {
-        BlackBoard.Agent.speed = BlackBoard.PatrolSpeed;
+        BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, BlackBoard.PatrolSpeed, 3);
+        BlackBoard.Anim.SetFloat("Speed", BlackBoard.PatrolSpeed);
         adjustedPoint = new Vector3(BlackBoard.Agent.destination.x, BlackBoard.Agent.transform.position.y, BlackBoard.Agent.destination.z);
 
         if (Vector3.Distance(BlackBoard.Agent.transform.position, adjustedPoint) < BlackBoard.DistanceToPointForSuccess)
+        {
             return NODE_STATE.SUCCESS;
+        }
+            
         else
             return NODE_STATE.RUNNING;
             

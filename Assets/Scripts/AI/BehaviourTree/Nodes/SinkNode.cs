@@ -12,7 +12,7 @@ public class SinkNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        BlackBoard.Agent.SetDestination(BlackBoard.Agent.transform.position);
+        BlackBoard.Agent.ResetPath();
         if (BlackBoard.Agent.baseOffset > 1.21f && BlackBoard.Rising == false)
         {
             BlackBoard.Agent.baseOffset -= Time.deltaTime * BlackBoard.StunSpeed;

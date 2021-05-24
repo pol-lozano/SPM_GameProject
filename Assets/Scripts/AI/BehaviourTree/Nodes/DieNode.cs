@@ -16,6 +16,7 @@ public class DieNode : Node
         {
             r.isKinematic = false;
         }
+
         BlackBoard.Anim.enabled = false;
 
         return NODE_STATE.SUCCESS;

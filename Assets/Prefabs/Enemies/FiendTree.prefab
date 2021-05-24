@@ -57,20 +57,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolSpeed: 2
-  attackSpeed: 0.3
-  chaseSpeed: 3
-  stunSpeed: 2
-  stunLength: 3
-  distanceToAttack: 15
+  attackSpeed: 2
+  chaseSpeed: 6.5
+  distanceToAttack: 2
   distanceToChase: 20
   distanceToInvestigate: 10
+  distanceToAid: 40
   distanceToPointForSuccess: 5
   maxDistanceFromStartPoint: 35
-  attackCooldown: 1.5
+  stunSpeed: 2
+  stunLength: 3
+  attackCooldown: 3
   waitTime: 3
   layersToIgnore:
     serializedVersion: 2
     m_Bits: 229311
+  attackAudio: {fileID: 0}
+  alarmAudio: {fileID: 0}
   target: {fileID: 0}
   anim: {fileID: 0}
   path: {fileID: 0}

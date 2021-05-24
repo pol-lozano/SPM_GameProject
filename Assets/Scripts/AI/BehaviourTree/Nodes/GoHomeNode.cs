@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class GoHomeNode : Node
 {
-    float returnSpeed = 3;
     public GoHomeNode(BehaviourTree tree) 
     { 
         this.tree = tree;
@@ -14,12 +13,15 @@ public class GoHomeNode : Node
     public override NODE_STATE Evaluate()
     {
         BlackBoard.Agent.SetDestination(BlackBoard.StartPoint);
-        BlackBoard.Agent.speed = returnSpeed;
+        BlackBoard.Anim.SetFloat("Speed", BlackBoard.PatrolSpeed);
         BlackBoard.RecentlySawTarget = false;
+        BlackBoard.ReturningHome = true;
 
         //Success if Distance between StartPoint and ThisAI is smallen than the accepted distance to point for Success
         if(Vector3.Distance(BlackBoard.StartPoint, BlackBoard.ThisAI.position) < BlackBoard.DistanceToPointForSuccess)
         {
+            Debug.Log("CameHome");
+            BlackBoard.ReturningHome = false;
             return NODE_STATE.SUCCESS;
         }
 

@@ -6,19 +6,26 @@ using UnityEngine.AI;
 public class BlackBoard : MonoBehaviour
 {
     /****************Values**************/
+    [Header("AI speeds")]
     [SerializeField] private float patrolSpeed;
     [SerializeField] private float attackSpeed;
     [SerializeField] private float chaseSpeed;
-    [SerializeField] private float stunSpeed;
-    [SerializeField] private float stunLength;
+    [Header("Distances")]
     [SerializeField] private float distanceToAttack;
     [SerializeField] private float distanceToChase;
     [SerializeField] private float distanceToInvestigate;
+    [SerializeField] private float distanceToAid;
     [SerializeField] private float distanceToPointForSuccess;
     [SerializeField] private float maxDistanceFromStartPoint;
+    [Header("Gameplay Values")]
+    [SerializeField] private float stunSpeed;
+    [SerializeField] private float stunLength;
     [SerializeField] private float attackCooldown;
     [SerializeField] private float waitTime;
     [SerializeField] private LayerMask layersToIgnore;
+    [Header("Sounds")]
+    [SerializeField] private AudioData attackAudio;
+    [SerializeField] private AudioData alarmAudio;
 
     #region GETTERS
     public float PatrolSpeed { get => patrolSpeed; }
@@ -30,23 +37,32 @@ public class BlackBoard : MonoBehaviour
     public float DistanceToAttack { get => distanceToAttack; }
     public float DistanceToChase { get => distanceToChase; }
     public float DistanceToInvestigate { get => distanceToInvestigate; }
+    public float DistanceToAid { get => distanceToAid; }
     public float DistanceToPointForSuccess { get => distanceToPointForSuccess; }
     public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
     public float AttackCooldown { get => attackCooldown; }
     public float WaitTime { get => waitTime; }
+    public AudioData AttackAudio { get => attackAudio; }
+    public AudioData AlarmAudio { get => alarmAudio; }
     #endregion
 
     #region PROPERTIES
     public bool IsCoolingDown { get; set; }
     public bool MovingToPoint { get; set; }
-    public bool RecentlyFired { get; set; }
+    public bool RecentlyAttacked { get; set; }
     public bool RecentlySawTarget { get; set; }
     public bool Investigating { get; set; }
     public bool Rising { get; set; }
+    public bool AllyInNeed { get; set; }
+    public bool SentForHelp { get; set; }
+    public bool RecentlyKnocked { get; set; }
+    public bool ReturningHome { get; set; }
+    public bool Chasing { get; set; }
     public Vector3 StartPoint { get; set; }
     public Vector3 InvestigatePoint { get; set; }
     public Vector3 RandomPoint { get; set; }
     public Vector3 TargetLastSeenPoint { get; set; }
+    public Vector3 AllyInNeedPosition { get; set; }
     public LayerMask LayersToIgnore { get => layersToIgnore; }
 
     #endregion
@@ -55,6 +71,7 @@ public class BlackBoard : MonoBehaviour
 
 
     /****************References**************/
+    [Header("References")]
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
@@ -62,6 +79,7 @@ public class BlackBoard : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
+
 
     #region GETTERS
     public Transform Target { get => target; }
@@ -94,7 +112,6 @@ public class BlackBoard : MonoBehaviour
         this.agent = agent;
         this.health = health;
         this.ragdoll = ragdoll;
-        Debug.Log(ThisAI.name);
     }
 
 }

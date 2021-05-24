@@ -21,6 +21,7 @@ public class InvestigatePointNode : Node
             BlackBoard.InvestigatePoint = BlackBoard.Target.position;
             BlackBoard.Agent.SetDestination(BlackBoard.InvestigatePoint);
             BlackBoard.Agent.speed = 1.5f;
+            BlackBoard.Anim.SetFloat("Speed", 1.5f);
             BlackBoard.Investigating = true;
         }
 

@@ -7,10 +7,10 @@ public class RecentlyFiredDecorator : Decorator
     public RecentlyFiredDecorator(BehaviourTree tree) { this.tree = tree; }
     public override bool Condition()
     {
-        if (BlackBoard.RecentlyFired == true)
+        if (BlackBoard.RecentlyAttacked == true)
         {
             Debug.Log("DODGE");
-            BlackBoard.RecentlyFired = false;
+            BlackBoard.RecentlyAttacked = false;
             return true;
         }
         else

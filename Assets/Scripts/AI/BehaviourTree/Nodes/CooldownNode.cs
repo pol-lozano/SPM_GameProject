@@ -26,8 +26,8 @@ public class CooldownNode : Node
         {
             BlackBoard.IsCoolingDown = false;
             BlackBoard.MovingToPoint = false;
+            BlackBoard.RecentlyKnocked = false;
             timer = timerLength;
-            //Debug.Log("Cooldown DONE");
             return NODE_STATE.SUCCESS;
         }
     }

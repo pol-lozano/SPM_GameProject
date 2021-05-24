@@ -21,7 +21,7 @@ public class Sequence : Node
         
         if (decorator.Condition() == true)
         {
-            Debug.Log(ID);
+            
             bool anyChildRunning = false;
             foreach (Node node in nodes)
             {
@@ -31,12 +31,14 @@ public class Sequence : Node
                 {
                     case NODE_STATE.FAILURE:
                         nodeState = NODE_STATE.FAILURE;
+                        Debug.Log(ID + "FAIL");
                         return nodeState;
                     case NODE_STATE.SUCCESS:
-                        //node.OnTerminate();
+                        Debug.Log(ID + "SUCC");
                         break;
                     case NODE_STATE.RUNNING:
                         nodeState = NODE_STATE.RUNNING;
+                        Debug.Log(ID + "RUNN");
                         return nodeState;
                     default:
                         break;
@@ -46,7 +48,7 @@ public class Sequence : Node
         }
         else
         {
-            Debug.Log("fail " + ID);
+            //Debug.Log("fail " + ID);
             return NODE_STATE.FAILURE;
         }
             

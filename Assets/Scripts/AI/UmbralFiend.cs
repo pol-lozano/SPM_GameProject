@@ -7,26 +7,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
 public class UmbralFiend : MonoBehaviour
 {
-    
-    [Header("AI speeds")]
-    [Header("THESE VALUES CANNOT CHANGE IN RUNTIME")]
-    [SerializeField] private float patrolSpeed;
-    [SerializeField] private float attackSpeed;
-    [SerializeField] private float chaseSpeed;
-
-    [Header("Gameplay Values")]
-    [SerializeField] private float stunLenght;
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private float waitTime;
-    [SerializeField] private LayerMask layersToIgnore;
-
-    [Header("Distances")]
-    [SerializeField] private float distanceToAttack;
-    [SerializeField] private float distanceToChase;
-    [SerializeField] private float distanceToInvestigate;
-    [SerializeField] private float distanceToPointForSucces;
-    [SerializeField] private float maxDistanceFromStartPoint;
-
     [Header("References")]
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
@@ -34,12 +14,15 @@ public class UmbralFiend : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
+    [SerializeField] private EnemyCollider collider;
 
     private BT_UmbralFiend behaviourTree;
+    private BlackBoard blackBoard;
     private GameObject treePrefab;
 
     #region GETTERS
-    /*GETTERS*/
+    
+    /*
     public float PatrolSpeed { get => patrolSpeed; }
     public float AttackSpeed { get => attackSpeed; }
     public float ChaseSpeed { get => chaseSpeed; }
@@ -53,6 +36,7 @@ public class UmbralFiend : MonoBehaviour
     public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
 
     public LayerMask LayersToIgnore { get => layersToIgnore; }
+    */
     public Transform Target { get => target; }
     public Animator Anim { get => anim; }
     public AIPath Path { get => path; }
@@ -62,16 +46,29 @@ public class UmbralFiend : MonoBehaviour
     #endregion
 
 
-    void Awake()
+    void Start()
     {
+        /*
+        if (EnemyLoader(this) == false)
+            Destroy(gameObject);
+        */
 
         treePrefab = ObjectPooler.instance.SpawnFromPool("FiendTree");
         behaviourTree = treePrefab.GetComponent<BT_UmbralFiend>();
-        BlackBoard bb = treePrefab.GetComponent<BlackBoard>();
-        bb.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
+        blackBoard = treePrefab.GetComponent<BlackBoard>();
+        blackBoard.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
 
         agent.SetDestination(path.Next().position);
 
+    }
+
+    private void OnEnable() => EventHandler<AlarmEvent>.RegisterListener(AidAlly);
+    private void OnDisable() => EventHandler<AlarmEvent>.UnregisterListener(AidAlly);
+
+    public void AidAlly(AlarmEvent eve)
+    {
+        blackBoard.AllyInNeed = true;
+        blackBoard.AllyInNeedPosition = eve.Position;
     }
 
     void Update()

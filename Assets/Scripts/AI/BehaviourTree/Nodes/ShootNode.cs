@@ -25,7 +25,7 @@ public class ShootNode : Node
             proj.SetActive(true);
             proj.SetForce(BlackBoard.Target.position - proj.transform.position);
             //tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
-            BlackBoard.RecentlyFired = true;
+            BlackBoard.RecentlyAttacked = true;
         }
 
         

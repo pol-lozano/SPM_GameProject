@@ -10,6 +10,7 @@ public class StunNode : Node
     {
         if(BlackBoard.IsCoolingDown == false)
         {
+            BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, 0,3);
             BlackBoard.Anim.SetBool("Stunned", true);
         }
         return NODE_STATE.SUCCESS;
