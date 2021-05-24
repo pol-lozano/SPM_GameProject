@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: UmbralFiendHit
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 4fe9df088025c834da4a6f5452d7f76e, type: 3}
-  - {fileID: 8300000, guid: 5eafe19577cac4c4d9fce624cbb36d16, type: 3}
-  - {fileID: 8300000, guid: 4adcafce6d627f94eb7086b3a3a3c3da, type: 3}
+  - {fileID: 8300000, guid: c3495c4ad08c47046afaeccf83b97db1, type: 3}

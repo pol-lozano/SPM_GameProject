@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
   m_Name: UmbralFiendFootsteps
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: fb6839219f2c6674996d76c7d9626311, type: 3}
+  - {fileID: 8300000, guid: a2cf935dcad44514894bf910c443d507, type: 3}
+  - {fileID: 8300000, guid: 0b36ebf0a6b6c234c89643b5bb83ec59, type: 3}

@@ -6,7 +6,7 @@ using UnityEngine;
 public class MeleeAttackState : CombatState
 {
     [SerializeField] private ShakeEventData shakeData;
-    [SerializeField] private AudioData attackSoundData;
+    [SerializeField] private AudioData attackSound;
 
     private float timeSinceLastAttack = 0;
 
@@ -27,6 +27,7 @@ public class MeleeAttackState : CombatState
     //Called by Animation Event in attack animation
     public override void OnAnimationStarted()
     {
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(attackSound, Player.MeleeWeapon.AudioSource));
 
         timeSinceLastAttack = Time.time - timeSinceLastAttack;
         Debug.Log("Time since last attack: " + timeSinceLastAttack);

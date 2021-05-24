@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: PlayerDeath
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 7a7486be56f4fd24588e8864e4a3eca3, type: 3}
-  - {fileID: 8300000, guid: aeda62f1871e7164c96ec680c560e6c4, type: 3}
-  - {fileID: 8300000, guid: 0967d93e1cc91994ca023f54034b8e5e, type: 3}
+  - {fileID: 8300000, guid: bcb9f0e8b37da6a429f3d320cfc269ed, type: 3}

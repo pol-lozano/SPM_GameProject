@@ -14,7 +14,7 @@ public class PlayerDodgeState : PlayerState
 
     private void Dodge()
     {
-        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDodgeSound));
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDodgeSound, Player.AudioSource));
         Player.DodgeInput = false;
         Player.Animator.SetTrigger(dodgeTriggerHash);
         Debug.Log("Dodge soundevent has been sent");

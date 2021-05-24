@@ -16,10 +16,11 @@ public class VolumeController : MonoBehaviour
 
     void Start()
     {
-        masterSlider.value = BackgroundMusic.volume;
-        musicSlider.value = Selected.volume;
-        effectSlider.value = Pressed.volume;
+        masterSlider.value = 0.85f;
+        musicSlider.value = 0.41f;
+        effectSlider.value = 0.85f;
         }
+
 
     }
 

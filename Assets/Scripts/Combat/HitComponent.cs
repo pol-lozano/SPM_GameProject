@@ -5,5 +5,7 @@ using UnityEngine;
 
 public abstract class HitComponent : MonoBehaviour
 {
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] protected AudioData hitSounds;
     public abstract void HandleHit(HitInfo info);
 }

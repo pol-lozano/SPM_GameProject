@@ -9,7 +9,7 @@ public class PlayerDeath : PlayerState
     public override void Enter()
     {
         Player.Animator.SetBool("Death", true);
-        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDeathSound));
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDeathSound, Player.AudioSource));
 
     }
 
