@@ -18,6 +18,9 @@ public class AudioSystem : MonoBehaviour
     private void OnDisable() => EventHandler<SoundEvent>.UnregisterListener(OnSoundEvent);
 
     void OnSoundEvent(SoundEvent soundEvent) {
+        if (soundEvent.Data == null)
+            return;
+       
         AudioClip clip = soundEvent.Data.GetAudioClip(); 
         if(clip != null)
         {
