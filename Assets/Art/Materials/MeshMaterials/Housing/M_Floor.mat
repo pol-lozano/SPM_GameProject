@@ -30,7 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 46258bd4855da6f4f9f1be9c507899b4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 310a0b6839e97d545808ad43e2448e03, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -70,15 +70,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 46258bd4855da6f4f9f1be9c507899b4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 310a0b6839e97d545808ad43e2448e03, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 81e44a86ffa27fe41be1e32780ea2868, type: 3}
+        m_Texture: {fileID: 2800000, guid: 756b03929a0d1224d809fc7466ed6f0b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 3ecf5093c7741b04e8dc437d3e47983a, type: 3}
+        m_Texture: {fileID: 2800000, guid: c95af28e4f2b11448b19350e3d765217, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapOS:
@@ -207,7 +207,7 @@ Material:
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _Smoothness: 0.5
-    - _SmoothnessRemapMax: 0.60714287
+    - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
