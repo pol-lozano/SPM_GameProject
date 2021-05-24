@@ -1,10 +1,10 @@
 //Author: Pol Lozano Llorens 
+//Secondary Author: Sajid Masoud
 using UnityEngine;
 
 public class AudioSystem : MonoBehaviour
 {
     public static AudioSystem instance;
-
     [SerializeField] private float minPitch = .95f, maxPitch = 1.05f;
 
     private void Awake()
@@ -18,11 +18,11 @@ public class AudioSystem : MonoBehaviour
     private void OnDisable() => EventHandler<SoundEvent>.UnregisterListener(OnSoundEvent);
 
     void OnSoundEvent(SoundEvent soundEvent) {
-        //=> PlayClip(soundEvent.Info);
-        AudioClip clip = soundEvent.Data.GetRandomSound(); 
-        soundEvent.AudioSource.pitch = Random.Range(minPitch, maxPitch);
-        soundEvent.AudioSource.PlayOneShot(clip);
-        Debug.Log("PlayedAudioClip: " + clip + " Kött fifaän");
-
+        AudioClip clip = soundEvent.Data.GetAudioClip(); 
+        if(clip != null)
+        {
+            soundEvent.AudioSource.pitch = Random.Range(minPitch, maxPitch);
+            soundEvent.AudioSource.PlayOneShot(clip);
+        }    
     }
 }
