@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: PlayerGroundedState
   m_EditorClassIdentifier: 
   maxSpeed: 7
-  acceleration: 50
-  deceleration: 45
+  playerStepSound: {fileID: 11400000, guid: b6dcd6a1fda501540b38f1790ba835d9, type: 2}
