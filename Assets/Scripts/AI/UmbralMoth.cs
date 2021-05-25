@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
 public class UmbralMoth : MonoBehaviour
 {
-    
+    /*
     [Header("AI speeds")]
     [Header("THESE VALUES CANNOT CHANGE IN RUNTIME")]
     [SerializeField] private float patrolSpeed;
@@ -27,6 +27,7 @@ public class UmbralMoth : MonoBehaviour
     [SerializeField] private float distanceToInvestigate;
     [SerializeField] private float distanceToPointForSucces;
     [SerializeField] private float maxDistanceFromStartPoint;
+    */
 
     [Header("References")]
     [SerializeField] private Transform target;
@@ -41,7 +42,7 @@ public class UmbralMoth : MonoBehaviour
     //private BT_UmbralMoth behaviourTree;
 
     #region GETTERS
-    /*GETTERS*/
+    /*GETTERS
     public float PatrolSpeed { get => patrolSpeed; }
     public float AttackSpeed { get => attackSpeed; }
     public float ChaseSpeed { get => chaseSpeed; }
@@ -54,8 +55,7 @@ public class UmbralMoth : MonoBehaviour
     public float DistanceToInvestigate { get => distanceToInvestigate; }
     public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
     public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
-
-    public LayerMask LayersToIgnore { get => layersToIgnore; }
+    */
     public Transform Target { get => target; }
     public Animator Anim { get => anim; }
     public AIPath Path { get => path; }
@@ -68,6 +68,7 @@ public class UmbralMoth : MonoBehaviour
 
     void Awake()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         //NEW
 
         treePrefab = ObjectPooler.instance.SpawnFromPool("MothTree");
