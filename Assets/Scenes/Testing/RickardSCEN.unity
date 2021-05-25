@@ -3162,34 +3162,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.data[2].tag
-      value: MothTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.data[3].tag
-      value: FiendTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.data[2].size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.data[3].size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.data[2].prefab
-      value: 
-      objectReference: {fileID: 2572793795754029990, guid: df1eab3879113dd45acae7fb5411d923, type: 3}
-    - target: {fileID: 1037115217564382799, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
-      propertyPath: pools.Array.data[3].prefab
-      value: 
-      objectReference: {fileID: 2572793795754029990, guid: 6acf5e737556b854895e49741413372d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e616f251fd926844b95b7e8336bf9a97, type: 3}
 --- !u!1 &345194129
@@ -20531,6 +20503,7 @@ MonoBehaviour:
   pickUpAudio: {fileID: 0}
   pickupCollider: {fileID: 7945887627381376218}
   audioSource: {fileID: 0}
+  particleSystem: {fileID: 0}
   anim: {fileID: 1070625467}
 --- !u!65 &7945887627947389156
 BoxCollider:
@@ -20562,6 +20535,7 @@ MonoBehaviour:
   pickUpAudio: {fileID: 0}
   pickupCollider: {fileID: 7945887627947389156}
   audioSource: {fileID: 0}
+  particleSystem: {fileID: 0}
   anim: {fileID: 1070625466}
 --- !u!1 &7945887627947389158
 GameObject:
