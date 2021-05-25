@@ -18,11 +18,13 @@ public class CharacterController3D : MonoBehaviour
         }
     }
 
-    [SerializeField] private InputHandler input;
-    [SerializeField] private PlayerState[] states;
-
     private StateMachine stateMachine;
 
+    [SerializeField] private InputHandler input;
+    [SerializeField] private PlayerState[] states;
+    [SerializeField] private Transform playerMesh;
+
+    public Transform PlayerMesh { get => playerMesh; set => playerMesh = value; }
     public PhysicsComponent PhysicsComponent { get; set; }
     public Animator Animator { get; set; }
     public AudioSource AudioSource { get; set; }

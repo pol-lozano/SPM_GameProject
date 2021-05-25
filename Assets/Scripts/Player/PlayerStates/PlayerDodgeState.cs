@@ -7,18 +7,14 @@ public class PlayerDodgeState : PlayerState
     [SerializeField] private float dodgeForce;
     [SerializeField] private AudioData playerDodgeSound;
 
-
     private float timeSinceLastDodge = 0;
 
     public override void Enter() => Dodge();
 
     private void Dodge()
     {
-        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDodgeSound, Player.AudioSource));
         Player.DodgeInput = false;
         Player.Animator.SetTrigger(dodgeTriggerHash);
-        Debug.Log("Dodge soundevent has been sent");
-
     }
 
     /// <summary>
@@ -26,12 +22,15 @@ public class PlayerDodgeState : PlayerState
     /// </summary>
     public override void OnAnimationStarted()
     {
-        Player.Animator.SetBool(isDodgingBoolHash, true);
         timeSinceLastDodge = Time.time - timeSinceLastDodge;
-        Debug.Log("Time since last dodge: " + timeSinceLastDodge);
 
-        Player.PhysicsComponent.AddForce(Player.GetInput().normalized * dodgeForce, ForceMode.Force);
+        Player.Animator.SetBool(isDodgingBoolHash, true);
+        Vector3 input = Player.GetInput();
+        Vector3 dodgeDirection = (input.magnitude > float.Epsilon) ? input.normalized : -Player.PlayerMesh.transform.forward.normalized;
+        Player.PhysicsComponent.AddForce(dodgeDirection * dodgeForce, ForceMode.Force);
+
         // Particle effects shaders, sounds etc...
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerDodgeSound, Player.AudioSource));
     }
 
     /// <summary>
