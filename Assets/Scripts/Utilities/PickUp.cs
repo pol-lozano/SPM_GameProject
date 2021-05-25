@@ -16,15 +16,16 @@ public class PickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-          objectToPickup.SetActive(false);
-          PlayerCombat.Player.PickUpObject(isSword);
-          Debug.Log("Picked up!");
-          anim.SetBool("Activated", true);
-          EventHandler<SoundEvent>.FireEvent(new SoundEvent(pickUpAudio, audioSource));
-          pickupCollider.enabled = false;
-          particleSystem.SetActive(false);
+        objectToPickup.SetActive(false);
+        PlayerCombat.Player.PickUpObject(isSword);
+        Debug.Log("Picked up!");
 
+        if (anim != null)
+            anim.SetBool("Activated", true);
+
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(pickUpAudio, audioSource));
+        pickupCollider.enabled = false;
+        particleSystem.SetActive(false);
     }
 }
-
 
