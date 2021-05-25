@@ -5,19 +5,11 @@ using UnityEngine;
 public class PlayerGroundedState : PlayerState
 {
     [SerializeField] private float maxSpeed = 10f;
-    [SerializeField] private AudioData playerStepSound;
 
     public override void HandleUpdate()
     {
         base.HandleUpdate();
         Move(maxSpeed);
-    }
-
-    public override void OnAnimationEnded()
-    {
-        base.OnAnimationEnded();
-        //Play step sound
-        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerStepSound, Player.AudioSource));
     }
 
     public override void EvaluateTransitions()
