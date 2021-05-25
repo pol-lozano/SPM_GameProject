@@ -13,9 +13,9 @@ public class PlayerGroundedState : PlayerState
         Move(maxSpeed);
     }
 
-    public override void OnAnimationEnded()
+    public override void OnAnimationStarted()
     {
-        base.OnAnimationEnded();
+     //   base.OnAnimationEnded();
         //Play step sound
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerStepSound, Player.AudioSource));
     }
