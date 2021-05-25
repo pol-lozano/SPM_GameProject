@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3833,10 +3833,6 @@ PrefabInstance:
       propertyPath: hitAudio
       value: 
       objectReference: {fileID: 11400000, guid: 26a85ca8745b51548a50f577faf4ab4e, type: 2}
-    - target: {fileID: 1952091810191860618, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 11400000, guid: 3ae18fec7d8f1fe428199844461bc79b, type: 2}
     - target: {fileID: 2109309907315314129, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.91691476
