@@ -21,16 +21,16 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   colorMode:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   color:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.8962264, g: 0.3580326, b: 0.10568706, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
   tint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.5754717, g: 0.434751, b: 0.377314, a: 1}
     hdr: 1
     showAlpha: 0
@@ -60,14 +60,14 @@ MonoBehaviour:
     m_Value: 10000
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 70
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
+    m_Value: {r: 0.14150941, g: 0.10296145, b: 0.07542719, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
     m_Value: 2
   anisotropy:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: -1
     min: -1
     max: 1
   sliceDistributionUniformity:
@@ -137,15 +137,15 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   postExposure:
-    m_OverrideState: 0
-    m_Value: 1.27
+    m_OverrideState: 1
+    m_Value: 0.38
   contrast:
     m_OverrideState: 1
-    m_Value: 43
+    m_Value: 15
     min: -100
     max: 100
   colorFilter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 0.9613588, b: 0.9009434, a: 1}
     hdr: 1
     showAlpha: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: -24
+    m_Value: -16
     min: -100
     max: 100
 --- !u!114 &-7690519846148620226
