@@ -6,6 +6,7 @@ public class AudioSystem : MonoBehaviour
 {
     public static AudioSystem instance;
     [SerializeField] private float minPitch = .95f, maxPitch = 1.05f;
+    [SerializeField] private float volume;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class AudioSystem : MonoBehaviour
         AudioClip clip = soundEvent.Data.GetAudioClip(); 
         if(clip != null)
         {
+            soundEvent.AudioSource.volume = volume;
             soundEvent.AudioSource.pitch = Random.Range(minPitch, maxPitch);
             soundEvent.AudioSource.PlayOneShot(clip);
         }    

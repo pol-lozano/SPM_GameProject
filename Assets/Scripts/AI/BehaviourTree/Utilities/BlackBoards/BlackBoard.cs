@@ -105,6 +105,7 @@ public class BlackBoard : MonoBehaviour
     {
         
         StartPoint = thisAI.position;
+        StartHeight = agent.baseOffset;
         this.target = target;
         this.anim = anim;
         this.path = path;

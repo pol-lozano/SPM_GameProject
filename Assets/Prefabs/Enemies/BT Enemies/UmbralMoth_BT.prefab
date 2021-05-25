@@ -415,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37cff3e88a2a204d98a388fcce27914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   anim: {fileID: 8678084837451227769}
   path: {fileID: 0}
   agent: {fileID: 8678084837441703936}
@@ -511,6 +510,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 1931234838199794790}
     - target: {fileID: 2254545869778099354, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: target
       value: 

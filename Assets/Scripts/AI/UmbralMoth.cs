@@ -67,6 +67,9 @@ public class UmbralMoth : MonoBehaviour
     void Awake()
     {
         Target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        ControlObjectSet<Transform>(Target);
+        ControlObjectSet<AIPath>(Path);
         //NEW
 
         treePrefab = ObjectPooler.instance.SpawnFromPool("MothTree");
@@ -82,5 +85,13 @@ public class UmbralMoth : MonoBehaviour
     {
         Debug.DrawLine(transform.position, agent.destination, Color.magenta);
         bt.RunBehaviourTree();
+    }
+
+    private void ControlObjectSet<T>(T obj)
+    {
+        if(obj == null)
+        {
+            Debug.LogError("WARNING: " + obj.GetType() + " is null. Make sure the object is set correctly");
+        }
     }
 }

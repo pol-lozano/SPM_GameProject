@@ -61,10 +61,10 @@ MonoBehaviour:
   chaseSpeed: 5.5
   distanceToAttack: 2
   distanceToChase: 20
-  distanceToInvestigate: 10
-  distanceToAid: 40
+  distanceToInvestigate: 8
+  distanceToAid: 15
   distanceToPointForSuccess: 5
-  maxDistanceFromStartPoint: 50
+  maxDistanceFromStartPoint: 40
   stunSpeed: 2
   stunLength: 3
   attackCooldown: 5
