@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &111833808 stripped
@@ -334,6 +338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &436679039 stripped
@@ -447,6 +455,10 @@ PrefabInstance:
     - target: {fileID: 6642198095672850230, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
       propertyPath: m_Name
       value: SM_TorchWallLight (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
@@ -617,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &890259419 stripped
@@ -774,6 +790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &1030354232 stripped
@@ -898,6 +918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &1112717588 stripped
@@ -930,7 +954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42.06702
+      value: 41.783
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1022,6 +1046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &1131070543 stripped
@@ -1054,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.649925
+      value: 46.207
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1146,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &1146489631 stripped
@@ -1207,6 +1239,10 @@ PrefabInstance:
     - target: {fileID: 6642198095672850230, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
       propertyPath: m_Name
       value: SM_TorchWallLight (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
@@ -1332,6 +1368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &1387293119 stripped
@@ -1356,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -91.67191
+      value: -92.256
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1364,7 +1404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.215714
+      value: 48.639
       objectReference: {fileID: 0}
     - target: {fileID: 7766288029283768803, guid: 475e96c0fa7d1cd40ad04a84b0fd2f92, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1580,6 +1620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TorchWallLight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
 --- !u!4 &1894712851 stripped
@@ -1736,6 +1780,10 @@ PrefabInstance:
     - target: {fileID: 6642198095672850230, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
       propertyPath: m_Name
       value: SM_TorchWallLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794613353156873363, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
+      propertyPath: m_Intensity
+      value: 87.53522
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
