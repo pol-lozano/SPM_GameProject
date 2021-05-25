@@ -10,6 +10,7 @@ public class PickUp : MonoBehaviour
     [SerializeField] private AudioData pickUpAudio;
     [SerializeField] private Collider pickupCollider;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject particleSystem;
 
     public Animator anim;
 
@@ -21,7 +22,7 @@ public class PickUp : MonoBehaviour
           anim.SetBool("Activated", true);
           EventHandler<SoundEvent>.FireEvent(new SoundEvent(pickUpAudio, audioSource));
           pickupCollider.enabled = false;
-
+          particleSystem.SetActive(false);
 
     }
 }
