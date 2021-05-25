@@ -14,7 +14,6 @@ public class UmbralFiend : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
-    [SerializeField] private Transform viewPoint;
 
     private BT_UmbralFiend behaviourTree;
     private BlackBoard blackBoard;
@@ -43,12 +42,12 @@ public class UmbralFiend : MonoBehaviour
     public NavMeshAgent Agent { get => agent; }
     public HealthComponent Health { get => health; }
     public List<Rigidbody> Ragdoll { get => ragdoll; }
-    public Transform ViewPoint { get => viewPoint; }
     #endregion
 
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         /*
         if (EnemyLoader(this) == false)
             Destroy(gameObject);

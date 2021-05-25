@@ -8,11 +8,10 @@ public class StunNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        if(BlackBoard.IsCoolingDown == false)
-        {
-            BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, 0,3);
-            BlackBoard.Anim.SetBool("Stunned", true);
-        }
+        BlackBoard.IsCoolingDown = true;
+        BlackBoard.Agent.speed = 0;
+        BlackBoard.Anim.SetBool("Stunned", true);
+        BlackBoard.Anim.SetFloat("Speed", 0);
         return NODE_STATE.SUCCESS;
     }
 }

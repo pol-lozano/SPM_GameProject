@@ -5,7 +5,12 @@ using UnityEngine.AI;
 
 public class BT_UmbralFiend : BehaviourTree
 {
-    [SerializeField] private DieNode dieNode;
+    /*
+    [Tooltip("Die sequence should hold: DieNode")]
+    [Header("Die Sequence")]
+    */
+
+
 
     public override void ConstructBehaviourTree()
     {
@@ -17,14 +22,15 @@ public class BT_UmbralFiend : BehaviourTree
 
         /*******Stun Sequence********/
         StunNode stun = new StunNode(this);
-        WaitNode stunWait = new WaitNode(BlackBoard.StunLength);
+        CooldownNode stunWait = new CooldownNode(this, BlackBoard.StunLength);
         ExitStunNode exitStun = new ExitStunNode(this);
         IsStunnedDecorator stunDec = new IsStunnedDecorator(this);
         Sequence stunSequence = new Sequence(new List<Node> { stun, stunWait, exitStun }, stunDec, "Stun");
 
         /******Alarm Sequence*******/
         SendForHelp sendForHelp = new SendForHelp(this);
-        Sequence alarmSequence = new Sequence(new List<Node> { sendForHelp }, new NeedHelpDecorator(this), "Alarm");
+        WaitNode helpWait = new WaitNode(BlackBoard.WaitTime);
+        Sequence alarmSequence = new Sequence(new List<Node> { sendForHelp, helpWait }, new NeedHelpDecorator(this), "Alarm");
 
 
         /*****Knock Back Sequence****/
@@ -42,7 +48,7 @@ public class BT_UmbralFiend : BehaviourTree
         ChaseNode chase = new ChaseNode(this);
         AttackNode attack = new AttackNode(this);
         CooldownNode cooldown = new CooldownNode(this, BlackBoard.AttackCooldown);
-        Sequence attackSequence = new Sequence(new List<Node> { attack, cooldown}, new AttackPlayerDecorator(this), "Attack");
+        Sequence attackSequence = new Sequence(new List<Node> { attack, cooldown}, new BaseDecorator(), "Attack");
             
        
         Sequence chaseAndAttackSequence = new Sequence(new List<Node> { chase, attackSequence}, new ChasePlayerDecorator(this), "Chase");

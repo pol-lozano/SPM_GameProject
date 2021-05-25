@@ -8,6 +8,6 @@ public class EnemyCollider : MonoBehaviour
 
     [SerializeField] private MeleeWeapon attack;
 
-    public void EnableCollider() { attack.Collider.enabled = true; Debug.Log("ON"); }
-    public void DisableCollider() { attack.Collider.enabled = false; Debug.Log("OFF"); }
+    public void EnableCollider() { attack.Collider.enabled = true; }
+    public void DisableCollider() { attack.Collider.enabled = false; }
 }

@@ -17,12 +17,12 @@ public class ChasePlayerDecorator : Decorator
     {
         if (Physics.Linecast(BlackBoard.ThisAI.position, BlackBoard.Target.position, out hitinfo, BlackBoard.LayersToIgnore))
         {
-            Debug.Log("Lost Player due to " + hitinfo.collider.name);
             BlackBoard.Chasing = false;
             return false;
         }
         else if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) < BlackBoard.DistanceToChase && BlackBoard.ReturningHome == false)
         {
+            //Debug.Log("Chase SUcceeded");
             BlackBoard.Chasing = true;
             BlackBoard.TargetLastSeenPoint = BlackBoard.Target.position;
             BlackBoard.RecentlySawTarget = true;

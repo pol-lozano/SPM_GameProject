@@ -7,7 +7,9 @@ public class CanPatrolDecorator : Decorator
     public CanPatrolDecorator(BehaviourTree tree) { this.tree = tree; }
     public override bool Condition()
     {
-        if (BlackBoard.MovingToPoint == false && BlackBoard.IsCoolingDown == false)
+        if (BlackBoard.MovingToPoint == false && 
+            BlackBoard.IsCoolingDown == false &&
+            BlackBoard.RecentlySawTarget == false)
         {
             return true;
         }

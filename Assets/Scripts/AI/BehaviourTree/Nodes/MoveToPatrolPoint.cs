@@ -14,7 +14,7 @@ public class MoveToPatrolPoint : Node
 
     public override NODE_STATE Evaluate()
     {
-        BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, BlackBoard.PatrolSpeed, 3);
+        BlackBoard.Agent.speed = BlackBoard.PatrolSpeed;
         BlackBoard.Anim.SetFloat("Speed", BlackBoard.PatrolSpeed);
         adjustedPoint = new Vector3(BlackBoard.Agent.destination.x, BlackBoard.Agent.transform.position.y, BlackBoard.Agent.destination.z);
 

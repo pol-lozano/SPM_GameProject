@@ -33,15 +33,15 @@ public class Selector : Node
                 switch (node.Evaluate())
                 {
                     case NODE_STATE.SUCCESS:
-                        //Debug.Log(node.ID + "SUCC");
+                        Debug.Log(node.ID + "SUCC");
                         nodeState = NODE_STATE.SUCCESS;
                         return nodeState;
                     case NODE_STATE.RUNNING:
-                        //Debug.Log(node.ID + "RUNN");
+                        Debug.Log(node.ID + "RUNN");
                         nodeState = NODE_STATE.RUNNING;
                         return nodeState;
                     case NODE_STATE.FAILURE:
-                        //Debug.Log(node.ID + "FAIL");
+                        Debug.Log(node.ID + "FAIL");
                         nodeState = NODE_STATE.FAILURE;
                         break;
                     default:

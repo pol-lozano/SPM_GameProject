@@ -8,7 +8,7 @@ public class KnockBackNode : Node
     public override NODE_STATE Evaluate()
     {
 
-        BlackBoard.Agent.SetDestination(BlackBoard.ThisAI.position);
+        BlackBoard.Agent.ResetPath();
         BlackBoard.ThisAI.GetComponent<EnemyCollider>().DisableCollider();
         BlackBoard.RecentlyKnocked = true;
         BlackBoard.Anim.SetBool("Hit", true);

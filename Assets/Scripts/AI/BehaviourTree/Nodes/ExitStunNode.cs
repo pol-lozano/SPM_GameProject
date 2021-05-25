@@ -9,10 +9,8 @@ public class ExitStunNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        if(BlackBoard.IsCoolingDown == false)
-        {
-            BlackBoard.Anim.SetBool("Stunned", false);
-        }
+        BlackBoard.Anim.SetBool("Stunned", false);
+        BlackBoard.Health.IsStunned = false;
         return NODE_STATE.SUCCESS;
     }
 }

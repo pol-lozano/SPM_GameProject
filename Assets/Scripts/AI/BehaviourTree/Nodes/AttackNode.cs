@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class AttackNode : Node
 {
-    float speed;
     public AttackNode(BehaviourTree tree) { this.tree = tree; }
     public override NODE_STATE Evaluate()
     {
-        speed = Mathf.Lerp(BlackBoard.Agent.speed, 0.3f, 3);
-        BlackBoard.Agent.speed = speed;
-        if(BlackBoard.IsCoolingDown == false)
+        BlackBoard.Agent.speed = Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) + 1;
+        BlackBoard.Anim.SetFloat("Speed", BlackBoard.Agent.speed);
+        BlackBoard.Agent.SetDestination(BlackBoard.Target.position);
+        
+        if (BlackBoard.IsCoolingDown == false)
         {
             BlackBoard.IsCoolingDown = true;
             BlackBoard.MovingToPoint = true;
             BlackBoard.Anim.SetBool("Attack", true);
-            BlackBoard.Anim.SetFloat("Speed", speed);
+            
         }
         else
         {

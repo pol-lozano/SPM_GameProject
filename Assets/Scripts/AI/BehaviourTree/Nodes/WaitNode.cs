@@ -25,7 +25,7 @@ public class WaitNode : Node
         else
         {
             timer = timerLength;
-            Debug.Log("WAIT DONE");
+            //Debug.Log("WAIT DONE");
             return NODE_STATE.SUCCESS;
         }
     }

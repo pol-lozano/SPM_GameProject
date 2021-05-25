@@ -8,7 +8,8 @@ public class AidAlly : Node
     public override NODE_STATE Evaluate()
     {
         BlackBoard.Agent.SetDestination(BlackBoard.AllyInNeedPosition);
-        BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, BlackBoard.ChaseSpeed, 3);
+        BlackBoard.Agent.speed = BlackBoard.ChaseSpeed;
+        BlackBoard.Anim.SetFloat("Speed", BlackBoard.ChaseSpeed);
         if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Agent.destination) < BlackBoard.DistanceToPointForSuccess)
         {
             BlackBoard.AllyInNeed = false;

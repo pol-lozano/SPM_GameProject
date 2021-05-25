@@ -19,20 +19,16 @@ public class ChaseNode : Node
 
         if (BlackBoard.MovingToPoint == false)
         {
-            
+            BlackBoard.Agent.speed = BlackBoard.ChaseSpeed;
             BlackBoard.Agent.SetDestination(BlackBoard.Target.position);
-            BlackBoard.Agent.speed = Mathf.Lerp(BlackBoard.Agent.speed, BlackBoard.ChaseSpeed, 3);
             BlackBoard.Anim.SetFloat("Speed", BlackBoard.ChaseSpeed);
         }
 
-        if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Agent.destination) < BlackBoard.DistanceToAttack)
+        if (Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Agent.destination) < BlackBoard.DistanceToAttack + 1.5f)
         {
             return NODE_STATE.SUCCESS;
         }
         else
-        {
-            Debug.Log("Not there yet");
-        }
             return NODE_STATE.RUNNING;
 
     }

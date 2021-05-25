@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class SetRandomPoint : Node
 {
 
-    float sampleDistance = 3;
-    float maxDistance = 3;
+    float sampleDistance = 5;
+    float maxDistance = 5;
 
     public SetRandomPoint(BehaviourTree tree) 
     { 
@@ -18,7 +18,7 @@ public class SetRandomPoint : Node
     {
         if(BlackBoard.MovingToPoint == false)
         {
-            Vector3 samplePos = GetSamplePositionOnNavMesh(BlackBoard.Target.position, sampleDistance, maxDistance);
+            Vector3 samplePos = GetSamplePositionOnNavMesh(BlackBoard.ThisAI.position, sampleDistance, maxDistance);
             Vector3 adjusted = new Vector3(samplePos.x, BlackBoard.Agent.transform.position.y, samplePos.z);
             BlackBoard.IsCoolingDown = true;
             BlackBoard.RandomPoint = adjusted;

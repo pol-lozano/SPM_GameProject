@@ -1963,7 +1963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5466197489885619610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.179, z: -0}
+  m_LocalPosition: {x: -0.06, y: 0.308, z: 0.026}
   m_LocalScale: {x: 1, y: 0.6889649, z: 1}
   m_Children: []
   m_Father: {fileID: 3913915786971272152}
@@ -2012,8 +2012,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 20
-  hitAudio: {fileID: 0}
-  attackAudio: {fileID: 0}
+  fleshHit: {fileID: 0}
+  defaultHit: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &5704959781669279634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,6 +2984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88a52f1c793a2c47b0faf82a26b8901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  hitSounds: {fileID: 0}
   shakeData: {fileID: 0}
   maxHealth: 100
   currentHealth: 100
@@ -2990,7 +2993,7 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 2048
-  hitAudio: {fileID: 11400000, guid: 8ce7eaac8754aaa48928440a765b8a81, type: 2}
+  deathSound: {fileID: 0}
   isPlayer: 0
 --- !u!195 &8188568301334767972
 NavMeshAgent:
@@ -3056,7 +3059,7 @@ MonoBehaviour:
   - {fileID: 199362314362191942}
   - {fileID: 6687278460338639669}
   - {fileID: 6581330128908083565}
-  collider: {fileID: 6050647908539955043}
+  viewPoint: {fileID: 0}
 --- !u!1 &8252005047757989140
 GameObject:
   m_ObjectHideFlags: 0
