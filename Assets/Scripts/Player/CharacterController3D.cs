@@ -67,8 +67,9 @@ public class CharacterController3D : MonoBehaviour
         return RawInput.x * correctedHorizontal + RawInput.y * correctedVertical;
     }
 
-    public void PlayFootStepSound()
+    public void PlayFootStepSound(AnimationEvent e)
     {
+        if(e.animatorClipInfo.weight > 0.5)
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerStepSound, Player.AudioSource));
     }
 
