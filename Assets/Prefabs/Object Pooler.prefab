@@ -50,3 +50,9 @@ MonoBehaviour:
   - tag: shadowball
     prefab: {fileID: 7781284558354789536, guid: b8b0e2d022f65df4d8c61f6fdac7a6dd, type: 3}
     size: 10
+  - tag: MothTree
+    prefab: {fileID: 2572793795754029990, guid: df1eab3879113dd45acae7fb5411d923, type: 3}
+    size: 6
+  - tag: FiendTree
+    prefab: {fileID: 2572793795754029990, guid: 6acf5e737556b854895e49741413372d, type: 3}
+    size: 8
