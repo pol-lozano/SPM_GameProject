@@ -30,14 +30,12 @@ public class UmbralMoth : MonoBehaviour
     */
 
     [Header("References")]
-    [SerializeField] private Transform target;
+    
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
-
-
     private GameObject treePrefab;
     //private BT_UmbralMoth behaviourTree;
 
@@ -56,7 +54,7 @@ public class UmbralMoth : MonoBehaviour
     public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
     public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
     */
-    public Transform Target { get => target; }
+    public Transform Target { get; private set; }
     public Animator Anim { get => anim; }
     public AIPath Path { get => path; }
     public NavMeshAgent Agent { get => agent; }
@@ -68,7 +66,7 @@ public class UmbralMoth : MonoBehaviour
 
     void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        Target = GameObject.FindGameObjectWithTag("Player").transform;
         //NEW
 
         treePrefab = ObjectPooler.instance.SpawnFromPool("MothTree");
