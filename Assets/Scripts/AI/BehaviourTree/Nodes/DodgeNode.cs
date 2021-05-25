@@ -5,34 +5,31 @@ using UnityEngine.AI;
 
 public class DodgeNode : Node
 {
-    NavMeshAgent agent;
     NavMeshHit hitinfo;
     float sampleDistance = 3;
     float maxDistance = 6;
     public DodgeNode(BehaviourTree tree) 
     { 
         this.tree = tree;
-        agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
     }
     public override NODE_STATE Evaluate()
     {
-        if(tree.GetBlackBoardValue<bool>("isCoolingDown").GetVariable() == true)
+        if(BlackBoard.IsCoolingDown == true)
         {
-            Vector3 samplePos = GetSamplePositionOnNavMesh(agent.transform.position, sampleDistance, maxDistance);
-            Vector3 adjusted = new Vector3(samplePos.x, agent.transform.position.y, samplePos.z);
-            Debug.Log(Vector3.Distance(agent.transform.position, adjusted));
-            Debug.DrawRay(agent.transform.position, adjusted - agent.transform.position, Color.cyan, 3f);
+            Vector3 samplePos = GetSamplePositionOnNavMesh(BlackBoard.Agent.transform.position, sampleDistance, maxDistance);
+            Vector3 adjusted = new Vector3(samplePos.x, BlackBoard.Agent.transform.position.y, samplePos.z);
+            Debug.Log(Vector3.Distance(BlackBoard.Agent.transform.position, adjusted));
+            Debug.DrawRay(BlackBoard.Agent.transform.position, adjusted - BlackBoard.Agent.transform.position, Color.cyan, 3f);
 
-            agent.SetDestination(adjusted);
+            BlackBoard.Agent.SetDestination(adjusted);
 
             //agent.speed = 5;
         }
         
-        if (Vector3.Distance(agent.transform.position, agent.destination)
-                < tree.GetBlackBoardValue<float>("DistanceToPointForSuccess").GetVariable())
+        if (Vector3.Distance(BlackBoard.Agent.transform.position, BlackBoard.Agent.destination) < BlackBoard.DistanceToPointForSuccess)
         {
-            Debug.Log("DODGED");
-            tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(false);
+            //Debug.Log("DODGED");
+            BlackBoard.IsCoolingDown = false;
             return NODE_STATE.SUCCESS;
         }   
             else

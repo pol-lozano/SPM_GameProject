@@ -5,8 +5,9 @@ using UnityEngine;
 
 public abstract class Decorator
 {
-    protected BlackBoard blackBoard;
     protected BehaviourTree tree;
     public abstract bool Condition();
+
+    protected BlackBoard BlackBoard { get => tree.BlackBoard; }
 
 }
