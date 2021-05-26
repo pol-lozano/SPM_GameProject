@@ -10,7 +10,7 @@ public class GameInstance : MonoBehaviour
     {
         CharacterController3D.Player.transform.position = Checkpoint.currentCheckPoint.transform.position;
         CharacterController3D.Player.GetComponent<HealthComponent>().ResetHealth();
-        
+        EnemyLoader.ResetEnemies();
         
     }
 
