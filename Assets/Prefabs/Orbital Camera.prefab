@@ -275,14 +275,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 32769
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 0
+  antialiasing: 2
   SMAAQuality: 2
-  dithering: 0
+  dithering: 1
   stopNaNs: 0
-  taaSharpenStrength: 0.5
-  TAAQuality: 1
-  taaHistorySharpening: 0.35
-  taaAntiFlicker: 0.5
+  taaSharpenStrength: 2
+  TAAQuality: 2
+  taaHistorySharpening: 0
+  taaAntiFlicker: 0
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   physicalParameters:
