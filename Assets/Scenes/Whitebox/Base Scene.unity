@@ -2585,6 +2585,18 @@ PrefabInstance:
       propertyPath: puzzleID
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 4487928480864295064, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487928480864295064, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487928480864295064, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 257
+      objectReference: {fileID: 0}
     - target: {fileID: 4842053555737344889, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Name
       value: AllPuzzles
