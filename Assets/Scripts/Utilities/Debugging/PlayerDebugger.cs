@@ -10,7 +10,7 @@ public class PlayerDebugger : MonoBehaviour
     [SerializeField] private PhysicsComponent playerPhysics;
     [SerializeField] private PlayerCombat playerCombat;
     [SerializeField] private GodMode godMode;
-   
+    [SerializeField] private TurnTowardsCameraDirection turnPlayer;
 
 
     public void GodMode()
@@ -19,4 +19,20 @@ public class PlayerDebugger : MonoBehaviour
         playerPhysics.enabled = !playerPhysics.enabled;
         godMode.enabled = !godMode.enabled;
     }
+
+    public void TurnOffScripts()
+    {
+        playerController.enabled = false;
+     //   playerPhysics.enabled = false;
+        playerCombat.enabled = false;
+        turnPlayer.enabled = false;
+    }
+
+    public void TurnOnScripts()
+    {
+        playerController.enabled = true;
+ //       playerPhysics.enabled = true;
+        playerCombat.enabled = true;
+        turnPlayer.enabled = true;
+    }   
 }
