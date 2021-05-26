@@ -64,9 +64,10 @@ public class UmbralMoth : MonoBehaviour
 
     BT_UmbralMoth bt;
 
-    void Awake()
+    void Start()
     {
         Target = GameObject.FindGameObjectWithTag("Player").transform;
+        Anim.SetBool("Die", false);
 
         ControlObjectSet<Transform>(Target);
         ControlObjectSet<AIPath>(Path);
