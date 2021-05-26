@@ -2968,7 +2968,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minPitch: 0.95
   maxPitch: 1.05
-  volume: 0.2
 --- !u!1 &1853206179
 GameObject:
   m_ObjectHideFlags: 1
@@ -3722,6 +3721,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.8171872
       objectReference: {fileID: 0}
+    - target: {fileID: 202013830762072630, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_Volume
+      value: 0.191
+      objectReference: {fileID: 0}
     - target: {fileID: 470533039130487289, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.8285188
@@ -4369,6 +4372,10 @@ PrefabInstance:
     - target: {fileID: 6388551472031196608, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.42616132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827194324155750844, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_Volume
+      value: 0.281
       objectReference: {fileID: 0}
     - target: {fileID: 6849719037567620346, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w
