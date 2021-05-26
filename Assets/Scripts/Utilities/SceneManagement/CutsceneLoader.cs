@@ -10,5 +10,6 @@ public class CutsceneLoader : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Timeline.Play();
+        GetComponent<Collider>().enabled = false;
     }
 }
