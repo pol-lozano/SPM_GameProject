@@ -2985,7 +2985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88a52f1c793a2c47b0faf82a26b8901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: -2326694989335640144}
   hitSounds: {fileID: 11400000, guid: 8ce7eaac8754aaa48928440a765b8a81, type: 2}
   shakeData: {fileID: 0}
   maxHealth: 100

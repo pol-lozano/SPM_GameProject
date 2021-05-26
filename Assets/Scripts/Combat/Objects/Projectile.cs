@@ -16,8 +16,6 @@ public class Projectile : MonoBehaviour
     private Rigidbody rb;
 
     private bool hit;
-    private float timeToKillAfterHit = 1;
-    private float timer;
 
     private void Awake()
     {
@@ -27,7 +25,6 @@ public class Projectile : MonoBehaviour
     private void OnEnable()
     {
         mesh.enabled = true;
-        timer = timeToKillAfterHit;
         coll.enabled = true;
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         rb.constraints = RigidbodyConstraints.FreezeRotationY;

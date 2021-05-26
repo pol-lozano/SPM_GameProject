@@ -73,7 +73,7 @@ public class UmbralFiend : MonoBehaviour
 
     void Update()
     {
-        //Debug.DrawLine(transform.position, agent.destination, Color.magenta);
+        Debug.DrawLine(transform.position, agent.destination, Color.magenta);
         behaviourTree.RunBehaviourTree();
     }
 }
