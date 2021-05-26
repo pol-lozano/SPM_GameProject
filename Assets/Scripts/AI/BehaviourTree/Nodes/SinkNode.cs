@@ -5,23 +5,21 @@ using UnityEngine.AI;
 
 public class SinkNode : Node
 {
-    public SinkNode(BlackBoard bb, BehaviourTree tree)
+    public SinkNode(BehaviourTree tree)
     {
-        this.blackboard = bb;
         this.tree = tree;
     }
 
     public override NODE_STATE Evaluate()
     {
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
-        if (agent.baseOffset > 1.3f)
+        BlackBoard.Agent.ResetPath();
+        if (BlackBoard.Agent.baseOffset > 1.21f && BlackBoard.Rising == false)
         {
-            agent.baseOffset -= Time.deltaTime * tree.GetBlackBoardValue<float>("SinkSpeed").GetVariable();
+            BlackBoard.Agent.baseOffset -= Time.deltaTime * BlackBoard.StunSpeed;
             return NODE_STATE.RUNNING;
         }
         else
         {
-            agent.baseOffset = 1.2f;
             return NODE_STATE.SUCCESS;
         }
     }

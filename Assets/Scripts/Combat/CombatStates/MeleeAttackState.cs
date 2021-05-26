@@ -30,7 +30,7 @@ public class MeleeAttackState : CombatState
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(attackSound, Player.MeleeWeapon.AudioSource));
 
         timeSinceLastAttack = Time.time - timeSinceLastAttack;
-        Debug.Log("Time since last attack: " + timeSinceLastAttack);
+        //Debug.Log("Time since last attack: " + timeSinceLastAttack);
 
         //Play attack sound
         //Begin listening for hits

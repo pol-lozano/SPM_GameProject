@@ -12,8 +12,7 @@ public class SetNextPatrolPoint : Node
 
     public override NODE_STATE Evaluate()
     {
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
-        agent.SetDestination(tree.GetBlackBoardValue<AIPath>("Path").GetVariable().Next().position);
+        BlackBoard.Agent.SetDestination(BlackBoard.Path.Next().position);
         return NODE_STATE.SUCCESS;
     }
 

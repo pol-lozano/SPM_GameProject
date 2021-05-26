@@ -23,6 +23,7 @@ public class CharacterController3D : MonoBehaviour
     [SerializeField] private InputHandler input;
     [SerializeField] private PlayerState[] states;
     [SerializeField] private Transform playerMesh;
+    [SerializeField] private AudioData playerStepSound;
 
     public Transform PlayerMesh { get => playerMesh; set => playerMesh = value; }
     public PhysicsComponent PhysicsComponent { get; set; }
@@ -64,6 +65,12 @@ public class CharacterController3D : MonoBehaviour
         correctedVertical.y = 0f;
         correctedVertical.Normalize();
         return RawInput.x * correctedHorizontal + RawInput.y * correctedVertical;
+    }
+
+    public void PlayFootStepSound(AnimationEvent e)
+    {
+        if(e.animatorClipInfo.weight > 0.5)
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(playerStepSound, Player.AudioSource));
     }
 
     //STATE MACHINE

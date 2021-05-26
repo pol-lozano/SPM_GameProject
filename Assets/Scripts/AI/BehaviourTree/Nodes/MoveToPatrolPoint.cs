@@ -14,18 +14,17 @@ public class MoveToPatrolPoint : Node
 
     public override NODE_STATE Evaluate()
     {
+        BlackBoard.Agent.speed = BlackBoard.PatrolSpeed;
+        BlackBoard.Anim.SetFloat("Speed", BlackBoard.PatrolSpeed);
+        adjustedPoint = new Vector3(BlackBoard.Agent.destination.x, BlackBoard.Agent.transform.position.y, BlackBoard.Agent.destination.z);
 
-        NavMeshAgent agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
-        agent.speed = tree.GetBlackBoardValue<float>("PatrolSpeed").GetVariable();
-        adjustedPoint = new Vector3(agent.destination.x, agent.transform.position.y, agent.destination.z);
-        if (Vector3.Distance(agent.transform.position, adjustedPoint) < tree.GetBlackBoardValue<float>("DistanceToPointForSuccess").GetVariable())
+        if (Vector3.Distance(BlackBoard.Agent.transform.position, adjustedPoint) < BlackBoard.DistanceToPointForSuccess)
         {
             return NODE_STATE.SUCCESS;
         }
+            
         else
-        {
             return NODE_STATE.RUNNING;
-        }
             
     }
 }

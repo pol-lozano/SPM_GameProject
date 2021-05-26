@@ -21,22 +21,24 @@ public class Sequence : Node
         
         if (decorator.Condition() == true)
         {
-            //Debug.Log(ID);
+            
             bool anyChildRunning = false;
             foreach (Node node in nodes)
             {
                 //if (node.STATUS == NODE_STATUS.START)
-                    //node.OnInitialize();
+                //node.OnInitialize();
+                //Debug.Log(ID);
                 switch (node.Evaluate())
                 {
                     case NODE_STATE.FAILURE:
-                        nodeState = NODE_STATE.FAILURE;
-                        return nodeState;
+                        //Debug.Log(ID + "FAIL");
+                        return NODE_STATE.FAILURE;
                     case NODE_STATE.SUCCESS:
-                        //node.OnTerminate();
+                        //Debug.Log(ID + "SUCC");
                         break;
                     case NODE_STATE.RUNNING:
                         nodeState = NODE_STATE.RUNNING;
+                        //Debug.Log(ID + "RUNN");
                         return nodeState;
                     default:
                         break;

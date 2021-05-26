@@ -133,11 +133,11 @@ Material:
     - Vector1_01094c93d14f4328bd8b0b1f3f17dd9a: -2
     - Vector1_10a94d5812f64e8f971c88bc03a4bd2e: 2
     - Vector1_23600a7503c24b158e8f1696d0d069cb: 4
-    - Vector1_3ae83b5d59f6486c95a988bd89c9586d: 500
+    - Vector1_3ae83b5d59f6486c95a988bd89c9586d: 800
     - Vector1_6f6fdb30d3994c49ae7c8124246922b4: 5
     - Vector1_7bea9d5c09b74d699d25c1750c8a201a: 2
     - Vector1_96bda0a2ddf24e8588cb0c1d736759eb: 1
-    - Vector1_d224ee34b15b4704a648c8e4c5798ec3: 0.025
+    - Vector1_d224ee34b15b4704a648c8e4c5798ec3: 0.1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1

@@ -6,24 +6,22 @@ using UnityEngine.AI;
 public class SetRandomPoint : Node
 {
 
-    NavMeshAgent agent;
     float sampleDistance = 5;
     float maxDistance = 5;
 
     public SetRandomPoint(BehaviourTree tree) 
     { 
         this.tree = tree;
-        agent = tree.GetBlackBoardValue<NavMeshAgent>("Agent").GetVariable();
 
     }
     public override NODE_STATE Evaluate()
     {
-        if(tree.GetBlackBoardValue<bool>("MovingToPoint").GetVariable() == false)
+        if(BlackBoard.MovingToPoint == false)
         {
-            Debug.Log("Set Random Point");
-            Vector3 samplePos = GetSamplePositionOnNavMesh(agent.transform.position, sampleDistance, maxDistance);
-            Vector3 adjusted = new Vector3(samplePos.x, agent.transform.position.y, samplePos.z);
-            tree.GetBlackBoardValue<Vector3>("RandomPoint").SetVariable(adjusted);
+            Vector3 samplePos = GetSamplePositionOnNavMesh(BlackBoard.ThisAI.position, sampleDistance, maxDistance);
+            Vector3 adjusted = new Vector3(samplePos.x, BlackBoard.Agent.transform.position.y, samplePos.z);
+            BlackBoard.IsCoolingDown = true;
+            BlackBoard.RandomPoint = adjusted;
         }
         return NODE_STATE.SUCCESS;
     }

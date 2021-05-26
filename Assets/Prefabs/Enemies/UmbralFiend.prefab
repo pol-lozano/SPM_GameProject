@@ -3925,6 +3925,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2254545870210786067, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254545870210786067, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254545870210786067, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 2254545870210786070, guid: 6fecf729eb6750248a235a00774bc1be, type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas

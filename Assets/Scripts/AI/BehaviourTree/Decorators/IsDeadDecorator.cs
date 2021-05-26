@@ -3,13 +3,12 @@ using UnityEngine;
 
 public class IsDeadDecorator : Decorator
 {
-    public IsDeadDecorator(BlackBoard bb, BehaviourTree tree) 
+    public IsDeadDecorator(BehaviourTree tree) 
     { 
-        this.blackBoard = bb;
         this.tree = tree;
     }
     public override bool Condition()
     {
-        return tree.GetBlackBoardValue<HealthComponent>("Health").GetVariable().CurrentHealth <= 0;
+        return BlackBoard.Health.CurrentHealth <= 0;
     }
 }
