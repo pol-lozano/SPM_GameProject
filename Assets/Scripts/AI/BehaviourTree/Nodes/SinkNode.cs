@@ -13,10 +13,10 @@ public class SinkNode : Node
 
     public override NODE_STATE Evaluate()
     {
-        BlackBoard.Agent.ResetPath();
-        if (BlackBoard.Agent.baseOffset > 1.21f && BlackBoard.Rising == false)
+        BlackBoard.Agent.SetDestination(BlackBoard.ThisAI.position);
+        if (BlackBoard.Agent.baseOffset > 1.18f && BlackBoard.Rising == false)
         {
-            BlackBoard.Agent.baseOffset -= Time.deltaTime * BlackBoard.StunSpeed + acceleration;
+            BlackBoard.Agent.baseOffset -= acceleration * BlackBoard.StunSpeed;
             acceleration += 0.01f;
             return NODE_STATE.RUNNING;
         }

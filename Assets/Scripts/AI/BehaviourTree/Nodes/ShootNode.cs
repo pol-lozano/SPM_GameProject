@@ -16,17 +16,21 @@ public class ShootNode : Node
     {
         if (BlackBoard.IsCoolingDown == false)
         {
-            //Debug.Log("Shoot");
+            
+            BlackBoard.Anim.SetTrigger("Attack");
             EventHandler<SoundEvent>.FireEvent(new SoundEvent(BlackBoard.AttackAudio, BlackBoard.ThisAI.GetComponent<AudioSource>()));
             BlackBoard.Agent.speed = BlackBoard.AttackSpeed;
+            BlackBoard.RecentlyAttacked = true;
+
+            //Get projectile from object pooler
             GameObject g = ObjectPooler.instance.SpawnFromPool("shadowball");
             Projectile proj = g.GetComponent<Projectile>();
             proj.transform.position = BlackBoard.ThisAI.position + BlackBoard.ThisAI.forward;
             proj.transform.rotation = BlackBoard.ThisAI.rotation;
             proj.SetActive(true);
             proj.SetForce(BlackBoard.Target.position - proj.transform.position);
-            //tree.GetBlackBoardValue<bool>("isCoolingDown").SetVariable(true);
-            BlackBoard.RecentlyAttacked = true;
+            
+            
         }
 
         
