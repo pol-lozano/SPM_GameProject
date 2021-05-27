@@ -5,6 +5,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public static Checkpoint currentCheckPoint;
+    [SerializeField] private string UItext;
 
 
     [SerializeField] private List<int> scenesOnThisCheckpoint = new List<int>();
@@ -23,6 +24,7 @@ public class Checkpoint : MonoBehaviour
 
     private void ActivateCheckpoint(GameObject player)
     {
+        EventHandler<UITriggerEvent>.FireEvent(new UITriggerEvent(UItext));
         Debug.Log("ActivateCheckpoint");
         currentCheckPoint = this;
         player.GetComponent<HealthComponent>().ResetHealth();
@@ -31,3 +33,4 @@ public class Checkpoint : MonoBehaviour
     
         
 }
+

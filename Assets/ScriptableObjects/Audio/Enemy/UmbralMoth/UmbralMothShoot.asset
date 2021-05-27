@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
+  m_Name: UmbralMothShoot
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 4b5952a7d312b3947b1916e071f30fa3, type: 3}
+  - {fileID: 8300000, guid: e3c34a819867df347a0aebd31f6975be, type: 3}
+  - {fileID: 8300000, guid: b629ec0157fbd3645a3fdf212125372d, type: 3}
+  - {fileID: 8300000, guid: a32c973c507ecb443bb58eb4c0080547, type: 3}
+  - {fileID: 8300000, guid: 0eedcb6ba9342d844951d49b9bc50ce4, type: 3}
+  - {fileID: 8300000, guid: 7cea4cab62f7667499a7c9cbb3cca862, type: 3}
+  - {fileID: 8300000, guid: 133ca925a6d13bf4b8f1b84c80c595ae, type: 3}

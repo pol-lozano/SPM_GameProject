@@ -9,8 +9,8 @@ public class SendForHelp : Node
     {
         BlackBoard.Anim.SetTrigger("Alarm");
         BlackBoard.Anim.SetFloat("Speed", 0);
-        
-        //spela ljud
+
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(BlackBoard.AlarmAudio, BlackBoard.ThisAI.GetComponent<AudioSource>()));
 
         BlackBoard.SentForHelp = true;
         BlackBoard.Agent.speed = 0;

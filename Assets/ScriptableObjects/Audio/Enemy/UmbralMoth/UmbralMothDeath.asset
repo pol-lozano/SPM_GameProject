@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
-  m_Name: UmbralFiendHit
+  m_Name: UmbralMothDeath
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: c3495c4ad08c47046afaeccf83b97db1, type: 3}
+  - {fileID: 8300000, guid: 93f05d342a6dd3a43a6981e1da915f77, type: 3}

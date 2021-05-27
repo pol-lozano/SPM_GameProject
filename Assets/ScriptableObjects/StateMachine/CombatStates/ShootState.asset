@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8850360b92d29074f8513b58369bb728, type: 3}
   m_Name: ShootState
   m_EditorClassIdentifier: 
-  shakeData: {fileID: 11400000, guid: 479f18fca6fb737409dc7d5445bb746a, type: 2}
+  shakeData: {fileID: 11400000, guid: b68f6b5f8e42d354fb3d484279c67d6f, type: 2}
   shotTimer: 1
   shootSound: {fileID: 11400000, guid: d4e5d19181164fc4aa3202aa0152cbff, type: 2}

@@ -8,7 +8,6 @@ public class BT_UmbralMoth : BehaviourTree
 
     public override void ConstructBehaviourTree()
     {
-
         /*******Death Sequence*******/
         DieNode die = new DieNode(this);
         IsDeadDecorator deadDec = new IsDeadDecorator(this);
@@ -80,7 +79,6 @@ public class BT_UmbralMoth : BehaviourTree
     }
 
 
-   
 
     public override void SetBlackBoard(BlackBoard bb)
     {

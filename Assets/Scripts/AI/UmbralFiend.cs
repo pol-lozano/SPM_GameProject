@@ -5,8 +5,11 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
-public class UmbralFiend : MonoBehaviour
+public class UmbralFiend : Enemy
 {
+
+    [SerializeField] private int enemyID;
+
     [Header("References")]
     [SerializeField] private Transform target;
     [SerializeField] private Animator anim;
@@ -21,38 +24,25 @@ public class UmbralFiend : MonoBehaviour
 
     #region GETTERS
     
-    /*
-    public float PatrolSpeed { get => patrolSpeed; }
-    public float AttackSpeed { get => attackSpeed; }
-    public float ChaseSpeed { get => chaseSpeed; }
-    public float StunLength { get => stunLenght; }
-    public float AttackCooldown { get => attackCooldown; }
-    public float WaitTime { get => waitTime; }
-    public float DistanceToAttack { get => distanceToAttack; }
-    public float DistanceToChase { get => distanceToChase; }
-    public float DistanceToInvestigate { get => distanceToInvestigate; }
-    public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
-    public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
-
-    public LayerMask LayersToIgnore { get => layersToIgnore; }
-    */
+ 
     public Transform Target { get => target; }
     public Animator Anim { get => anim; }
     public AIPath Path { get => path; }
     public NavMeshAgent Agent { get => agent; }
-    public HealthComponent Health { get => health; }
     public List<Rigidbody> Ragdoll { get => ragdoll; }
     #endregion
 
-
+    private void Awake()
+    {
+        Id = enemyID;
+        healthComponent = health;
+        if (EnemyLoader.LoadEnemy(this) == false)
+            Destroy(gameObject);
+    }
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-        /*
-        if (EnemyLoader(this) == false)
-            Destroy(gameObject);
-        */
 
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         treePrefab = ObjectPooler.instance.SpawnFromPool("FiendTree");
         behaviourTree = treePrefab.GetComponent<BT_UmbralFiend>();
         blackBoard = treePrefab.GetComponent<BlackBoard>();
@@ -75,5 +65,13 @@ public class UmbralFiend : MonoBehaviour
     {
         //Debug.DrawLine(transform.position, agent.destination, Color.magenta);
         behaviourTree.RunBehaviourTree();
+
+        if (Health.CurrentHealth <= 0)
+            Destroy(gameObject, 4);
+    }
+
+    private void OnDestroy()
+    {
+        EnemyLoader.OnDestroy(this);
     }
 }

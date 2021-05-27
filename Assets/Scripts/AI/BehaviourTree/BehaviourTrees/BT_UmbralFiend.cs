@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[System.Serializable]
 public class BT_UmbralFiend : BehaviourTree
 {
-    /*
-    [Tooltip("Die sequence should hold: DieNode")]
-    [Header("Die Sequence")]
-    */
 
 
 

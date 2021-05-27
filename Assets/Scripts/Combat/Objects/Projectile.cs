@@ -11,12 +11,12 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Collider coll;
     [SerializeField] private int damageAmount;
     [SerializeField] private MeshRenderer mesh;
-    [SerializeField] private VisualEffect particles;
+    [SerializeField] private VisualEffect hitParticles;
 
     private Rigidbody rb;
 
     private bool hit;
-    private float timeToKillAfterHit = 1;
+    private float timeToKillAfterHit = 3;
     private float timer;
 
     private void Awake()
@@ -27,7 +27,6 @@ public class Projectile : MonoBehaviour
     private void OnEnable()
     {
         mesh.enabled = true;
-        timer = timeToKillAfterHit;
         coll.enabled = true;
         rb.constraints = RigidbodyConstraints.FreezeRotationX;
         rb.constraints = RigidbodyConstraints.FreezeRotationY;
@@ -64,6 +63,9 @@ public class Projectile : MonoBehaviour
         if (hitBox == null)
             return false;
 
+        
+        hitParticles.Play();
+
         //Check if owner of health system?
         HitInfo info = new HitInfo()
         {
@@ -74,6 +76,7 @@ public class Projectile : MonoBehaviour
 
         hitBox.ApplyHit(info);
 
+        //Invoke(nameof(Disable), 2);
         return true;
     }
 }
