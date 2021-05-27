@@ -6,6 +6,7 @@ public class PlayerDodgeState : PlayerState
 {
     [SerializeField] private float dodgeForce;
     [SerializeField] private AudioData playerDodgeSound;
+    [SerializeField] private ShakeEventData dodgeShake;
 
     private float timeSinceLastDodge = 0;
 
@@ -22,6 +23,7 @@ public class PlayerDodgeState : PlayerState
     /// </summary>
     public override void OnAnimationStarted()
     {
+        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(dodgeShake));
         timeSinceLastDodge = Time.time - timeSinceLastDodge;
 
         Player.Animator.SetBool(isDodgingBoolHash, true);

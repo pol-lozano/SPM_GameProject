@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5734045759487020983}
-  m_Layer: 3
+  m_Layer: 14
   m_Name: Puzzle_Lever_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2330151862379302824}
-  m_LocalRotation: {x: -0.031479362, y: 0.9995027, z: 0.00009113162, w: 0.0018716516}
+  m_LocalRotation: {x: -0.031480763, y: 0.9995026, z: 0.000089435904, w: 0.0018714084}
   m_LocalPosition: {x: -37.45, y: 9.56, z: -38.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -31,7 +31,7 @@ Transform:
   - {fileID: 8944108694800377635}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.017, y: 179.786, z: -3.608}
 --- !u!65 &5833405710541482151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70,7 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390f7e8c1c95db44d8b1845b6a3dbcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzleID: 8
+  audioSource: {fileID: 0}
+  hitSounds: {fileID: 0}
+  puzzleID: 2
+  puzzleShake: {fileID: 11400000, guid: f2d811be25750d44f8b022e8d4a7063c, type: 2}
 --- !u!64 &8905131612662122607
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -95,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 8598510597086084505}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e1eb5f2cd7b7193409096f8cbffdfd5f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ce01bff1312168643b03819a2c83c5b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
   anim: {fileID: 1036710674624876138}
 --- !u!1001 &8905131612559261896
 PrefabInstance:
@@ -191,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
@@ -271,14 +274,14 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 87e36b658b954fd49b72a1ecbb8542f8, type: 2}
+      objectReference: {fileID: 2100000, guid: 38961758f905d2a46b84c012afccb310, type: 2}
     - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_Name
       value: LeverBase
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}

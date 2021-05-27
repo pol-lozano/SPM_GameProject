@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccec77e41d331c641aceba93aa48e8ac, type: 3}
+  m_Name: ShootShake
+  m_EditorClassIdentifier: 
+  target: 0
+  amplitude: 1.82
+  frequency: 0.5
+  duration: 0.4
+  blendOverLifetime:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.003953575
+      value: 0.005722463
+      inSlope: 14.321072
+      outSlope: 14.321072
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.0484123
+    - serializedVersion: 3
+      time: 0.16599171
+      value: 0.9882088
+      inSlope: 0.010405998
+      outSlope: 0.010405998
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.20416424
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.3315365
+      outSlope: -2.3315365
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.17500055
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -14,14 +14,14 @@ public class RiseNode : Node
     {
         if (BlackBoard.Agent.baseOffset < BlackBoard.StartHeight && BlackBoard.IsCoolingDown == false)
         {
-            Debug.Log("Rise");
+            //Debug.Log("Rise");
             BlackBoard.Rising = true;
             BlackBoard.Agent.baseOffset += Time.deltaTime * BlackBoard.StunSpeed;
             return NODE_STATE.RUNNING;
         }
         else if (BlackBoard.IsCoolingDown == false)
         {
-            Debug.Log("Done Rising");
+            //Debug.Log("Done Rising");
             BlackBoard.Rising = false;
             BlackBoard.Health.IsStunned = false;
             BlackBoard.Agent.baseOffset = BlackBoard.StartHeight;
