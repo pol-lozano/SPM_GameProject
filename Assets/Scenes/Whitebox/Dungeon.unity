@@ -2943,10 +2943,6 @@ MonoBehaviour:
   m_Script: {fileID: 1940700431}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 0}
 --- !u!4 &872749021
 Transform:
   m_ObjectHideFlags: 19
