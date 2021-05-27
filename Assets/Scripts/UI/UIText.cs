@@ -14,7 +14,7 @@ public class UIText : MonoBehaviour
 
     private void ShowText(UITriggerEvent eve)
     {
-        text.text = eve.Text;
-        anim.SetTrigger("ShowText");
+            text.text = eve.Text;
+            anim.SetTrigger("ShowText");
     }
 }
