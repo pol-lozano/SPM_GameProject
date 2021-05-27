@@ -1004,6 +1004,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1892919872}
+    - target: {fileID: 3421437935308927447, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: enemyID
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4447778782025954705, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.00000029150397
@@ -2470,6 +2474,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1098410489}
+    - target: {fileID: 3421437935308927447, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: enemyID
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4447778782025954705, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000006882474
@@ -2924,6 +2932,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 5563912849143274429}
+    - target: {fileID: 3421437935308927447, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: enemyID
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4447778782025954705, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000023422763
@@ -3118,6 +3130,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 72654794}
+    - target: {fileID: 3421437935308927447, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: enemyID
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4447778782025954705, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.0000023422763
@@ -3972,6 +3988,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 1701758107}
+    - target: {fileID: 3421437935308927447, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
+      propertyPath: enemyID
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4447778782025954705, guid: c87ceee05c64f9b428baa018e54e5836, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00000010058284

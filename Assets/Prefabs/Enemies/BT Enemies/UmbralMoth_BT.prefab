@@ -360,7 +360,7 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 2048
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 11400000, guid: adbb01da5920a684ca10a88afe1f40cb, type: 2}
   isPlayer: 0
 --- !u!195 &8678084837441703936
 NavMeshAgent:
@@ -403,7 +403,6 @@ MonoBehaviour:
   health: {fileID: 1931234838199794790}
   ragdoll:
   - {fileID: 8601044176809088005}
-  mesh: {fileID: 8601044176809088001}
 --- !u!82 &1354258026773920670
 AudioSource:
   m_ObjectHideFlags: 0

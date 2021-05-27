@@ -17,6 +17,7 @@ public class ShootNode : Node
         if (BlackBoard.IsCoolingDown == false)
         {
             //Debug.Log("Shoot");
+            EventHandler<SoundEvent>.FireEvent(new SoundEvent(BlackBoard.AttackAudio, BlackBoard.ThisAI.GetComponent<AudioSource>()));
             BlackBoard.Agent.speed = BlackBoard.AttackSpeed;
             GameObject g = ObjectPooler.instance.SpawnFromPool("shadowball");
             Projectile proj = g.GetComponent<Projectile>();
