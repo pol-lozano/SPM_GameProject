@@ -4136,6 +4136,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
       propertyPath: m_Name
       value: SM_Roof_S_Crack (3)
@@ -4373,6 +4377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (12)
@@ -4768,6 +4776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (18)
@@ -5068,6 +5080,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
       propertyPath: m_Name
       value: SM_Roof_S_Crack (4)
@@ -6702,7 +6718,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9f2c6b44f8dee8f4492b2258761b149c, type: 2}
+    - target: {fileID: -6468085518280132687, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: -2670993419985959148, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -8201,7 +8221,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9f2c6b44f8dee8f4492b2258761b149c, type: 2}
+    - target: {fileID: -6468085518280132687, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: -2670993419985959148, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -8481,7 +8505,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9f2c6b44f8dee8f4492b2258761b149c, type: 2}
+    - target: {fileID: -6468085518280132687, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: -2670993419985959148, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -11478,6 +11506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (13)
@@ -11635,7 +11667,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9f2c6b44f8dee8f4492b2258761b149c, type: 2}
+    - target: {fileID: -6468085518280132687, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: -2670993419985959148, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -15524,6 +15560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (14)
@@ -15899,6 +15939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
       propertyPath: m_Name
       value: SM_Roof_S_Crack
@@ -16874,6 +16918,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 725506dd2228ac04191375fed4c1dfd9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: 725506dd2228ac04191375fed4c1dfd9, type: 3}
       propertyPath: m_Name
       value: SM_Roof_L_Crack2 (1)
@@ -17652,6 +17700,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: c6ba0dc394e12d148bb63cadb0975ad3, type: 3}
       propertyPath: m_Name
       value: SM_Roof_S_Crack (5)
@@ -17734,7 +17786,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9f2c6b44f8dee8f4492b2258761b149c, type: 2}
+    - target: {fileID: -6468085518280132687, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: -2670993419985959148, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -19977,6 +20033,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (10)
@@ -20788,6 +20848,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (15)
@@ -22223,7 +22287,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 63b14f34f5b25de40aad96c311af836c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9f2c6b44f8dee8f4492b2258761b149c, type: 2}
+    - target: {fileID: -6468085518280132687, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: -2670993419985959148, guid: 6cef41ff56b7a884da1c8886bb8bae30, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -22871,6 +22939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (11)
@@ -22946,6 +23018,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (20)
@@ -23321,6 +23397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: f0c4e06b9446f3846a4dfaae4176ee3c, type: 3}
       propertyPath: m_Name
       value: M_Pillar_Stone_Corner (19)
@@ -23396,6 +23476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 90542a9ea46c0ab4aa10f951ee678e31, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
     - target: {fileID: 919132149155446097, guid: 90542a9ea46c0ab4aa10f951ee678e31, type: 3}
       propertyPath: m_Name
       value: SM_Roof_L_Crack
