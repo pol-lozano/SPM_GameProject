@@ -113,6 +113,7 @@ public class BlackBoard : MonoBehaviour
         this.agent = agent;
         this.health = health;
         this.ragdoll = ragdoll;
+        Debug.Log("RAGDOLL COUNT = " + ragdoll.Count);
     }
 
 }

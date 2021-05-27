@@ -396,12 +396,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37cff3e88a2a204d98a388fcce27914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyID: 0
   anim: {fileID: 8678084837451227769}
   path: {fileID: 0}
   agent: {fileID: 8678084837441703936}
   health: {fileID: 1931234838199794790}
   ragdoll:
   - {fileID: 8601044176809088005}
+  mesh: {fileID: 8601044176809088001}
 --- !u!82 &1354258026773920670
 AudioSource:
   m_ObjectHideFlags: 0

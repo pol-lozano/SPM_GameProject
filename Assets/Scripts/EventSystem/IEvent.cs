@@ -89,6 +89,10 @@ public class PuzzleEvent : IEvent{
 public class ReloadEvent : IEvent { }
 #endregion
 
+#region RELOADENEMIES_EVENT
+public class ReloadEnemiesEvent : IEvent { }
+#endregion
+
 #region SHAKE_EVENT
 //SHAKE EVENT DATA IS A SCRIPTABLE OBJECT
 [System.Serializable]

@@ -20,10 +20,11 @@ public class HealthComponent : HitComponent
     public bool Invulnerable { get; set; }
     public bool IsStunned { get; set; }
     public float MaxHealth => maxHealth;
-    public float CurrentHealth => currentHealth;
     public Type LastType { get; private set; }
 
-    void Start() => ResetHealth();
+    public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+
+    void Awake() => ResetHealth();
 
     public void ResetHealth()
     {

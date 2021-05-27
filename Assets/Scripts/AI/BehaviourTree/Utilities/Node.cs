@@ -8,15 +8,12 @@ public abstract class Node
 {
     public string ID;
 
-    protected NODE_STATUS status = NODE_STATUS.START;
     protected NODE_STATE nodeState;
     protected BehaviourTree tree;
 
     public NODE_STATE NodeState { get => nodeState; }
 
-    public NODE_STATUS STATUS { get => status; }
-    public void OnInitialize() { }
-    public void OnTerminate() { }
+
 
     public void SetBehaviourTree(BehaviourTree tree) { this.tree = tree; }
     public abstract NODE_STATE Evaluate();
@@ -31,9 +28,3 @@ public enum NODE_STATE
     RUNNING
 }
 
-public enum NODE_STATUS
-{
-    START,
-    RUNNING, 
-    ENDED
-}

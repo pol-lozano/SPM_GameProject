@@ -46,7 +46,7 @@ public class AIController : MonoBehaviour
 
         stateMachine = new StateMachine(this, states);
 
-        EnemyLoader.LoadEnemy(this);
+        //EnemyLoader.LoadEnemy(this);
     }
 
     public void DeactivateRagdoll()
@@ -73,7 +73,7 @@ public class AIController : MonoBehaviour
 
     private void OnDestroy()
     {
-        EnemyLoader.OnDestroy(this);
+        //EnemyLoader.OnDestroy(this);
     }
 
 #if UNITY_EDITOR
