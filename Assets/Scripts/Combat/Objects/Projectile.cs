@@ -65,7 +65,6 @@ public class Projectile : MonoBehaviour
 
         
         hitParticles.Play();
-        
 
         //Check if owner of health system?
         HitInfo info = new HitInfo()
