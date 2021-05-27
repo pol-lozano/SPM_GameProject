@@ -73,6 +73,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   hitSounds: {fileID: 0}
   puzzleID: 2
+  puzzleShake: {fileID: 11400000, guid: f2d811be25750d44f8b022e8d4a7063c, type: 2}
 --- !u!64 &8905131612662122607
 MeshCollider:
   m_ObjectHideFlags: 0
