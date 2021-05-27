@@ -20,6 +20,9 @@ public class PhysicsComponent : MonoBehaviour
     private RaycastHit groundHit;
 
     public RaycastHit GroundHit => groundHit;
+
+    public Rigidbody RigidBody { get => rb; }
+
     public Vector3 Top => transform.position + col.center + Vector3.up * (col.height / 2 - col.radius);
     public Vector3 Bottom => transform.position + col.center + Vector3.down * (col.height / 2 - col.radius);
     public bool IsGrounded => Physics.CapsuleCast(Top, Bottom, col.radius * 0.95f, Vector3.down, out groundHit, groundCheckDistance + skinWidth, collisionMask);
