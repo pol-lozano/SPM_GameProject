@@ -180,3 +180,11 @@ public class AlarmEvent : IEvent
     public AlarmEvent(Vector3 pos) => Position = pos;
 }
 #endregion
+
+#region UITRIGGER_EVENT
+public class UITriggerEvent : IEvent
+{
+    public string Text { get; }
+    public UITriggerEvent(string t) => Text = t;
+}
+#endregion
