@@ -1,6 +1,7 @@
 using UnityEngine;
 
-//Main Author Sajid Masoud El Pip, Supervisors Pol Loreno Llorenz & Rille Linegreen 
+//Author: Pol Loreno Llorenz
+//Secondary Author: Sajid A. Masoud
 [CreateAssetMenu(menuName = "Audio/AudioData")]
 public class AudioData : ScriptableObject
 {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
+//Author: Sajid A. Masoud
 public class CutsceneLoader : MonoBehaviour
 {
     [SerializeField] private PlayableDirector Timeline;
