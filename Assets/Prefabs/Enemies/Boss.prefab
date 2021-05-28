@@ -1744,6 +1744,7 @@ GameObject:
   - component: {fileID: 7300770125381667622}
   - component: {fileID: 4105725708660444136}
   - component: {fileID: 4105725708660444137}
+  - component: {fileID: 8778206953255845613}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -1934,6 +1935,28 @@ MonoBehaviour:
   - {fileID: 5266824112163723870}
   - {fileID: 2614103998492952319}
   - {fileID: 8552193000777166436}
+--- !u!195 &8778206953255845613
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105725708660444134}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 3
+  m_Speed: 3.5
+  m_Acceleration: 40
+  avoidancePriority: 50
+  m_AngularSpeed: 720
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 10
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4244305685048625385
 GameObject:
   m_ObjectHideFlags: 0

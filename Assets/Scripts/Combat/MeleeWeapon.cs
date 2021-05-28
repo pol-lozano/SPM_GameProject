@@ -25,6 +25,7 @@ public class MeleeWeapon : MonoBehaviour
     private bool CheckHit(Collision other)
     {
         HitBox hitBox = other.collider.GetComponent<HitBox>();
+        HitFX(defaultHit, other, hitDefaultFX);
 
         if (hitBox == null)
             return false;
@@ -38,23 +39,19 @@ public class MeleeWeapon : MonoBehaviour
             hitPosition = other.GetContact(0).point
         };
 
-        
-
         hitBox.ApplyHit(info);
         if (hitBox.hitComponent is HealthComponent)
         {
-            HitFX(fleshHit, other.contacts[0].point, hitFleshFX);
-        } else
-        {
-            HitFX(defaultHit, other.contacts[0].point, hitDefaultFX);
+            HitFX(fleshHit, other, hitFleshFX);
         }
-
         return true;
     }
 
-    private void HitFX(AudioData audio, Vector3 fxPos, VisualEffect fx)
+    private void HitFX(AudioData audio, Collision collision, VisualEffect fx)
     {
-        fx.transform.position = fxPos;
+        ContactPoint contact = collision.GetContact(0);
+        fx.transform.position = contact.point + (contact.normal * 0.35f);
+        fx.transform.rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
         fx.Play();
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(audio, audioSource));
     }
