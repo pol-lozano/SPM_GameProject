@@ -20,6 +20,8 @@ public class MoveToPatrolPoint : Node
 
         if (Vector3.Distance(BlackBoard.Agent.transform.position, adjustedPoint) < BlackBoard.DistanceToPointForSuccess)
         {
+            BlackBoard.Agent.speed = 0;
+            BlackBoard.Anim.SetFloat("Speed", 0);
             return NODE_STATE.SUCCESS;
         }
             
