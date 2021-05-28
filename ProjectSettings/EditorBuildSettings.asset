@@ -40,6 +40,6 @@ EditorBuildSettings:
     guid: 153f94a634897684a89af7e93257eb43
   - enabled: 1
     path: Assets/Scenes/Whitebox/MainMenuCutscene.unity
-    guid: 45bda235e391fc24aa1617d8ce46a3b6
+    guid: 760849915379c964faf6ce43c5faad76
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cfb7b9ac6a0ad5b45a6b809bf1aa34a6, type: 2}
