@@ -10,7 +10,7 @@ public class ClothCollider : MonoBehaviour
 
     private void Awake()
     {
-        //colliders[1] = GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider>();
+        colliders[1] = GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider>();
         cloth.capsuleColliders = colliders;
     }
 }

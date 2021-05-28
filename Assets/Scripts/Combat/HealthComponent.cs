@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class HealthComponent : HitComponent
 {
-    [SerializeField] private ShakeEventData shakeData;
     [SerializeField] private float maxHealth = 1;
     [SerializeField] private float currentHealth = 1;
     [SerializeField] private float invulnerabilityTime = 1;

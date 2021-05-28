@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
-  m_Name: BreakablePlanks
+  m_Name: Handle
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: e9426052a4451b84bb0c9aee399fd2b6, type: 3}
+  - {fileID: 8300000, guid: 38edfd41d9e5da944b52279579f1b640, type: 3}
