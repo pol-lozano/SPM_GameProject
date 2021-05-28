@@ -9847,6 +9847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Umbral Castle Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 3450407612098713736, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -14567,6 +14571,10 @@ PrefabInstance:
     - target: {fileID: 7653735945681384585, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
       propertyPath: m_Name
       value: 'Directional Light '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7653735945681384585, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
       propertyPath: m_RootOrder
