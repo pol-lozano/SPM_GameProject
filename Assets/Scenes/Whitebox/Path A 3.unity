@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 54.779312, g: 61.407417, b: 100.81244, a: 1}
+  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1688,6 +1688,10 @@ PrefabInstance:
       propertyPath: path
       value: 
       objectReference: {fileID: 4094392686491904547}
+    - target: {fileID: 8907106083378183707, guid: 6cf252e49fd65b249b24fdb97196b2c8, type: 3}
+      propertyPath: enemyID
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cf252e49fd65b249b24fdb97196b2c8, type: 3}
 --- !u!4 &633343907 stripped
