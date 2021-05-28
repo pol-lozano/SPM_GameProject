@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BossDoor
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 67aef817fbe8ec341b6142799d7dbb88, type: 3}
+  - {fileID: 8300000, guid: 972e4d6c862fc854697f60a223885022, type: 3}
