@@ -49,11 +49,19 @@ public class MeleeWeapon : MonoBehaviour
 
     private void HitFX(AudioData audio, Collision collision, VisualEffect fx)
     {
-        ContactPoint contact = collision.GetContact(0);
-        fx.transform.position = contact.point + (contact.normal * 0.35f);
-        fx.transform.rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        fx.Play();
-        EventHandler<SoundEvent>.FireEvent(new SoundEvent(audio, audioSource));
+        if(fx != null)
+        {
+            ContactPoint contact = collision.GetContact(0);
+            fx.transform.position = contact.point + (contact.normal * 0.35f);
+            fx.transform.rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            fx.Play();
+        }
+        
+        if(audio != null)
+        {
+            EventHandler<SoundEvent>.FireEvent(new SoundEvent(audio, audioSource));
+        }
+        
     }
 
 }
