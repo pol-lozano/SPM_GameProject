@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: UmbralMothShoot
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 4b5952a7d312b3947b1916e071f30fa3, type: 3}
-  - {fileID: 8300000, guid: e3c34a819867df347a0aebd31f6975be, type: 3}
-  - {fileID: 8300000, guid: b629ec0157fbd3645a3fdf212125372d, type: 3}
-  - {fileID: 8300000, guid: a32c973c507ecb443bb58eb4c0080547, type: 3}
-  - {fileID: 8300000, guid: 0eedcb6ba9342d844951d49b9bc50ce4, type: 3}
-  - {fileID: 8300000, guid: 7cea4cab62f7667499a7c9cbb3cca862, type: 3}
-  - {fileID: 8300000, guid: 133ca925a6d13bf4b8f1b84c80c595ae, type: 3}
+  - {fileID: 8300000, guid: f87ba1fd4201a804d98aa98abb1bfa83, type: 3}
+  - {fileID: 8300000, guid: bff2d7a2374cddf44b069b6c2363e964, type: 3}
+  - {fileID: 8300000, guid: f95f38cfb24b8634bb0fd6cc5aad6825, type: 3}
+  - {fileID: 8300000, guid: 87a6252e36a8bd14684c8a7429bd107e, type: 3}
+  - {fileID: 8300000, guid: 7c0142d2ec2d16b469142b4dc4359d0d, type: 3}
+  - {fileID: 8300000, guid: e4c11cba3b65fab4e8a7943b0a27eb4d, type: 3}
+  - {fileID: 8300000, guid: 4a67eb014a585a0419646d7f1e5c5703, type: 3}

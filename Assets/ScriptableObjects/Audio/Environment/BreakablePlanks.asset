@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec4bcc6e323c546b089b3bcffaa281, type: 3}
   m_Name: BreakablePlanks
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: 3fdb51d710965bb4eb0df8cff4f56858, type: 3}

@@ -130,10 +130,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 50
   lifetime: 5
+  vfxName: BoltHit
   coll: {fileID: -3336412847428500009}
   damageAmount: 0
   mesh: {fileID: 7632731296786656435}
-  hitParticles: {fileID: -8498181522849058249}
 --- !u!2083052967 &-8498181522849058249
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -189,7 +189,8 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

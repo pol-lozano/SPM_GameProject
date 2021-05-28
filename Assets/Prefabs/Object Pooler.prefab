@@ -56,3 +56,6 @@ MonoBehaviour:
   - tag: FiendTree
     prefab: {fileID: 2572793795754029990, guid: 6acf5e737556b854895e49741413372d, type: 3}
     size: 8
+  - tag: BoltHit
+    prefab: {fileID: 0}
+    size: 8

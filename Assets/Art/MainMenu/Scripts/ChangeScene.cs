@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Author: Sajid A. Masoud
 public class ChangeScene : MonoBehaviour
 
 {

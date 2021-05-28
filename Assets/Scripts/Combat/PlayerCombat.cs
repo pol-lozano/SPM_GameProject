@@ -30,6 +30,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private MeleeWeapon meleeWeapon;
     [SerializeField] private GameObject crossbow;
 
+    [SerializeField] private ParticleSystem trail;
+
     private StateMachine stateMachine;
 
     //CrossHairTarget and Firepoint should be removed when we properly implement this
@@ -47,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
 
     public bool SwordPickup { get => swordPickup; }
     public bool CrossbowPickup { get => crossbowPickup; }
-
+    public ParticleSystem Trail { get => trail; }
     public MeleeWeapon MeleeWeapon { get => meleeWeapon; }
 
     private void Awake()
