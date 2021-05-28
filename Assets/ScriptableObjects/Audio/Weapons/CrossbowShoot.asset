@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CrossbowShoot
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: d4b4ffa2bce8f1c4bbb5bb83aea345e3, type: 3}
+  - {fileID: 8300000, guid: da4facbbea0f0734293f0f47d8d2ca7d, type: 3}

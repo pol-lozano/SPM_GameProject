@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: UmbralMothHit
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 286b52ff058040c46bf2419d16d4fc59, type: 3}
+  - {fileID: 8300000, guid: 99f86709420e1154da54a90fd6e54bdc, type: 3}

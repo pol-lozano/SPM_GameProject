@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: UnlockPuzzle
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 909bf429bdde1ad4eae8d77822e83ee8, type: 3}
+  - {fileID: 8300000, guid: 26b34b946822b514e848cb353c0e649f, type: 3}

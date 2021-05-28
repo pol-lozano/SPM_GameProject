@@ -3213,6 +3213,10 @@ PrefabInstance:
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 3853703288398202108, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7072608168107771626, guid: f9f55b0b67bc7244697e8379b20bcde2, type: 3}
       propertyPath: m_Name
       value: Sword

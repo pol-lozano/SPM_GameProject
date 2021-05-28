@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwordDefaultSwing
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 34f4622baab6b8540a60299291d9cc4c, type: 3}
-  - {fileID: 8300000, guid: 4c9e4d5aea5fab641a35eaad4573e4df, type: 3}
-  - {fileID: 8300000, guid: 26b0977421fdc504b8f5168c50666bbc, type: 3}
-  - {fileID: 8300000, guid: 77e3e0b88ddc0da4689cf79b7b5eefc7, type: 3}
+  - {fileID: 8300000, guid: c5bf0083a1d11f346a57a3be763c3035, type: 3}
+  - {fileID: 8300000, guid: bf11aaa0d8eb65d43912d4b8137dff01, type: 3}
+  - {fileID: 8300000, guid: d55c538718e8c1c4c96112010b47bfb0, type: 3}
+  - {fileID: 8300000, guid: d6bf2dafd26f5604990a2f104ab04bb3, type: 3}
