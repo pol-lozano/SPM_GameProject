@@ -701,6 +701,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6213638056214725612, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
+      propertyPath: m_Name
+      value: Balcony
+      objectReference: {fileID: 0}
     - target: {fileID: 9031026420496771350, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: m_RootOrder
       value: 7
