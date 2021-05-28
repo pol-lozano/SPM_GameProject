@@ -1,5 +1,6 @@
 //Author: Pol Lozano Llorens
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class MeleeWeapon : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] private AudioData fleshHit;
     [SerializeField] private AudioData defaultHit;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private VisualEffect hitDefaultFX;
+    [SerializeField] private VisualEffect hitFleshFX;
 
     public Collider Collider { get; private set; }
     public AudioSource AudioSource { get => audioSource; set => audioSource = value; }
@@ -22,6 +25,7 @@ public class MeleeWeapon : MonoBehaviour
     private bool CheckHit(Collision other)
     {
         HitBox hitBox = other.collider.GetComponent<HitBox>();
+        HitFX(defaultHit, other, hitDefaultFX);
 
         if (hitBox == null)
             return false;
@@ -38,12 +42,18 @@ public class MeleeWeapon : MonoBehaviour
         hitBox.ApplyHit(info);
         if (hitBox.hitComponent is HealthComponent)
         {
-            EventHandler<SoundEvent>.FireEvent(new SoundEvent(fleshHit, audioSource));
-        } else
-        {
-            EventHandler<SoundEvent>.FireEvent(new SoundEvent(defaultHit, audioSource));
+            HitFX(fleshHit, other, hitFleshFX);
         }
-
         return true;
     }
+
+    private void HitFX(AudioData audio, Collision collision, VisualEffect fx)
+    {
+        ContactPoint contact = collision.GetContact(0);
+        fx.transform.position = contact.point + (contact.normal * 0.35f);
+        fx.transform.rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        fx.Play();
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(audio, audioSource));
+    }
+
 }
