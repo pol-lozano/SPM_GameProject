@@ -2189,6 +2189,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5044614843522880415, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
+      propertyPath: puzzleID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044614843522880415, guid: 0beb59b3ab577fd438ebee184562b654, type: 3}
       propertyPath: puzzleShake
       value: 
       objectReference: {fileID: 11400000, guid: f2d811be25750d44f8b022e8d4a7063c, type: 2}
