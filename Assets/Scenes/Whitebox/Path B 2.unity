@@ -625,12 +625,12 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 1
+  m_Mode: 2
   m_RefreshMode: 2
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 21.7, y: 11.93, z: 21.2}
+  m_BoxSize: {x: 21.7, y: 11.93, z: 21.3}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000
@@ -3043,9 +3043,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Directional Light '
       objectReference: {fileID: 0}
+    - target: {fileID: 7653735945681384585, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7653735945681384586, guid: 8b942c6994c65c84081472fe21afa2a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5981,12 +5985,12 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 1
+  m_Mode: 2
   m_RefreshMode: 2
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 13.85, y: 14.7, z: 23.9}
+  m_BoxSize: {x: 13.85, y: 14.7, z: 24}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000
@@ -6448,7 +6452,7 @@ Transform:
   - {fileID: 307811684}
   - {fileID: 1940942938}
   m_Father: {fileID: 1350798161}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &606091830
 PrefabInstance:
@@ -9977,9 +9981,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Umbral Castle Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 3450407612098713736, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13623,7 +13631,7 @@ Transform:
   - {fileID: 1856385213}
   - {fileID: 362316080}
   m_Father: {fileID: 1350798161}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350798160
 GameObject:
@@ -13652,11 +13660,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1341303774}
   - {fileID: 1825854497}
-  - {fileID: 605796463}
-  - {fileID: 240634109}
   - {fileID: 969219014}
+  - {fileID: 240634109}
+  - {fileID: 1341303774}
+  - {fileID: 605796463}
   - {fileID: 1938307594}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -16470,7 +16478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1825854497
 Transform:
   m_ObjectHideFlags: 0
@@ -16485,7 +16493,7 @@ Transform:
   - {fileID: 80263138}
   - {fileID: 1001042498}
   m_Father: {fileID: 1350798161}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1827395183
 PrefabInstance:
@@ -17205,12 +17213,12 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 1
+  m_Mode: 2
   m_RefreshMode: 2
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 16.7, y: 11.93, z: 17.22}
+  m_BoxSize: {x: 16.6, y: 11.93, z: 17.22}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000
@@ -19851,12 +19859,12 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 1
+  m_Mode: 2
   m_RefreshMode: 2
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 21.9, y: 11.93, z: 16.3}
+  m_BoxSize: {x: 21.8, y: 11.93, z: 16.3}
   m_BoxOffset: {x: 0, y: 0, z: 0}
   m_NearClip: 0.3
   m_FarClip: 1000
@@ -34497,8 +34505,8 @@ Transform:
   - {fileID: 13564415153429973}
   - {fileID: 13564416804230364}
   - {fileID: 13564417101680659}
-  - {fileID: 13564417021257708}
   - {fileID: 13564417182736188}
+  - {fileID: 13564417021257708}
   m_Father: {fileID: 829632108838218534}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -16.544, z: 0}
