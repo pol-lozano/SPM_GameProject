@@ -2412,6 +2412,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.8171872
       objectReference: {fileID: 0}
+    - target: {fileID: 287817950609268473, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 287817950609268473, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 287817950609268473, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 0.30980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 287817950609268473, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 470533039130487289, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.8285188
