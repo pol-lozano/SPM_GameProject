@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 54.782276, g: 61.413986, b: 100.8105, a: 1}
+  m_IndirectSpecularColor: {r: 54.779312, g: 61.407417, b: 100.81244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1382,6 +1382,11 @@ AudioReverbZone:
   m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
+--- !u!1 &728251620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 704101936157041714, guid: 1644206011a811a4ca76d941a3ec1cb1, type: 3}
+  m_PrefabInstance: {fileID: 227336683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &733705913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,6 +1793,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossCutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].value
+      value: 
+      objectReference: {fileID: 728251620}
+    - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].value
+      value: 
+      objectReference: {fileID: 1727772586}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
 --- !u!1 &976796815
@@ -2600,6 +2613,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8395710706769569223, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+--- !u!114 &1727772586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4311991607897206135, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+  m_PrefabInstance: {fileID: 6929837306840456439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1775816978
 GameObject:
   m_ObjectHideFlags: 0
