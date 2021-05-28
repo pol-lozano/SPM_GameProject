@@ -11,8 +11,14 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] private VisualEffect hitDefaultFX;
     [SerializeField] private VisualEffect hitFleshFX;
 
+    private bool recentlyHit;
+    private float hitTimer = 1;
+    private float timer;
+
     public Collider Collider { get; private set; }
     public AudioSource AudioSource { get => audioSource; set => audioSource = value; }
+
+
 
     private void Awake()
     {
@@ -22,8 +28,22 @@ public class MeleeWeapon : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) => CheckHit(collision);
 
+    private void Update()
+    {
+        if(recentlyHit == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+                recentlyHit = false;
+        }
+    }
+
     private bool CheckHit(Collision other)
     {
+        if(recentlyHit == false)
+        {
+
+        }
         HitBox hitBox = other.collider.GetComponent<HitBox>();
         HitFX(defaultHit, other, hitDefaultFX);
 
