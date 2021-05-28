@@ -25,7 +25,7 @@ public class AudioSystem : MonoBehaviour
         AudioClip clip = soundEvent.Data.GetAudioClip(); 
         if(clip != null)
         {
-            Debug.Log(soundEvent.Data);
+            //Debug.Log(soundEvent.Data);
             soundEvent.AudioSource.volume = volume;
             soundEvent.AudioSource.pitch = Random.Range(minPitch, maxPitch);
             soundEvent.AudioSource.PlayOneShot(clip);
