@@ -5,72 +5,46 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(HealthComponent), typeof(Animator), typeof(NavMeshAgent))]
-public class UmbralMoth : MonoBehaviour
+public class UmbralMoth : Enemy
 {
-    /*
-    [Header("AI speeds")]
-    [Header("THESE VALUES CANNOT CHANGE IN RUNTIME")]
-    [SerializeField] private float patrolSpeed;
-    [SerializeField] private float attackSpeed;
-    [SerializeField] private float chaseSpeed;
-    [SerializeField] private float sinkSpeed;
 
-    [Header("Gameplay Values")]
-    [SerializeField] private float stunLenght;
-    [SerializeField] private float shotCooldown;
-    [SerializeField] private float waitTime;
-    [SerializeField] private LayerMask layersToIgnore;
-
-    [Header("Distances")]
-    [SerializeField] private float distanceToAttack;
-    [SerializeField] private float distanceToChase;
-    [SerializeField] private float distanceToInvestigate;
-    [SerializeField] private float distanceToPointForSucces;
-    [SerializeField] private float maxDistanceFromStartPoint;
-    */
+    [SerializeField] private int enemyID;
 
     [Header("References")]
-    
     [SerializeField] private Animator anim;
     [SerializeField] private AIPath path;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private HealthComponent health;
     [SerializeField] private List<Rigidbody> ragdoll;
+
     private GameObject treePrefab;
-    //private BT_UmbralMoth behaviourTree;
+    private BT_UmbralMoth bt;
 
     #region GETTERS
-    /*GETTERS
-    public float PatrolSpeed { get => patrolSpeed; }
-    public float AttackSpeed { get => attackSpeed; }
-    public float ChaseSpeed { get => chaseSpeed; }
-    public float SinkSpeed { get => sinkSpeed; }
-    public float StunLength { get => stunLenght; }
-    public float ShotCooldown { get => shotCooldown; }
-    public float WaitTime { get => waitTime; }
-    public float DistanceToAttack { get => distanceToAttack; }
-    public float DistanceToChase { get => distanceToChase; }
-    public float DistanceToInvestigate { get => distanceToInvestigate; }
-    public float DistanceToPointForSuccess { get => distanceToPointForSucces; }
-    public float MaxDistanceFromStartPoint { get => maxDistanceFromStartPoint; }
-    */
+
     public Transform Target { get; private set; }
     public Animator Anim { get => anim; }
     public AIPath Path { get => path; }
     public NavMeshAgent Agent { get => agent; }
-    public HealthComponent Health { get => health; }
     public List<Rigidbody> Ragdoll { get => ragdoll; }
     #endregion
 
-    BT_UmbralMoth bt;
-
-    void Awake()
+    private void Awake()
     {
+        Id = enemyID;
+        healthComponent = health;
+        if (EnemyLoader.LoadEnemy(this) == false)
+            Destroy(gameObject);
+    }
+
+    void Start()
+    {
+
         Target = GameObject.FindGameObjectWithTag("Player").transform;
+        Anim.SetBool("Die", false);
 
         ControlObjectSet<Transform>(Target);
         ControlObjectSet<AIPath>(Path);
-        //NEW
 
         treePrefab = ObjectPooler.instance.SpawnFromPool("MothTree");
         bt = treePrefab.GetComponent<BT_UmbralMoth>();
@@ -83,8 +57,16 @@ public class UmbralMoth : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawLine(transform.position, agent.destination, Color.magenta);
+        //Debug.DrawLine(transform.position, agent.destination, Color.magenta);
         bt.RunBehaviourTree();
+
+        if (Health.CurrentHealth <= 0)
+            Destroy(gameObject, 4);
+    }
+
+    private void OnDestroy()
+    {
+        EnemyLoader.OnDestroy(this);
     }
 
     private void ControlObjectSet<T>(T obj)

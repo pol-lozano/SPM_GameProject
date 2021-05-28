@@ -35,8 +35,7 @@ public class SceneController : MonoBehaviour
             //ifall relevanta scener inte innehåller någon av de aktiva scenera så laddas de av.
             for(int i = 0; i < SceneManager.sceneCount; i++)
             {
-                if (relevantScenes.Contains(SceneManager.GetSceneAt(i).buildIndex) == false &&
-                    SceneManager.GetSceneAt(i).buildIndex != baseSceneIndex)
+                if (SceneManager.GetSceneAt(i).buildIndex != baseSceneIndex)
                 {
                     SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(i).buildIndex);
                 }

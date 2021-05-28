@@ -5,8 +5,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public static Checkpoint currentCheckPoint;
-
-
+    [SerializeField] private string UItext;
     [SerializeField] private List<int> scenesOnThisCheckpoint = new List<int>();
 
     public List<int> ScenesOnCheckpoint { get => scenesOnThisCheckpoint; }
@@ -14,7 +13,7 @@ public class Checkpoint : MonoBehaviour
     /*DEN BORDE INTE AKTIVERAS SÅ HÄR, SPELAREN BORDE GÅ FRAM OCH INTERAGERA*/
     private void OnTriggerEnter/*STAY!?*/(Collider other)
     {
-        if (other.CompareTag("Player")/*&& input.G*/)
+        if (other.CompareTag("Player") && this!=currentCheckPoint)
         {
             Debug.Log("player");
             ActivateCheckpoint(other.gameObject);
@@ -23,11 +22,11 @@ public class Checkpoint : MonoBehaviour
 
     private void ActivateCheckpoint(GameObject player)
     {
+        EventHandler<UITriggerEvent>.FireEvent(new UITriggerEvent(UItext));
         Debug.Log("ActivateCheckpoint");
         currentCheckPoint = this;
         player.GetComponent<HealthComponent>().ResetHealth();
     }
     
-    
-        
 }
+

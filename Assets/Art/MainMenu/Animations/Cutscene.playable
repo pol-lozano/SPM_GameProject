@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Time: 36.86666666666667
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 8fcb6581c877f014d8de399611bb4922, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &1026720326244563662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_Time: 36.86116152815521
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 8fcb6581c877f014d8de399611bb4922, type: 2}
+  m_Asset: {fileID: 0}
 --- !u!114 &3991372776598777090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1199,4 +1199,4 @@ MonoBehaviour:
   m_Time: 54.98869238930444
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 8fcb6581c877f014d8de399611bb4922, type: 2}
+  m_Asset: {fileID: 0}

@@ -45,12 +45,17 @@ public class CharacterController3D : MonoBehaviour
     {
         input.moveEvent += OnMove;
         input.dodgeEvent += OnDodge;
+
     }
 
     private void OnDisable()
     {
+        RawInput = Vector3.zero;
         input.moveEvent -= OnMove;
         input.dodgeEvent -= OnDodge;
+        Animator.SetFloat("InputX", 0);
+        Animator.SetFloat("InputY", 0);
+        PhysicsComponent.RigidBody.velocity = Vector3.zero;
     }
 
     private void OnMove(Vector2 input) => RawInput = Vector2.ClampMagnitude(input, 1f);

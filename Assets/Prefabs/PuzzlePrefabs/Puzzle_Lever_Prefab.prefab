@@ -73,6 +73,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   hitSounds: {fileID: 0}
   puzzleID: 2
+  puzzleShake: {fileID: 11400000, guid: f2d811be25750d44f8b022e8d4a7063c, type: 2}
 --- !u!64 &8905131612662122607
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -273,7 +274,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 38961758f905d2a46b84c012afccb310, type: 2}
+      objectReference: {fileID: 2100000, guid: 51715d426647c0a469aa54fd0d386aa6, type: 2}
     - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_Name
       value: LeverBase
