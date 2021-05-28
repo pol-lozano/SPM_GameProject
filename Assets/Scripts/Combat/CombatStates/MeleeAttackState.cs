@@ -1,5 +1,6 @@
 //Author: Pol Lozano Llorens
 using UnityEngine;
+using UnityEngine.VFX;
 
 [CreateAssetMenu(menuName = "CombatState/Melee")]
 
@@ -7,6 +8,7 @@ public class MeleeAttackState : CombatState
 {
     [SerializeField] private ShakeEventData shakeData;
     [SerializeField] private AudioData attackSound;
+    
 
     private float timeSinceLastAttack = 0;
 
@@ -28,7 +30,7 @@ public class MeleeAttackState : CombatState
     public override void OnAnimationStarted()
     {
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(attackSound, Player.MeleeWeapon.AudioSource));
-
+        Player.Trail.Play();
         timeSinceLastAttack = Time.time - timeSinceLastAttack;
         //Debug.Log("Time since last attack: " + timeSinceLastAttack);
 
@@ -42,6 +44,7 @@ public class MeleeAttackState : CombatState
 
     public override void OnAnimationEnded()
     {
+        Player.Trail.Stop();
         Player.Animator.SetBool(isAttackingBoolHash, false);
         Player.Animator.SetFloat(timeSinceLastAttackFloatHash, timeSinceLastAttack);
 
