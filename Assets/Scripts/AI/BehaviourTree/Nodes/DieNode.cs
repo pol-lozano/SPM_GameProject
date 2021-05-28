@@ -15,7 +15,7 @@ public class DieNode : Node
         {
             r.isKinematic = false;
         }
-        Debug.Log("IS DEAD");
+        //Debug.Log("IS DEAD");
         BlackBoard.Anim.SetBool("Die", true);
         BlackBoard.Anim.enabled = false;
 
