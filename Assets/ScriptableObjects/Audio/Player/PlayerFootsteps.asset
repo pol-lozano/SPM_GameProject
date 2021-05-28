@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlayerFootsteps
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: b129e694a0fa16f498b497481befe169, type: 3}
-  - {fileID: 8300000, guid: fead5cfe6593ab64dac60ff7b677fb86, type: 3}
-  - {fileID: 8300000, guid: a9e804a8165699a49bceb84d083a34a6, type: 3}
-  - {fileID: 8300000, guid: a3eb761c67da86e4d95a714d5040e215, type: 3}
-  - {fileID: 8300000, guid: ffeb60b812fdc464499d8bd1c46cd055, type: 3}
+  - {fileID: 8300000, guid: d82a98cf7da66dd4f91dd0b6924fe075, type: 3}
+  - {fileID: 8300000, guid: ba39fabaf5759f041b4a1c5badfb6ef1, type: 3}
+  - {fileID: 8300000, guid: e0f7683c4d735ae4b9ede32085dbf5c9, type: 3}
+  - {fileID: 8300000, guid: ec15530b6a158764d91d6bbf2a221d41, type: 3}
+  - {fileID: 8300000, guid: 287a45785cddb6d47bdec920f9926080, type: 3}

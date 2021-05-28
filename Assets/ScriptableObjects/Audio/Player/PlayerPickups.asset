@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: PlayerPickups
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: ccaac1cbccd29a74cafcbf3aefc94c25, type: 3}
   - {fileID: 8300000, guid: 9f4632a4ccf161744a9ebaae6375172e, type: 3}
-  - {fileID: 8300000, guid: 3782457f2fa7fe6478a12e89281fc654, type: 3}
