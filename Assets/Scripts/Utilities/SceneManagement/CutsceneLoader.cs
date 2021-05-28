@@ -8,8 +8,10 @@ public class CutsceneLoader : MonoBehaviour
 {
     [SerializeField] private PlayableDirector Timeline;
 
+
     public void OnTriggerEnter(Collider other)
     {
         Timeline.Play();
+        GetComponent<Collider>().enabled = false;
     }
 }

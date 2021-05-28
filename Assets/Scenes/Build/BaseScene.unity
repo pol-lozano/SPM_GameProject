@@ -1268,6 +1268,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &626907434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3017663086157650530, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+  m_PrefabInstance: {fileID: 6929837306840456439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &630160122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1799,14 @@ PrefabInstance:
       value: BossCutscene
       objectReference: {fileID: 0}
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
+      propertyPath: m_SceneBindings.Array.data[6].key
+      value: 
+      objectReference: {fileID: 6775371167507676371, guid: f8a77b78a7724a34b968c07a78424b1e, type: 2}
+    - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_SceneBindings.Array.data[4].value
       value: 
       objectReference: {fileID: 728251620}
@@ -1801,6 +1814,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[5].value
       value: 
       objectReference: {fileID: 1727772586}
+    - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
+      propertyPath: m_SceneBindings.Array.data[6].value
+      value: 
+      objectReference: {fileID: 626907434}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
 --- !u!1 &976796815
@@ -3365,6 +3382,10 @@ PrefabInstance:
     - target: {fileID: 3017663085709079448, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017663086157650530, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3017663086261839343, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
       propertyPath: m_Pivot.x
