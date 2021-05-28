@@ -26,6 +26,7 @@ public class PlayerDebugger : MonoBehaviour
      //   playerPhysics.enabled = false;
         playerCombat.enabled = false;
         turnPlayer.enabled = false;
+        Debug.Log("Turned off player scripts");
     }
 
     public void TurnOnScripts()
@@ -34,5 +35,7 @@ public class PlayerDebugger : MonoBehaviour
  //       playerPhysics.enabled = true;
         playerCombat.enabled = true;
         turnPlayer.enabled = true;
-    }   
+        Debug.Log("Turned on player scripts");
+
+    }
 }

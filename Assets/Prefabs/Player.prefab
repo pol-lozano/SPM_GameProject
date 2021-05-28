@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300488184}
   - component: {fileID: 300488185}
+  - component: {fileID: 4311991607897206135}
   m_Layer: 6
   m_Name: Debugger
   m_TagString: Untagged
@@ -77,7 +78,52 @@ MonoBehaviour:
   playerPhysics: {fileID: 2104137301}
   playerCombat: {fileID: 6261909279374753516}
   godMode: {fileID: 1952091810191860615}
-  turnPlayer: {fileID: 0}
+  turnPlayer: {fileID: 1784946299}
+--- !u!114 &4311991607897206135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300488183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: b3ed51a5f11e4064eae341accb28aa8e, type: 2}
+    - {fileID: 11400000, guid: 335294a9df2fde54b95d6e7dd1583662, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 300488185}
+          m_TargetAssemblyTypeName: PlayerDebugger, Assembly-CSharp
+          m_MethodName: TurnOffScripts
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 300488185}
+          m_TargetAssemblyTypeName: PlayerDebugger, Assembly-CSharp
+          m_MethodName: TurnOnScripts
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &87395886076615348
 GameObject:
   m_ObjectHideFlags: 0
