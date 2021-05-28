@@ -79,7 +79,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5026,6 +5026,8 @@ MonoBehaviour:
   fleshHit: {fileID: 11400000, guid: e5942e2584d41f1408da5291c16a2175, type: 2}
   defaultHit: {fileID: 11400000, guid: 71c881e989160c642a7713fc726cc286, type: 2}
   audioSource: {fileID: 3853703288398202108}
+  hitDefaultFX: {fileID: 0}
+  hitFleshFX: {fileID: 0}
 --- !u!82 &3853703288398202108
 AudioSource:
   m_ObjectHideFlags: 0
