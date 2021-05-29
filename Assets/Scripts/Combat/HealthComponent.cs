@@ -11,7 +11,6 @@ public class HealthComponent : HitComponent
     [SerializeField] private float invulnerabilityTime = 1;
     [SerializeField] private LayerMask damageLayer;
     [SerializeField] private AudioData deathSound;
-    [SerializeField] private VisualEffect damageFX;
 
     private float timeSinceLastHit = 0.0f;
     [SerializeField] private bool isPlayer;
@@ -74,11 +73,6 @@ public class HealthComponent : HitComponent
 
     private void TakeDamage(HitInfo info)
     {
-        if(damageFX != null)
-        {
-            damageFX.transform.position = info.hitPosition;
-            damageFX.Play();
-        }
 
         if(info.damager.GetType() == typeof(MeleeWeapon))
             EventHandler<ImpactEvent>.FireEvent(new ImpactEvent(IsPlayer));
