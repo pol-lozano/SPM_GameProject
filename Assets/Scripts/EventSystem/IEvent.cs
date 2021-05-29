@@ -181,10 +181,18 @@ public class AlarmEvent : IEvent
 }
 #endregion
 
-#region UITRIGGER_EVENT
+#region CHECKPOINT_EVENT
 public class CheckPointEvent : IEvent
 {
     public string Text { get; }
     public CheckPointEvent(string t) => Text = t;
+}
+#endregion
+
+#region IMPACT_EVENT
+public class ImpactEvent : IEvent
+{
+    public bool IsPlayer { get; }
+    public ImpactEvent(bool b) => IsPlayer = b;
 }
 #endregion

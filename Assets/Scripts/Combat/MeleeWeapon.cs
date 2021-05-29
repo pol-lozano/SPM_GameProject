@@ -7,6 +7,8 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] private int damageAmount;
     [SerializeField] private AudioData fleshHit;
     [SerializeField] private AudioData defaultHit;
+    [SerializeField] private ShakeEventData fleshShake;
+    [SerializeField] private ShakeEventData defaultShake;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private VisualEffect hitDefaultFX;
     [SerializeField] private VisualEffect hitFleshFX;
@@ -44,7 +46,7 @@ public class MeleeWeapon : MonoBehaviour
         HitBox hitBox = other.collider.GetComponent<HitBox>();
         if(recentlyHit == false)
         {
-            HitFX(defaultHit, other, hitDefaultFX);
+            HitFX(defaultHit, defaultShake, other, hitDefaultFX);
         }
         
 
@@ -68,14 +70,15 @@ public class MeleeWeapon : MonoBehaviour
         
         if (hitBox.hitComponent is HealthComponent && recentlyHit == false )
         {
-            HitFX(fleshHit, other, hitFleshFX);
+            HitFX(fleshHit, fleshShake, other, hitFleshFX);
         }
         recentlyHit = true;
         return true;
     }
 
-    private void HitFX(AudioData audio, Collision collision, VisualEffect fx)
+    private void HitFX(AudioData audio, ShakeEventData shakeData, Collision collision, VisualEffect fx)
     {
+
         if(fx != null)
         {
             ContactPoint contact = collision.GetContact(0);
@@ -83,11 +86,11 @@ public class MeleeWeapon : MonoBehaviour
             fx.transform.rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
             fx.Play();
         }
+        if (shakeData != null)
+            EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(shakeData));
         
         if(audio != null)
-        {
             EventHandler<SoundEvent>.FireEvent(new SoundEvent(audio, audioSource));
-        }
         
     }
 
