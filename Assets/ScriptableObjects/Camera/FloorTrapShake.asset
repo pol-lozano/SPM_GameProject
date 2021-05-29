@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FloorTrapShake
   m_EditorClassIdentifier: 
   target: 0
-  amplitude: 12
-  frequency: 10
+  amplitude: 8
+  frequency: 15
   duration: 2.5
   blendOverLifetime:
     serializedVersion: 2

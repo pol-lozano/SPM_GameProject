@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BossShake
   m_EditorClassIdentifier: 
   target: 0
-  amplitude: 4
-  frequency: 9
+  amplitude: 2
+  frequency: 12
   duration: 6
   blendOverLifetime:
     serializedVersion: 2
