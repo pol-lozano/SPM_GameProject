@@ -4,9 +4,6 @@
     "m_ObjectId": "ba85258748d74b8aa8f346e721c73b81",
     "m_Properties": [
         {
-            "m_Id": "c5495e69c97644f2b5a067e7d19c9bf9"
-        },
-        {
             "m_Id": "09492ab817524f34a12886ec349b7817"
         },
         {
@@ -5063,29 +5060,6 @@
         "w": 0.0
     },
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "c5495e69c97644f2b5a067e7d19c9bf9",
-    "m_Guid": {
-        "m_GuidSerialized": "0a3cb398-1d53-4cdb-911b-e64c00cc5e50"
-    },
-    "m_Name": "Albedo",
-    "m_DefaultReferenceName": "Texture2D_c5495e69c97644f2b5a067e7d19c9bf9",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
-        "m_Guid": ""
-    },
-    "m_Modifiable": true,
-    "m_DefaultType": 0
 }
 
 {
