@@ -33769,6 +33769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2144555311}
+  shakeData: {fileID: 11400000, guid: fcdad9a78b837904fa019942097efd9b, type: 2}
 --- !u!65 &2144555313
 BoxCollider:
   m_ObjectHideFlags: 0
