@@ -17,6 +17,7 @@ public class ChasePlayerDecorator : Decorator
     {
         if (Physics.Linecast(BlackBoard.ThisAI.position, BlackBoard.Target.position, out hitinfo, BlackBoard.LayersToIgnore))
         {
+            Debug.Log("Lost player due to: " + hitinfo.collider.name);
             BlackBoard.Chasing = false;
             return false;
         }

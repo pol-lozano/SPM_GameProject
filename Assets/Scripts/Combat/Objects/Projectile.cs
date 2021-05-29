@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Collider coll;
     [SerializeField] private int damageAmount;
     [SerializeField] private MeshRenderer mesh;
-    [SerializeField] private VisualEffect hitParticles;
+
 
     private Rigidbody rb;
 
@@ -63,8 +63,7 @@ public class Projectile : MonoBehaviour
         if (hitBox == null)
             return false;
 
-        
-        hitParticles.Play();
+       
 
         //Check if owner of health system?
         HitInfo info = new HitInfo()
@@ -73,6 +72,9 @@ public class Projectile : MonoBehaviour
             damager = this,
             amount = damageAmount,
         };
+
+
+        
 
         hitBox.ApplyHit(info);
 

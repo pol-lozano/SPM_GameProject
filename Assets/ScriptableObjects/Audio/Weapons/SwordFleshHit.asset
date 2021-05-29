@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: SwordFleshHit
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 97d7bdd59da879e47a956e686d9feb53, type: 3}
-  - {fileID: 8300000, guid: 08ea40335e4af9a4ea435a744b65b76d, type: 3}
-  - {fileID: 8300000, guid: 22106758b4143b34c9e42763a7286cad, type: 3}
-  - {fileID: 8300000, guid: 88fd82ea911316749be03aa25070eac1, type: 3}
-  - {fileID: 8300000, guid: eb7dc4254c1b3cb46a6076d819339cb1, type: 3}
-  - {fileID: 8300000, guid: b31b2b23860aaaf40b141b15800db2f7, type: 3}
+  - {fileID: 8300000, guid: 840843a1bf4a6f44ca2ce902b65b1010, type: 3}
+  - {fileID: 8300000, guid: a1f118c485dcfa64d8dc5cd5efadc3bc, type: 3}
+  - {fileID: 8300000, guid: c7f7f68b6811d444d90ff82fd2a95057, type: 3}

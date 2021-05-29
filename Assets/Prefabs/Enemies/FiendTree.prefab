@@ -61,17 +61,17 @@ MonoBehaviour:
   chaseSpeed: 5.5
   distanceToAttack: 2
   distanceToChase: 20
-  distanceToInvestigate: 8
+  distanceToInvestigate: 10
   distanceToAid: 15
-  distanceToPointForSuccess: 5
+  distanceToPointForSuccess: 2
   maxDistanceFromStartPoint: 40
   stunSpeed: 2
   stunLength: 3
-  attackCooldown: 2
-  waitTime: 3
+  attackCooldown: 1.5
+  waitTime: 2
   layersToIgnore:
     serializedVersion: 2
-    m_Bits: 249791
+    m_Bits: 247615
   attackAudio: {fileID: 0}
   alarmAudio: {fileID: 11400000, guid: 161ff768c262f8d4d9e44b8c58589454, type: 2}
   target: {fileID: 0}

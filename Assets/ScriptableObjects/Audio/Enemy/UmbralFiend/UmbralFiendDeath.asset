@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: UmbralFiendDeath
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 286b52ff058040c46bf2419d16d4fc59, type: 3}
+  - {fileID: 8300000, guid: b1ab3c2b206c1034bb93d4566d7fa8c0, type: 3}

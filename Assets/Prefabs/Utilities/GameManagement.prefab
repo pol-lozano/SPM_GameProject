@@ -1013,7 +1013,7 @@ PrefabInstance:
     - target: {fileID: 848337244414792628, guid: 458d0a5a02e7a294aade18116de280c4, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 196194246}
+      objectReference: {fileID: 1290082436}
     - target: {fileID: 848337244414792628, guid: 458d0a5a02e7a294aade18116de280c4, type: 3}
       propertyPath: pickUpAudio
       value: 
