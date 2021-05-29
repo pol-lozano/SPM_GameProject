@@ -15,7 +15,7 @@ MonoBehaviour:
   target: 0
   amplitude: 8
   frequency: 15
-  duration: 2.5
+  duration: 4.5
   blendOverLifetime:
     serializedVersion: 2
     m_Curve:
