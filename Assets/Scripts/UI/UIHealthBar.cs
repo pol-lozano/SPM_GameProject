@@ -31,12 +31,14 @@ public class UIHealthBar : MonoBehaviour
     private void OnEnable()
     {
         EventHandler<HitEvent>.RegisterListener(SetHealth);
+        EventHandler<CheckPointEvent>.RegisterListener(ResetHealth);
         EventHandler<DyingEvent>.RegisterListener(DeactivateHealthBar);
     }
 
     private void OnDisable()
     {
         EventHandler<HitEvent>.UnregisterListener(SetHealth);
+        EventHandler<CheckPointEvent>.UnregisterListener(ResetHealth);
         EventHandler<DyingEvent>.UnregisterListener(DeactivateHealthBar);
     }
 
@@ -61,6 +63,14 @@ public class UIHealthBar : MonoBehaviour
         }
 
         SetHealthBarPercentage(owner.CurrentHealth / owner.MaxHealth);
+    }
+
+    private void ResetHealth(CheckPointEvent data)
+    {
+        if(owner.IsPlayer == true)
+        {
+            SetHealthBarPercentage(1);
+        }
     }
 
     private void LateUpdate()

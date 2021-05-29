@@ -182,9 +182,9 @@ public class AlarmEvent : IEvent
 #endregion
 
 #region UITRIGGER_EVENT
-public class UITriggerEvent : IEvent
+public class CheckPointEvent : IEvent
 {
     public string Text { get; }
-    public UITriggerEvent(string t) => Text = t;
+    public CheckPointEvent(string t) => Text = t;
 }
 #endregion

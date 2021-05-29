@@ -9,10 +9,10 @@ public class UIText : MonoBehaviour
     [SerializeField] private Animator anim;
 
 
-    private void OnEnable() => EventHandler<UITriggerEvent>.RegisterListener(ShowText);
-    private void OnDisable() => EventHandler<UITriggerEvent>.UnregisterListener(ShowText);
+    private void OnEnable() => EventHandler<CheckPointEvent>.RegisterListener(ShowText);
+    private void OnDisable() => EventHandler<CheckPointEvent>.UnregisterListener(ShowText);
 
-    private void ShowText(UITriggerEvent eve)
+    private void ShowText(CheckPointEvent eve)
     {
             text.text = eve.Text;
             anim.SetTrigger("ShowText");

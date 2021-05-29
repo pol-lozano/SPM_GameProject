@@ -22,7 +22,7 @@ public class Checkpoint : MonoBehaviour
 
     private void ActivateCheckpoint(GameObject player)
     {
-        EventHandler<UITriggerEvent>.FireEvent(new UITriggerEvent(UItext));
+        EventHandler<CheckPointEvent>.FireEvent(new CheckPointEvent(UItext));
         Debug.Log("ActivateCheckpoint");
         currentCheckPoint = this;
         player.GetComponent<HealthComponent>().ResetHealth();
