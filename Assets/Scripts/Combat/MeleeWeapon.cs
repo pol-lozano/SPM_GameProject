@@ -11,24 +11,49 @@ public class MeleeWeapon : MonoBehaviour
     [SerializeField] private VisualEffect hitDefaultFX;
     [SerializeField] private VisualEffect hitFleshFX;
 
+    private bool recentlyHit;
+    private float fxTimer = 1;
+    private float timer;
     public Collider Collider { get; private set; }
     public AudioSource AudioSource { get => audioSource; set => audioSource = value; }
 
     private void Awake()
     {
+        timer = fxTimer;
         Collider = GetComponent<Collider>();
         Collider.enabled = false;
     }
 
+    private void Update()
+    {
+        if(recentlyHit == true)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                timer = fxTimer;
+                recentlyHit = false;
+            }
+        }
+    }
     private void OnCollisionEnter(Collision collision) => CheckHit(collision);
 
+    
     private bool CheckHit(Collision other)
     {
         HitBox hitBox = other.collider.GetComponent<HitBox>();
-        HitFX(defaultHit, other, hitDefaultFX);
+        if(recentlyHit == false)
+        {
+            HitFX(defaultHit, other, hitDefaultFX);
+        }
+        
 
         if (hitBox == null)
+        {
+            recentlyHit = true;
             return false;
+        }
+            
 
         //Check if owner of health system
         HitInfo info = new HitInfo()
@@ -40,10 +65,12 @@ public class MeleeWeapon : MonoBehaviour
         };
 
         hitBox.ApplyHit(info);
-        if (hitBox.hitComponent is HealthComponent)
+        
+        if (hitBox.hitComponent is HealthComponent && recentlyHit == false )
         {
             HitFX(fleshHit, other, hitFleshFX);
         }
+        recentlyHit = true;
         return true;
     }
 

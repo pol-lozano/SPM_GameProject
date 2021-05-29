@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SwordWallHit
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 57495ce7b1a79bc49abd28544303c0ce, type: 3}
+  - {fileID: 8300000, guid: e4ac60fade307c040b8fbfe0c999eb33, type: 3}
+  - {fileID: 8300000, guid: ecc5a4ffe8b03074483a42be95374ae3, type: 3}
