@@ -13,33 +13,24 @@ MonoBehaviour:
   m_Name: FloorTrapShake
   m_EditorClassIdentifier: 
   target: 0
-  amplitude: 8
-  frequency: 15
-  duration: 4.5
+  amplitude: 10
+  frequency: 10
+  duration: 2.2
   blendOverLifetime:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 12.566371
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.2
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
