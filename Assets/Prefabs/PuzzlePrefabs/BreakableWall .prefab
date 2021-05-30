@@ -4391,7 +4391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5939555653375400077}
   - component: {fileID: 1571107581006706568}
-  m_Layer: 14
+  m_Layer: 10
   m_Name: SM_WallWithPlanks_Shattered
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4691,6 +4691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 21
   anim: {fileID: 5939555653601294589}
+  puzzleAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &5939555653601294591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4718,6 +4720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6412709994033970675}
   hitSounds: {fileID: 11400000, guid: 032493ca70ce4904783dfe95e05aced4, type: 2}
+  shakeData: {fileID: 0}
   puzzleID: 21
 --- !u!65 &5939555653601294585
 BoxCollider:
