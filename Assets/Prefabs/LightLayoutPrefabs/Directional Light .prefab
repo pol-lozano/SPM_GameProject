@@ -45,7 +45,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.9242418, g: 0.88394445, b: 0.9811321, a: 1}
-  m_Intensity: 10000
+  m_Intensity: 9500
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 10000
+  m_Intensity: 9500
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8602964017870834030}
   m_LocalRotation: {x: 0.7017052, y: -0.0045529343, z: 0.0016311838, w: 0.71245104}
-  m_LocalPosition: {x: 1.9, y: -0.5, z: -128.1}
+  m_LocalPosition: {x: 1.9, y: -0.5, z: -144.2}
   m_LocalScale: {x: 15.706395, y: 15.706395, z: 15.706395}
   m_Children: []
   m_Father: {fileID: 7653735945681384586}
@@ -273,7 +273,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6d1c75054d1e39741abbd00092c999a7, type: 2}
