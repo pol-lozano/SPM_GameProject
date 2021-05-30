@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9675c3864df764a4cab5c4f2c42bd721, type: 3}
   m_Name: New Boss Charge State
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 5
   stoppingDistance: 5

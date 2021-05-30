@@ -7,7 +7,12 @@ public class BossChargeState : BossState
     public override void Enter()
     {
         base.Enter();
-        BossController.Agent.SetDestination((BossController.Player.transform.position - BossController.transform.position).normalized * 100);
+    }
+
+    public override void HandleUpdate()
+    {
+        base.HandleUpdate();
+        BossController.Agent.SetDestination(BossController.Player.transform.position);
     }
 
     public override void EvaluateTransitions()
