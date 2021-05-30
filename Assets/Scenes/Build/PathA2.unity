@@ -4824,13 +4824,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 456657014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1701659022}
+  m_Script: {fileID: 551980148}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 0}
   - id: 1
     category: 0
     gameObject: {fileID: 47950218}
@@ -5428,7 +5425,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 512548426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1257190766}
+  m_Script: {fileID: 551980148}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Entries:
@@ -5450,9 +5447,6 @@ MonoBehaviour:
   - id: 5
     category: 0
     gameObject: {fileID: 2001225339}
-  - id: 6
-    category: 0
-    gameObject: {fileID: 0}
 --- !u!4 &512548428
 Transform:
   m_ObjectHideFlags: 19
@@ -6048,6 +6042,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5139442083506219791, guid: e21e7b123579e9e4e80af7638afb4fd8, type: 3}
+--- !u!115 &551980148
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1001 &555118450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14660,20 +14668,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &1257190766
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1001 &1265045530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20719,20 +20713,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6297724794660679052, guid: f99406527cc5d3048a5b69cbcda750b1, type: 3}
   m_PrefabInstance: {fileID: 1699469279}
   m_PrefabAsset: {fileID: 0}
---- !u!115 &1701659022
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1001 &1711708815
 PrefabInstance:
   m_ObjectHideFlags: 0
