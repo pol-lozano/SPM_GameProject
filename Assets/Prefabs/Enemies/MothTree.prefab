@@ -72,7 +72,7 @@ MonoBehaviour:
   waitTime: 3
   layersToIgnore:
     serializedVersion: 2
-    m_Bits: 214847
+    m_Bits: 213823
   attackAudio: {fileID: 11400000, guid: e77e32e9eec074e4bb5e24dc203213a2, type: 2}
   alarmAudio: {fileID: 0}
   target: {fileID: 0}
