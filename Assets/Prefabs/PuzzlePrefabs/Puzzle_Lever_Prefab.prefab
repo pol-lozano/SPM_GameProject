@@ -217,8 +217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   anim: {fileID: 1036710674624876138}
-  puzzleAudio: {fileID: 11400000, guid: f0ac386f8670bc143b58b536b24f17e8, type: 2}
+  puzzleActivationAudio: {fileID: 11400000, guid: f0ac386f8670bc143b58b536b24f17e8, type: 2}
+  puzzleImpactAudio: {fileID: 0}
   audioSource: {fileID: 0}
+  vfx: {fileID: 0}
 --- !u!1001 &8905131612559261896
 PrefabInstance:
   m_ObjectHideFlags: 0
