@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1445,20 +1445,72 @@ MonoScript:
   m_ExecutionOrder: 0
   m_ClassName: SceneObjectIDMapSceneAsset
   m_Namespace: UnityEngine.Rendering.HighDefinition
---- !u!115 &551980148
-MonoScript:
+--- !u!1001 &532619475
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1962072750}
+    m_Modifications:
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -50.762863
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.354256
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.26571
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566301513986127925, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_Name
+      value: Dungeon Volume
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566301513986127925, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+--- !u!4 &532619476 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+  m_PrefabInstance: {fileID: 532619475}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1 &593101629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,7 +2401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &698356117
 Transform:
   m_ObjectHideFlags: 0
@@ -2888,7 +2940,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 872749019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 551980148}
+  m_Script: {fileID: 1940700431}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Entries: []
@@ -4628,6 +4680,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!115 &1940700431
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1 &1962072749
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,7 +4724,7 @@ Transform:
   - {fileID: 2023807062}
   - {fileID: 1677979452}
   - {fileID: 1009678785}
-  - {fileID: 625039699547417562}
+  - {fileID: 532619476}
   - {fileID: 2106380615}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -5149,7 +5215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2040879047
 Transform:
   m_ObjectHideFlags: 0
@@ -6023,65 +6089,3 @@ LightProbeGroup:
   - {x: 53.82458, y: 0.03376007, z: -19.873001}
   - {x: 53.82458, y: 1.2315884, z: -19.873001}
   m_Dering: 1
---- !u!4 &625039699547417562 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-  m_PrefabInstance: {fileID: 3836288005665977448}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3836288005665977448
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1962072750}
-    m_Modifications:
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -50.762863
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -26.354256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 64.26571
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436518242970083250, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646711333986528398, guid: 1e4507745d857674296ae862353d08a1, type: 3}
-      propertyPath: m_Name
-      value: Dungeon Volume
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e4507745d857674296ae862353d08a1, type: 3}
