@@ -10,6 +10,7 @@ public class StartLoader : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 300;
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         Checkpoint.currentCheckPoint = startingCheckPoint;

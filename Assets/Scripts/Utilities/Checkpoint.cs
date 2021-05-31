@@ -10,12 +10,15 @@ public class Checkpoint : MonoBehaviour
 
     public List<int> ScenesOnCheckpoint { get => scenesOnThisCheckpoint; }
 
+    private void OnEnable() => EventHandler<ReloadEvent>.RegisterListener(Reload);
+    private void OnDisable() => EventHandler<ReloadEvent>.UnregisterListener(Reload);
+
     /*DEN BORDE INTE AKTIVERAS SÅ HÄR, SPELAREN BORDE GÅ FRAM OCH INTERAGERA*/
     private void OnTriggerEnter/*STAY!?*/(Collider other)
     {
         if (other.CompareTag("Player") && this!=currentCheckPoint)
         {
-            Debug.Log("player");
+            //Debug.Log("player");
             ActivateCheckpoint(other.gameObject);
         }
     }
@@ -23,9 +26,14 @@ public class Checkpoint : MonoBehaviour
     private void ActivateCheckpoint(GameObject player)
     {
         EventHandler<CheckPointEvent>.FireEvent(new CheckPointEvent(UItext));
-        Debug.Log("ActivateCheckpoint");
+        //Debug.Log("ActivateCheckpoint");
         currentCheckPoint = this;
         player.GetComponent<HealthComponent>().ResetHealth();
+    }
+
+    private void Reload(ReloadEvent eve)
+    {
+        //EventHandler<CheckPointEvent>.FireEvent(new CheckPointEvent(UItext));
     }
     
 }
