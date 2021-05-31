@@ -19,7 +19,7 @@ public class PickUp : MonoBehaviour
         EventHandler<SoundEvent>.FireEvent(new SoundEvent(pickUpAudio, audioSource));
         objectToPickup.SetActive(false);
         PlayerCombat.Player.PickUpObject(isSword);
-        Debug.Log("Picked up!");
+        //Debug.Log("Picked up!");
 
         if (anim != null)
             anim.SetBool("Activated", true);
