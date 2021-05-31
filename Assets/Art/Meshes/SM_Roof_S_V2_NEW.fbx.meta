@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d28ef8b805252d43953c8a245eb3b97
+guid: 90886b97419b11d498f9aaec4d083ca9
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: eb8ce7e9fe321ec499568f86fd892efd, type: 2}
+      name: M_Roof
+    second: {fileID: 2100000, guid: d002eaa906cb8b64693ae3ba871aa004, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -50,7 +50,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

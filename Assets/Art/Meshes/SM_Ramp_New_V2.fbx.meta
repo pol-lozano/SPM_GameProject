@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d28ef8b805252d43953c8a245eb3b97
+guid: 5c3634b3edc46d443abfa22645bf50c3
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: eb8ce7e9fe321ec499568f86fd892efd, type: 2}
+      name: M_Metal
+    second: {fileID: 2100000, guid: 44ad6761f1c9db44fa24837860a2b16c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wood_Fine
+    second: {fileID: 2100000, guid: 38961758f905d2a46b84c012afccb310, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -50,7 +55,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
