@@ -4,6 +4,7 @@ using UnityEngine;
 public class OrbitCamera : MonoBehaviour
 {
     private static OrbitCamera cam;
+    private bool activated = true;
     public static OrbitCamera Camera
     {
         get
@@ -15,6 +16,8 @@ public class OrbitCamera : MonoBehaviour
             return cam;
         }
     }
+
+    public bool Activated { get => activated; set => activated = value; }
 
     [Header("Input")]
     public InputHandler input;
@@ -39,10 +42,10 @@ public class OrbitCamera : MonoBehaviour
     private void OnValidate()
     {
         //Do not allow maxViewAngle to be lower than minViewAngle
-        if (maxViewAngle < minViewAngle) 
+        if (maxViewAngle < minViewAngle)
             maxViewAngle = minViewAngle;
 
-        if (maxDistance < minDistance) 
+        if (maxDistance < minDistance)
             maxDistance = minDistance;
     }
 
@@ -66,14 +69,17 @@ public class OrbitCamera : MonoBehaviour
 
     private void OnCameraZoom(float zoom)
     {
-        if(cameraZoomEnabled)
+        if (cameraZoomEnabled)
             cameraOffset.z -= zoom * Time.deltaTime;
     }
 
     private void LateUpdate()
     {
-        TurnCamera();
-        MoveCamera();
+        if (activated)
+        {
+            TurnCamera();
+            MoveCamera();
+        }
     }
 
     /// <summary> 
@@ -81,7 +87,7 @@ public class OrbitCamera : MonoBehaviour
     /// </summary>
     void TurnCamera()
     {
-        if (cameraInput.magnitude > float.Epsilon) 
+        if (cameraInput.magnitude > float.Epsilon)
             cameraRotation += turnSpeed * Time.unscaledDeltaTime * cameraInput;
 
         UpdateConstraints();
