@@ -105,6 +105,14 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": ""Normalize(max=1)"",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""870c6912-87c9-40f9-881f-f8ba4def4864"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""Normalize(max=1)"",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -338,6 +346,28 @@ public class @GameInput : IInputActionCollection, IDisposable
                     ""action"": ""Enter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""08fbc206-83ed-46a2-b157-55a748b471eb"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f800a4e0-6cb8-40f3-9260-029fa38109d8"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -368,6 +398,7 @@ public class @GameInput : IInputActionCollection, IDisposable
         m_Gameplay_Fly = m_Gameplay.FindAction("Fly", throwIfNotFound: true);
         m_Gameplay_Sink = m_Gameplay.FindAction("Sink", throwIfNotFound: true);
         m_Gameplay_Enter = m_Gameplay.FindAction("Enter", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -428,6 +459,7 @@ public class @GameInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Fly;
     private readonly InputAction m_Gameplay_Sink;
     private readonly InputAction m_Gameplay_Enter;
+    private readonly InputAction m_Gameplay_Pause;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
@@ -443,6 +475,7 @@ public class @GameInput : IInputActionCollection, IDisposable
         public InputAction @Fly => m_Wrapper.m_Gameplay_Fly;
         public InputAction @Sink => m_Wrapper.m_Gameplay_Sink;
         public InputAction @Enter => m_Wrapper.m_Gameplay_Enter;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -485,6 +518,9 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @Enter.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEnter;
                 @Enter.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEnter;
                 @Enter.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnEnter;
+                @Pause.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -522,6 +558,9 @@ public class @GameInput : IInputActionCollection, IDisposable
                 @Enter.started += instance.OnEnter;
                 @Enter.performed += instance.OnEnter;
                 @Enter.canceled += instance.OnEnter;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -557,5 +596,6 @@ public class @GameInput : IInputActionCollection, IDisposable
         void OnFly(InputAction.CallbackContext context);
         void OnSink(InputAction.CallbackContext context);
         void OnEnter(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

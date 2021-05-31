@@ -24,6 +24,8 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public event UnityAction sinkEvent = delegate { };
     public event UnityAction sinkEventCanceled = delegate { };
     public event UnityAction enterEvent = delegate { };
+
+    public event UnityAction pauseEvent = delegate { };
     //------------------------------
     private GameInput gameInput;
 
@@ -122,6 +124,12 @@ public class InputHandler : ScriptableObject, GameInput.IGameplayActions
     public void OnEnter(InputAction.CallbackContext context)
     {
         enterEvent.Invoke();
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Started) 
+        pauseEvent.Invoke();
     }
 
     #endregion

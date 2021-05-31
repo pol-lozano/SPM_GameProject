@@ -27,5 +27,6 @@ public class SceneLoader : MonoBehaviour
         for (int i = 0; i < indexesToUnload.Count; i++)
             EventHandler<UnloadSceneEvent>.FireEvent(new UnloadSceneEvent(indexesToUnload[i]));
     }
+
 }
 
