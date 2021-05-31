@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2819618, g: 0.31631538, b: 0.5201411, a: 1}
+  m_IndirectSpecularColor: {r: 0.28194928, g: 0.31636763, b: 0.52022636, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1518,7 +1518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].key
@@ -1531,7 +1531,7 @@ PrefabInstance:
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_SceneBindings.Array.data[8].key
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8021849880968077415, guid: f8a77b78a7724a34b968c07a78424b1e, type: 2}
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_SceneBindings.Array.data[4].value
       value: 
@@ -1547,7 +1547,7 @@ PrefabInstance:
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_SceneBindings.Array.data[8].value
       value: 
-      objectReference: {fileID: 935591125}
+      objectReference: {fileID: 935591124}
     - target: {fileID: 2638492842177776307, guid: 1ba4193ae3bbbb14c926ea1dcedaaf34, type: 3}
       propertyPath: m_ExposedReferences.m_References.Array.size
       value: 1
@@ -1578,7 +1578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &935591125
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a861f8c690517714e875a5d0d7105874, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1600,7 +1600,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 50
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -1635,7 +1635,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1683,7 +1683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935591124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.454037, y: 13.15, z: -16.19}
+  m_LocalPosition: {x: -55.454037, y: 13.15, z: 3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3658,6 +3658,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5696358241111206108, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370110480104820617, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3673,6 +3677,10 @@ PrefabInstance:
     - target: {fileID: 6370110480104820617, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398012176394128030, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7276044930420109488, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
