@@ -41,6 +41,7 @@ public class UmbralMoth : Enemy
     {
 
         Target = GameObject.FindGameObjectWithTag("Player").transform;
+        Anim.enabled = true;
         Anim.SetBool("Die", false);
 
         ControlObjectSet<Transform>(Target);

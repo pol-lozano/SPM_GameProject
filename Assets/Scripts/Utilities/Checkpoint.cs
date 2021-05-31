@@ -7,7 +7,10 @@ public class Checkpoint : MonoBehaviour
     public static Checkpoint currentCheckPoint;
     [SerializeField] private string UItext;
     [SerializeField] private List<int> scenesOnThisCheckpoint = new List<int>();
+    [SerializeField] private AudioData checkpointAudio;
+    [SerializeField] private AudioSource audioSource;
 
+    private bool playedMusic;
     public List<int> ScenesOnCheckpoint { get => scenesOnThisCheckpoint; }
 
     private void OnEnable() => EventHandler<ReloadEvent>.RegisterListener(Reload);
@@ -25,6 +28,11 @@ public class Checkpoint : MonoBehaviour
 
     private void ActivateCheckpoint(GameObject player)
     {
+        if(playedMusic == false && checkpointAudio != null)
+        {
+            EventHandler<SoundEvent>.FireEvent(new SoundEvent(checkpointAudio, audioSource));
+            playedMusic = true;
+        }
         EventHandler<CheckPointEvent>.FireEvent(new CheckPointEvent(UItext));
         //Debug.Log("ActivateCheckpoint");
         currentCheckPoint = this;
