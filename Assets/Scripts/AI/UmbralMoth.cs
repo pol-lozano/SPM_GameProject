@@ -18,7 +18,7 @@ public class UmbralMoth : Enemy
     [SerializeField] private List<Rigidbody> ragdoll;
 
     private GameObject treePrefab;
-    private BT_UmbralMoth bt;
+    private BT_UmbralMoth behaviourTree;
 
     #region GETTERS
 
@@ -48,7 +48,7 @@ public class UmbralMoth : Enemy
         ControlObjectSet<AIPath>(Path);
 
         treePrefab = ObjectPooler.instance.SpawnFromPool("MothTree");
-        bt = treePrefab.GetComponent<BT_UmbralMoth>();
+        behaviourTree = treePrefab.GetComponent<BT_UmbralMoth>();
         BlackBoard bb = treePrefab.GetComponent<BlackBoard>();
         bb.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
 
@@ -59,7 +59,7 @@ public class UmbralMoth : Enemy
     void Update()
     {
         //Debug.DrawLine(transform.position, agent.destination, Color.magenta);
-        bt.RunBehaviourTree();
+        behaviourTree.RunBehaviourTree();
 
         if (Health.CurrentHealth <= 0)
             Destroy(gameObject, 4);
@@ -67,6 +67,7 @@ public class UmbralMoth : Enemy
 
     private void OnDestroy()
     {
+        behaviourTree.BlackBoard.Reset();
         EnemyLoader.OnDestroy(this);
     }
 

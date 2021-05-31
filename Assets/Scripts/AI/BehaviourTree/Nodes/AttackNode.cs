@@ -8,7 +8,7 @@ public class AttackNode : Node
     public override NODE_STATE Evaluate()
     {
         BlackBoard.Agent.speed = Vector3.Distance(BlackBoard.ThisAI.position, BlackBoard.Target.position) + 1;
-        BlackBoard.Anim.SetFloat("Speed", BlackBoard.Agent.speed);
+        BlackBoard.Anim.SetFloat("Speed", BlackBoard.Agent.speed - 1);
         BlackBoard.Agent.SetDestination(BlackBoard.Target.position);
         
         if (BlackBoard.IsCoolingDown == false)
