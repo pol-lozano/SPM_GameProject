@@ -1551,6 +1551,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9179074791308977450, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
 --- !u!4 &171654552 stripped
@@ -6436,14 +6440,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuCutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449218, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -975.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449218, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -540.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449218, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449219, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8353212610113449219, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449244, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
+      value: 1719
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449244, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449244, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353212610113449244, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.x
+      value: 52.21
       objectReference: {fileID: 0}
     - target: {fileID: 8353212610427176815, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 540414922}
+    - target: {fileID: 8353212610856568029, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8785421210170695412, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
       propertyPath: m_RootOrder
       value: 5
