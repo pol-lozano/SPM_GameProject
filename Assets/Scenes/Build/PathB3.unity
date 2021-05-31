@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 54.781826, g: 61.425697, b: 100.79921, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1776,7 +1776,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 5081d234bf1d76847b0a01df4a7ad76e, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: e3ba12f840afbe941b8bd3ad8c21718f, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -3045,7 +3045,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: d6f3f9fabb15be045bfc27cef321fc69, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 061dd455bc67b2349af839e6dc9f1608, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -3745,7 +3745,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 061dd455bc67b2349af839e6dc9f1608, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: bc67202e23bc1e24c888706ccd5b4c14, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -4363,7 +4363,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: bc67202e23bc1e24c888706ccd5b4c14, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 197d3adb4522ab64aa0ce6788d535ce5, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -5098,7 +5098,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: c0cb21a150dd9f944a56339cc2700cdb, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 9bead3332fa55cc45bf261fcf43f3499, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -6342,6 +6342,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 994356153055754212, guid: 9db92395b61e0044bb03ed6fef7a8558, type: 3}
+--- !u!115 &551980148
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1 &575128010
 GameObject:
   m_ObjectHideFlags: 19
@@ -6368,9 +6382,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 575128010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1174529537}
+  m_Script: {fileID: 551980148}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries:
+  - id: 0
+    category: 0
+    gameObject: {fileID: 151458632}
+  - id: 1
+    category: 0
+    gameObject: {fileID: 255180450}
+  - id: 2
+    category: 0
+    gameObject: {fileID: 313048123}
+  - id: 3
+    category: 0
+    gameObject: {fileID: 365867932}
+  - id: 4
+    category: 0
+    gameObject: {fileID: 412605617}
+  - id: 5
+    category: 0
+    gameObject: {fileID: 616307284}
+  - id: 6
+    category: 0
+    gameObject: {fileID: 1422400299}
+  - id: 7
+    category: 0
+    gameObject: {fileID: 1931401837}
+  - id: 8
+    category: 0
+    gameObject: {fileID: 2000509503}
 --- !u!4 &575128012
 Transform:
   m_ObjectHideFlags: 19
@@ -6954,7 +6996,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 197d3adb4522ab64aa0ce6788d535ce5, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: c0cb21a150dd9f944a56339cc2700cdb, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -11889,20 +11931,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5139442083506219791, guid: e21e7b123579e9e4e80af7638afb4fd8, type: 3}
---- !u!115 &1174529537
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1001 &1179716492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16224,7 +16252,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: e3ba12f840afbe941b8bd3ad8c21718f, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: d6f3f9fabb15be045bfc27cef321fc69, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -20419,7 +20447,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 9bead3332fa55cc45bf261fcf43f3499, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 5081d234bf1d76847b0a01df4a7ad76e, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
