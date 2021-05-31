@@ -26,7 +26,7 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField, Tooltip("The target that the camera will follow")] private Transform target;
     [SerializeField, Tooltip("The offset the camera will have in relation to the target")] private Vector3 cameraOffset;
     [SerializeField, Tooltip("Allow to zoom in the camera in and out")] private bool cameraZoomEnabled = false;
-    [SerializeField, Range(0, 100), Tooltip("Speed of the rotation of the camera in degrees per second")] private float turnSpeed = 25f;
+    [SerializeField, Range(0, 100), Tooltip("Speed of the rotation of the camera in degrees per second")] private float turnSpeed = 10f;
     [SerializeField, Range(-89, 89), Tooltip("Minimum and maximum vertical angle")] private float minViewAngle = -89f, maxViewAngle = 45f;
     [SerializeField, Range(0, 100), Tooltip("Minimum and maximum vertical angle")] private float minDistance = 1f, maxDistance = 10f;
     [SerializeField, Tooltip("If y axis will be inverted or not")] private bool invertY = false;
@@ -88,7 +88,7 @@ public class OrbitCamera : MonoBehaviour
     void TurnCamera()
     {
         if (cameraInput.magnitude > float.Epsilon)
-            cameraRotation += turnSpeed * Time.unscaledDeltaTime * cameraInput;
+            cameraRotation += PlayerPrefs.GetFloat("MouseSensitivity", turnSpeed) * Time.unscaledDeltaTime * cameraInput;
 
         UpdateConstraints();
         transform.rotation = Quaternion.Euler(cameraRotation);
