@@ -477,6 +477,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2360187442844433776}
     m_Modifications:
+    - target: {fileID: 2771819717683881776, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
+      propertyPath: m_InitialEventName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2771819717683881776, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
+      propertyPath: m_InitialEventNameOverriden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2771819717683881777, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
