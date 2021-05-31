@@ -73635,7 +73635,7 @@ MonoBehaviour:
   priority: 1
   blendDistance: 17
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 13915cb4e5f4d87469b9b4231a9aa1d9, type: 2}
+  sharedProfile: {fileID: 11400000, guid: f7bd351ee79ab59469c99c993442b186, type: 2}
 --- !u!64 &5986307185077391457
 MeshCollider:
   m_ObjectHideFlags: 0
