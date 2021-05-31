@@ -19,7 +19,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 329
     y: -241
-    width: 961
+    width: 960
     height: 2834
 --- !u!114 &114350483966674976
 MonoBehaviour:
@@ -107,9 +107,9 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 500
+      m_SerializableObject: 5000
     min: 0
-    max: 1000
+    max: 5000
     enumValues: []
     descendantCount: 0
   - name: Fade In Start
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_ImportDependencies: []
   m_GraphVersion: 6
   m_ResourceVersion: 1
-  m_saved: 1
+  m_saved: 0
   m_SubgraphDependencies: []
   m_CategoryPath: 
 --- !u!2058629511 &8926484042661614527
@@ -653,7 +653,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614596}
   dataType: 0
-  capacity: 500
+  capacity: 10000
   stripCapacity: 16
   particlePerStripCount: 16
   m_Space: 0
@@ -3540,7 +3540,7 @@ MonoBehaviour:
     m_Type:
       m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-    m_SerializableObject: 1000
+    m_SerializableObject: 5000
   m_IsOutput: 0
   m_EnumValues: []
   m_ValueFilter: 1
@@ -3578,7 +3578,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 500
+      m_SerializableObject: 5000
     m_Space: 2147483647
   m_Property:
     name: o

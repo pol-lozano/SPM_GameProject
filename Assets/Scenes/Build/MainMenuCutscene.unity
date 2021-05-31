@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.07059097, g: 0.07917864, b: 0.13013422, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1486,6 +1486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon
       objectReference: {fileID: 0}
+    - target: {fileID: 7422457432162433563, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
 --- !u!1001 &171654551
@@ -2877,17 +2881,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &725042691 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8353212610558884043, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-  m_PrefabInstance: {fileID: 2043438232}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73aa33ad18931c040b483cd4f0e78627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &747731086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6443,10 +6436,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuCutscene
       objectReference: {fileID: 0}
-    - target: {fileID: 8353212609951737750, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8353212610113449219, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6455,78 +6444,6 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 540414922}
-    - target: {fileID: 8353212610539288489, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Signals.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Signals.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6378468969452e544b6b6dbb07e49cfc, type: 2}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 725042691}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: fadeOut
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ChangeScene, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610558884036, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Events.m_Events.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610609661553, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610758679797, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610763328017, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212610871572676, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212611003909716, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212611276104175, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8353212611648439413, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8785421210170695412, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
       propertyPath: m_RootOrder
       value: 5

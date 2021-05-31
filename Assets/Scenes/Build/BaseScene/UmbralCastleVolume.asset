@@ -331,7 +331,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddcec8a8eb2d684d833ac8f5d26aebd, type: 3}
   m_Name: HDShadowSettings
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   maxShadowDistance:
     m_OverrideState: 1
@@ -895,7 +895,7 @@ MonoBehaviour:
     max: 512
   m_VolumetricFogBudget:
     m_OverrideState: 1
-    m_Value: 0.6
+    m_Value: 0.4
     min: 0
     max: 1
   m_ResolutionDepthRatio:
