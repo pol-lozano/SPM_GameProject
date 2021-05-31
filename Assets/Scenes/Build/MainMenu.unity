@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07058658, g: 0.079183355, b: 0.13014042, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -655,11 +655,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -234.95}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &46921341 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834784072755, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &51108867
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,11 +730,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51108867}
   m_CullTransparentMesh: 1
---- !u!1 &58613347 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834758097965, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &58839669
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,11 +864,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58839669}
   m_CullTransparentMesh: 1
---- !u!1 &73428306 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834807770908, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &89248305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,11 +5709,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 5.568, y: 529.68896, z: -0.413}
---- !u!1 &541168222 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834205937680, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &549735207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6976,11 +6956,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1 &624745468 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834250684850, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649035528
 GameObject:
   m_ObjectHideFlags: 0
@@ -8020,11 +7995,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746420729}
   m_CullTransparentMesh: 1
---- !u!1 &747731086 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834412518080, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &748492218
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,37 +9341,6 @@ MonoBehaviour:
   m_Script: {fileID: 1382066923}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 46921341}
-  - id: 1
-    category: 0
-    gameObject: {fileID: 58613347}
-  - id: 2
-    category: 0
-    gameObject: {fileID: 73428306}
-  - id: 3
-    category: 0
-    gameObject: {fileID: 541168222}
-  - id: 4
-    category: 0
-    gameObject: {fileID: 624745468}
-  - id: 5
-    category: 0
-    gameObject: {fileID: 747731086}
-  - id: 6
-    category: 0
-    gameObject: {fileID: 937894266}
-  - id: 7
-    category: 0
-    gameObject: {fileID: 1265828724}
-  - id: 8
-    category: 0
-    gameObject: {fileID: 1432993865}
-  - id: 9
-    category: 0
-    gameObject: {fileID: 1703795429}
 --- !u!4 &867569698
 Transform:
   m_ObjectHideFlags: 19
@@ -9979,11 +9918,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937883740}
   m_CullTransparentMesh: 1
---- !u!1 &937894266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743834027840308, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950996186
 GameObject:
   m_ObjectHideFlags: 0
@@ -12958,11 +12892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249648004}
   m_CullTransparentMesh: 1
---- !u!1 &1265828724 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743833818919226, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282334735
 GameObject:
   m_ObjectHideFlags: 0
@@ -14239,11 +14168,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
---- !u!1 &1432993865 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743833448329735, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1447045646
 GameObject:
   m_ObjectHideFlags: 0
@@ -16748,9 +16672,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1979339692}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 0.063
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -19037,11 +18961,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703204036}
   m_CullTransparentMesh: 1
---- !u!1 &1703795429 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6087743833186445483, guid: 79e4dc6e51cfe374b817b3ceede37417, type: 3}
-  m_PrefabInstance: {fileID: 6087743834738586190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1703908097
 GameObject:
   m_ObjectHideFlags: 0
