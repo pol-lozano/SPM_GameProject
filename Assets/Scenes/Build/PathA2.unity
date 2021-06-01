@@ -5,7 +5,7 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
+    smallestOccluder: 3
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 6123f182e6875634b8d193f2e4f2ed0c
@@ -42222,15 +42222,15 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 418088737}
+  - {fileID: 822079314}
   - {fileID: 1451764149}
   - {fileID: 1112418927}
+  - {fileID: 418088737}
   - {fileID: 719292227}
   - {fileID: 1859190923}
-  - {fileID: 1635580163}
   - {fileID: 1868244002}
+  - {fileID: 1635580163}
   - {fileID: 358321535}
-  - {fileID: 822079314}
   - {fileID: 29220821}
   - {fileID: 1006646799}
   - {fileID: 698333607}
