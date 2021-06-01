@@ -3,27 +3,22 @@ using UnityEngine;
 [CreateAssetMenu(menuName="BossState/TargetingState")]
 public class BossTargetingState : BossState
 {
-    [SerializeField] private float targetingTime = 3f;
-    private float timer;
+    [SerializeField] private ShakeEventData stompShake;
 
-    public override void Enter()
+    public override void Enter() => BossController.RigBuilder.layers[0].active = false;
+
+    public override void HandleUpdate() => Rotate();
+
+    public override void OnAnimationStarted()
     {
-        base.Enter();
-        BossController.Animator.SetBool("Targeting", true);
-        timer = targetingTime;
+        //Play sound and effects of feet stomping
+        EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(stompShake));
     }
 
-    public override void HandleUpdate()
+    public override void OnAnimationEnded()
     {
-        Rotate();
-        timer -= Time.deltaTime;
-    }
-
-    public override void EvaluateTransitions()
-    {
-        base.EvaluateTransitions();
-        if (timer <= 0)
-            stateMachine.Transition<BossChargeState>();
+        BossController.RigBuilder.layers[0].active = true;
+        stateMachine.Transition<BossChargeState>();
     }
 
     /// <summary>
@@ -35,12 +30,6 @@ public class BossTargetingState : BossState
                new Vector3(BossController.Player.transform.position.x,
                BossController.transform.position.y,
                BossController.Player.transform.position.z));
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-        BossController.Animator.SetBool("Targeting", false);
     }
 }
 

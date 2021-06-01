@@ -4,9 +4,12 @@ using UnityEngine;
 public class BossChargeState : BossState
 {
     [SerializeField] private float stoppingDistance = 5f;
+
     public override void Enter()
     {
         base.Enter();
+        BossController.Agent.SetDestination(BossController.Player.transform.position);
+        BossController.RigBuilder.layers[0].active = true;
     }
 
     public override void HandleUpdate()
@@ -19,6 +22,6 @@ public class BossChargeState : BossState
     {
         base.EvaluateTransitions();
         if (BossController.Agent.remainingDistance <= stoppingDistance)
-            stateMachine.Transition<BossStunnedState>();
+            stateMachine.Transition<BossAttackState>();
     }
 }

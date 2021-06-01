@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations.Rigging;
 
 [RequireComponent(typeof(HealthComponent))]
 public class BossController : MonoBehaviour
@@ -11,6 +12,9 @@ public class BossController : MonoBehaviour
     public NavMeshAgent Agent { get; private set; }
     public HealthComponent HealthComponent { get; private set; }
     public CharacterController3D Player { get; private set; }
+
+    public RigBuilder RigBuilder;
+    public MeleeWeapon MeleeWeapon;
 
     void Awake()
     {

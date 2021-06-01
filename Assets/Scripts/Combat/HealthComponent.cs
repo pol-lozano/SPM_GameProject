@@ -73,7 +73,6 @@ public class HealthComponent : HitComponent
 
     private void TakeDamage(HitInfo info)
     {
-
         if(info.damager.GetType() == typeof(MeleeWeapon))
             EventHandler<ImpactEvent>.FireEvent(new ImpactEvent(IsPlayer));
 

@@ -7,6 +7,7 @@ public class UIHealthBar : MonoBehaviour
     [SerializeField] private HealthComponent owner;
 
     [SerializeField] private bool movable = true;
+    [SerializeField] private bool isBossHealthBar = false;
     [SerializeField] private float deactivateTimer = 7;
     [SerializeField] private Transform target;
     [SerializeField] private Vector3 offset;
@@ -22,7 +23,7 @@ public class UIHealthBar : MonoBehaviour
     private void Awake()
     {
         rectParent = GetComponent<RectTransform>();
-        if (owner.IsPlayer) 
+        if (owner.IsPlayer || isBossHealthBar) 
             Activate();
         else 
             Deactivate();
@@ -47,7 +48,7 @@ public class UIHealthBar : MonoBehaviour
         if (data.Info.hitComponent != owner) 
             return;
 
-        if(owner.IsPlayer == false)
+        if(owner.IsPlayer == false && isBossHealthBar == false)
             Invoke(nameof(DeactivateDelayed), 2);
     }
 
@@ -56,7 +57,7 @@ public class UIHealthBar : MonoBehaviour
         if (data.Info.hitComponent != owner)
             return;
 
-        if (owner.IsPlayer == false)
+        if (owner.IsPlayer == false && isBossHealthBar == false)
         {
             Activate();
             DeactivateDelayed(deactivateTimer);

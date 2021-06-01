@@ -1,17 +1,13 @@
 
 using UnityEngine;
-
+[CreateAssetMenu(menuName =("BossState/Death"))]
 public class BossDeathState : BossState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Enter()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Enter();
+        BossController.Animator.SetTrigger("Death");
+        BossController.RigBuilder.layers[0].active = false;
+        BossController.MeleeWeapon.Collider.enabled = false;
     }
 }

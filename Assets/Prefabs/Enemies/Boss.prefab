@@ -1946,11 +1946,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 4105725708660444134}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 5
   m_Speed: 3.5
   m_Acceleration: 40
   avoidancePriority: 50
-  m_AngularSpeed: 720
+  m_AngularSpeed: 420
   m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -1974,12 +1974,12 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   hitSounds: {fileID: 0}
   shakeData: {fileID: 0}
-  maxHealth: 1000
-  currentHealth: 1000
+  maxHealth: 100
+  currentHealth: 100
   invulnerabilityTime: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4096
   deathSound: {fileID: 0}
   isPlayer: 0
 --- !u!114 &2586191526851024934
@@ -1998,6 +1998,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e8ad2694818702b49b76fdad1c3c9ef2, type: 2}
   - {fileID: 11400000, guid: 76c7df936d5c7e24c9e3d351b11f6666, type: 2}
   - {fileID: 11400000, guid: 5211e1af47dcfdc4c8e2a6def5f33e75, type: 2}
+  - {fileID: 11400000, guid: fe19caac684d5bd4d88bdf51f10af82b, type: 2}
+  RigBuilder: {fileID: 4105725708660444136}
+  MeleeWeapon: {fileID: 0}
 --- !u!1 &4244305685048625385
 GameObject:
   m_ObjectHideFlags: 0
