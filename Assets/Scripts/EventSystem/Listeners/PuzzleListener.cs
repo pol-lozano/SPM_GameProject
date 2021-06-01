@@ -13,7 +13,8 @@ public class PuzzleListener : MonoBehaviour
     [SerializeField] private AudioData puzzleActivationAudio;
     [SerializeField] private AudioData puzzleImpactAudio;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private VisualEffect vfx;
+    [SerializeField] private VisualEffect vfxOne;
+    [SerializeField] private VisualEffect vfxTwo;
 
     private void OnEnable() => EventHandler<PuzzleEvent>.RegisterListener(UnlockPuzzle);
     private void OnDisable() => EventHandler<PuzzleEvent>.UnregisterListener(UnlockPuzzle);
@@ -32,8 +33,12 @@ public class PuzzleListener : MonoBehaviour
 
     public void OnAnimationEnded()
     {
-        vfx.Play();
-        EventHandler<SoundEvent>.FireEvent(new SoundEvent(puzzleImpactAudio, audioSource));
+        if(vfxOne != null)
+            vfxOne.Play();
+        if(vfxTwo != null)
+           vfxTwo.Play();
+        if (puzzleImpactAudio != null && audioSource != null)
+            EventHandler<SoundEvent>.FireEvent(new SoundEvent(puzzleImpactAudio, audioSource));
     }
 
 }
