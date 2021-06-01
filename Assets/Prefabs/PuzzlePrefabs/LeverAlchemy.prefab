@@ -14,44 +14,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -357720883455864929, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
---- !u!95 &6686855213253553596
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2736871814802316879}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &357007411916496743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2736871814802316879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 25
-  anim: {fileID: 0}
-  puzzleActivationAudio: {fileID: 11400000, guid: f0ac386f8670bc143b58b536b24f17e8, type: 2}
-  puzzleImpactAudio: {fileID: 0}
-  audioSource: {fileID: 8898644246509485716}
-  vfxOne: {fileID: 0}
-  vfxTwo: {fileID: 0}
 --- !u!82 &4720387711852666499
 AudioSource:
   m_ObjectHideFlags: 0
@@ -244,6 +206,44 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6686855213253553596
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736871814802316879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce01bff1312168643b03819a2c83c5b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &357007411916496743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736871814802316879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 25
+  anim: {fileID: 6686855213253553596}
+  puzzleActivationAudio: {fileID: 11400000, guid: f0ac386f8670bc143b58b536b24f17e8, type: 2}
+  puzzleImpactAudio: {fileID: 0}
+  audioSource: {fileID: 8898644246509485716}
+  vfxOne: {fileID: 0}
+  vfxTwo: {fileID: 0}
 --- !u!65 &169784561325181809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -353,19 +353,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &9165372915655088145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2736871814858993385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitComponent: {fileID: 1489930373918191689}
 --- !u!114 &1489930373918191689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +369,19 @@ MonoBehaviour:
   hitSounds: {fileID: 11400000, guid: 20aaf8de4f93455439a96e1a4069fd8b, type: 2}
   shakeData: {fileID: 11400000, guid: f2d811be25750d44f8b022e8d4a7063c, type: 2}
   puzzleID: 25
+--- !u!114 &9165372915655088145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736871814858993385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f8f5e092857d14681a0545ac6ecf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitComponent: {fileID: 1489930373918191689}
 --- !u!1 &8284659015774383230
 GameObject:
   m_ObjectHideFlags: 0
