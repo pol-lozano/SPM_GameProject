@@ -351,7 +351,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7c2bba739ebe2794188339abdc45ec5a, type: 2}
+      objectReference: {fileID: 2100000, guid: 51715d426647c0a469aa54fd0d386aa6, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -357720883455864929, guid: 9554e35e9dd0aeb43a341890d96d5c88, type: 3}
     - target: {fileID: 919132149155446097, guid: 91b1bf4b8d5e37d45a8e4de600dd6127, type: 3}
       propertyPath: m_Name
       value: LeverHandle
@@ -439,6 +443,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 51715d426647c0a469aa54fd0d386aa6, type: 2}
+    - target: {fileID: -5754084199372789682, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3682169199630124851, guid: c251afc81d1b4d64ab055b566c274421, type: 3}
     - target: {fileID: 919132149155446097, guid: 9e12f57948c2204468b621e9a70738a4, type: 3}
       propertyPath: m_Name
       value: LeverBase
