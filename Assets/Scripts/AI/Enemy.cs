@@ -6,6 +6,8 @@ public abstract class Enemy : MonoBehaviour
 {
     protected int Id;
 
+
+
     protected HealthComponent healthComponent;
 
     public HealthComponent Health { get => healthComponent; }
@@ -13,6 +15,9 @@ public abstract class Enemy : MonoBehaviour
 
     private void OnEnable() => EventHandler<ReloadEnemiesEvent>.RegisterListener(Reload);
     private void OnDisable() => EventHandler<ReloadEnemiesEvent>.UnregisterListener(Reload);
+
+
+ 
 
     public void Reload(ReloadEnemiesEvent eve)
     {

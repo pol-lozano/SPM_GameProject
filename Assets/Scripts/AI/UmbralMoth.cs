@@ -59,15 +59,21 @@ public class UmbralMoth : Enemy
     void Update()
     {
         //Debug.DrawLine(transform.position, agent.destination, Color.magenta);
-        behaviourTree.RunBehaviourTree();
-
         if (Health.CurrentHealth <= 0)
+        {
+            anim.SetBool("Die", true);
+            ActivateRagdoll();
+            behaviourTree.BlackBoard.Reset();
             Destroy(gameObject, 4);
+        }
+        else
+            behaviourTree.RunBehaviourTree();
+
     }
 
     private void OnDestroy()
     {
-        behaviourTree.BlackBoard.Reset();
+        
         EnemyLoader.OnDestroy(this);
     }
 
@@ -76,6 +82,14 @@ public class UmbralMoth : Enemy
         if(obj == null)
         {
             Debug.LogError("WARNING: " + obj.GetType() + " is null. Make sure the object is set correctly");
+        }
+    }
+
+    private void ActivateRagdoll()
+    {
+        foreach (Rigidbody r in Ragdoll)
+        {
+            r.isKinematic = false;
         }
     }
 }

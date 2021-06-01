@@ -66,19 +66,28 @@ public class UmbralFiend : Enemy
     void Update()
     {
         Debug.DrawLine(transform.position, agent.destination, Color.magenta);
-        behaviourTree.RunBehaviourTree();
 
         if (Health.CurrentHealth <= 0)
         {
             Anim.enabled = false;
+            ActivateRagdoll();
+            blackBoard.Reset();
             Destroy(gameObject, 4);
         }
-            
+        else
+            behaviourTree.RunBehaviourTree();
     }
 
     private void OnDestroy()
     {
-        blackBoard.Reset();
         EnemyLoader.OnDestroy(this);
+    }
+
+    private void ActivateRagdoll()
+    {
+        foreach (Rigidbody r in Ragdoll)
+        {
+            r.isKinematic = false;
+        }
     }
 }
