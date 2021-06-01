@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - {fileID: 8300000, guid: f2129371839da9843b5344d1797fae41, type: 3}
+  staticPitch: 1

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07048732, g: 0.07909191, b: 0.13005659, a: 1}
+  m_IndirectSpecularColor: {r: 0.07049045, g: 0.079078846, b: 0.13003528, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -640,14 +640,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: MaxDistance
-      value: 50
+      value: 33.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
+      propertyPath: MinDistance
+      value: 15.9
       objectReference: {fileID: 0}
     - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: rolloffMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
@@ -669,6 +677,10 @@ PrefabInstance:
     - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
       value: 0.8417605
+      objectReference: {fileID: 0}
+    - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150986015, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
@@ -698,9 +710,17 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 372396381, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 372396383, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: m_Volume
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 372396383, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9031026419319554536, guid: 44ca2d8842e9f364aacc664b66113d91, type: 3}
       propertyPath: m_LocalPosition.y

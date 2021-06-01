@@ -6,7 +6,9 @@ using UnityEngine;
 public class AudioData : ScriptableObject
 {
     public AudioClip[] sounds;
+    [SerializeField] private bool staticPitch;
 
+    public bool StaticPitch { get => staticPitch; }
     public AudioClip GetAudioClip()
     {
         return (sounds.Length > 1) ? GetRandomSound() : GetSingleSound();

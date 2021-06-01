@@ -27,7 +27,8 @@ public class AudioSystem : MonoBehaviour
         {
             //Debug.Log(soundEvent.Data);
             soundEvent.AudioSource.volume = volume;
-            soundEvent.AudioSource.pitch = Random.Range(minPitch, maxPitch);
+            if(soundEvent.Data.StaticPitch == false)
+                soundEvent.AudioSource.pitch = Random.Range(minPitch, maxPitch);
             soundEvent.AudioSource.PlayOneShot(clip);
         }    
     }
