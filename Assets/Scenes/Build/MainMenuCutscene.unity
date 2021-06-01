@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07058891, g: 0.07915756, b: 0.13002834, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1438,6 +1438,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4106555659073743910, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_CapsuleColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106555659073743910, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_CapsuleColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 189783769}
+    - target: {fileID: 4284428064411134459, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_CapsuleColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284428064411134459, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_CapsuleColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 605932398}
+    - target: {fileID: 4779960016052749278, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_CapsuleColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779960016052749278, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+      propertyPath: m_CapsuleColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 605932398}
     - target: {fileID: 5678347510913095102, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1488,9 +1512,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7422457432162433563, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 550619377830765170, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+    - {fileID: 9010734984664468874, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+    - {fileID: 300619031202359215, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
 --- !u!1001 &171654551
 PrefabInstance:
@@ -1561,6 +1588,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 625039699608947465, guid: d56ae33c6329b7946ab593e778a72c28, type: 3}
   m_PrefabInstance: {fileID: 171654551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &189783769 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 3313227496197013103, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+  m_PrefabInstance: {fileID: 155155685}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &192512420
 PrefabInstance:
@@ -2563,6 +2595,11 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!136 &605932398 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6292175230440952215, guid: ffc2bbc6a1925ff45b87999857ae335e, type: 3}
+  m_PrefabInstance: {fileID: 155155685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &624745468
 GameObject:
   m_ObjectHideFlags: 0
