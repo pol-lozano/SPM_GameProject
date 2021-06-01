@@ -8,7 +8,7 @@ public class BT_UmbralMoth : BehaviourTree
 
     public override void ConstructBehaviourTree()
     {
-        /*******Death Sequence*******/
+        /*
         DieNode die = new DieNode(this);
         IsDeadDecorator deadDec = new IsDeadDecorator(this);
         Sequence dieSequence = new Sequence(new List<Node> { die }, deadDec, "die");
@@ -68,7 +68,7 @@ public class BT_UmbralMoth : BehaviourTree
         /********Top Sequence********/
         Selector topSequence = new Selector(new List<Node> { 
             /*Place all sequences here in the order you want*/
-            dieSequence,
+            //dieSequence,
             stunSequence,
             goHomeSequence,
             chaseAndAttackSequence,

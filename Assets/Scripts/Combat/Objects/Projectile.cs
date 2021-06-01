@@ -15,9 +15,6 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody rb;
 
-    private bool hit;
-    private float timeToKillAfterHit = 3;
-    private float timer;
 
     private void Awake()
     {
@@ -51,7 +48,6 @@ public class Projectile : MonoBehaviour
     private void OnDisable()
     {
         rb.velocity = Vector3.zero;
-        hit = false;
     }
 
     private void OnCollisionEnter(Collision collision) => CheckHit(collision);
