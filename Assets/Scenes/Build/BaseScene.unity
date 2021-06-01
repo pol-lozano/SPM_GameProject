@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07056932, g: 0.079163976, b: 0.13018394, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -707,11 +707,6 @@ MonoBehaviour:
 VisualEffect:
   m_CorrespondingSourceObject: {fileID: 8948281464438103350, guid: 76f7abb561fb3264eaf5367df3e251f5, type: 3}
   m_PrefabInstance: {fileID: 8948281464090175718}
-  m_PrefabAsset: {fileID: 0}
---- !u!2083052967 &427559924 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 8945168044009453407, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-  m_PrefabInstance: {fileID: 1662293073}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &545544375
 PrefabInstance:
@@ -2694,14 +2689,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2222727692953111993, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.082
-      objectReference: {fileID: 0}
-    - target: {fileID: 2222727692953111993, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3286187559437229763, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2718,10 +2705,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7483060786731969444, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: vfxOne
-      value: 
-      objectReference: {fileID: 427559924}
     - target: {fileID: 8577308244243165755, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3461,25 +3444,13 @@ PrefabInstance:
       propertyPath: particles
       value: 
       objectReference: {fileID: 2390210146502265452}
-    - target: {fileID: 2394695949018877456, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394695949018877456, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.256
-      objectReference: {fileID: 0}
-    - target: {fileID: 2394695949018877456, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.107
-      objectReference: {fileID: 0}
     - target: {fileID: 2588214219975095811, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.25
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2588214219975095811, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.15
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2588214219975095811, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime1
@@ -3535,15 +3506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2588214220093374762, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.35
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2588214220093374762, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: InitialModule.startSize.minScalar
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2588214220093374762, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7276044930420109488, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
