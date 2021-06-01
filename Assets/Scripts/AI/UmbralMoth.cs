@@ -63,6 +63,7 @@ public class UmbralMoth : Enemy
         {
             anim.SetBool("Die", true);
             ActivateRagdoll();
+            behaviourTree.BlackBoard.Reset();
             Destroy(gameObject, 4);
         }
         else
@@ -72,7 +73,7 @@ public class UmbralMoth : Enemy
 
     private void OnDestroy()
     {
-        behaviourTree.BlackBoard.Reset();
+        
         EnemyLoader.OnDestroy(this);
     }
 

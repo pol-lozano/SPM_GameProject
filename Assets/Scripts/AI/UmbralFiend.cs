@@ -71,6 +71,7 @@ public class UmbralFiend : Enemy
         {
             Anim.enabled = false;
             ActivateRagdoll();
+            blackBoard.Reset();
             Destroy(gameObject, 4);
         }
         else
@@ -79,7 +80,6 @@ public class UmbralFiend : Enemy
 
     private void OnDestroy()
     {
-        blackBoard.Reset();
         EnemyLoader.OnDestroy(this);
     }
 
