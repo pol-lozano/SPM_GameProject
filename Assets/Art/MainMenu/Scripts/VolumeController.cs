@@ -19,9 +19,11 @@ public class VolumeController : MonoBehaviour
         masterSlider.value = 0.85f;
         musicSlider.value = 0.41f;
         effectSlider.value = 0.85f;
-        }
-
+        Cursor.lockState = CursorLockMode.None;
 
     }
+
+
+}
 
 
