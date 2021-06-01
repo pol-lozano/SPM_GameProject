@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 //Author: Pol Lozano Llorens
+//Secondary author: Sajid A. Masoud
 public class PauseListener : MonoBehaviour
 {
 
     [SerializeField] private InputHandler input;
     [SerializeField] private bool paused;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private Button exitButton;
 
     public void OnEnable() => input.pauseEvent += TogglePause;
     public void OnDisable() => input.pauseEvent -= TogglePause;
@@ -23,6 +27,8 @@ public class PauseListener : MonoBehaviour
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
             OrbitCamera.Camera.Activated = false;
+            exitButton.onClick.Invoke();
+
 
         } else
         {
