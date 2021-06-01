@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07056932, g: 0.079163976, b: 0.13018394, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2641,10 +2641,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1087914829312780790, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: puzzleActivationAudio
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1103578150242274645, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2701,10 +2697,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3974027031454667260, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: b78545aa4f68e6d46abc81006d9b605b, type: 2}
     - target: {fileID: 4842053555737344889, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Name
       value: AllPuzzles
@@ -2713,14 +2705,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7483060786731969444, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: puzzleActivationAudio
-      value: 
-      objectReference: {fileID: 11400000, guid: 93be3ca2a3c99b640955f1c48b592675, type: 2}
-    - target: {fileID: 8077117608819426746, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
-      propertyPath: shakeData
-      value: 
-      objectReference: {fileID: 11400000, guid: f2d811be25750d44f8b022e8d4a7063c, type: 2}
     - target: {fileID: 8577308244243165755, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
