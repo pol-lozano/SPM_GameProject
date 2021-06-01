@@ -11,12 +11,12 @@ public class BossController : MonoBehaviour
     public Animator Animator { get; private set; }
     public NavMeshAgent Agent { get; private set; }
     public HealthComponent HealthComponent { get; private set; }
-    public CharacterController3D Player { get; private set; }
+    public CharacterController3D Player { get;  set; }
 
     public RigBuilder RigBuilder;
     public MeleeWeapon MeleeWeapon;
 
-    void Awake()
+    void Start()
     {
         Player = CharacterController3D.Player;
         Animator = GetComponent<Animator>();
