@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 6805796202595419556}
   - component: {fileID: 8761749637053280622}
   - component: {fileID: 7950658183496035823}
-  - component: {fileID: 5225795657813625752}
-  - component: {fileID: 4225725141089677476}
   m_Layer: 3
   m_Name: BookcasePussel
   m_TagString: Untagged
@@ -99,41 +97,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7051976229117147703, guid: 497d55ca6f3d9b4409f7f956dc0e7759, type: 3}
---- !u!95 &5225795657813625752
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104147691803267259}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d7408db550d04046aee62d3700f98b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4225725141089677476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104147691803267259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24aab28181f12994d88f29b3fae338d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 25
-  anim: {fileID: 5225795657813625752}
-  puzzleActivationAudio: {fileID: 0}
-  puzzleImpactAudio: {fileID: 0}
-  audioSource: {fileID: 0}
-  vfxOne: {fileID: 0}
-  vfxTwo: {fileID: 0}
