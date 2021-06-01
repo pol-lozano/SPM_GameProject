@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07049045, g: 0.079078846, b: 0.13003528, a: 1}
+  m_IndirectSpecularColor: {r: 0.07056932, g: 0.079163976, b: 0.13018394, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2647,6 +2647,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3286187559437229763, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717299936016674503, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3974027031454667260, guid: 74d499a99fbd6384abebd45180bc25f5, type: 3}
       propertyPath: m_Controller
       value: 
@@ -3382,67 +3390,6 @@ PrefabInstance:
       objectReference: {fileID: 1629741674}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
---- !u!1001 &2771819716023724153
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2771819717683881777, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -121.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.512
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.121
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2771819717683881790, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-      propertyPath: m_Name
-      value: RampSmoke
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
 --- !u!4 &5030949066766026963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5030949066807183702, guid: 3080c7bbdc66c764ebfc0cd592408e3a, type: 3}
