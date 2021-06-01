@@ -39,9 +39,11 @@ public class UmbralFiend : Enemy
         if (EnemyLoader.LoadEnemy(this) == false)
             Destroy(gameObject);
     }
+
     void Start()
     {
-
+        Anim.enabled = true;
+        Anim.SetBool("Die", false);
         target = GameObject.FindGameObjectWithTag("Player").transform;
         treePrefab = ObjectPooler.instance.SpawnFromPool("FiendTree");
         behaviourTree = treePrefab.GetComponent<BT_UmbralFiend>();
@@ -67,11 +69,16 @@ public class UmbralFiend : Enemy
         behaviourTree.RunBehaviourTree();
 
         if (Health.CurrentHealth <= 0)
+        {
+            Anim.enabled = false;
             Destroy(gameObject, 4);
+        }
+            
     }
 
     private void OnDestroy()
     {
+        blackBoard.Reset();
         EnemyLoader.OnDestroy(this);
     }
 }

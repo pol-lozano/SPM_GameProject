@@ -4691,8 +4691,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 21
   anim: {fileID: 5939555653601294589}
-  puzzleAudio: {fileID: 0}
+  puzzleActivationAudio: {fileID: 11400000, guid: 032493ca70ce4904783dfe95e05aced4, type: 2}
+  puzzleImpactAudio: {fileID: 0}
   audioSource: {fileID: 0}
+  vfx: {fileID: 0}
 --- !u!114 &5939555653601294591
 MonoBehaviour:
   m_ObjectHideFlags: 0

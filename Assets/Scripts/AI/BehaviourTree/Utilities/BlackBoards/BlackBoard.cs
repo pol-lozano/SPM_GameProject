@@ -115,4 +115,24 @@ public class BlackBoard : MonoBehaviour
         this.ragdoll = ragdoll;
     }
 
+    public void Reset()
+    {
+        IsCoolingDown = false;
+        MovingToPoint = false;
+        RecentlyAttacked = false;
+        RecentlySawTarget = false;
+        Investigating = false;
+        Rising = false;
+        AllyInNeed = false;
+        SentForHelp = false;
+        RecentlyKnocked = false;
+        ReturningHome = false;
+        Chasing = false;
+        StartPoint = Vector3.zero;
+        InvestigatePoint = Vector3.zero;
+        RandomPoint = Vector3.zero;
+        TargetLastSeenPoint = Vector3.zero;
+        AllyInNeedPosition = Vector3.zero;
+}
+
 }

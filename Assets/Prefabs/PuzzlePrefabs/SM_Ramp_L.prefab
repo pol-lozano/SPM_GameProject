@@ -113,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   anim: {fileID: 9214593481729579355, guid: d7ab301cffcbc434ebf4649ef5f2daeb, type: 3}
+  puzzleAudio: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!95 &9214593481275451003
 Animator:
   serializedVersion: 3
@@ -146,3 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   anim: {fileID: 9214593481275451003}
+  puzzleAudio: {fileID: 0}
+  audioSource: {fileID: 0}

@@ -17,7 +17,7 @@ public class DieNode : Node
         }
         //Debug.Log("IS DEAD");
         BlackBoard.Anim.SetBool("Die", true);
-        BlackBoard.Anim.enabled = false;
+        
 
         return NODE_STATE.SUCCESS;
     }
