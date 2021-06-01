@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HubAudio
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 7763fba300145f242af5a1ba6cd6670e, type: 3}
+  - {fileID: 8300000, guid: a0265b4ded525f1408f3592ee9d0b623, type: 3}
