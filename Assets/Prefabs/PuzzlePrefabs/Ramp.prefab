@@ -104,7 +104,8 @@ MonoBehaviour:
   puzzleActivationAudio: {fileID: 11400000, guid: 2f11926427cd01647b456b8bbf3c9356, type: 2}
   puzzleImpactAudio: {fileID: 11400000, guid: 7edfa1f81ce8f3c498d99973c21e1673, type: 2}
   audioSource: {fileID: 3028528719907353864}
-  vfx: {fileID: 1955542660242709820}
+  vfxOne: {fileID: 0}
+  vfxTwo: {fileID: 0}
 --- !u!95 &8385517065374218442
 Animator:
   serializedVersion: 3
@@ -115,7 +116,7 @@ Animator:
   m_GameObject: {fileID: 1070221297132689473}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 07338dee0b4b9384498cbf18156f9a46, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -542,10 +543,5 @@ PrefabInstance:
 --- !u!4 &1955542660242709823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2771819717683881779, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
-  m_PrefabInstance: {fileID: 4419158133794617868}
-  m_PrefabAsset: {fileID: 0}
---- !u!2083052967 &1955542660242709820 stripped
-VisualEffect:
-  m_CorrespondingSourceObject: {fileID: 2771819717683881776, guid: 7ab66bf81dc308842917a3cd5506b2fe, type: 3}
   m_PrefabInstance: {fileID: 4419158133794617868}
   m_PrefabAsset: {fileID: 0}
