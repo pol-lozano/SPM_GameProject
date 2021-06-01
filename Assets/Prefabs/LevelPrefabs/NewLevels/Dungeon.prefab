@@ -28317,11 +28317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1340181974146670719, guid: 17bda73c31ddada4d97eb74f22fa34bd, type: 3}
       propertyPath: m_Radius
-      value: 1.75
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 1340181974146670719, guid: 17bda73c31ddada4d97eb74f22fa34bd, type: 3}
       propertyPath: m_Center.z
-      value: -1.57
+      value: -1.68
       objectReference: {fileID: 0}
     - target: {fileID: 2570783768198851209, guid: 17bda73c31ddada4d97eb74f22fa34bd, type: 3}
       propertyPath: m_Materials.Array.data[0]

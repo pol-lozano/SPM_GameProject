@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DiningHallsAudio
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: efd75f3f138094d40aed7beaef08aee0, type: 3}
+  - {fileID: 8300000, guid: eaf46700c2934ad4b8c2c289eee1cfad, type: 3}
