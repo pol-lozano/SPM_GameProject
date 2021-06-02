@@ -21,9 +21,8 @@ public class BossChargeState : BossState
     public override void EvaluateTransitions()
     {
         base.EvaluateTransitions();
-        if (BossController.Agent.remainingDistance <= stoppingDistance)
+        if (Vector3.Distance(BossController.transform.position,BossController.Player.transform.position) <= stoppingDistance)
         {
-           BossController.Agent.ResetPath();
            stateMachine.Transition<BossAttackState>();
         }
     }

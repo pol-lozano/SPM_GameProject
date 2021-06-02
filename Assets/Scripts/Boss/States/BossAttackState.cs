@@ -7,6 +7,7 @@ public class BossAttackState : BossState
     public override void Enter()
     {
         base.Enter();
+        BossController.Agent.ResetPath();
         BossController.Animator.SetTrigger("Attack");
         BossController.RigBuilder.layers[0].active = false;
     }
