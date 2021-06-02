@@ -27,7 +27,7 @@ public static class EnemyLoader
         else
         {
             //Debug.Log("LOAD LIVE ENEMY");
-            ai.transform.position = enemies[ai.ID].Position;
+            ai.transform.position = enemies[ai.ID].StartingPosition;
             ai.Health.CurrentHealth = enemies[ai.ID].HP;
             return true;
         }

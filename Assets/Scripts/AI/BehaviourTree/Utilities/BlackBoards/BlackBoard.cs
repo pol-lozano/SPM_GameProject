@@ -133,6 +133,14 @@ public class BlackBoard : MonoBehaviour
         RandomPoint = Vector3.zero;
         TargetLastSeenPoint = Vector3.zero;
         AllyInNeedPosition = Vector3.zero;
-}
+        target = null;
+        anim = null;
+        path = null;
+        thisAI = null;
+        agent = null;
+        health = null;
+        ragdoll = null;
+
+    }
 
 }
