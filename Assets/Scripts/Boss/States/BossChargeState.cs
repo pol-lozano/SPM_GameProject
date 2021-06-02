@@ -22,6 +22,9 @@ public class BossChargeState : BossState
     {
         base.EvaluateTransitions();
         if (BossController.Agent.remainingDistance <= stoppingDistance)
-            stateMachine.Transition<BossAttackState>();
+        {
+           BossController.Agent.ResetPath();
+           stateMachine.Transition<BossAttackState>();
+        }
     }
 }

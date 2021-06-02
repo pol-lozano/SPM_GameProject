@@ -9,6 +9,7 @@ public class GameInstance : MonoBehaviour
     private void Reload(ReloadEvent eve)
     {
         CharacterController3D.Player.transform.position = Checkpoint.currentCheckPoint.transform.position;
+        BossController.Boss.Agent.Warp(BossController.Boss.StartPosition);
         CharacterController3D.Player.GetComponent<HealthComponent>().ResetHealth();
         EnemyLoader.ResetEnemies();
         EventHandler<ReloadEnemiesEvent>.FireEvent(new ReloadEnemiesEvent());
