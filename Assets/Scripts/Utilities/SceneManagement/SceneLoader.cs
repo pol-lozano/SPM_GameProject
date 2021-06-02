@@ -11,8 +11,8 @@ public class SceneLoader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            UnloadScene();
             LoadScene();
+            UnloadScene();
         }
     }
 
