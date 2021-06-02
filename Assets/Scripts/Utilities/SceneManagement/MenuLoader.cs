@@ -1,6 +1,8 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+//Author: Pol Lozano Llorens
+//Secondary author: Sajid A. Masoud
 
 public class MenuLoader : MonoBehaviour
 {
@@ -9,11 +11,7 @@ public class MenuLoader : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Cursor.lockState = CursorLockMode.None;
-            for(int i = 1; i < SceneManager.sceneCount; i++)
-            {
-                SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(i));
-            }
-            SceneManager.LoadScene(0);
+            SceneManager.LoadSceneAsync(12, LoadSceneMode.Single);
 
         }
     }
