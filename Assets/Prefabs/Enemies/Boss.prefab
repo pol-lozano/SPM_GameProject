@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Data:
     m_Root: {fileID: 3708168425916118585}
     m_Tip: {fileID: 8552193000777166436}
-    m_Target: {fileID: 0}
+    m_Target: {fileID: 2136838399613295032}
     m_ChainRotationWeight: 1
     m_TipRotationWeight: 0
     m_MaxIterations: 15
@@ -2004,6 +2004,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fe19caac684d5bd4d88bdf51f10af82b, type: 2}
   RigBuilder: {fileID: 4105725708660444136}
   MeleeWeapon: {fileID: 7072608169788722585}
+  headLookConstraint: {fileID: 1896610045}
 --- !u!114 &8073687114889380455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,7 +2019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 4827ff1ebc5c27a44aee0c81b998e268, type: 2}
+    - {fileID: 0}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
