@@ -3,7 +3,17 @@ guid: c8fc7d16f83ff5f43874abc874465b73
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BossDorrValve
+    second: {fileID: 2100000, guid: 3ce2d12e5987d6f4bb3c8fd9a51620df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Valve1
+    second: {fileID: 2100000, guid: 3ce2d12e5987d6f4bb3c8fd9a51620df, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -45,7 +55,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
