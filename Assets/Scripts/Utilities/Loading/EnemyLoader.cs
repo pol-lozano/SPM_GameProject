@@ -20,13 +20,13 @@ public static class EnemyLoader
         //The enemy exist but is dead
         else if (enemies[ai.ID].IsDead)
         {
-            //Debug.Log("LOAD DEAD ENEMY");
+            Debug.Log("LOAD DEAD ENEMY");
             return false;
         }
         //The enemy has been loaded before and is alive so it loads the objects past information
         else
         {
-            //Debug.Log("LOAD LIVE ENEMY");
+            Debug.Log("LOAD LIVE ENEMY");
             ai.transform.position = enemies[ai.ID].StartingPosition;
             ai.Health.CurrentHealth = enemies[ai.ID].HP;
             return true;
@@ -49,7 +49,7 @@ public static class EnemyLoader
     //On Reload we want to reset all enemy stats
     public static void ResetEnemies()
     {
-        //Debug.Log("RESET ALL ENEMIES");
+        Debug.Log("RESET ALL ENEMIES");
         foreach(Persistance enemy in enemies.Values)
         {
             enemy.Position = enemy.StartingPosition;
