@@ -48,6 +48,7 @@ public class UmbralFiend : Enemy
         treePrefab = ObjectPooler.instance.SpawnFromPool("FiendTree");
         behaviourTree = treePrefab.GetComponent<BT_UmbralFiend>();
         blackBoard = treePrefab.GetComponent<BlackBoard>();
+        blackBoard.Reset();
         blackBoard.SetBlackBoardValues(Target, Anim, Path, transform, Agent, Health, Ragdoll);
 
         agent.SetDestination(path.Next().position);
@@ -65,12 +66,13 @@ public class UmbralFiend : Enemy
 
     void Update()
     {
-        Debug.DrawLine(transform.position, agent.destination, Color.magenta);
-
+        //Debug.DrawLine(transform.position, agent.destination, Color.magenta);
         if (Health.CurrentHealth <= 0)
         {
             Anim.enabled = false;
             ActivateRagdoll();
+            blackBoard.AllyInNeed = false;
+            blackBoard.AllyInNeedPosition = Vector3.zero;
             blackBoard.Reset();
             Destroy(gameObject, 4);
         }
