@@ -573,7 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UItext: The Hub
-  scenesOnThisCheckpoint: 020000000300000004000000
+  scenesOnThisCheckpoint: 0200000003000000040000000a00000009000000
   checkpointAudio: {fileID: 11400000, guid: f4a5d2d55b51b674294c9142c6c3dabb, type: 2}
   audioSource: {fileID: 150986015}
 --- !u!65 &9031026420159570985
