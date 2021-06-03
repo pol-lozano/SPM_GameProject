@@ -203,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6213638056214725612}
   m_LocalRotation: {x: -0, y: -0.008301522, z: -0, w: 0.99996555}
-  m_LocalPosition: {x: 35.43, y: 25.42, z: -141.02}
+  m_LocalPosition: {x: 35.43, y: 25.967, z: -141.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9031026420496771350}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UItext: The Balcony
-  scenesOnThisCheckpoint: 03000000040000000a000000
+  scenesOnThisCheckpoint: 0300000004000000090000000a000000
   checkpointAudio: {fileID: 11400000, guid: b1dbcd05bad2a524da3b28a2646bd654, type: 2}
   audioSource: {fileID: 372396383}
 --- !u!65 &7194604527429161501

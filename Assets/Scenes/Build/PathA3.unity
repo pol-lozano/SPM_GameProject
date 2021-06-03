@@ -11168,6 +11168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3DM_Books_Stacked
       objectReference: {fileID: 0}
+    - target: {fileID: 1470014343861148139, guid: a51e676473e40d64aa6ce617c6cf0fde, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2246551764258177873, guid: a51e676473e40d64aa6ce617c6cf0fde, type: 3}
       propertyPath: m_RootOrder
       value: 7
