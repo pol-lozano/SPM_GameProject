@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: SPM_GameProject
+  companyName: 'Habibi Productions '
+  productName: UmbralCastle
   defaultCursor: {fileID: 2800000, guid: e88fa643b554952428d94c9ac477de3d, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -131,7 +131,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 0.1
+  bundleVersion: 1.0
   preloadedAssets:
   - {fileID: 11400000, guid: cfb7b9ac6a0ad5b45a6b809bf1aa34a6, type: 2}
   metroInputSource: 0
