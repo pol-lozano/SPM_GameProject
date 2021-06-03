@@ -10,9 +10,16 @@ public class MenuLoader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadSceneAsync(12, LoadSceneMode.Single);
+            LoadMenu();
 
         }
+    }
+
+    public void LoadMenu()
+    {
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadSceneAsync(12, LoadSceneMode.Single);
+
     }
 }
