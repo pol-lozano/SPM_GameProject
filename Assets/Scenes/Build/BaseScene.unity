@@ -3213,6 +3213,10 @@ PrefabInstance:
       value: 0.1663329
       objectReference: {fileID: 0}
     - target: {fileID: 433161375454590283, guid: fa0cf8261ae537048bfe0961bd8324c5, type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 433161375454590283, guid: fa0cf8261ae537048bfe0961bd8324c5, type: 3}
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 11400000, guid: c063ee4b97fe9c647b54a9640212e384, type: 2}
@@ -3220,6 +3224,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1190121532}
+    - target: {fileID: 433161375454590283, guid: fa0cf8261ae537048bfe0961bd8324c5, type: 3}
+      propertyPath: currentHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 525694363823179855, guid: fa0cf8261ae537048bfe0961bd8324c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.40200952
@@ -4122,7 +4130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7072608169788722585, guid: fa0cf8261ae537048bfe0961bd8324c5, type: 3}
       propertyPath: damageAmount
-      value: 25
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 7108992264032948959, guid: fa0cf8261ae537048bfe0961bd8324c5, type: 3}
       propertyPath: m_LocalPosition.x
