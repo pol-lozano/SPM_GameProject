@@ -17,6 +17,7 @@ public class MenuLoader : MonoBehaviour
 
     public void LoadMenu()
     {
+        EnemyLoader.ResetEnemies();
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadSceneAsync(12, LoadSceneMode.Single);
