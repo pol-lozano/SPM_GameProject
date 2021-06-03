@@ -4,6 +4,7 @@ using UnityEngine;
 public class BossTargetingState : BossState
 {
     [SerializeField] private ShakeEventData stompShake;
+    [SerializeField] private AudioData audioData;
 
     public override void Enter() => BossController.RigBuilder.layers[0].active = false;
 
@@ -12,6 +13,7 @@ public class BossTargetingState : BossState
     public override void OnAnimationStarted()
     {
         //Play sound and effects of feet stomping
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(audioData, bossController.AudioSource));
         EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(stompShake));
     }
 

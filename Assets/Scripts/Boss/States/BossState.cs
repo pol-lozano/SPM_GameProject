@@ -4,7 +4,7 @@ public class BossState : State
 {
     [SerializeField] protected float moveSpeed;
 
-    private BossController bossController;
+    protected BossController bossController;
     public BossController BossController => bossController = bossController != null ? bossController : (BossController)owner;
 
     public override void Enter()

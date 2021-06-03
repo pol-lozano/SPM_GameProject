@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   attackShake: {fileID: 11400000, guid: 8196f72298bd73c428586e2f4db00227, type: 2}
+  audioData: {fileID: 11400000, guid: 9f96047a0a55ad249b709c329244f343, type: 2}

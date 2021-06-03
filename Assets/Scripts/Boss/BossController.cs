@@ -31,6 +31,8 @@ public class BossController : MonoBehaviour
     public MeleeWeapon MeleeWeapon;
     public ChainIKConstraint headLookConstraint;
     public Animator BossDoorAnimator;
+    public AudioSource AudioSource { get; set; }
+
 
     void Start()
     {
@@ -41,7 +43,7 @@ public class BossController : MonoBehaviour
         Animator = GetComponent<Animator>();
         Agent = GetComponent<NavMeshAgent>();
         HealthComponent = GetComponent<HealthComponent>();
-
+        AudioSource = GetComponent<AudioSource>();
         stateMachine = new StateMachine(this, states);
     }
 

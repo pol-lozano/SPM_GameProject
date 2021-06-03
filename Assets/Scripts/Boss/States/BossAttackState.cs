@@ -4,6 +4,7 @@ using UnityEngine;
 public class BossAttackState : BossState
 {
     [SerializeField] private ShakeEventData attackShake;
+    [SerializeField] private AudioData audioData;
     public override void Enter()
     {
         base.Enter();
@@ -15,6 +16,7 @@ public class BossAttackState : BossState
     public override void OnAnimationStarted()
     {
         //Play sound and effects
+        EventHandler<SoundEvent>.FireEvent(new SoundEvent(audioData, bossController.AudioSource));
         EventHandler<ShakeEvent>.FireEvent(new ShakeEvent(attackShake));
         BossController.MeleeWeapon.Collider.enabled = true;
     }
