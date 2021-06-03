@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07056932, g: 0.079163976, b: 0.13018394, a: 1}
+  m_IndirectSpecularColor: {r: 0.07056889, g: 0.07918051, b: 0.13020322, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2981,67 +2981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexesToLoad: 03000000
   indexesToUnload: 04000000
---- !u!1001 &1091655481
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3450407612098713736, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_Name
-      value: Umbral Castle Volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713736, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -39
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -8.284237
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3450407612098713743, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ae8d260be2be9bf489609e0ae4237ca3, type: 3}
 --- !u!1 &1092837636
 GameObject:
   m_ObjectHideFlags: 0
@@ -11670,6 +11609,68 @@ Transform:
   m_Father: {fileID: 6573208180724556009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3450407613154709424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450407613154709425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 300, y: 300, z: 300}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3450407613154709425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3450407613154709430}
+  - component: {fileID: 3450407613154709431}
+  - component: {fileID: 3450407613154709424}
+  m_Layer: 0
+  m_Name: Umbral Castle Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3450407613154709430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450407613154709425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39, y: -8.284237, z: 38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3450407613154709431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450407613154709425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 694813bf7b11c654eb8df30d6d06c352, type: 2}
 --- !u!1 &3453144556597224121
 GameObject:
   m_ObjectHideFlags: 0
