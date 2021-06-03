@@ -30,6 +30,7 @@ public class BossController : MonoBehaviour
     public RigBuilder RigBuilder;
     public MeleeWeapon MeleeWeapon;
     public ChainIKConstraint headLookConstraint;
+    public Animator BossDoorAnimator;
 
     void Start()
     {
