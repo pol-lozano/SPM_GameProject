@@ -8,6 +8,7 @@ public class StunNode : Node
 
     public override NODE_STATE Evaluate()
     {
+        BlackBoard.ThisAI.GetComponent<EnemyCollider>().DisableCollider();
         BlackBoard.IsCoolingDown = true;
         BlackBoard.Agent.speed = 0;
         BlackBoard.Anim.SetBool("Stunned", true);

@@ -7,6 +7,8 @@ public class SendForHelp : Node
     public SendForHelp(BehaviourTree tree) { this.tree = tree; }
     public override NODE_STATE Evaluate()
     {
+        BlackBoard.ThisAI.GetComponent<EnemyCollider>().DisableCollider();
+
         BlackBoard.Anim.SetTrigger("Alarm");
         BlackBoard.Anim.SetFloat("Speed", 0);
 
