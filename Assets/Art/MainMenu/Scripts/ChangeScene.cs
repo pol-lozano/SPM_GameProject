@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
 {
     public void btn_change_scene(string scene_name)
     {
-        SceneManager.LoadScene(scene_name);
+        SceneManager.LoadSceneAsync(scene_name, LoadSceneMode.Single);
     }
 
     public void doExitGame()

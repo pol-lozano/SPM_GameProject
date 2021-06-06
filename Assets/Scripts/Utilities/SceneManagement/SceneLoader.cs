@@ -19,7 +19,11 @@ public class SceneLoader : MonoBehaviour
     private void LoadScene()
     {
         for (int i = 0; i < indexesToLoad.Count; i++)
+        {
+            Debug.Log("LOAD");
             EventHandler<LoadSceneEvent>.FireEvent(new LoadSceneEvent(indexesToLoad[i]));
+        }
+            
     }
 
     private void UnloadScene()

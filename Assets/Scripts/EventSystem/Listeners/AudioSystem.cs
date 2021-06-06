@@ -12,7 +12,6 @@ public class AudioSystem : MonoBehaviour
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(this);
-        DontDestroyOnLoad(this);
     }
 
     private void OnEnable() => EventHandler<SoundEvent>.RegisterListener(OnSoundEvent);

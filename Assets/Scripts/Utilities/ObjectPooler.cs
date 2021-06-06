@@ -13,7 +13,7 @@ public class ObjectPooler : MonoBehaviour
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(this);
-        DontDestroyOnLoad(this);
+
 
         if (poolDictionary == null)
             PopulatePools();
