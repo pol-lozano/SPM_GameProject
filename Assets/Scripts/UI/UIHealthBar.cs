@@ -1,3 +1,5 @@
+//Author: Pol Lozano Llorens
+
 using System;
 using UnityEngine;
 using UnityEngine.UI;

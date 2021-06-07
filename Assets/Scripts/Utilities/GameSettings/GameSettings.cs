@@ -1,3 +1,6 @@
+//Main Author: Pol Lozano Llorens
+//Secondary Author: Sajid A. Masoud
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
