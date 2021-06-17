@@ -7643,6 +7643,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 138699745978509770, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: m_text
+      value: AMBIENCE VOLUME
+      objectReference: {fileID: 0}
     - target: {fileID: 186396260998865944, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8655,6 +8659,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
       objectReference: {fileID: 2390210146502265452}
+    - target: {fileID: 3288676496986812580, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
+      propertyPath: m_Text
+      value: AMBIENCE VOLUME
+      objectReference: {fileID: 0}
     - target: {fileID: 3396789704730765086, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_audioClip
       value: 
