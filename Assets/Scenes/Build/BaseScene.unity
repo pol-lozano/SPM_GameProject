@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07049045, g: 0.079078846, b: 0.13003528, a: 1}
+  m_IndirectSpecularColor: {r: 0.07056889, g: 0.07918051, b: 0.13020322, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7635,10 +7635,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 581274183589678083, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: m_Spacing
-      value: 328
-      objectReference: {fileID: 0}
     - target: {fileID: 920350195370256701, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8804,10 +8800,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7672338828595899115, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 560
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672338828595899115, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -8863,10 +8855,6 @@ PrefabInstance:
       propertyPath: playerdebugger
       value: 
       objectReference: {fileID: 1629741674}
-    - target: {fileID: 8474816711427992895, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
-      propertyPath: m_text
-      value: IN-GAME MOUSE SENSITIVITY
-      objectReference: {fileID: 0}
     - target: {fileID: 8574783551563431404, guid: b11a085fdfdcdec4cbfcd2be64b9fda7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

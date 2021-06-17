@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07058891, g: 0.07915756, b: 0.13002834, a: 1}
+  m_IndirectSpecularColor: {r: 0.07067107, g: 0.07924231, b: 0.13017389, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3721,7 +3721,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 328
+  m_Spacing: 365.7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -11074,7 +11074,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 263.6, y: 0.9750004}
-  m_SizeDelta: {x: 560, y: -1.9500008}
+  m_SizeDelta: {x: 527.2, y: -1.9500008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047512165
 MonoBehaviour:
@@ -11096,7 +11096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: IN-GAME MOUSE SENSITIVITY
+  m_text: MOUSE SENSITIVITY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f3ac26474880f194a9b6b6ae33aed099, type: 2}
   m_sharedMaterial: {fileID: 8597273356582513915, guid: f3ac26474880f194a9b6b6ae33aed099, type: 2}
