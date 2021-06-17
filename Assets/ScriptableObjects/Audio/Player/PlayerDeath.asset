@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: PlayerDeath
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: bcb9f0e8b37da6a429f3d320cfc269ed, type: 3}
+  - {fileID: 8300000, guid: 247f6b2b46b2f8343a0ef1790eea3153, type: 3}
+  staticPitch: 0
