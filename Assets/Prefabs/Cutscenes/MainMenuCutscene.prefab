@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5909017013517635159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5909017013517635153}
+  - component: {fileID: 5909017013517635152}
+  m_Layer: 0
+  m_Name: SkipScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5909017013517635153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909017013517635159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.450996, y: 0.90455437, z: 29.587143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8785421210170695412}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5909017013517635152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909017013517635159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5838bbe3f91bc2489bfe749bb3e9ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
+  fadeout: {fileID: 8353212610558884041}
+  thisObject: {fileID: 0}
 --- !u!1 &7500386989576656625
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,6 +73,7 @@ Transform:
   m_LocalPosition: {x: -77.11233, y: -10.48036, z: 80.10775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5909017013517635153}
   - {fileID: 8353212610427176808}
   - {fileID: 8353212609857824835}
   - {fileID: 8353212610856568030}
@@ -200,7 +247,7 @@ RectTransform:
   - {fileID: 8353212609829447143}
   - {fileID: 8353212610558884042}
   m_Father: {fileID: 8785421210170695412}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -294,7 +341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8353212610113449217}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -968.15, y: -539.281, z: 131.57}
+  m_LocalPosition: {x: -975.94, y: -540.84, z: 134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8353212610856568030}
@@ -317,20 +364,20 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 613
+      - m_Value: 1719
         m_Name: Spawn Rate
         m_Overridden: 1
       - m_Value: 3
         m_Name: Min Dust Size
         m_Overridden: 1
-      - m_Value: 6
+      - m_Value: 4
         m_Name: Max Dust Size
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 7, y: 7, z: 40}
+      - m_Value: {x: 52.21, y: 7, z: 40}
         m_Name: Box Size
         m_Overridden: 1
     m_Vector4f:
@@ -418,7 +465,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8785421210170695412}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &8353212610427176815
 PlayableDirector:
@@ -644,5 +691,5 @@ Transform:
   m_Children:
   - {fileID: 8353212610113449218}
   m_Father: {fileID: 8785421210170695412}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

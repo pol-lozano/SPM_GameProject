@@ -1,12 +1,16 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkipScene : MonoBehaviour
+
+public class Skip : MonoBehaviour
 {
 
     [SerializeField] private InputHandler input;
     [SerializeField] private GameObject fadeout;
+    [SerializeField] private GameObject thisObject;
+
 
     public void OnEnable()
     {
@@ -15,5 +19,6 @@ public class SkipScene : MonoBehaviour
     public void NextScene()
     {
         fadeout.GetComponent<Animator>().SetTrigger("fadeOut");
+        thisObject.SetActive(false);
     }
 }
