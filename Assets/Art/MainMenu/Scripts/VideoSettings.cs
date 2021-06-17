@@ -11,6 +11,7 @@ public class VideoSettings : MonoBehaviour
         SetFullScreen(true);
     }
 
+
     List<int> widths = new List<int>() { 1920, 1600, 1280 };
     List<int> heights = new List<int>() { 1080, 900, 720 };
 

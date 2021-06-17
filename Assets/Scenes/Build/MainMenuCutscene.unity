@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0706661, g: 0.079234414, b: 0.13015544, a: 1}
+  m_IndirectSpecularColor: {r: 0.07083918, g: 0.07944334, b: 0.1306136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6369,6 +6369,51 @@ LightProbeGroup:
   - {x: 53.82458, y: 0.03376007, z: -19.873001}
   - {x: 53.82458, y: 1.2315884, z: -19.873001}
   m_Dering: 1
+--- !u!1 &1641241907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641241909}
+  - component: {fileID: 1641241908}
+  m_Layer: 0
+  m_Name: SkipScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1641241908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641241907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5838bbe3f91bc2489bfe749bb3e9ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 243f4356209c70844b02db19f815863c, type: 2}
+  fadeout: {fileID: 2043438233}
+--- !u!4 &1641241909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641241907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -106.563324, y: -9.575806, z: 109.69489}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703795429
 GameObject:
   m_ObjectHideFlags: 0
@@ -6988,3 +7033,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+--- !u!1 &2043438233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8353212610558884041, guid: 056c3cbeb6254f6469105dad80495d9c, type: 3}
+  m_PrefabInstance: {fileID: 2043438232}
+  m_PrefabAsset: {fileID: 0}

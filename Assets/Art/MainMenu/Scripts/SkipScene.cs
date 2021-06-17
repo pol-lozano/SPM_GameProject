@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class SkipScene : MonoBehaviour
 {
-    public void skipScene()
+
+    [SerializeField] private InputHandler input;
+    [SerializeField] private GameObject fadeout;
+
+    public void OnEnable()
     {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            Debug.Log("Hej");
-        }
+        input.dodgeEvent += NextScene;
+    }
+    public void NextScene()
+    {
+        fadeout.GetComponent<Animator>().SetTrigger("fadeOut");
     }
 }
