@@ -13,30 +13,13 @@ public class VolumeController : MonoBehaviour
     public AudioSource Selected;
     public AudioSource Pressed;
 
+
     void Start()
     {
         masterSlider.value = 0.85f;
-        musicSlider.value = 0.81f;
-        effectSlider.value = 0.95f;
+        musicSlider.value = 0.41f;
+        effectSlider.value = 0.85f;
         Cursor.lockState = CursorLockMode.None;
-    }
-
-    public void SettEffectvolume()
-    {
-        Selected.volume = effectSlider.value * masterSlider.value; 
-        Pressed.volume = effectSlider.value * masterSlider.value;
-    }
-
-    public void SetMusicVolume()
-    {
-        BackgroundMusic.volume = musicSlider.value * masterSlider.value;
-    }
-
-    public void SetMasterVolume()
-    {
-        BackgroundMusic.volume = masterSlider.value * musicSlider.value;
-        Selected.volume = masterSlider.value * effectSlider.value;
-        Pressed.volume = masterSlider.value * effectSlider.value;
     }
 }
 
