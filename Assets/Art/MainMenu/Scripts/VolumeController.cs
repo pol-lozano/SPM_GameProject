@@ -16,8 +16,8 @@ public class VolumeController : MonoBehaviour
     void Start()
     {
         masterSlider.value = 0.85f;
-        musicSlider.value = 0.81f;
-        effectSlider.value = 0.95f;
+        musicSlider.value = 0.92f;
+        effectSlider.value = 0.90f;
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -36,7 +36,7 @@ public class VolumeController : MonoBehaviour
     {
         BackgroundMusic.volume = masterSlider.value * musicSlider.value;
         Selected.volume = masterSlider.value * effectSlider.value;
-        Pressed.volume = masterSlider.value * effectSlider.value;
+        Pressed.volume = masterSlider.value * effectSlider.value    ;
     }
 }
 
