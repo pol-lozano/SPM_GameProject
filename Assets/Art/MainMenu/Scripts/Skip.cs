@@ -11,15 +11,27 @@ public class Skip : MonoBehaviour
     [SerializeField] private InputHandler input;
     [SerializeField] private GameObject fadeout;
     [SerializeField] private GameObject thisObject;
+    private bool activated = false;
 
 
     public void OnEnable()
     {
-        input.dodgeEvent += NextScene;
+        if(activated == false)
+        {
+            input.dodgeEvent += NextScene;
+        }
+        else
+        {
+            Debug.Log("Activated");
+        }
     }
-    public void NextScene()
+    private void NextScene()
     {
-        fadeout.GetComponent<Animator>().SetTrigger("fadeOut");
-        thisObject.SetActive(false);
+        if(fadeout != null && thisObject != null)
+        {
+            fadeout.GetComponent<Animator>().SetTrigger("fadeOut");
+            activated = true;
+         }
     }
+
 }

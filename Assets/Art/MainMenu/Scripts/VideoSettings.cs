@@ -8,8 +8,27 @@ using UnityEngine.UI;
 
 public class VideoSettings : MonoBehaviour
 {
+    [SerializeField] private Button camShakeBtn, vSyncBtn;
+    [SerializeField] private GameObject camera;
+    [SerializeField] private Slider mouseSensitivity;
+    private float vSync => QualitySettings.vSyncCount;
+
     void Start()
     {
+        int myCamShake = PlayerPrefs.GetInt("CameraShake");
+        mouseSensitivity.value = PlayerPrefs.GetFloat("MouseSensitivity");
+
+        if (vSync == 0)
+        {
+            vSyncBtn.onClick.Invoke();
+        }
+
+        if(myCamShake == 0)
+        {
+            camShakeBtn.onClick.Invoke();
+            camera.GetComponent<ShakeEventListener>().enabled = false;
+        }
+
 
     }
 
@@ -22,22 +41,21 @@ public class VideoSettings : MonoBehaviour
 
         if (currentMode.Equals("FULLSCREEN")) 
         {
-            SetFullScreen(true);
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
             Debug.Log("full");
 
         }
         if (currentMode.Equals("BORDERLESS")) 
         {
-            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+            Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
             Debug.Log("bord");
         }
         if (currentMode.Equals("WINDOWED")) 
         {
-            SetWindowed(true);
+            Screen.fullScreenMode = FullScreenMode.Windowed;
             Debug.Log("windowed");
         }
     }
-
 
     List<int> widths = new List<int>() { 1920, 1600, 1280, 1024 };
     List<int> heights = new List<int>() { 1080, 900, 720, 576 };
@@ -51,7 +69,7 @@ public class VideoSettings : MonoBehaviour
         Debug.Log("width: " + width + " height: " + height);
     }
 
-
+    /*
     public void SetFullScreen(bool _fullscreen)
     {
         Screen.fullScreen = _fullscreen;
@@ -66,20 +84,8 @@ public class VideoSettings : MonoBehaviour
     public void SetBorderless(bool _borderless)
     {
         Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-    }
-   
-    public void SetVSync(int index)
-    {
-        if(index == 1)
-        {
-            QualitySettings.vSyncCount = 1;
-            Debug.Log("VSync on");
-        } 
-        else
-        {
-            QualitySettings.vSyncCount = 0;
-            Debug.Log("VSync off");
 
-        }
     }
+    */
+
 }

@@ -9,17 +9,21 @@ public class VolumeController : MonoBehaviour
     public Slider masterSlider;
     public Slider musicSlider;
     public Slider effectSlider;
+
     public AudioSource BackgroundMusic;
     public AudioSource Selected;
     public AudioSource Pressed;
 
     void Start()
     {
-        masterSlider.value = 0.85f;
-        musicSlider.value = 0.92f;
-        effectSlider.value = 0.90f;
+        masterSlider.value = PlayerPrefs.GetFloat("MasterVolume", masterSlider.value);
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume", musicSlider.value);
+        effectSlider.value = PlayerPrefs.GetFloat("EffectVolume", effectSlider.value);
+
         Cursor.lockState = CursorLockMode.None;
     }
+
+
 
     public void SettEffectvolume()
     {
@@ -36,7 +40,7 @@ public class VolumeController : MonoBehaviour
     {
         BackgroundMusic.volume = masterSlider.value * musicSlider.value;
         Selected.volume = masterSlider.value * effectSlider.value;
-        Pressed.volume = masterSlider.value * effectSlider.value    ;
+        Pressed.volume = masterSlider.value * effectSlider.value;
     }
 }
 

@@ -6910,15 +6910,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press SPACE or B to skip
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f3ac26474880f194a9b6b6ae33aed099, type: 2}
-  m_sharedMaterial: {fileID: 8597273356582513915, guid: f3ac26474880f194a9b6b6ae33aed099, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c2726f405a04c3459430aae8658b96f, type: 2}
+  m_sharedMaterial: {fileID: 4616752334483188440, guid: 0c2726f405a04c3459430aae8658b96f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.000023186207}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6935,8 +6935,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7236,38 +7236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 0}
-    - {fileID: 0}
     - {fileID: 11400000, guid: 6378468969452e544b6b6dbb07e49cfc, type: 2}
     m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2444778631248669615}
-          m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-          m_MethodName: fadeOut
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Base Scene
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2444778631248669615}
-          m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-          m_MethodName: fadeOut
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2444778631248669615}
@@ -7432,6 +7402,10 @@ PlayableDirector:
     value: {fileID: 540414922}
   - key: {fileID: 5860013815875086158, guid: 0c5ed896e99c9e24493ab582d1027df3, type: 2}
     value: {fileID: 1979959468}
+  - key: {fileID: -5492575261024258267, guid: 0c5ed896e99c9e24493ab582d1027df3, type: 2}
+    value: {fileID: 1979959465}
+  - key: {fileID: 4929647469417714255, guid: 0c5ed896e99c9e24493ab582d1027df3, type: 2}
+    value: {fileID: 1641241907}
   m_ExposedReferences:
     m_References:
     - e085d2232d1c4f046bf45e86d6f28d4a: {fileID: 0}
@@ -7738,8 +7712,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3539992575
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.82459265}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
