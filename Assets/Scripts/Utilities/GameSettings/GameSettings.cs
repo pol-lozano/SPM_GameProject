@@ -12,17 +12,10 @@ public class GameSettings : MonoBehaviour
     public Slider masterVolumeSlider;
     public Slider musicVolumeSlider;
     public Slider effectVolumeSlider;
-
-    public TMPro.TMP_Dropdown screenModeDropdown;
-
     public void EnableCameraShake() => PlayerPrefs.SetInt("CameraShake", 1);
     public void DisableCameraShake() => PlayerPrefs.SetInt("CameraShake", 0);
     public void SetMouseSensitivity() => PlayerPrefs.SetFloat("MouseSensitivity", mouseSensitivitySlider.value);
     public void SetVsync(int value) => QualitySettings.vSyncCount = value;
-    public void ScreenMode()
-    {
-        Screen.fullScreen = screenModeDropdown.value == 0;
-    }
     public void SetMasterVolume() => PlayerPrefs.SetFloat("MasterVolume", masterVolumeSlider.value);
     public void SetMusicVolume() => PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
     public void SetEffectVolume() => PlayerPrefs.SetFloat("EffectVolume", effectVolumeSlider.value);

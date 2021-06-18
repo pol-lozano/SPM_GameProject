@@ -27,6 +27,7 @@ public class DefaultSettings : MonoBehaviour
         QualitySettings.vSyncCount = 1;
         PlayerPrefs.SetInt("CameraShake", 1);
         Screen.SetResolution(1920, 1080, FullScreenMode.ExclusiveFullScreen);
+        Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
 
         cameraShakeBtn.onClick.Invoke();
         verticalSyncBtn.onClick.Invoke();

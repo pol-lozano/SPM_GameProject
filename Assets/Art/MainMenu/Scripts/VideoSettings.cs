@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //Author: Sajid A. Masoud
 
@@ -11,6 +12,10 @@ public class VideoSettings : MonoBehaviour
     [SerializeField] private Button camShakeBtn, vSyncBtn;
     [SerializeField] private GameObject camera;
     [SerializeField] private Slider mouseSensitivity;
+
+    [SerializeField] private TMP_Dropdown screenModeDropdown;
+    [SerializeField] private TMP_Dropdown resolutionDropdown;
+
     private float vSync => QualitySettings.vSyncCount;
 
     void Start()
@@ -42,6 +47,10 @@ public class VideoSettings : MonoBehaviour
         if (currentMode.Equals("FULLSCREEN")) 
         {
             Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+            SetScreenSize(0);
+            screenModeDropdown.value = 0;
+            resolutionDropdown.value = 0;
+
             Debug.Log("full");
 
         }
@@ -66,6 +75,14 @@ public class VideoSettings : MonoBehaviour
         int width = widths[index];
         int height = heights[index];
         Screen.SetResolution(width, height, fullscreen);
+
+        if(index != 0 && screenModeDropdown.value == 0)
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+            screenModeDropdown.value = 2;
+            Debug.Log("Windowed switch");
+        }
+
         Debug.Log("width: " + width + " height: " + height);
     }
 
