@@ -3,17 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Author: Sajid A. Masoud
+
+
 public class VideoSettings : MonoBehaviour
 {
     void Start()
     {
-        SetScreenSize(0);
-        SetFullScreen(true);
+
     }
+
+    List<string> mode = new List<string>() { "FULLSCREEN", "BORDERLESS", "WINDOWED" };
 
 
     List<int> widths = new List<int>() { 1920, 1600, 1280 };
     List<int> heights = new List<int>() { 1080, 900, 720 };
+
+    public void SetScreenMode(int index)
+    {
+        string currentMode = mode[index];
+        
+
+        if (currentMode.Equals("FULLSCREEN")) 
+        {
+            SetFullScreen(true);
+            Debug.Log("full");
+
+        }
+        if (currentMode.Equals("BORDERLESS")) 
+        {
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+            Debug.Log("bord");
+        }
+        if (currentMode.Equals("WINDOWED")) 
+        {
+            SetWindowed(true);
+            Debug.Log("windowed");
+        }
+    }
 
     public void SetScreenSize(int index)
     {
@@ -24,6 +51,7 @@ public class VideoSettings : MonoBehaviour
         Debug.Log("width: " + width + " height: " + height);
     }
 
+
     public void SetFullScreen(bool _fullscreen)
     {
         Screen.fullScreen = _fullscreen;
@@ -33,5 +61,25 @@ public class VideoSettings : MonoBehaviour
     public void SetWindowed(bool _windowed)
     {
         Screen.fullScreenMode = FullScreenMode.Windowed;
+    }
+
+    public void SetBorderless(bool _borderless)
+    {
+        Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+    }
+   
+    public void SetVSync(int index)
+    {
+        if(index == 1)
+        {
+            QualitySettings.vSyncCount = 1;
+            Debug.Log("VSync on");
+        } 
+        else
+        {
+            QualitySettings.vSyncCount = 0;
+            Debug.Log("VSync off");
+
+        }
     }
 }

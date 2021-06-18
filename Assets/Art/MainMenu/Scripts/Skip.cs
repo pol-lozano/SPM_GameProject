@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Author: Sajid A. Masoud
 
 public class Skip : MonoBehaviour
 {

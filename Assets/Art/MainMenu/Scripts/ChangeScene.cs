@@ -26,4 +26,5 @@ public class ChangeScene : MonoBehaviour
     {
         GetComponent<Animator>().SetTrigger("fadeOut");
     }
+    
 }

@@ -1,8 +1,9 @@
-//Author: Sajid A. Masoud
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+//Author: Sajid A. Masoud
 
 public class VolumeController : MonoBehaviour
 {
