@@ -15,10 +15,6 @@ public class VideoSettings : MonoBehaviour
 
     List<string> mode = new List<string>() { "FULLSCREEN", "BORDERLESS", "WINDOWED" };
 
-
-    List<int> widths = new List<int>() { 1920, 1600, 1280 };
-    List<int> heights = new List<int>() { 1080, 900, 720 };
-
     public void SetScreenMode(int index)
     {
         string currentMode = mode[index];
@@ -41,6 +37,10 @@ public class VideoSettings : MonoBehaviour
             Debug.Log("windowed");
         }
     }
+
+
+    List<int> widths = new List<int>() { 1920, 1600, 1280, 1024 };
+    List<int> heights = new List<int>() { 1080, 900, 720, 576 };
 
     public void SetScreenSize(int index)
     {

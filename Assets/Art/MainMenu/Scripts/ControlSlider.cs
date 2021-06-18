@@ -12,11 +12,14 @@ public class ControlSlider : MonoBehaviour
     public void reduceValue()
     {
         sliderval.value -= (sliderval.value * 0.2f);
+        Debug.Log("Reduce slider");
     }
 
     public void increaseValue()
     {
-        sliderval.value += (sliderval.value * 0.2f);
+        sliderval.value = (sliderval.value * 0.2f) + sliderval.value;
+        Debug.Log("Increase slider");
+
     }
 
 }
