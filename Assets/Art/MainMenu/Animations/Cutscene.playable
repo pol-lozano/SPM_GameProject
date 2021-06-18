@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7365fd41256807640a64b185c4d90a96, type: 3}
   m_Name: SubtitleClip
   m_EditorClassIdentifier: 
-  subtitleText: Press space to skip
+  subtitleText: Press SPACE or B to skip
 --- !u!114 &3808692764072967544
 MonoBehaviour:
   m_ObjectHideFlags: 1
