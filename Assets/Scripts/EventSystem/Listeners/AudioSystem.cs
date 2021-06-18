@@ -30,7 +30,7 @@ public class AudioSystem : MonoBehaviour
         if(clip != null)
         {
             //Debug.Log(soundEvent.Data);
-             volume = (PlayerPrefs.GetFloat("EffectVolume", effectSlider.value)) * 0.1f * masterSlider.value;
+            volume = (PlayerPrefs.GetFloat("EffectVolume", effectSlider.value)) * 0.1f * (PlayerPrefs.GetFloat("MasterVolume", masterSlider.value));
             soundEvent.AudioSource.volume = volume;
 
             if (soundEvent.Data.StaticPitch == false)

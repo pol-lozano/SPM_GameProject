@@ -46,8 +46,9 @@ public class VideoSettings : MonoBehaviour
 
         if (currentMode.Equals("FULLSCREEN")) 
         {
+            Screen.SetResolution(1920, 1080, FullScreenMode.ExclusiveFullScreen);
             Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-            SetScreenSize(0);
+
             screenModeDropdown.value = 0;
             resolutionDropdown.value = 0;
 
