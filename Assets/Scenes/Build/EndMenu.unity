@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.07084021, g: 0.079443954, b: 0.13060924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3956,6 +3956,7 @@ MonoBehaviour:
   musicSlider: {fileID: 2413741446978877748}
   effectSlider: {fileID: 676083862}
   BackgroundMusic: {fileID: 1955122628}
+  BossMusic: {fileID: 0}
   Selected: {fileID: 1837757628}
   Pressed: {fileID: 997007932}
 --- !u!1 &441580320
@@ -5182,7 +5183,7 @@ Animator:
   m_GameObject: {fileID: 540414921}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a7564466867f1343bde530afe6f18d3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9730,7 +9731,6 @@ MonoBehaviour:
   masterVolumeSlider: {fileID: 2413741446978877748}
   musicVolumeSlider: {fileID: 2413741446978877748}
   effectVolumeSlider: {fileID: 676083862}
-  screenModeDropdown: {fileID: 1860318500}
 --- !u!224 &971754608
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9762,6 +9762,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffaeef3e48fa573499837164d81a4c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camShakeBtn: {fileID: 0}
+  vSyncBtn: {fileID: 0}
+  camera: {fileID: 0}
+  mouseSensitivity: {fileID: 0}
+  screenModeDropdown: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
 --- !u!1 &975640362
 GameObject:
   m_ObjectHideFlags: 0

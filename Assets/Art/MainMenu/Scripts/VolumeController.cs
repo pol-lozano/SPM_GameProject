@@ -11,6 +11,7 @@ public class VolumeController : MonoBehaviour
     public Slider effectSlider;
 
     public AudioSource BackgroundMusic;
+    public AudioSource BossMusic;
     public AudioSource Selected;
     public AudioSource Pressed;
 
@@ -23,8 +24,6 @@ public class VolumeController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-
-
     public void SettEffectvolume()
     {
         Selected.volume = effectSlider.value * masterSlider.value; 
@@ -34,6 +33,10 @@ public class VolumeController : MonoBehaviour
     public void SetMusicVolume()
     {
         BackgroundMusic.volume = musicSlider.value * masterSlider.value;
+        if(BossMusic != null)
+        {
+            BossMusic.volume = musicSlider.value * masterSlider.value;
+        }
     }
 
     public void SetMasterVolume()

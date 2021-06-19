@@ -33,58 +33,45 @@ public class VideoSettings : MonoBehaviour
             camShakeBtn.onClick.Invoke();
             camera.GetComponent<ShakeEventListener>().enabled = false;
         }
-
-
     }
-
-    List<string> mode = new List<string>() { "FULLSCREEN", "BORDERLESS", "WINDOWED" };
-
     public void SetScreenMode(int index)
-    {
-        string currentMode = mode[index];
-        
-
-        if (currentMode.Equals("FULLSCREEN")) 
+    {        
+        if (index == 0) 
         {
-            Screen.SetResolution(1920, 1080, FullScreenMode.ExclusiveFullScreen);
-            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-
-            screenModeDropdown.value = 0;
             resolutionDropdown.value = 0;
-
-            Debug.Log("full");
-
+            Screen.SetResolution(1920, 1080, FullScreenMode.ExclusiveFullScreen);
+            Debug.Log("Fullscreen");
         }
-        if (currentMode.Equals("BORDERLESS")) 
+        if (index == 1) 
         {
-            Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
-            Debug.Log("bord");
+            resolutionDropdown.value = 0;
+            Screen.SetResolution(1920, 1080, FullScreenMode.MaximizedWindow);
+            Debug.Log("Borderless");
         }
-        if (currentMode.Equals("WINDOWED")) 
+        if (index == 2) 
         {
             Screen.fullScreenMode = FullScreenMode.Windowed;
-            Debug.Log("windowed");
+            Debug.Log("Windowed");
         }
     }
 
     List<int> widths = new List<int>() { 1920, 1600, 1280, 1024 };
     List<int> heights = new List<int>() { 1080, 900, 720, 576 };
-
     public void SetScreenSize(int index)
     {
-        bool fullscreen = Screen.fullScreen;
         int width = widths[index];
         int height = heights[index];
-        Screen.SetResolution(width, height, fullscreen);
 
-        if(index != 0 && screenModeDropdown.value == 0)
+        if(index != 0)
         {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
             screenModeDropdown.value = 2;
-            Debug.Log("Windowed switch");
-        }
+            Screen.SetResolution(width, height, FullScreenMode.Windowed);
+            Debug.Log("Mode: Windowed - Width: " + width + " height: " + height);        }
 
-        Debug.Log("width: " + width + " height: " + height);
+        if(index == 0)
+        {
+            Debug.Log("1920x1080p initiated -> check for ScreenMode");
+        }
     }
 
     /*
