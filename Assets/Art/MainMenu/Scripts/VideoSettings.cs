@@ -68,7 +68,13 @@ public class VideoSettings : MonoBehaviour
             Screen.SetResolution(width, height, FullScreenMode.Windowed);
             Debug.Log("Mode: Windowed - Width: " + width + " height: " + height);        }
 
-        if(index == 0)
+        if(index == 0 && screenModeDropdown.value == 2)
+        {
+            Screen.SetResolution(width, height, FullScreenMode.Windowed);
+            Debug.Log("Windowed 1920x1080");
+        }
+
+        if (index == 0)
         {
             Debug.Log("1920x1080p initiated -> check for ScreenMode");
         }

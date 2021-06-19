@@ -34,9 +34,7 @@ public class VolumeController : MonoBehaviour
     {
         BackgroundMusic.volume = musicSlider.value * masterSlider.value;
         if(BossMusic != null)
-        {
-            BossMusic.volume = musicSlider.value * masterSlider.value;
-        }
+        BossMusic.volume = musicSlider.value * masterSlider.value * 0.15f;
     }
 
     public void SetMasterVolume()
