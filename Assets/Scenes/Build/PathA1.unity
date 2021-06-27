@@ -13461,7 +13461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &510651581
 Transform:
   m_ObjectHideFlags: 0
@@ -25228,6 +25228,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1151344047}
     m_Modifications:
+    - target: {fileID: 8039791029650395862, guid: 6cf252e49fd65b249b24fdb97196b2c8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8039791029650395862, guid: 6cf252e49fd65b249b24fdb97196b2c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -55018,7 +55022,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5206899324285567269}
-  m_RootOrder: 79
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &543450653145905411
 Transform:
@@ -57643,6 +57647,7 @@ Transform:
   - {fileID: 1080379522}
   - {fileID: 1321854523}
   - {fileID: 801457315}
+  - {fileID: 543450652271129880}
   - {fileID: 1443381854}
   - {fileID: 847384044}
   - {fileID: 180771293}
@@ -57656,7 +57661,6 @@ Transform:
   - {fileID: 1630432267}
   - {fileID: 1089864725}
   - {fileID: 2048324971}
-  - {fileID: 543450652271129880}
   - {fileID: 46279822}
   - {fileID: 441113470}
   - {fileID: 324588572}
