@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Build/GameTrailerBaseScene.unity
+    guid: a6a0dc70633b22040b8659b1bc07548a
+  - enabled: 0
     path: Assets/Scenes/Build/Startup.unity
     guid: b8cd374c168f65c47860c324a2312263
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Build/BaseScene.unity
     guid: 0af03046e401b2442bd70cc480a3eb82
   - enabled: 1
@@ -38,14 +41,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build/Courtyard.unity
     guid: 153f94a634897684a89af7e93257eb43
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Build/MainMenuCutscene.unity
     guid: 760849915379c964faf6ce43c5faad76
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Build/MainMenu.unity
     guid: 48c8f969fd560bc4ab3f273017eafe83
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Build/EndMenu.unity
     guid: 71ab2c1ef2b7db241ac674172522c600
+  - enabled: 0
+    path: Assets/Scenes/Build/GameTrailer.unity
+    guid: 295836b4dcb7f064c86486a1e4087eba
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: cfb7b9ac6a0ad5b45a6b809bf1aa34a6, type: 2}

@@ -6,13 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class MenuLoader : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.CompareTag("Player"))
-        {
-            LoadMenu();
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(6, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(7, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(8, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(9, LoadSceneMode.Additive);
 
-        }
+
     }
 
     public void LoadMenu()
