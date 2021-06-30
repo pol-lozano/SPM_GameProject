@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07087323, g: 0.0794693, b: 0.1305967, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23061,7 +23061,8 @@ MonoBehaviour:
     imported from Substance share:\r\nBricks Lumpy by gametextures.com\r\nBrick Stone
     Carved by gametextures.com\r\nCeramic 004 by Allegorithmic\r\nCeramic Tiels by
     L.Kuzyakin\r\nChurch Tiles by Andreas Gebert\r\nStone Mandala Tile 01 by figster1962\r\n\nSounds:\nDeath
-    Sound by szegvari on freesound\r\nSword attacks by Isolation Music on YouTube\r\n\n"
+    Sound by szegvari on freesound\r\nSword attacks by Isolation Music on YouTube\r\nMenu
+    Hover by ZapSplat\nMenu Click by spookymodem on freesound"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c2726f405a04c3459430aae8658b96f, type: 2}
   m_sharedMaterial: {fileID: 4616752334483188440, guid: 0c2726f405a04c3459430aae8658b96f, type: 2}
